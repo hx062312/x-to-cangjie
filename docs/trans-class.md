@@ -354,7 +354,6 @@ Python method translation:
         self.__closed = True
         super().close()
 ```
-```
 
 ### 6.4 API 调用与解析
 
