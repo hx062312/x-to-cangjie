@@ -42,16 +42,31 @@
                         "    def update(self, pBytesRead: int, pContentLength: int, pItems: int) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def update(self, pBytesRead: int, pContentLength: int, pItems: int) -> None:",
+                        "        pass"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "graal_validation": "not-exercised",
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 53.29327917098999,
+                    "generation_timestamp": "2026-02-15T16:39:51.951473",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 }
             },
             "fields": {},

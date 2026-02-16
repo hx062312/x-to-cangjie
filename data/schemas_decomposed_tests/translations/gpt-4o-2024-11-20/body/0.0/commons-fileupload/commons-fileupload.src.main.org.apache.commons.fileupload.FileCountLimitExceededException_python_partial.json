@@ -41,16 +41,31 @@
                         "    def getLimit(self) -> int:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getLimit(self) -> int:",
+                        "        return self.__limit"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "graal_validation": "not-exercised",
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 52.588220834732056,
+                    "generation_timestamp": "2026-02-15T19:31:26.179589",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "33-36:FileCountLimitExceededException": {
                     "start": 33,
@@ -89,16 +104,32 @@
                         "    def __init__(self, message: str, limit: int) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def __init__(self, message: str, limit: int) -> None:",
+                        "        super().__init__(message, None)",
+                        "        self.__limit = limit"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "graal_validation": "not-exercised",
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 53.411386251449585,
+                    "generation_timestamp": "2026-02-15T19:32:19.601785",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 }
             },
             "fields": {
@@ -122,16 +153,31 @@
                         "    __limit: int = 0",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __limit: int = 0",
+                        ""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-02-15T16:14:59.690254",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    }
                 },
                 "22-22:serialVersionUID": {
                     "start": 22,
@@ -154,16 +200,30 @@
                         "    __serialVersionUID: int = <placeholder>",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __serialVersionUID: int = 6904179610227521789"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 11.11636233329773,
+                    "generation_timestamp": "2026-02-15T16:15:10.813792",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 }
             },
             "is_enum": false,

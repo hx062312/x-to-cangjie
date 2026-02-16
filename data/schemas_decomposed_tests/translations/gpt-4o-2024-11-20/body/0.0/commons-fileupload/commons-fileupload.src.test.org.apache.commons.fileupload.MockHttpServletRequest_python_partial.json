@@ -102,16 +102,31 @@
                         "    def getRealPath(self, arg0: str) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getRealPath(self, arg0: str) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.371761560440063,
+                    "generation_timestamp": "2026-02-15T19:55:15.184026",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "396-398:getLocalAddr": {
                     "start": 396,
@@ -142,16 +157,31 @@
                         "    def getLocalAddr(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getLocalAddr(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.574508666992188,
+                    "generation_timestamp": "2026-02-15T19:55:03.792185",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "374-376:getRemotePort": {
                     "start": 374,
@@ -182,16 +212,31 @@
                         "    def getRemotePort(self) -> int:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getRemotePort(self) -> int:",
+                        "        return 0"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.825332403182983,
+                    "generation_timestamp": "2026-02-15T19:54:53.198305",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "366-368:getLocalPort": {
                     "start": 366,
@@ -222,16 +267,31 @@
                         "    def getLocalPort(self) -> int:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getLocalPort(self) -> int:",
+                        "        return 0"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.613367319107056,
+                    "generation_timestamp": "2026-02-15T19:54:42.353769",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "351-353:getLocalName": {
                     "start": 351,
@@ -262,16 +322,31 @@
                         "    def getLocalName(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getLocalName(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.744196653366089,
+                    "generation_timestamp": "2026-02-15T19:54:31.720302",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "225-227:isRequestedSessionIdFromUrl": {
                     "start": 225,
@@ -302,16 +377,31 @@
                         "    def isRequestedSessionIdFromUrl(self) -> bool:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def isRequestedSessionIdFromUrl(self) -> bool:",
+                        "        return False"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.751820802688599,
+                    "generation_timestamp": "2026-02-15T19:54:20.956556",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "434-436:isSecure": {
                     "start": 434,
@@ -340,16 +430,31 @@
                         "    def isSecure(self) -> bool:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def isSecure(self) -> bool:",
+                        "        return False"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.450208187103271,
+                    "generation_timestamp": "2026-02-15T19:54:10.185554",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "427-429:getLocales": {
                     "start": 427,
@@ -378,16 +483,31 @@
                         "    def getLocales(self) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[typing.Any, typing.Any, typing.Any]]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getLocales(self) -> typing.Union[typing.Iterator[Locale], typing.Generator[Locale, None, None]]:",
+                        "        return iter([])"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.729958772659302,
+                    "generation_timestamp": "2026-02-15T19:53:59.716295",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "420-422:getLocale": {
                     "start": 420,
@@ -416,16 +536,31 @@
                         "    def getLocale(self) -> typing.Any:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getLocale(self) -> typing.Any:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.016731977462769,
+                    "generation_timestamp": "2026-02-15T19:53:48.966708",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "415-415:removeAttribute": {
                     "start": 415,
@@ -454,16 +589,32 @@
                         "    def removeAttribute(self, arg0: str) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def removeAttribute(self, arg0: str) -> None:",
+                        "        # This method is intentionally left empty, as in the Java implementation.",
+                        "        pass"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.622863531112671,
+                    "generation_timestamp": "2026-02-15T19:53:37.930916",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "410-410:setAttribute": {
                     "start": 410,
@@ -493,16 +644,32 @@
                         "    def setAttribute(self, arg0: str, arg1: typing.Any) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def setAttribute(self, arg0: str, arg1: typing.Any) -> None:",
+                        "        # This method is intentionally left empty, as in the Java code.",
+                        "        pass"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.785216093063354,
+                    "generation_timestamp": "2026-02-15T19:53:27.288680",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "403-405:getRemoteHost": {
                     "start": 403,
@@ -531,16 +698,31 @@
                         "    def getRemoteHost(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getRemoteHost(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.613970041275024,
+                    "generation_timestamp": "2026-02-15T19:53:16.484541",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "388-390:getRemoteAddr": {
                     "start": 388,
@@ -569,16 +751,31 @@
                         "    def getRemoteAddr(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getRemoteAddr(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.104515314102173,
+                    "generation_timestamp": "2026-02-15T19:53:05.851518",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "381-383:getReader": {
                     "start": 381,
@@ -607,16 +804,31 @@
                         "    def getReader(self) -> io.BufferedReader:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getReader(self) -> io.BufferedReader:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.527612447738647,
+                    "generation_timestamp": "2026-02-15T19:52:54.727990",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "358-360:getServerPort": {
                     "start": 358,
@@ -645,16 +857,31 @@
                         "    def getServerPort(self) -> int:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getServerPort(self) -> int:",
+                        "        return 0"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.874071598052979,
+                    "generation_timestamp": "2026-02-15T19:52:44.181539",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "343-345:getServerName": {
                     "start": 343,
@@ -683,16 +910,31 @@
                         "    def getServerName(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getServerName(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.00047492980957,
+                    "generation_timestamp": "2026-02-15T19:52:33.288675",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "336-338:getScheme": {
                     "start": 336,
@@ -721,16 +963,31 @@
                         "    def getScheme(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getScheme(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.444779872894287,
+                    "generation_timestamp": "2026-02-15T19:52:22.252391",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "329-331:getProtocol": {
                     "start": 329,
@@ -759,16 +1016,31 @@
                         "    def getProtocol(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getProtocol(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.481969118118286,
+                    "generation_timestamp": "2026-02-15T19:52:11.788748",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "322-324:getParameterMap": {
                     "start": 322,
@@ -797,16 +1069,31 @@
                         "    def getParameterMap(self) -> typing.Dict[str, typing.List[str]]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getParameterMap(self) -> typing.Dict[str, typing.List[str]]:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.520049571990967,
+                    "generation_timestamp": "2026-02-15T19:52:01.287070",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "315-317:getParameterValues": {
                     "start": 315,
@@ -837,16 +1124,31 @@
                         "    def getParameterValues(self, arg0: str) -> typing.List[typing.List[str]]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getParameterValues(self, arg0: str) -> typing.Optional[typing.List[str]]:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 12.137254476547241,
+                    "generation_timestamp": "2026-02-15T19:51:50.748702",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "308-310:getParameterNames": {
                     "start": 308,
@@ -875,16 +1177,31 @@
                         "    def getParameterNames(self) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[str, typing.Any, typing.Any]]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getParameterNames(self) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[str, typing.Any, typing.Any]]:",
+                        "        return iter([])"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.20765995979309,
+                    "generation_timestamp": "2026-02-15T19:51:38.592796",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "301-303:getParameter": {
                     "start": 301,
@@ -915,16 +1232,31 @@
                         "    def getParameter(self, arg0: str) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getParameter(self, arg0: str) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.852856159210205,
+                    "generation_timestamp": "2026-02-15T19:51:27.366645",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "294-296:setReadLimit": {
                     "start": 294,
@@ -955,16 +1287,31 @@
                         "    def setReadLimit(self, readLimit: int) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def setReadLimit(self, readLimit: int) -> None:",
+                        "        self.__readLimit = readLimit"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.751898527145386,
+                    "generation_timestamp": "2026-02-15T19:51:16.495274",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "281-283:getContentType": {
                     "start": 281,
@@ -993,16 +1340,31 @@
                         "    def getContentType(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getContentType(self) -> str:",
+                        "        return self.__m_strContentType"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.418975591659546,
+                    "generation_timestamp": "2026-02-15T19:51:05.723937",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "274-276:setContentLength": {
                     "start": 274,
@@ -1033,16 +1395,31 @@
                         "    def setContentLength(self, length: int) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def setContentLength(self, length: int) -> None:",
+                        "        self.__length = length"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.915021419525146,
+                    "generation_timestamp": "2026-02-15T19:50:55.270359",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "258-271:getContentLength": {
                     "start": 258,
@@ -1088,16 +1465,42 @@
                         "    def getContentLength(self) -> int:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getContentLength(self) -> int:",
+                        "        iLength = 0",
+                        "",
+                        "        if self.__m_requestData is None:",
+                        "            iLength = -1",
+                        "        else:",
+                        "            if self.__length > (2**31 - 1):  # 2147483647 in Java is 2^31 - 1",
+                        "                raise RuntimeError(",
+                        "                    f\"Value '{self.__length}' is too large to be converted to int\"",
+                        "                )",
+                        "            iLength = int(self.__length)",
+                        "        ",
+                        "        return iLength"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.111947059631348,
+                    "generation_timestamp": "2026-02-15T19:50:44.337029",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "253-253:setCharacterEncoding": {
                     "start": 253,
@@ -1126,16 +1529,33 @@
                         "    def setCharacterEncoding(self, arg0: str) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def setCharacterEncoding(self, arg0: str) -> None:",
+                        "        # In Java, this method is a placeholder and does not perform any action.",
+                        "        # Similarly, in Python, we leave it as a no-op.",
+                        "        pass"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.899643421173096,
+                    "generation_timestamp": "2026-02-15T19:50:33.207065",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "246-248:getCharacterEncoding": {
                     "start": 246,
@@ -1164,16 +1584,31 @@
                         "    def getCharacterEncoding(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getCharacterEncoding(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.937816143035889,
+                    "generation_timestamp": "2026-02-15T19:50:22.289320",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "239-241:getAttributeNames": {
                     "start": 239,
@@ -1202,16 +1637,31 @@
                         "    def getAttributeNames(self) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[str, typing.Any, typing.Any]]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getAttributeNames(self) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[str, typing.Any, typing.Any]]:",
+                        "        return iter([])"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.732534170150757,
+                    "generation_timestamp": "2026-02-15T19:50:11.333335",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "232-234:getAttribute": {
                     "start": 232,
@@ -1242,16 +1692,31 @@
                         "    def getAttribute(self, arg0: str) -> typing.Any:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getAttribute(self, arg0: str) -> typing.Any:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.609717607498169,
+                    "generation_timestamp": "2026-02-15T19:49:59.582758",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "216-218:isRequestedSessionIdFromURL": {
                     "start": 216,
@@ -1280,16 +1745,31 @@
                         "    def isRequestedSessionIdFromURL(self) -> bool:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def isRequestedSessionIdFromURL(self) -> bool:",
+                        "        return False"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.470006227493286,
+                    "generation_timestamp": "2026-02-15T19:49:48.955200",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "209-211:isRequestedSessionIdFromCookie": {
                     "start": 209,
@@ -1318,16 +1798,31 @@
                         "    def isRequestedSessionIdFromCookie(self) -> bool:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def isRequestedSessionIdFromCookie(self) -> bool:",
+                        "        return False"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.532272338867188,
+                    "generation_timestamp": "2026-02-15T19:49:38.466562",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "202-204:isRequestedSessionIdValid": {
                     "start": 202,
@@ -1356,16 +1851,31 @@
                         "    def isRequestedSessionIdValid(self) -> bool:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def isRequestedSessionIdValid(self) -> bool:",
+                        "        return False"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.871568202972412,
+                    "generation_timestamp": "2026-02-15T19:49:27.899335",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "187-189:getServletPath": {
                     "start": 187,
@@ -1394,16 +1904,31 @@
                         "    def getServletPath(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getServletPath(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.822289943695068,
+                    "generation_timestamp": "2026-02-15T19:49:17.009463",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "180-182:getRequestURL": {
                     "start": 180,
@@ -1432,16 +1957,31 @@
                         "    def getRequestURL(self) -> io.StringIO:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getRequestURL(self) -> io.StringIO:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.688510179519653,
+                    "generation_timestamp": "2026-02-15T19:49:06.169115",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "173-175:getRequestURI": {
                     "start": 173,
@@ -1470,16 +2010,31 @@
                         "    def getRequestURI(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getRequestURI(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.767301321029663,
+                    "generation_timestamp": "2026-02-15T19:48:54.462629",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "166-168:getRequestedSessionId": {
                     "start": 166,
@@ -1508,16 +2063,31 @@
                         "    def getRequestedSessionId(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getRequestedSessionId(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.943623542785645,
+                    "generation_timestamp": "2026-02-15T19:48:43.677460",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "155-157:isUserInRole": {
                     "start": 155,
@@ -1548,16 +2118,31 @@
                         "    def isUserInRole(self, arg0: str) -> bool:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def isUserInRole(self, arg0: str) -> bool:",
+                        "        return False"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.722057104110718,
+                    "generation_timestamp": "2026-02-15T19:48:32.715391",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "148-150:getRemoteUser": {
                     "start": 148,
@@ -1586,16 +2171,31 @@
                         "    def getRemoteUser(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getRemoteUser(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.725358486175537,
+                    "generation_timestamp": "2026-02-15T19:48:21.975602",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "141-143:getQueryString": {
                     "start": 141,
@@ -1624,16 +2224,31 @@
                         "    def getQueryString(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getQueryString(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.550638437271118,
+                    "generation_timestamp": "2026-02-15T19:48:11.232001",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "134-136:getContextPath": {
                     "start": 134,
@@ -1662,16 +2277,31 @@
                         "    def getContextPath(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getContextPath(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.486575365066528,
+                    "generation_timestamp": "2026-02-15T19:48:00.646313",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "127-129:getPathTranslated": {
                     "start": 127,
@@ -1700,16 +2330,31 @@
                         "    def getPathTranslated(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getPathTranslated(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.733787536621094,
+                    "generation_timestamp": "2026-02-15T19:47:50.142264",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "120-122:getPathInfo": {
                     "start": 120,
@@ -1738,16 +2383,31 @@
                         "    def getPathInfo(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getPathInfo(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.583422422409058,
+                    "generation_timestamp": "2026-02-15T19:47:39.390886",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "113-115:getMethod": {
                     "start": 113,
@@ -1776,16 +2436,31 @@
                         "    def getMethod(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getMethod(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.893516540527344,
+                    "generation_timestamp": "2026-02-15T19:47:28.789802",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "102-104:getHeaderNames": {
                     "start": 102,
@@ -1814,16 +2489,31 @@
                         "    def getHeaderNames(self) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[str, typing.Any, typing.Any]]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getHeaderNames(self) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[str, typing.Any, typing.Any]]:",
+                        "        return iter([])"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 11.57911229133606,
+                    "generation_timestamp": "2026-02-15T19:47:17.878696",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "95-97:getHeaders": {
                     "start": 95,
@@ -1854,16 +2544,31 @@
                         "    def getHeaders(self, arg0: str) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[str, typing.Any, typing.Any]]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getHeaders(self, arg0: str) -> typing.Union[typing.Iterator[typing.Any], typing.Generator[str, typing.Any, typing.Any]]:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 12.12288236618042,
+                    "generation_timestamp": "2026-02-15T19:47:06.282186",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "88-90:getHeader": {
                     "start": 88,
@@ -1900,16 +2605,31 @@
                         "    def getHeader(self, headerName: str) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getHeader(self, headerName: str) -> str:",
+                        "        return self.__m_headers.get(headerName)"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.535021781921387,
+                    "generation_timestamp": "2026-02-15T19:46:54.141163",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "81-83:getDateHeader": {
                     "start": 81,
@@ -1940,16 +2660,31 @@
                         "    def getDateHeader(self, arg0: str) -> int:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getDateHeader(self, arg0: str) -> int:",
+                        "        return 0"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.797716617584229,
+                    "generation_timestamp": "2026-02-15T19:46:43.587655",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "70-72:getAuthType": {
                     "start": 70,
@@ -1978,16 +2713,31 @@
                         "    def getAuthType(self) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getAuthType(self) -> str:",
+                        "        return None"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.74411654472351,
+                    "generation_timestamp": "2026-02-15T19:46:32.755741",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "59-63:MockHttpServletRequest1": {
                     "start": 59,
@@ -2034,16 +2784,34 @@
                         "    def MockHttpServletRequest1(requestData: typing.List[int], strContentType: str) -> MockHttpServletRequest:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    @staticmethod",
+                        "    def MockHttpServletRequest1(requestData: typing.List[int], strContentType: str) -> MockHttpServletRequest:",
+                        "        return MockHttpServletRequest(",
+                        "            0, io.BytesIO(bytes(requestData)), strContentType, len(requestData)",
+                        "        )"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 13.378395795822144,
+                    "generation_timestamp": "2026-02-15T19:46:09.443235",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "41-57:MockHttpServletRequest": {
                     "start": 41,
@@ -2097,16 +2865,40 @@
                         "    def __init__(self, constructorId: int, requestData: typing.Union[io.BytesIO, io.StringIO, io.BufferedReader], strContentType: str, requestLength: int) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def __init__(self, constructorId: int, requestData: typing.Union[io.BytesIO, io.StringIO, io.BufferedReader], strContentType: str, requestLength: int) -> None:",
+                        "        if constructorId == 0:",
+                        "            self.__m_requestData = requestData",
+                        "            self.__length = requestLength",
+                        "            self.__m_strContentType = strContentType",
+                        "            self.__m_headers[FileUploadBase.CONTENT_TYPE] = strContentType",
+                        "        else:",
+                        "            self.__m_requestData = requestData",
+                        "            self.__length = requestLength",
+                        "            self.__m_strContentType = strContentType",
+                        "            self.__m_headers[FileUploadBase.CONTENT_TYPE] = strContentType"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 12.533937454223633,
+                    "generation_timestamp": "2026-02-15T19:46:21.994517",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 }
             },
             "fields": {
@@ -2130,16 +2922,30 @@
                         "    __m_headers: typing.Dict[str, str] = <placeholder>",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __m_headers: typing.Dict[str, str] = {}"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 10.677585124969482,
+                    "generation_timestamp": "2026-02-15T16:07:37.216722",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "36-36:readLimit": {
                     "start": 36,
@@ -2160,16 +2966,30 @@
                         "    __readLimit: int = <placeholder>",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __readLimit: int = -1"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 10.734147071838379,
+                    "generation_timestamp": "2026-02-15T16:07:47.973340",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "34-34:m_strContentType": {
                     "start": 34,
@@ -2191,16 +3011,31 @@
                         "    __m_strContentType: str = ''",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __m_strContentType: str = ''",
+                        ""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-02-15T16:07:47.987780",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    }
                 },
                 "32-32:length": {
                     "start": 32,
@@ -2221,16 +3056,31 @@
                         "    __length: int = 0",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __length: int = 0",
+                        ""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-02-15T16:07:47.997189",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    }
                 },
                 "30-30:m_requestData": {
                     "start": 30,
@@ -2252,16 +3102,31 @@
                         "    __m_requestData: typing.Union[io.BytesIO, io.StringIO, io.BufferedReader] = None",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __m_requestData: typing.Union[io.BytesIO, io.StringIO, io.BufferedReader] = None",
+                        ""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-02-15T16:07:48.007480",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    }
                 }
             },
             "is_enum": false,
@@ -2322,16 +3187,33 @@
                         "    def read1(self, b: typing.List[int], off: int, len_: int) -> int:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def read1(self, b: typing.List[int], off: int, len_: int) -> int:",
+                        "        if self.__readLimit > 0:",
+                        "            return self.__in.readinto(memoryview(b)[off:off + min(self.__readLimit, len_)])",
+                        "        return self.__in.readinto(memoryview(b)[off:off + len_])"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 14.20863962173462,
+                    "generation_timestamp": "2026-02-15T19:45:56.047292",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "462-464:read0": {
                     "start": 462,
@@ -2366,16 +3248,31 @@
                         "    def read0(self) -> int:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def read0(self) -> int:",
+                        "        return self.__in.read(1)[0] if isinstance(self.__in.read(1), bytes) else ord(self.__in.read(1))"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 10.958745002746582,
+                    "generation_timestamp": "2026-02-15T19:45:41.822567",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "457-460:MyServletInputStream": {
                     "start": 457,
@@ -2408,16 +3305,32 @@
                         "    def __init__(self, pStream: typing.Union[io.BytesIO, io.StringIO, io.BufferedReader], readLimit: int) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def __init__(self, pStream: typing.Union[io.BytesIO, io.StringIO, io.BufferedReader], readLimit: int) -> None:",
+                        "        self.__in = pStream",
+                        "        self.__readLimit = readLimit"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 12.407665252685547,
+                    "generation_timestamp": "2026-02-15T19:45:30.846898",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 }
             },
             "fields": {
@@ -2441,16 +3354,31 @@
                         "    __readLimit: int = 0",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __readLimit: int = 0",
+                        ""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-02-15T16:07:48.016154",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    }
                 },
                 "453-453:in": {
                     "start": 453,
@@ -2472,16 +3400,31 @@
                         "    __in: typing.Union[io.BytesIO, io.StringIO, io.BufferedReader] = None",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __in: typing.Union[io.BytesIO, io.StringIO, io.BufferedReader] = None",
+                        ""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-02-15T16:07:48.024573",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    }
                 }
             },
             "is_enum": false,

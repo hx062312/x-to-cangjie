@@ -135,16 +135,158 @@
                         "    def getHeaders(self, name: str) -> typing.Iterator[str]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getHeaders(self, name: str) -> typing.Iterator[str]:",
+                        "        name_lower = name.lower()",
+                        "        header_value_list = self.__headerNameToValueListMap.get(name_lower, [])",
+                        "        return iter(header_value_list)"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "graal_validation": "error",
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test6_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "124-147:testFileItemHeaders_test6_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test7_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "150-174:testFileItemHeaders_test7_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test8_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "177-202:testFileItemHeaders_test8_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test9_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py\", line 816, in testFileItemHeaders_test9_decomposed\n    self.assertEqual(next(headerValueEnumeration), \"text/plain\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "205-231:testFileItemHeaders_test9_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 78.52417588233948,
+                    "generation_timestamp": "2026-02-15T18:11:47.440421",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 1,
+                        "field_exercise": 1,
+                        "graal": 1,
+                        "test_execution": 1
+                    }
                 },
                 "57-59:getHeaderNames": {
                     "start": 57,
@@ -186,16 +328,245 @@
                         "    def getHeaderNames(self) -> typing.Iterator[str]:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getHeaderNames(self) -> typing.Iterator[str]:",
+                        "        return iter(self.__headerNameToValueListMap.keys())"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "graal_validation": "error",
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test2_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "54-64:testFileItemHeaders_test2_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test3_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "67-80:testFileItemHeaders_test3_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test4_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "83-97:testFileItemHeaders_test4_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test5_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "100-121:testFileItemHeaders_test5_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test6_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "124-147:testFileItemHeaders_test6_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test7_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "150-174:testFileItemHeaders_test7_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test8_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "177-202:testFileItemHeaders_test8_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test9_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py\", line 816, in testFileItemHeaders_test9_decomposed\n    self.assertEqual(next(headerValueEnumeration), \"text/plain\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "205-231:testFileItemHeaders_test9_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 79.26517987251282,
+                    "generation_timestamp": "2026-02-15T18:13:06.715163",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 1,
+                        "field_exercise": 1,
+                        "graal": 1,
+                        "test_execution": 1
+                    }
                 },
                 "46-53:getHeader": {
                     "start": 46,
@@ -249,16 +620,186 @@
                         "    def getHeader(self, name: str) -> str:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def getHeader(self, name: str) -> str:",
+                        "        name_lower = name.lower()",
+                        "        header_value_list = self.__headerNameToValueListMap.get(name_lower)",
+                        "        if header_value_list is None:",
+                        "            return None",
+                        "        return header_value_list[0]"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "graal_validation": "success",
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test5_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "100-121:testFileItemHeaders_test5_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test6_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "124-147:testFileItemHeaders_test6_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test7_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "150-174:testFileItemHeaders_test7_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test8_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "177-202:testFileItemHeaders_test8_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test9_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py\", line 816, in testFileItemHeaders_test9_decomposed\n    self.assertEqual(next(headerValueEnumeration), \"text/plain\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "205-231:testFileItemHeaders_test9_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 79.9676308631897,
+                    "generation_timestamp": "2026-02-15T18:02:34.780270",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "78-86:addHeader": {
                     "start": 78,
@@ -323,16 +864,269 @@
                         "    def addHeader(self, name: str, value: str) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def addHeader(self, name: str, value: str) -> None:",
+                        "        name_lower = name.lower()",
+                        "        header_value_list = self.__headerNameToValueListMap.get(name_lower)",
+                        "        if header_value_list is None:",
+                        "            header_value_list = []",
+                        "            self.__headerNameToValueListMap[name_lower] = header_value_list",
+                        "        header_value_list.append(value)"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "graal_validation": {
+                        "outcome": "success",
+                        "message": ""
+                    },
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test1_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "42-51:testFileItemHeaders_test1_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test2_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "54-64:testFileItemHeaders_test2_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test3_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "67-80:testFileItemHeaders_test3_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test4_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "83-97:testFileItemHeaders_test4_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test5_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "100-121:testFileItemHeaders_test5_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test6_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "124-147:testFileItemHeaders_test6_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test7_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "150-174:testFileItemHeaders_test7_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test8_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "177-202:testFileItemHeaders_test8_decomposed"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py::FileItemHeadersTest::testFileItemHeaders_test9_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/FileItemHeadersTest.py\", line 816, in testFileItemHeaders_test9_decomposed\n    self.assertEqual(next(headerValueEnumeration), \"text/plain\")\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "63-70:getHeaders"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "57-59:getHeaderNames"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "46-53:getHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.FileItemHeadersImpl",
+                                    "class": "FileItemHeadersImpl",
+                                    "method": "78-86:addHeader"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.FileItemHeadersTest",
+                                    "class": "FileItemHeadersTest",
+                                    "method": "205-231:testFileItemHeaders_test9_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 452.5789906978607,
+                    "generation_timestamp": "2026-02-15T18:10:07.370236",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 1
+                    }
                 }
             },
             "fields": {
@@ -357,16 +1151,31 @@
                         "    __headerNameToValueListMap: typing.Dict[str, typing.List[str]] = {}",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __headerNameToValueListMap: typing.Dict[str, typing.List[str]] = {}",
+                        ""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-02-15T16:07:05.302967",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "syntactic": -1,
+                        "field_exercise": -1,
+                        "graal": -1,
+                        "test_execution": -1
+                    }
                 },
                 "38-38:serialVersionUID": {
                     "start": 38,
@@ -389,16 +1198,30 @@
                         "    __serialVersionUID: int = <placeholder>",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __serialVersionUID: int = -4455695752627032559"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 10.346401929855347,
+                    "generation_timestamp": "2026-02-15T16:07:15.657694",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 }
             },
             "is_enum": false,

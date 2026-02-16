@@ -77,16 +77,31 @@
                         "    def __init__(self, fieldName: str, contentType: str, isFormField: bool, fileName: str, sizeThreshold: int, repository: pathlib.Path) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def __init__(self, fieldName: str, contentType: str, isFormField: bool, fileName: str, sizeThreshold: int, repository: pathlib.Path) -> None:",
+                        "        super().__init__(fieldName, contentType, isFormField, fileName, sizeThreshold, repository)"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "graal_validation": "not-exercised",
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 54.44798469543457,
+                    "generation_timestamp": "2026-02-15T16:50:35.332363",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 }
             },
             "fields": {},

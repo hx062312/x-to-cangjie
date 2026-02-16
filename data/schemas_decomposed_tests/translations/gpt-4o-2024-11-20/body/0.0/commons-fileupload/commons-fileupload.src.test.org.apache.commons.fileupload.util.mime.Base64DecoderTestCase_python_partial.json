@@ -98,16 +98,49 @@
                         "    def nonASCIIcharacter_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def nonASCIIcharacter_test0_decomposed(self) -> None:",
+                        "        self.__assertEncoded(\"f\", \"Zg=\u00c0=\")",
+                        "        self.__assertEncoded(\"f\", \"Zg=\\u0100=\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testnonASCIIcharacter_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 17, in testnonASCIIcharacter_test0_decomposed\n    self.__assertEncoded(\"f\", \"Zg=\u00c0=\".encode(\"latin-1\").decode(\"latin-1\"))\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 83, in __assertEncoded\n    encodedData = encoded.encode(\"US-ASCII\")\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\nUnicodeEncodeError: 'ascii' codec can't encode character '\\xc0' in position 3: ordinal not in range(128)",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "176-179:nonASCIIcharacter_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.092343330383301,
+                    "generation_timestamp": "2026-02-15T20:16:46.286610",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "171-173:badLength_test0_decomposed": {
                     "start": 171,
@@ -144,16 +177,48 @@
                         "    def badLength_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def badLength_test0_decomposed(self) -> None:",
+                        "        self.__assertOSError(\"truncated\", \"Zm8==\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testbadLength_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 21, in testbadLength_test0_decomposed\n    self.__assertOSError(\"truncated\", \"Zm8==\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 79, in __assertOSError\n    pytest.fail(\"Expected OSError\")  # Fail if no exception is raised\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/site-packages/_pytest/outcomes.py\", line 163, in __call__\n    raise Failed(msg=reason, pytrace=pytrace)\nFailed: Expected OSError",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "171-173:badLength_test0_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.375547409057617,
+                    "generation_timestamp": "2026-02-15T20:16:48.688367",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "166-168:badPaddingLeading2_test0_decomposed": {
                     "start": 166,
@@ -190,16 +255,48 @@
                         "    def badPaddingLeading2_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def badPaddingLeading2_test0_decomposed(self) -> None:",
+                        "        self.__assertOSError(\"incorrect padding, first two bytes cannot be padding\", \"====\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testbadPaddingLeading2_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 24, in testbadPaddingLeading2_test0_decomposed\n    self.__assertOSError(\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 79, in __assertOSError\n    pytest.fail(\"Expected OSError\")  # Fail if no exception is raised\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/site-packages/_pytest/outcomes.py\", line 163, in __call__\n    raise Failed(msg=reason, pytrace=pytrace)\nFailed: Expected OSError",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "166-168:badPaddingLeading2_test0_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.3330953121185303,
+                    "generation_timestamp": "2026-02-15T20:16:51.057495",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "161-163:badPaddingLeading1_test0_decomposed": {
                     "start": 161,
@@ -236,16 +333,48 @@
                         "    def badPaddingLeading1_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def badPaddingLeading1_test0_decomposed(self) -> None:",
+                        "        self.__assertOSError(\"incorrect padding, first two bytes cannot be padding\", \"=A==\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testbadPaddingLeading1_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 29, in testbadPaddingLeading1_test0_decomposed\n    self.__assertOSError(\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 79, in __assertOSError\n    pytest.fail(\"Expected OSError\")  # Fail if no exception is raised\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/site-packages/_pytest/outcomes.py\", line 163, in __call__\n    raise Failed(msg=reason, pytrace=pytrace)\nFailed: Expected OSError",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "161-163:badPaddingLeading1_test0_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.7691283226013184,
+                    "generation_timestamp": "2026-02-15T20:16:53.858749",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "156-158:badPadding_test0_decomposed": {
                     "start": 156,
@@ -282,16 +411,48 @@
                         "    def badPadding_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def badPadding_test0_decomposed(self) -> None:",
+                        "        self.__assertOSError(\"incorrect padding, 4th byte\", \"Zg=a\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testbadPadding_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 34, in testbadPadding_test0_decomposed\n    self.__assertOSError(\"incorrect padding, 4th byte\", \"Zg=a\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 79, in __assertOSError\n    pytest.fail(\"Expected OSError\")  # Fail if no exception is raised\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/site-packages/_pytest/outcomes.py\", line 163, in __call__\n    raise Failed(msg=reason, pytrace=pytrace)\nFailed: Expected OSError",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "156-158:badPadding_test0_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.7339224815368652,
+                    "generation_timestamp": "2026-02-15T20:16:56.624955",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "151-153:decodeTrailing3_test0_decomposed": {
                     "start": 151,
@@ -328,16 +489,48 @@
                         "    def decodeTrailing3_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def decodeTrailing3_test0_decomposed(self) -> None:",
+                        "        self.__assertOSError(\"truncated\", \"Zm9vYmFy123\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testdecodeTrailing3_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 37, in testdecodeTrailing3_test0_decomposed\n    self.__assertOSError(\"truncated\", \"Zm9vYmFy123\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 79, in __assertOSError\n    pytest.fail(\"Expected OSError\")  # Fail if no exception is raised\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/site-packages/_pytest/outcomes.py\", line 163, in __call__\n    raise Failed(msg=reason, pytrace=pytrace)\nFailed: Expected OSError",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "151-153:decodeTrailing3_test0_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.6341676712036133,
+                    "generation_timestamp": "2026-02-15T20:16:59.292224",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "146-148:decodeTrailing2_test0_decomposed": {
                     "start": 146,
@@ -374,16 +567,48 @@
                         "    def decodeTrailing2_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def decodeTrailing2_test0_decomposed(self) -> None:",
+                        "        self.__assertOSError(\"truncated\", \"Zm9vYmFy12\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testdecodeTrailing2_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 40, in testdecodeTrailing2_test0_decomposed\n    self.__assertOSError(\"truncated\", \"Zm9vYmFy12\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 79, in __assertOSError\n    pytest.fail(\"Expected OSError\")  # Fail if no exception is raised\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/site-packages/_pytest/outcomes.py\", line 163, in __call__\n    raise Failed(msg=reason, pytrace=pytrace)\nFailed: Expected OSError",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "146-148:decodeTrailing2_test0_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.930440664291382,
+                    "generation_timestamp": "2026-02-15T20:17:02.254609",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "141-143:decodeTrailing1_test0_decomposed": {
                     "start": 141,
@@ -420,16 +645,48 @@
                         "    def decodeTrailing1_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def decodeTrailing1_test0_decomposed(self) -> None:",
+                        "        self.__assertOSError(\"truncated\", \"Zm9vYmFy1\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testdecodeTrailing1_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 43, in testdecodeTrailing1_test0_decomposed\n    self.__assertOSError(\"truncated\", \"Zm9vYmFy1\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 79, in __assertOSError\n    pytest.fail(\"Expected OSError\")  # Fail if no exception is raised\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/site-packages/_pytest/outcomes.py\", line 163, in __call__\n    raise Failed(msg=reason, pytrace=pytrace)\nFailed: Expected OSError",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "141-143:decodeTrailing1_test0_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.5311434268951416,
+                    "generation_timestamp": "2026-02-15T20:17:04.818457",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "136-138:decodeTrailingJunk_test0_decomposed": {
                     "start": 136,
@@ -466,16 +723,53 @@
                         "    def decodeTrailingJunk_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def decodeTrailingJunk_test0_decomposed(self) -> None:",
+                        "        self.__assertEncoded(\"foobar\", \"Zm9vYmFy!!!\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testdecodeTrailingJunk_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 49, in testdecodeTrailingJunk_test0_decomposed\n    self.__assertEncoded(\"foobar\", \"Zm9vYmFy!!!\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 88, in __assertEncoded\n    assert expected == actual, f\"Expected {expected}, but got {actual}\"\nAssertionError: Expected b'foobar', but got b''\nassert b'foobar' == b''\n  \n  Use -v to get more diff",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "136-138:decodeTrailingJunk_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 3.2477896213531494,
+                    "generation_timestamp": "2026-02-15T20:17:08.093900",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "130-133:truncatedString_test0_decomposed": {
                     "start": 130,
@@ -518,16 +812,50 @@
                         "    def truncatedString_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def truncatedString_test0_decomposed(self) -> None:",
+                        "        x = b'n'  # Equivalent to new byte[] {'n'} in Java",
+                        "        with self.assertRaises(io.UnsupportedOperation):  # OSError in Java maps to IOError/UnsupportedOperation in Python",
+                        "            Base64Decoder.decode(x, io.BytesIO())"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testtruncatedString_test0_decomposed": {
+                            "test_outcome": "exercised-success",
+                            "feedback": "",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "130-133:truncatedString_test0_decomposed"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 4.083874702453613,
+                    "generation_timestamp": "2026-02-15T20:16:44.164533",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "125-127:nonBase64Bytes_test0_decomposed": {
                     "start": 125,
@@ -564,16 +892,53 @@
                         "    def nonBase64Bytes_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def nonBase64Bytes_test0_decomposed(self) -> None:",
+                        "        self.__assertEncoded(\"Hello World\", \"S?G!V%sbG 8g\\rV\\t\\n29ybGQ*=\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testnonBase64Bytes_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 57, in testnonBase64Bytes_test0_decomposed\n    self.__assertEncoded(\"Hello World\", \"S?G!V%sbG 8g\\rV\\t\\n29ybGQ*=\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 88, in __assertEncoded\n    assert expected == actual, f\"Expected {expected}, but got {actual}\"\nAssertionError: Expected b'Hello World', but got b''\nassert b'Hello World' == b''\n  \n  Use -v to get more diff",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "125-127:nonBase64Bytes_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.8560447692871094,
+                    "generation_timestamp": "2026-02-15T20:17:10.965288",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "120-122:decodeWithInnerPad_test0_decomposed": {
                     "start": 120,
@@ -610,16 +975,53 @@
                         "    def decodeWithInnerPad_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def decodeWithInnerPad_test0_decomposed(self) -> None:",
+                        "        self.__assertEncoded(\"Hello WorldHello World\", \"SGVsbG8gV29ybGQ=SGVsbG8gV29ybGQ=\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testdecodeWithInnerPad_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 60, in testdecodeWithInnerPad_test0_decomposed\n    self.__assertEncoded(\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 88, in __assertEncoded\n    assert expected == actual, f\"Expected {expected}, but got {actual}\"\nAssertionError: Expected b'Hello WorldHello World', but got b''\nassert b'Hello WorldHello World' == b''\n  \n  Use -v to get more diff",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "120-122:decodeWithInnerPad_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 2.9677319526672363,
+                    "generation_timestamp": "2026-02-15T20:17:13.965825",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "109-117:rfc4648Section10Decode_test0_decomposed": {
                     "start": 109,
@@ -662,16 +1064,59 @@
                         "    def rfc4648Section10Decode_test0_decomposed(self) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    def rfc4648Section10Decode_test0_decomposed(self) -> None:",
+                        "        self.__assertEncoded(\"\", \"\")",
+                        "        self.__assertEncoded(\"f\", \"Zg==\")",
+                        "        self.__assertEncoded(\"fo\", \"Zm8=\")",
+                        "        self.__assertEncoded(\"foo\", \"Zm9v\")",
+                        "        self.__assertEncoded(\"foob\", \"Zm9vYg==\")",
+                        "        self.__assertEncoded(\"fooba\", \"Zm9vYmE=\")",
+                        "        self.__assertEncoded(\"foobar\", \"Zm9vYmFy\")"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testrfc4648Section10Decode_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 66, in testrfc4648Section10Decode_test0_decomposed\n    self.__assertEncoded(\"f\", \"Zg==\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 88, in __assertEncoded\n    assert expected == actual, f\"Expected {expected}, but got {actual}\"\nAssertionError: Expected b'f', but got b''\nassert b'f' == b''\n  \n  Use -v to get more diff",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "109-117:rfc4648Section10Decode_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 3.623892307281494,
+                    "generation_timestamp": "2026-02-15T20:17:17.616317",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 },
                 "93-106:assertIOException": {
                     "start": 93,
@@ -757,16 +1202,40 @@
                         "    def __assertIOException(messageText: str, encoded: str) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    @staticmethod",
+                        "    def __assertOSError(messageText: str, encoded: str) -> None:",
+                        "        out = io.BytesIO()  # Equivalent to ByteArrayOutputStream in Java",
+                        "        encodedData = encoded.encode(Base64DecoderTestCase.__US_ASCII_CHARSET)  # Convert string to bytes using US-ASCII",
+                        "",
+                        "        try:",
+                        "            Base64Decoder.decode(encodedData, out)  # Attempt to decode",
+                        "            pytest.fail(\"Expected OSError\")  # Fail if no exception is raised",
+                        "        except IOError as e:  # Catch the IOError (equivalent to OSError in Java)",
+                        "            em = str(e)  # Get the exception message",
+                        "            assert messageText in em, f\"Expected to find '{messageText}' in '{em}'\"  # Assert the message contains the expected text"
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 91.78141260147095,
+                    "generation_timestamp": "2026-02-15T20:05:07.952583",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 1
+                    }
                 },
                 "82-91:assertEncoded": {
                     "start": 82,
@@ -838,16 +1307,141 @@
                         "    def __assertEncoded(clearText: str, encoded: str) -> None:\n",
                         "        pass\n\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
+                    "translation": [
+                        "    @staticmethod",
+                        "    def __assertEncoded(clearText: str, encoded: str) -> None:",
+                        "        expected = clearText.encode(\"US-ASCII\")",
+                        "",
+                        "        out = io.BytesIO()",
+                        "        encodedData = encoded.encode(\"US-ASCII\")",
+                        "        Base64Decoder.decode(encodedData, out)",
+                        "        out.seek(0)  # Ensure the pointer is at the beginning of the stream",
+                        "        actual = out.read(len(expected))  # Read only the expected number of bytes",
+                        "",
+                        "        assert expected == actual, f\"Expected {expected}, but got {actual}\""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": {
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testnonASCIIcharacter_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 17, in testnonASCIIcharacter_test0_decomposed\n    self.__assertEncoded(\"f\", \"Zg=\u00c0=\".encode(\"latin-1\").decode(\"latin-1\"))\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 83, in __assertEncoded\n    encodedData = encoded.encode(\"US-ASCII\")\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\nUnicodeEncodeError: 'ascii' codec can't encode character '\\xc0' in position 3: ordinal not in range(128)",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "176-179:nonASCIIcharacter_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testdecodeTrailingJunk_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 49, in testdecodeTrailingJunk_test0_decomposed\n    self.__assertEncoded(\"foobar\", \"Zm9vYmFy!!!\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 88, in __assertEncoded\n    assert expected == actual, f\"Expected {expected}, but got {actual}\"\nAssertionError: Expected b'foobar', but got b''\nassert b'foobar' == b''\n  \n  Use -v to get more diff",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "136-138:decodeTrailingJunk_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testnonBase64Bytes_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 57, in testnonBase64Bytes_test0_decomposed\n    self.__assertEncoded(\"Hello World\", \"S?G!V%sbG 8g\\rV\\t\\n29ybGQ*=\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 88, in __assertEncoded\n    assert expected == actual, f\"Expected {expected}, but got {actual}\"\nAssertionError: Expected b'Hello World', but got b''\nassert b'Hello World' == b''\n  \n  Use -v to get more diff",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "125-127:nonBase64Bytes_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testdecodeWithInnerPad_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 60, in testdecodeWithInnerPad_test0_decomposed\n    self.__assertEncoded(\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 88, in __assertEncoded\n    assert expected == actual, f\"Expected {expected}, but got {actual}\"\nAssertionError: Expected b'Hello WorldHello World', but got b''\nassert b'Hello WorldHello World' == b''\n  \n  Use -v to get more diff",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "120-122:decodeWithInnerPad_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        },
+                        "commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py::Base64DecoderTestCase::testrfc4648Section10Decode_test0_decomposed": {
+                            "test_outcome": "exercised-failed",
+                            "feedback": "Traceback (most recent call last):\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 57, in testPartExecutor\n    yield\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 623, in run\n    self._callTestMethod(testMethod)\n  File \"/root/miniconda3/envs/alphatrans/lib/python3.11/unittest/case.py\", line 579, in _callTestMethod\n    if method() is not None:\n       ^^^^^^^^\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 66, in testrfc4648Section10Decode_test0_decomposed\n    self.__assertEncoded(\"f\", \"Zg==\")\n  File \"/home/AlphaTrans/data/recomposed_projects/gpt-4o-2024-11-20/body/0.0/commons-fileupload/src/test/org/apache/commons/fileupload/util/mime/Base64DecoderTestCase.py\", line 88, in __assertEncoded\n    assert expected == actual, f\"Expected {expected}, but got {actual}\"\nAssertionError: Expected b'f', but got b''\nassert b'f' == b''\n  \n  Use -v to get more diff",
+                            "covered_methods": [
+                                {
+                                    "file": "commons-fileupload.src.main.org.apache.commons.fileupload.util.mime.Base64Decoder",
+                                    "class": "Base64Decoder",
+                                    "method": "138-181:decode"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "109-117:rfc4648Section10Decode_test0_decomposed"
+                                },
+                                {
+                                    "file": "commons-fileupload.src.test.org.apache.commons.fileupload.util.mime.Base64DecoderTestCase",
+                                    "class": "Base64DecoderTestCase",
+                                    "method": "82-91:assertEncoded"
+                                }
+                            ]
+                        }
+                    },
+                    "elapsed_time": 11.049008131027222,
+                    "generation_timestamp": "2026-02-15T20:03:18.156308",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 1,
+                        "field_exercise": 1,
+                        "graal": 1,
+                        "test_execution": -8
+                    }
                 }
             },
             "fields": {
@@ -872,16 +1466,30 @@
                         "    __US_ASCII_CHARSET: str = <placeholder>",
                         ""
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
+                    "translation": [
+                        "    __US_ASCII_CHARSET: str = \"US-ASCII\""
+                    ],
+                    "translation_status": "attempted",
+                    "syntactic_validation": "parseable",
+                    "field_exercise": "success",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 11.078246831893921,
+                    "generation_timestamp": "2026-02-15T16:02:10.116743",
                     "model_name": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    },
+                    "final_budget": {
+                        "syntactic": 2,
+                        "field_exercise": 2,
+                        "graal": 2,
+                        "test_execution": 2
+                    }
                 }
             },
             "is_enum": false,
