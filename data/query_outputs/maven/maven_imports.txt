@@ -11,3 +11,16 @@
 | import static Assertions.* | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/CartItemTest.java:5:1:5:49        |
 | import static Assertions.* | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/DiscountServiceTest.java:5:1:5:49 |
 | import static Assertions.* | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/ShoppingCartTest.java:6:1:6:49    |
+| import DisplayName         | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/CartItemTest.java:4:1:4:41        |
+| import DisplayName         | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/DiscountServiceTest.java:4:1:4:41 |
+| import DisplayName         | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/ShoppingCartTest.java:5:1:5:41    |
+| import Test                | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/CartItemTest.java:3:1:3:34        |
+| import Test                | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/DiscountServiceTest.java:3:1:3:34 |
+| import Test                | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/ShoppingCartTest.java:3:1:3:34    |
+| import List                | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/main/java/com/demo/ShoppingCart.java:5:1:5:22        |
+| import BeforeEach          | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/ShoppingCartTest.java:4:1:4:40    |
+| import ArrayList           | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/main/java/com/demo/ShoppingCart.java:3:1:3:27        |
+| import Collections         | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/main/java/com/demo/ShoppingCart.java:4:1:4:29        |
+| import static Assertions.* | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/CartItemTest.java:5:1:5:49        |
+| import static Assertions.* | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/DiscountServiceTest.java:5:1:5:49 |
+| import static Assertions.* | file:///home/AlphaTrans/java_projects/preprocessed_0/maven/src/test/java/com/demo/ShoppingCartTest.java:6:1:6:49    |
