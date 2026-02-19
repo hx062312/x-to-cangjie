@@ -21,10 +21,14 @@ fi
 PROJECT_NAME="$1"
 SUFFIX="${2:-}"
 DATABASE_NAME="${PROJECT_NAME}${SUFFIX}"
+# 输出路径不带 data/ 前缀，因为 execute_queries.py 会自动添加到 data/ 下
 OUTPUT_PATH="query_outputs${SUFFIX}"
 
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
-cd "$SCRIPT_DIR" || exit 1
+# 需要在 vscode-codeql-starter/codeql-custom-queries-java/ 目录下运行
+# 因为那里有 qlpack.yml 配置 CodeQL Java 语言库
+CODEQL_DIR="${SCRIPT_DIR}/../vscode-codeql-starter/codeql-custom-queries-java"
+cd "$CODEQL_DIR" || exit 1
 
 echo "=========================================="
 echo "Running CodeQL queries for: $PROJECT_NAME"

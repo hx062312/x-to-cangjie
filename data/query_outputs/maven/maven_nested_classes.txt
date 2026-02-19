@@ -1,0 +1,11 @@
+| DiscountType                                | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/main/java/com/demo/DiscountService.java:12:17:12:28    | DiscountService  |
+| new Consumer<CartItem>(...) { ... }         | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/main/java/com/demo/ReceiptGenerator.java:31:26:46:17   | ReceiptGenerator |
+| new Predicate<CartItem>(...) { ... }        | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/main/java/com/demo/ShoppingCart.java:43:31:44:53       | ShoppingCart     |
+| new ToDoubleFunction<CartItem>(...) { ... } | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/main/java/com/demo/ShoppingCart.java:73:43:73:63       | ShoppingCart     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/CartItemTest.java:24:54:25:38       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/CartItemTest.java:32:54:33:38       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/CartItemTest.java:40:54:41:42       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/CartItemTest.java:48:54:49:41       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/CartItemTest.java:56:54:57:42       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/ShoppingCartTest.java:38:54:38:77   | ShoppingCartTest |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/automated_reduced_projects/maven/src/test/java/com/demo/ShoppingCartTest.java:111:59:112:58 | ShoppingCartTest |
