@@ -1,0 +1,451 @@
+{
+    "com.demo.DiscountServiceTest": {
+        "testDiscountDescriptions": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "getDiscountDescription"
+            ],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testFixedAmountDiscount": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount",
+                "hasDiscount"
+            ],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testVipDiscount": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount",
+                "hasDiscount"
+            ],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testReset": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount",
+                "hasDiscount",
+                "reset"
+            ],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testFixedDiscountCap": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount"
+            ],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testPercentageDiscount": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount",
+                "hasDiscount"
+            ],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testNoDiscount": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "calculateDiscount",
+                "hasDiscount"
+            ],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testZeroSubtotal": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount"
+            ],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        }
+    },
+    "com.demo.CartItemTest": {
+        "testNegativePriceThrows": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [
+                "<init>"
+            ],
+            "com/demo/DiscountService$DiscountType": [],
+            "com/demo/App": []
+        },
+        "testNegativeQuantityThrows": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [
+                "<init>"
+            ],
+            "com/demo/DiscountService$DiscountType": [],
+            "com/demo/App": []
+        },
+        "testSubtotalCalculation": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [
+                "<init>",
+                "getSubtotal"
+            ],
+            "com/demo/DiscountService$DiscountType": [],
+            "com/demo/App": []
+        },
+        "testZeroQuantityThrows": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [
+                "<init>"
+            ],
+            "com/demo/DiscountService$DiscountType": [],
+            "com/demo/App": []
+        },
+        "testEmptyNameThrows": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [
+                "<init>"
+            ],
+            "com/demo/DiscountService$DiscountType": [],
+            "com/demo/App": []
+        },
+        "testNullNameThrows": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [
+                "<init>"
+            ],
+            "com/demo/DiscountService$DiscountType": [],
+            "com/demo/App": []
+        },
+        "testEquality": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [
+                "<init>",
+                "equals"
+            ],
+            "com/demo/DiscountService$DiscountType": [],
+            "com/demo/App": []
+        },
+        "testCreateValidItem": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [],
+            "com/demo/ShoppingCart": [],
+            "com/demo/CartItem": [
+                "<init>",
+                "getName",
+                "getPrice",
+                "getQuantity",
+                "getSubtotal"
+            ],
+            "com/demo/DiscountService$DiscountType": [],
+            "com/demo/App": []
+        }
+    },
+    "com.demo.ShoppingCartTest": {
+        "testAddItem": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "isEmpty",
+                "getItemCount",
+                "getSubtotal"
+            ],
+            "com/demo/CartItem": [
+                "<init>",
+                "getSubtotal"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testSubtotal": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "getSubtotal"
+            ],
+            "com/demo/CartItem": [
+                "<init>",
+                "getSubtotal"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testClear": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "hasDiscount",
+                "reset"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "isEmpty",
+                "getDiscountService",
+                "hasDiscount",
+                "clear"
+            ],
+            "com/demo/CartItem": [
+                "<init>"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testTotal": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "getSubtotal",
+                "getDiscountAmount",
+                "getTotal",
+                "getDiscountService"
+            ],
+            "com/demo/CartItem": [
+                "<init>",
+                "getSubtotal"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testInjectedDiscountService": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "getSubtotal",
+                "getDiscountAmount",
+                "getTotal"
+            ],
+            "com/demo/CartItem": [
+                "<init>",
+                "getSubtotal"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testAddNullThrows": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem"
+            ],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testMultipleItemsWithDiscount": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "getSubtotal",
+                "getDiscountAmount",
+                "getTotal",
+                "getDiscountService"
+            ],
+            "com/demo/CartItem": [
+                "<init>",
+                "getSubtotal"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testEmptyInitially": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "isEmpty",
+                "getItemCount"
+            ],
+            "com/demo/CartItem": [],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testRemoveItem": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "removeItem",
+                "getItemCount",
+                "lambda$removeItem$0"
+            ],
+            "com/demo/CartItem": [
+                "<init>",
+                "getName"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testDiscount": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>",
+                "withDiscount",
+                "calculateDiscount"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "getSubtotal",
+                "getDiscountAmount",
+                "getTotal",
+                "getDiscountService"
+            ],
+            "com/demo/CartItem": [
+                "<init>",
+                "getSubtotal"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        },
+        "testUnmodifiableItems": {
+            "com/demo/ReceiptGenerator": [],
+            "com/demo/DiscountService": [
+                "<init>"
+            ],
+            "com/demo/ShoppingCart": [
+                "<init>",
+                "ShoppingCart1",
+                "addItem",
+                "getItems"
+            ],
+            "com/demo/CartItem": [
+                "<init>"
+            ],
+            "com/demo/DiscountService$DiscountType": [
+                "<clinit>"
+            ],
+            "com/demo/App": []
+        }
+    }
+}

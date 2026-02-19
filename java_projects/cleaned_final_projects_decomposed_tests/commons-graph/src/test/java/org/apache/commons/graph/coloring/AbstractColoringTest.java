@@ -82,6 +82,4 @@ abstract class AbstractColoringTest {
         }
         return colors;
     }
-
-    
 }

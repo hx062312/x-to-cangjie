@@ -31,88 +31,38 @@ public class StringUtilTest {
     /**
      * Test a default string substitution, e.g. all placeholders are expanded.
      */
-    
+    @Test
+    public void testDefaultStringSubstitution() throws Exception {
+        final Map<String, String> vars = new HashMap<>();
+        vars.put("foo", "FOO");
+        vars.put("bar", "BAR");
+
+        assertEquals("This is a FOO & BAR test", StringUtils.stringSubstitution("This is a ${foo} & ${bar} test", vars, true).toString());
+        assertEquals("This is a FOO & BAR test", StringUtils.stringSubstitution("This is a ${foo} & ${bar} test", vars, false).toString());
+    }
 
     /**
      * Test a erroneous template.
      */
-    
+    @Test
+    public void testErroneousTemplate() throws Exception {
+        final Map<String, String> vars = new HashMap<>();
+        vars.put("foo", "FOO");
+
+        assertEquals("This is a FOO & ${}} test", StringUtils.stringSubstitution("This is a ${foo} & ${}} test", vars, true).toString());
+    }
 
     /**
      * Test an incomplete string substitution where not all placeholders are expanded.
      */
-    
-
-    /**
-     * Test no string substitution
-     */
-
     @Test
-    public void testDefaultStringSubstitution_test0_decomposed() throws Exception {
+    public void testIncompleteSubstitution() throws Exception {
+
         final Map<String, String> vars = new HashMap<>();
         vars.put("foo", "FOO");
-        vars.put("bar", "BAR");
-        StringUtils.stringSubstitution("This is a ${foo} & ${bar} test",vars,true);
-    }
 
-    @Test
-    public void testDefaultStringSubstitution_test1_decomposed() throws Exception {
-        final Map<String, String> vars = new HashMap<>();
-        vars.put("foo", "FOO");
-        vars.put("bar", "BAR");
-        StringUtils.stringSubstitution("This is a ${foo} & ${bar} test",vars,true);
-        assertEquals("This is a FOO & BAR test", StringUtils.stringSubstitution("This is a ${foo} & ${bar} test", vars, true).toString());
-    }
-
-    @Test
-    public void testDefaultStringSubstitution_test2_decomposed() throws Exception {
-        final Map<String, String> vars = new HashMap<>();
-        vars.put("foo", "FOO");
-        vars.put("bar", "BAR");
-        StringUtils.stringSubstitution("This is a ${foo} & ${bar} test",vars,true);
-        assertEquals("This is a FOO & BAR test", StringUtils.stringSubstitution("This is a ${foo} & ${bar} test", vars, true).toString());
-        StringUtils.stringSubstitution("This is a ${foo} & ${bar} test",vars,false);
-    }
-
-    @Test
-    public void testDefaultStringSubstitution_test3_decomposed() throws Exception {
-        final Map<String, String> vars = new HashMap<>();
-        vars.put("foo", "FOO");
-        vars.put("bar", "BAR");
-        StringUtils.stringSubstitution("This is a ${foo} & ${bar} test",vars,true);
-        assertEquals("This is a FOO & BAR test", StringUtils.stringSubstitution("This is a ${foo} & ${bar} test", vars, true).toString());
-        StringUtils.stringSubstitution("This is a ${foo} & ${bar} test",vars,false);
-        assertEquals("This is a FOO & BAR test", StringUtils.stringSubstitution("This is a ${foo} & ${bar} test", vars, false).toString());
-    }
-
-    @Test
-    public void testErroneousTemplate_test0_decomposed() throws Exception {
-        final Map<String, String> vars = new HashMap<>();
-        vars.put("foo", "FOO");
-        StringUtils.stringSubstitution("This is a ${foo} & ${}} test",vars,true);
-    }
-
-    @Test
-    public void testErroneousTemplate_test1_decomposed() throws Exception {
-        final Map<String, String> vars = new HashMap<>();
-        vars.put("foo", "FOO");
-        StringUtils.stringSubstitution("This is a ${foo} & ${}} test",vars,true);
-        assertEquals("This is a FOO & ${}} test", StringUtils.stringSubstitution("This is a ${foo} & ${}} test", vars, true).toString());
-    }
-
-    @Test
-    public void testIncompleteSubstitution_test0_decomposed() throws Exception {
-        final Map<String, String> vars = new HashMap<>();
-        vars.put("foo", "FOO");
-        StringUtils.stringSubstitution("This is a ${foo} & ${bar} test",vars,true);
-    }
-
-    @Test
-    public void testIncompleteSubstitution_test1_decomposed() throws Exception {
-        final Map<String, String> vars = new HashMap<>();
-        vars.put("foo", "FOO");
-        StringUtils.stringSubstitution("This is a ${foo} & ${bar} test",vars,true);
         assertEquals("This is a FOO & ${bar} test", StringUtils.stringSubstitution("This is a ${foo} & ${bar} test", vars, true).toString());
+
         try {
             StringUtils.stringSubstitution("This is a ${foo} & ${bar} test", vars, false).toString();
             fail();
@@ -121,20 +71,15 @@ public class StringUtilTest {
         }
     }
 
+    /**
+     * Test no string substitution
+     */
     @Test
-    public void testNoStringSubstitution_test0_decomposed() throws Exception {
+    public void testNoStringSubstitution() throws Exception {
         final Map<String, String> vars = new HashMap<>();
         vars.put("foo", "FOO");
         vars.put("bar", "BAR");
-        StringUtils.stringSubstitution("This is a FOO & BAR test",vars,true);
-    }
 
-    @Test
-    public void testNoStringSubstitution_test1_decomposed() throws Exception {
-        final Map<String, String> vars = new HashMap<>();
-        vars.put("foo", "FOO");
-        vars.put("bar", "BAR");
-        StringUtils.stringSubstitution("This is a FOO & BAR test",vars,true);
         assertEquals("This is a FOO & BAR test", StringUtils.stringSubstitution("This is a FOO & BAR test", vars, true).toString());
     }
 }

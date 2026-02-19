@@ -30,6 +30,4 @@ public class Base32TestData {
     static final String STRING_FIXTURE = "Hello World";
 
     static final String BASE32_FIXTURE = "JBSWY3DPEBLW64TMMQ======\r\n";
-
-    
 }

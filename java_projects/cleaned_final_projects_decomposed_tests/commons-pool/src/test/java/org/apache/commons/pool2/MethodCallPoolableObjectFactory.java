@@ -137,6 +137,4 @@ public class MethodCallPoolableObjectFactory {
         call.returned(Boolean.valueOf(r));
         return r;
     }
-
-    
 }

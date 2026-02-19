@@ -46,6 +46,4 @@ public class PoolTest {
             "commons-pool-EvictionTimer";
 
     private static final long EVICTION_PERIOD_IN_MILLIS = 100;
-
-    
 }

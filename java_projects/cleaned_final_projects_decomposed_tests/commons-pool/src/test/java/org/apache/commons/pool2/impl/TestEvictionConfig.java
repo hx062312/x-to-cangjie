@@ -26,72 +26,10 @@ import java.time.Duration;
 public class TestEvictionConfig {
 
     @Test
-    public void testConstructor1s_test0_decomposed()  {
+    public void testConstructor1s() {
         final EvictionConfig config =
                 new EvictionConfig(Duration.ofMillis(1), Duration.ofMillis(1), 1);
-    }
 
-    @Test
-    public void testConstructor1s_test1_decomposed()  {
-        final EvictionConfig config =
-                new EvictionConfig(Duration.ofMillis(1), Duration.ofMillis(1), 1);
-        assertEquals(1, config.getIdleEvictDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructor1s_test2_decomposed()  {
-        final EvictionConfig config =
-                new EvictionConfig(Duration.ofMillis(1), Duration.ofMillis(1), 1);
-        assertEquals(1, config.getIdleEvictDuration().toMillis());
-        assertEquals(1, config.getIdleEvictTime());
-    }
-
-    @Test
-    public void testConstructor1s_test3_decomposed()  {
-        final EvictionConfig config =
-                new EvictionConfig(Duration.ofMillis(1), Duration.ofMillis(1), 1);
-        assertEquals(1, config.getIdleEvictDuration().toMillis());
-        assertEquals(1, config.getIdleEvictTime());
-        assertEquals(1, config.getIdleEvictTimeDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructor1s_test4_decomposed()  {
-        final EvictionConfig config =
-                new EvictionConfig(Duration.ofMillis(1), Duration.ofMillis(1), 1);
-        assertEquals(1, config.getIdleEvictDuration().toMillis());
-        assertEquals(1, config.getIdleEvictTime());
-        assertEquals(1, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(1, config.getIdleSoftEvictDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructor1s_test5_decomposed()  {
-        final EvictionConfig config =
-                new EvictionConfig(Duration.ofMillis(1), Duration.ofMillis(1), 1);
-        assertEquals(1, config.getIdleEvictDuration().toMillis());
-        assertEquals(1, config.getIdleEvictTime());
-        assertEquals(1, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(1, config.getIdleSoftEvictDuration().toMillis());
-        assertEquals(1, config.getIdleSoftEvictTime());
-    }
-
-    @Test
-    public void testConstructor1s_test6_decomposed()  {
-        final EvictionConfig config =
-                new EvictionConfig(Duration.ofMillis(1), Duration.ofMillis(1), 1);
-        assertEquals(1, config.getIdleEvictDuration().toMillis());
-        assertEquals(1, config.getIdleEvictTime());
-        assertEquals(1, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(1, config.getIdleSoftEvictDuration().toMillis());
-        assertEquals(1, config.getIdleSoftEvictTime());
-        assertEquals(1, config.getIdleSoftEvictTimeDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructor1s_test7_decomposed()  {
-        final EvictionConfig config =
-                new EvictionConfig(Duration.ofMillis(1), Duration.ofMillis(1), 1);
         assertEquals(1, config.getIdleEvictDuration().toMillis());
         assertEquals(1, config.getIdleEvictTime());
         assertEquals(1, config.getIdleEvictTimeDuration().toMillis());
@@ -102,64 +40,9 @@ public class TestEvictionConfig {
     }
 
     @Test
-    public void testConstructorZerosDurations_test0_decomposed()  {
+    public void testConstructorZerosDurations() {
         final EvictionConfig config = new EvictionConfig(Duration.ZERO, Duration.ZERO, 0);
-    }
 
-    @Test
-    public void testConstructorZerosDurations_test1_decomposed()  {
-        final EvictionConfig config = new EvictionConfig(Duration.ZERO, Duration.ZERO, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructorZerosDurations_test2_decomposed()  {
-        final EvictionConfig config = new EvictionConfig(Duration.ZERO, Duration.ZERO, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-    }
-
-    @Test
-    public void testConstructorZerosDurations_test3_decomposed()  {
-        final EvictionConfig config = new EvictionConfig(Duration.ZERO, Duration.ZERO, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructorZerosDurations_test4_decomposed()  {
-        final EvictionConfig config = new EvictionConfig(Duration.ZERO, Duration.ZERO, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructorZerosDurations_test5_decomposed()  {
-        final EvictionConfig config = new EvictionConfig(Duration.ZERO, Duration.ZERO, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictTime());
-    }
-
-    @Test
-    public void testConstructorZerosDurations_test6_decomposed()  {
-        final EvictionConfig config = new EvictionConfig(Duration.ZERO, Duration.ZERO, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictTimeDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructorZerosDurations_test7_decomposed()  {
-        final EvictionConfig config = new EvictionConfig(Duration.ZERO, Duration.ZERO, 0);
         assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
         assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
         assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
@@ -170,72 +53,10 @@ public class TestEvictionConfig {
     }
 
     @Test
-    public void testConstructorZerosMillis_test0_decomposed()  {
+    public void testConstructorZerosMillis() {
         @SuppressWarnings("deprecation")
         final EvictionConfig config = EvictionConfig.EvictionConfig0(0, 0, 0);
-    }
 
-    @Test
-    public void testConstructorZerosMillis_test1_decomposed()  {
-        @SuppressWarnings("deprecation")
-        final EvictionConfig config = EvictionConfig.EvictionConfig0(0, 0, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructorZerosMillis_test2_decomposed()  {
-        @SuppressWarnings("deprecation")
-        final EvictionConfig config = EvictionConfig.EvictionConfig0(0, 0, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-    }
-
-    @Test
-    public void testConstructorZerosMillis_test3_decomposed()  {
-        @SuppressWarnings("deprecation")
-        final EvictionConfig config = EvictionConfig.EvictionConfig0(0, 0, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructorZerosMillis_test4_decomposed()  {
-        @SuppressWarnings("deprecation")
-        final EvictionConfig config = EvictionConfig.EvictionConfig0(0, 0, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructorZerosMillis_test5_decomposed()  {
-        @SuppressWarnings("deprecation")
-        final EvictionConfig config = EvictionConfig.EvictionConfig0(0, 0, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictTime());
-    }
-
-    @Test
-    public void testConstructorZerosMillis_test6_decomposed()  {
-        @SuppressWarnings("deprecation")
-        final EvictionConfig config = EvictionConfig.EvictionConfig0(0, 0, 0);
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictDuration().toMillis());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictTime());
-        assertEquals(Long.MAX_VALUE, config.getIdleSoftEvictTimeDuration().toMillis());
-    }
-
-    @Test
-    public void testConstructorZerosMillis_test7_decomposed()  {
-        @SuppressWarnings("deprecation")
-        final EvictionConfig config = EvictionConfig.EvictionConfig0(0, 0, 0);
         assertEquals(Long.MAX_VALUE, config.getIdleEvictDuration().toMillis());
         assertEquals(Long.MAX_VALUE, config.getIdleEvictTime());
         assertEquals(Long.MAX_VALUE, config.getIdleEvictTimeDuration().toMillis());

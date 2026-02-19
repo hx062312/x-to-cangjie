@@ -49,6 +49,4 @@ public final class NodeSequenceVisitor
     public List<BaseLabeledVertex> onCompleted() {
         return unmodifiableList(vertices);
     }
-
-    
 }

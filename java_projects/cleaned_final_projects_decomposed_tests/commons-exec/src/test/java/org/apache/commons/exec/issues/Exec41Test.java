@@ -47,7 +47,39 @@ public class Exec41Test {
      *
      * @throws Exception the test failed
      */
-    
+    @Test
+    public void testExec41WithoutStreams() throws Exception {
+
+        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
+        cmdLine.addArgument0("10"); // sleep 10 seconds
+        final DefaultExecutor executor = DefaultExecutor.builder().get();
+        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000); // allow process no more than 2 seconds
+
+        // create a custom "PumpStreamHandler" doing no pumping at all
+        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(null, null, null);
+
+        executor.setWatchdog(watchdog);
+        executor.setStreamHandler(pumpStreamHandler);
+
+        final long startTime = System.currentTimeMillis();
+
+        try {
+            executor.execute0(cmdLine);
+        } catch (final ExecuteException e) {
+            System.out.println(e);
+        }
+
+        final long duration = System.currentTimeMillis() - startTime;
+
+        System.out.println("Process completed in " + duration + " millis; below is its output");
+
+        if (watchdog.killedProcess()) {
+            System.out.println("Process timed out and was killed.");
+        }
+
+        assertTrue(watchdog.killedProcess(), "The process was killed by the watchdog");
+        assertTrue(duration < 9000, () -> "Skipping the Thread.join() did not work, duration=" + duration);
+    }
 
     /**
      *
@@ -57,168 +89,11 @@ public class Exec41Test {
      *
      * @throws Exception the test failed
      */
-
     @Test
-    public void testExec41WithoutStreams_test0_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-    }
+    public void testExec41WithStreams() throws Exception {
 
-    @Test
-    public void testExec41WithoutStreams_test1_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test2_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test3_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test4_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test5_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(null, null, null);
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test6_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(null, null, null);
-        executor.setWatchdog(watchdog);
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test7_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(null, null, null);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test8_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(null, null, null);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
-        final long startTime = System.currentTimeMillis();
-        try {
-            executor.execute0(cmdLine);
-        } catch (final ExecuteException e) {
-            System.out.println(e);
-        }
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test9_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(null, null, null);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
-        final long startTime = System.currentTimeMillis();
-        try {
-            executor.execute0(cmdLine);
-        } catch (final ExecuteException e) {
-            System.out.println(e);
-        }
-        final long duration = System.currentTimeMillis() - startTime;
-        System.out.println("Process completed in " + duration + " millis; below is its output");
-        if (watchdog.killedProcess()) {
-            System.out.println("Process timed out and was killed.");
-        }
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test10_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(null, null, null);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
-        final long startTime = System.currentTimeMillis();
-        try {
-            executor.execute0(cmdLine);
-        } catch (final ExecuteException e) {
-            System.out.println(e);
-        }
-        final long duration = System.currentTimeMillis() - startTime;
-        System.out.println("Process completed in " + duration + " millis; below is its output");
-        if (watchdog.killedProcess()) {
-            System.out.println("Process timed out and was killed.");
-        }
-        assertTrue(watchdog.killedProcess(), "The process was killed by the watchdog");
-    }
-
-    @Test
-    public void testExec41WithoutStreams_test11_decomposed() throws Exception {
-        final CommandLine cmdLine = new CommandLine(1, null, pingScript, null);
-        cmdLine.addArgument0("10");
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(null, null, null);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
-        final long startTime = System.currentTimeMillis();
-        try {
-            executor.execute0(cmdLine);
-        } catch (final ExecuteException e) {
-            System.out.println(e);
-        }
-        final long duration = System.currentTimeMillis() - startTime;
-        System.out.println("Process completed in " + duration + " millis; below is its output");
-        if (watchdog.killedProcess()) {
-            System.out.println("Process timed out and was killed.");
-        }
-        assertTrue(watchdog.killedProcess(), "The process was killed by the watchdog");
-        assertTrue(duration < 9000, () -> "Skipping the Thread.join() did not work, duration=" + duration);
-    }
-
-    @Test
-    public void testExec41WithStreams_test0_decomposed() throws Exception {
         CommandLine cmdLine;
+
         if (OS.isFamilyWindows()) {
             cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
         } else if ("HP-UX".equals(System.getProperty("os.name"))) {
@@ -230,251 +105,32 @@ public class Exec41Test {
             System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
             return;
         }
-    }
 
-    @Test
-    public void testExec41WithStreams_test1_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-    }
-
-    @Test
-    public void testExec41WithStreams_test2_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
         final DefaultExecutor executor = DefaultExecutor.builder().get();
-    }
-
-    @Test
-    public void testExec41WithStreams_test3_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-    }
-
-    @Test
-    public void testExec41WithStreams_test4_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
+        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000); // allow process no more than 2 seconds
         final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
-    }
+        // this method was part of the patch I reverted
+        // pumpStreamHandler.setAlwaysWaitForStreamThreads(false);
 
-    @Test
-    public void testExec41WithStreams_test5_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
-        executor.setWatchdog(watchdog);
-    }
-
-    @Test
-    public void testExec41WithStreams_test6_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
         executor.setWatchdog(watchdog);
         executor.setStreamHandler(pumpStreamHandler);
-    }
 
-    @Test
-    public void testExec41WithStreams_test7_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
         final long startTime = System.currentTimeMillis();
+
         try {
             executor.execute0(cmdLine);
         } catch (final ExecuteException e) {
             // nothing to do
         }
-    }
 
-    @Test
-    public void testExec41WithStreams_test8_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
-        final long startTime = System.currentTimeMillis();
-        try {
-            executor.execute0(cmdLine);
-        } catch (final ExecuteException e) {
-            // nothing to do
-        }
         final long duration = System.currentTimeMillis() - startTime;
+
         System.out.println("Process completed in " + duration + " millis; below is its output");
+
         if (watchdog.killedProcess()) {
             System.out.println("Process timed out and was killed by watchdog.");
         }
-    }
 
-    @Test
-    public void testExec41WithStreams_test9_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
-        final long startTime = System.currentTimeMillis();
-        try {
-            executor.execute0(cmdLine);
-        } catch (final ExecuteException e) {
-            // nothing to do
-        }
-        final long duration = System.currentTimeMillis() - startTime;
-        System.out.println("Process completed in " + duration + " millis; below is its output");
-        if (watchdog.killedProcess()) {
-            System.out.println("Process timed out and was killed by watchdog.");
-        }
-        assertTrue(watchdog.killedProcess(), "The process was killed by the watchdog");
-    }
-
-    @Test
-    public void testExec41WithStreams_test10_decomposed() throws Exception {
-        CommandLine cmdLine;
-        if (OS.isFamilyWindows()) {
-            cmdLine = CommandLine.parse0("ping.exe -n 10 -w 1000 127.0.0.1");
-        } else if ("HP-UX".equals(System.getProperty("os.name"))) {
-            // see EXEC-52 - option must appear after the hostname!
-            cmdLine = CommandLine.parse0("ping 127.0.0.1 -n 10");
-        } else if (OS.isFamilyUnix()) {
-            cmdLine = CommandLine.parse0("ping -c 10 127.0.0.1");
-        } else {
-            System.err.println("The test 'testExec41WithStreams' does not support the following OS : " + System.getProperty("os.name"));
-            return;
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(2 * 1000);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
-        executor.setWatchdog(watchdog);
-        executor.setStreamHandler(pumpStreamHandler);
-        final long startTime = System.currentTimeMillis();
-        try {
-            executor.execute0(cmdLine);
-        } catch (final ExecuteException e) {
-            // nothing to do
-        }
-        final long duration = System.currentTimeMillis() - startTime;
-        System.out.println("Process completed in " + duration + " millis; below is its output");
-        if (watchdog.killedProcess()) {
-            System.out.println("Process timed out and was killed by watchdog.");
-        }
         assertTrue(watchdog.killedProcess(), "The process was killed by the watchdog");
         assertTrue(duration < 9000, "Skipping the Thread.join() did not work");
     }

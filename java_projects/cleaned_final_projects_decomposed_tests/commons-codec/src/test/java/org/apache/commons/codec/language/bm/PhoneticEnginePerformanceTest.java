@@ -120,24 +120,7 @@ public class PhoneticEnginePerformanceTest {
     private static final int LOOP = 80000;
 
     @Test
-    public void test_test0_decomposed()  {
-        final PhoneticEngine engine =
-                PhoneticEngine.PhoneticEngine0(NameType.GENERIC, RuleType.APPROX, true);
-    }
-
-    @Test
-    public void test_test1_decomposed()  {
-        final PhoneticEngine engine =
-                PhoneticEngine.PhoneticEngine0(NameType.GENERIC, RuleType.APPROX, true);
-        final String input = "Angelo";
-        final long startMillis = System.currentTimeMillis();
-        for (int i = 0; i < LOOP; i++) {
-            engine.encode0(input);
-        }
-    }
-
-    @Test
-    public void test_test2_decomposed()  {
+    public void test() {
         final PhoneticEngine engine =
                 PhoneticEngine.PhoneticEngine0(NameType.GENERIC, RuleType.APPROX, true);
         final String input = "Angelo";

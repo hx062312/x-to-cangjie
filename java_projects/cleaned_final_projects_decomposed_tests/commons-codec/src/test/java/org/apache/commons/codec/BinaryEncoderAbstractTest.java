@@ -27,23 +27,13 @@ public abstract class BinaryEncoderAbstractTest {
     protected abstract BinaryEncoder makeEncoder();
 
     @Test
-    public void testEncodeEmpty_test0_decomposed() throws Exception {
-        final BinaryEncoder encoder = makeEncoder();
-    }
-
-    @Test
-    public void testEncodeEmpty_test1_decomposed() throws Exception {
+    public void testEncodeEmpty() throws Exception {
         final BinaryEncoder encoder = makeEncoder();
         encoder.encode(new byte[0]);
     }
 
     @Test
-    public void testEncodeNull_test0_decomposed() throws Exception {
-        final BinaryEncoder encoder = makeEncoder();
-    }
-
-    @Test
-    public void testEncodeNull_test1_decomposed() throws Exception {
+    public void testEncodeNull() throws Exception {
         final BinaryEncoder encoder = makeEncoder();
         try {
             encoder.encode(null);

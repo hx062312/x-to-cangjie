@@ -45,5 +45,4 @@ public class LongClusteredDataGenerator {
          *                arguments are ignored
          */
 
-    
 }

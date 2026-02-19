@@ -26,36 +26,9 @@ public class AdhocTest {
     /**
      * 
      */
-    
-    
-    /**
-     * 
-     */
-    
-    
-
-    /**
-     * 
-     */
-    
- 
-    /**
-     * a test
-     */
-    
-
-    /**
-     * a test
-     */
-    
-
-    /**
-     * a test
-     */
-
     @Test
-    public void testIssue29_test0_decomposed()  {
-        for(int x = 0; x < 64; x++) {
+    public void testIssue29() {
+    	    for(int x = 0; x < 64; x++) {
           int[] a = {2, 3, 4, 5};
           int[] b = new int[90];
           int[] c = new int[a.length];
@@ -71,10 +44,13 @@ public class AdhocTest {
           Assert.assertArrayEquals(a,c);
     	    }
     }
-
+    
+    /**
+     * 
+     */
     @Test
-    public void testIssue29b_test0_decomposed()  {
-        for(int x = 0; x < 64; x++) {
+    public void testIssue29b() {
+    	    for(int x = 0; x < 64; x++) {
           int[] a = {2, 3, 4, 5};
           int[] b = new int[90];
           int[] c = new int[a.length];
@@ -89,10 +65,14 @@ public class AdhocTest {
           Assert.assertArrayEquals(a,c);
     	    }
     }
+    
 
+    /**
+     * 
+     */
     @Test
-    public void testIssue41_test0_decomposed()  {
-        for (int x = 0; x < 64; x++) {
+	public void testIssue41() {
+		for (int x = 0; x < 64; x++) {
 			int[] a = { 2, 3, 4, 5 };
 			int[] b = new int[90];
 			int[] c = new int[a.length];
@@ -110,68 +90,42 @@ public class AdhocTest {
 			codec.headlessUncompress(b, bOffset, len, c, cOffset, a.length, initValue);
 			Assert.assertArrayEquals(a, c);
 		}
-    }
-
+	}
+ 
+    /**
+     * a test
+     */
     @Test
-    public void biggerCompressedArray0_test0_decomposed()  {
-        IntegerCODEC c = new Composition(FastPFOR128.FastPFOR1281(), new VariableByte());
-    }
-
-    @Test
-    public void biggerCompressedArray0_test1_decomposed()  {
-        IntegerCODEC c = new Composition(FastPFOR128.FastPFOR1281(), new VariableByte());
-        assertSymmetry(c, 0, 16384);
-    }
-
-    @Test
-    public void biggerCompressedArray0_test2_decomposed()  {
-        IntegerCODEC c = new Composition(FastPFOR128.FastPFOR1281(), new VariableByte());
-        assertSymmetry(c, 0, 16384);
-        c = new Composition(FastPFOR.FastPFOR1(), new VariableByte());
-    }
-
-    @Test
-    public void biggerCompressedArray0_test3_decomposed()  {
+    public void biggerCompressedArray0() {
+        // No problem: for comparison.
         IntegerCODEC c = new Composition(FastPFOR128.FastPFOR1281(), new VariableByte());
         assertSymmetry(c, 0, 16384);
         c = new Composition(FastPFOR.FastPFOR1(), new VariableByte());
         assertSymmetry(c, 0, 16384);
+
     }
 
+    /**
+     * a test
+     */
     @Test
-    public void biggerCompressedArray1_test0_decomposed()  {
-        IntegerCODEC c = new VariableByte();
-    }
-
-    @Test
-    public void biggerCompressedArray1_test1_decomposed()  {
+    public void biggerCompressedArray1() {
+        // Compressed array is bigger than original, because of VariableByte.
         IntegerCODEC c = new VariableByte();
         assertSymmetry(c, -1);
     }
 
+    /**
+     * a test
+     */
     @Test
-    public void biggerCompressedArray2_test0_decomposed()  {
-        IntegerCODEC c = new Composition(FastPFOR128.FastPFOR1281(), new VariableByte());
-    }
-
-    @Test
-    public void biggerCompressedArray2_test1_decomposed()  {
-        IntegerCODEC c = new Composition(FastPFOR128.FastPFOR1281(), new VariableByte());
-        assertSymmetry(c, 65535, 65535);
-    }
-
-    @Test
-    public void biggerCompressedArray2_test2_decomposed()  {
-        IntegerCODEC c = new Composition(FastPFOR128.FastPFOR1281(), new VariableByte());
-        assertSymmetry(c, 65535, 65535);
-        c = new Composition(FastPFOR.FastPFOR1(), new VariableByte());
-    }
-
-    @Test
-    public void biggerCompressedArray2_test3_decomposed()  {
+    public void biggerCompressedArray2() {
+        // Compressed array is bigger than original, because of Composition.
         IntegerCODEC c = new Composition(FastPFOR128.FastPFOR1281(), new VariableByte());
         assertSymmetry(c, 65535, 65535);
         c = new Composition(FastPFOR.FastPFOR1(), new VariableByte());
         assertSymmetry(c, 65535, 65535);
     }
+
+ 
 }

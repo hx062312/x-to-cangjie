@@ -41,82 +41,39 @@ public class ResourcedTest {
 	 *             bug)
 	 * 
 	 */
-
-    @Test
-    public void IntCompressorTest_test0_decomposed() throws IOException {
-        File f = new File("src/test/resources/integers.txt");
-        System.out.println("loading test data from "+ f.getAbsolutePath());
-        BufferedReader bfr = new BufferedReader(new FileReader(f));
-        String line;
-        ArrayList<Integer> ai = new ArrayList<Integer>();
-        while ((line = bfr.readLine()) != null) {
+	@Test
+	public void IntCompressorTest() throws IOException {
+		// next line requires Java8?
+		// int[] data =
+		// Files.lines(Paths.get("integers.txt")).mapToInt(Integer::parseInt).toArray();
+		File f = new File("src/test/resources/integers.txt");
+		System.out.println("loading test data from "+ f.getAbsolutePath());
+		BufferedReader bfr = new BufferedReader(new FileReader(f));
+		String line;
+		ArrayList<Integer> ai = new ArrayList<Integer>();
+		while ((line = bfr.readLine()) != null) {
 			ai.add(Integer.parseInt(line));
 		}
-    }
-
-    @Test
-    public void IntCompressorTest_test1_decomposed() throws IOException {
-        File f = new File("src/test/resources/integers.txt");
-        System.out.println("loading test data from "+ f.getAbsolutePath());
-        BufferedReader bfr = new BufferedReader(new FileReader(f));
-        String line;
-        ArrayList<Integer> ai = new ArrayList<Integer>();
-        while ((line = bfr.readLine()) != null) {
-			ai.add(Integer.parseInt(line));
-		}
-        bfr.close();
-        int[] data = new int[ai.size()];
-        for (int k = 0; k < data.length; ++k)
+		bfr.close();
+		int[] data = new int[ai.size()];
+		for (int k = 0; k < data.length; ++k)
 			data[k] = ai.get(k).intValue();
-    }
-
-    @Test
-    public void IntCompressorTest_test2_decomposed() throws IOException {
-        File f = new File("src/test/resources/integers.txt");
-        System.out.println("loading test data from "+ f.getAbsolutePath());
-        BufferedReader bfr = new BufferedReader(new FileReader(f));
-        String line;
-        ArrayList<Integer> ai = new ArrayList<Integer>();
-        while ((line = bfr.readLine()) != null) {
-			ai.add(Integer.parseInt(line));
+		ai = null;
+		// finally!
+		{
+			IntegratedIntCompressor iic = new IntegratedIntCompressor(1, null);
+			int[] compressed = iic.compress(data);
+			int[] recovered = iic.uncompress(compressed);
+			Assert.assertArrayEquals(recovered, data);
 		}
-        bfr.close();
-        int[] data = new int[ai.size()];
-        for (int k = 0; k < data.length; ++k)
-			data[k] = ai.get(k).intValue();
-        ai = null;
-        for (SkippableIntegerCODEC C : codecs) {
+		for (SkippableIntegerCODEC C : codecs) {
 			IntCompressor iic = new IntCompressor(0, C);
 			int[] compressed = iic.compress(data);
 			int[] recovered = iic.uncompress(compressed);
 			Assert.assertArrayEquals(recovered, data);
 
 		}
-    }
-
-    @Test
-    public void IntCompressorTest_test3_decomposed() throws IOException {
-        File f = new File("src/test/resources/integers.txt");
-        System.out.println("loading test data from "+ f.getAbsolutePath());
-        BufferedReader bfr = new BufferedReader(new FileReader(f));
-        String line;
-        ArrayList<Integer> ai = new ArrayList<Integer>();
-        while ((line = bfr.readLine()) != null) {
-			ai.add(Integer.parseInt(line));
-		}
-        bfr.close();
-        int[] data = new int[ai.size()];
-        for (int k = 0; k < data.length; ++k)
-			data[k] = ai.get(k).intValue();
-        ai = null;
-        for (SkippableIntegerCODEC C : codecs) {
-			IntCompressor iic = new IntCompressor(0, C);
-			int[] compressed = iic.compress(data);
-			int[] recovered = iic.uncompress(compressed);
-			Assert.assertArrayEquals(recovered, data);
-
-		}
-        for (SkippableIntegerCODEC C : codecs) {
+		for (SkippableIntegerCODEC C : codecs) {
 			if (C instanceof SkippableIntegratedIntegerCODEC) {
 				IntegratedIntCompressor iic = new IntegratedIntCompressor(0, (SkippableIntegratedIntegerCODEC) C);
 				int[] compressed = iic.compress(data);
@@ -125,5 +82,7 @@ public class ResourcedTest {
 			}
 
 		}
-    }
+
+	}
+
 }

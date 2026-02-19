@@ -3,7 +3,7 @@
 # 用法: bash scripts/init_codeql_db.sh <project_name> [source_dir] [output_suffix]
 # 示例:
 #   bash scripts/init_codeql_db.sh maven automated_reduced_projects ""
-#   bash scripts/init_codeql_db.sh maven preprocessed_0 "_preprocessed"
+#   bash scripts/init_codeql_db.sh maven preprocessed_0 ""
 #   bash scripts/init_codeql_db.sh maven cleaned_final_projects "_transformed"
 #   bash scripts/init_codeql_db.sh maven cleaned_final_projects_decomposed_tests "_decomposed_tests"
 

@@ -130,6 +130,4 @@ public class LongTestUtils {
 	public static String longToBinaryWithLeading(long l) {
 		return String.format("%64s", Long.toBinaryString(l)).replace(' ', '0');
 	}
-
-    
 }

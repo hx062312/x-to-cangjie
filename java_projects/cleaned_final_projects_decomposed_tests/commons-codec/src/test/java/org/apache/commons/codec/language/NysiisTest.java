@@ -57,13 +57,25 @@ public class NysiisTest extends StringEncoderAbstractTest<Nysiis> {
         }
     }
 
-    
+    @Test
+    public void testBran() {
+        encodeAll(new String[] {"Brian", "Brown", "Brun"}, "BRAN");
+    }
 
-    
+    @Test
+    public void testCap() {
+        this.encodeAll(new String[] {"Capp", "Cope", "Copp", "Kipp"}, "CAP");
+    }
 
-    
+    @Test
+    public void testDad() {
+        this.encodeAll(new String[] {"Dent"}, "DAD");
+    }
 
-    
+    @Test
+    public void testDan() {
+        this.encodeAll(new String[] {"Dane", "Dean", "Dionne"}, "DAN");
+    }
 
     /**
      * Tests data gathered from around the internet.
@@ -72,88 +84,9 @@ public class NysiisTest extends StringEncoderAbstractTest<Nysiis> {
      *     href="http://www.dropby.com/NYSIISTextStrings.html">http://www.dropby.com/NYSIISTextStrings.html</a>
      * @throws EncoderException for some failure scenarios
      */
-    
-
-    
-
-    /**
-     * Tests data gathered from around the internets.
-     *
-     * @throws EncoderException for some failure scenarios
-     */
-    
-
-    /**
-     * Tests rule 1: Translate first characters of name: MAC → MCC, KN → N, K → C, PH, PF → FF, SCH
-     * → SSS
-     *
-     * @throws EncoderException for some failure scenarios
-     */
-    
-
-    /**
-     * Tests rule 2: Translate last characters of name: EE → Y, IE → Y, DT, RT, RD, NT, ND → D
-     *
-     * @throws EncoderException for some failure scenarios
-     */
-    
-
-    /**
-     * Tests rule 4.1: EV → AF else A, E, I, O, U → A
-     *
-     * @throws EncoderException for some failure scenarios
-     */
-    
-
-    /**
-     * Tests rule 4.2: Q → G, Z → S, M → N
-     *
-     * @throws EncoderException for some failure scenarios
-     */
-    
-
-    /**
-     * Tests rule 5: If last character is S, remove it.
-     *
-     * @throws EncoderException for some failure scenarios
-     */
-    
-
-    /**
-     * Tests rule 6: If last characters are AY, replace with Y.
-     *
-     * @throws EncoderException for some failure scenarios
-     */
-    
-
-    /**
-     * Tests rule 7: If last character is A, remove it.
-     *
-     * @throws EncoderException for some failure scenarios
-     */
-
     @Test
-    public void testBran_test0_decomposed()  {
-        encodeAll(new String[] {"Brian", "Brown", "Brun"}, "BRAN");
-    }
+    public void testDropBy() throws EncoderException {
 
-    @Test
-    public void testCap_test0_decomposed()  {
-        this.encodeAll(new String[] {"Capp", "Cope", "Copp", "Kipp"}, "CAP");
-    }
-
-    @Test
-    public void testDad_test0_decomposed()  {
-        this.encodeAll(new String[] {"Dent"}, "DAD");
-    }
-
-    @Test
-    public void testDan_test0_decomposed()  {
-        this.encodeAll(new String[] {"Dane", "Dean", "Dionne"}, "DAN");
-    }
-
-    @Test
-    public void testDropBy_test0_decomposed() throws EncoderException {
         this.assertEncodings(
                 new String[] {"MACINTOSH", "MCANT"},
                 new String[] {"KNUTH", "NAT"}, // Original: NNAT; modified: NATH
@@ -185,12 +118,17 @@ public class NysiisTest extends StringEncoderAbstractTest<Nysiis> {
     }
 
     @Test
-    public void testFal_test0_decomposed()  {
+    public void testFal() {
         this.encodeAll(new String[] {"Phil"}, "FAL");
     }
 
+    /**
+     * Tests data gathered from around the internets.
+     *
+     * @throws EncoderException for some failure scenarios
+     */
     @Test
-    public void testOthers_test0_decomposed() throws EncoderException {
+    public void testOthers() throws EncoderException {
         this.assertEncodings(
                 new String[] {"O'Daniel", "ODANAL"},
                 new String[] {"O'Donnel", "ODANAL"},
@@ -200,8 +138,14 @@ public class NysiisTest extends StringEncoderAbstractTest<Nysiis> {
                 new String[] {"FUZZY", "FASY"});
     }
 
+    /**
+     * Tests rule 1: Translate first characters of name: MAC → MCC, KN → N, K → C, PH, PF → FF, SCH
+     * → SSS
+     *
+     * @throws EncoderException for some failure scenarios
+     */
     @Test
-    public void testRule1_test0_decomposed() throws EncoderException {
+    public void testRule1() throws EncoderException {
         this.assertEncodings(
                 new String[] {"MACX", "MCX"},
                 new String[] {"KNX", "NX"},
@@ -211,8 +155,13 @@ public class NysiisTest extends StringEncoderAbstractTest<Nysiis> {
                 new String[] {"SCHX", "SX"});
     }
 
+    /**
+     * Tests rule 2: Translate last characters of name: EE → Y, IE → Y, DT, RT, RD, NT, ND → D
+     *
+     * @throws EncoderException for some failure scenarios
+     */
     @Test
-    public void testRule2_test0_decomposed() throws EncoderException {
+    public void testRule2() throws EncoderException {
         this.assertEncodings(
                 new String[] {"XEE", "XY"},
                 new String[] {"XIE", "XY"},
@@ -223,8 +172,13 @@ public class NysiisTest extends StringEncoderAbstractTest<Nysiis> {
                 new String[] {"XND", "XD"});
     }
 
+    /**
+     * Tests rule 4.1: EV → AF else A, E, I, O, U → A
+     *
+     * @throws EncoderException for some failure scenarios
+     */
     @Test
-    public void testRule4Dot1_test0_decomposed() throws EncoderException {
+    public void testRule4Dot1() throws EncoderException {
         this.assertEncodings(
                 new String[] {"XEV", "XAF"},
                 new String[] {"XAX", "XAX"},
@@ -234,39 +188,59 @@ public class NysiisTest extends StringEncoderAbstractTest<Nysiis> {
                 new String[] {"XUX", "XAX"});
     }
 
+    /**
+     * Tests rule 4.2: Q → G, Z → S, M → N
+     *
+     * @throws EncoderException for some failure scenarios
+     */
     @Test
-    public void testRule4Dot2_test0_decomposed() throws EncoderException {
+    public void testRule4Dot2() throws EncoderException {
         this.assertEncodings(
                 new String[] {"XQ", "XG"}, new String[] {"XZ", "X"}, new String[] {"XM", "XN"});
     }
 
+    /**
+     * Tests rule 5: If last character is S, remove it.
+     *
+     * @throws EncoderException for some failure scenarios
+     */
     @Test
-    public void testRule5_test0_decomposed() throws EncoderException {
+    public void testRule5() throws EncoderException {
         this.assertEncodings(new String[] {"XS", "X"}, new String[] {"XSS", "X"});
     }
 
+    /**
+     * Tests rule 6: If last characters are AY, replace with Y.
+     *
+     * @throws EncoderException for some failure scenarios
+     */
     @Test
-    public void testRule6_test0_decomposed() throws EncoderException {
-        this.assertEncodings(new String[] {"XAY", "XY"}, new String[] {"XAYS", "XY"});
+    public void testRule6() throws EncoderException {
+        this.assertEncodings(new String[] {"XAY", "XY"}, new String[] {"XAYS", "XY"}); // Rules 5, 6
+    }
+
+    /**
+     * Tests rule 7: If last character is A, remove it.
+     *
+     * @throws EncoderException for some failure scenarios
+     */
+    @Test
+    public void testRule7() throws EncoderException {
+        this.assertEncodings(new String[] {"XA", "X"}, new String[] {"XAS", "X"}); // Rules 5, 7
     }
 
     @Test
-    public void testRule7_test0_decomposed() throws EncoderException {
-        this.assertEncodings(new String[] {"XA", "X"}, new String[] {"XAS", "X"});
-    }
-
-    @Test
-    public void testSnad_test0_decomposed()  {
+    public void testSnad() {
         this.encodeAll(new String[] {"Schmidt"}, "SNAD");
     }
 
     @Test
-    public void testSnat_test0_decomposed()  {
+    public void testSnat() {
         this.encodeAll(new String[] {"Smith", "Schmit"}, "SNAT");
     }
 
     @Test
-    public void testSpecialBranches_test0_decomposed()  {
+    public void testSpecialBranches() {
         this.encodeAll(new String[] {"Kobwick"}, "CABWAC");
         this.encodeAll(new String[] {"Kocher"}, "CACAR");
         this.encodeAll(new String[] {"Fesca"}, "FASC");
@@ -277,31 +251,14 @@ public class NysiisTest extends StringEncoderAbstractTest<Nysiis> {
     }
 
     @Test
-    public void testTranan_test0_decomposed()  {
+    public void testTranan() {
         this.encodeAll(new String[] {"Trueman", "Truman"}, "TRANAN");
     }
 
     @Test
-    public void testTrueVariant_test0_decomposed()  {
+    public void testTrueVariant() {
         final Nysiis encoder = new Nysiis(true);
-    }
 
-    @Test
-    public void testTrueVariant_test1_decomposed()  {
-        final Nysiis encoder = new Nysiis(true);
-        final String encoded = encoder.encode1("WESTERLUND");
-    }
-
-    @Test
-    public void testTrueVariant_test2_decomposed()  {
-        final Nysiis encoder = new Nysiis(true);
-        final String encoded = encoder.encode1("WESTERLUND");
-        Assert.assertTrue(encoded.length() <= 6);
-    }
-
-    @Test
-    public void testTrueVariant_test3_decomposed()  {
-        final Nysiis encoder = new Nysiis(true);
         final String encoded = encoder.encode1("WESTERLUND");
         Assert.assertTrue(encoded.length() <= 6);
         Assert.assertEquals("WASTAR", encoded);

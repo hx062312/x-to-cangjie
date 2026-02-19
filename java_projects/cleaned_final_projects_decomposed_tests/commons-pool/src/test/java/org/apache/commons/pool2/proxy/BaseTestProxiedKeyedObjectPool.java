@@ -63,232 +63,80 @@ public abstract class BaseTestProxiedKeyedObjectPool {
     protected abstract ProxySource<TestObject> getproxySource();
 
     @Test
-    public void testAccessAfterInvalidate_test0_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-    }
-
-    @Test
-    public void testAccessAfterInvalidate_test1_decomposed() throws Exception {
+    public void testAccessAfterInvalidate() throws Exception {
         final TestObject obj = pool.borrowObject(KEY1);
         assertNotNull(obj);
-        obj.setData(DATA1);
-    }
 
-    @Test
-    public void testAccessAfterInvalidate_test2_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
         obj.setData(DATA1);
         assertEquals(DATA1, obj.getData());
-    }
 
-    @Test
-    public void testAccessAfterInvalidate_test3_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
-        obj.setData(DATA1);
-        assertEquals(DATA1, obj.getData());
         pool.invalidateObject0(KEY1, obj);
+
+        assertNotNull(obj);
+
+        assertThrows(IllegalStateException.class, obj::getData);
     }
 
     @Test
-    public void testAccessAfterInvalidate_test4_decomposed() throws Exception {
+    public void testAccessAfterReturn() throws Exception {
         final TestObject obj = pool.borrowObject(KEY1);
         assertNotNull(obj);
+
         obj.setData(DATA1);
         assertEquals(DATA1, obj.getData());
-        pool.invalidateObject0(KEY1, obj);
+
+        pool.returnObject(KEY1, obj);
+
         assertNotNull(obj);
         assertThrows(IllegalStateException.class, obj::getData);
     }
 
     @Test
-    public void testAccessAfterReturn_test0_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-    }
-
-    @Test
-    public void testAccessAfterReturn_test1_decomposed() throws Exception {
+    public void testBorrowObject() throws Exception {
         final TestObject obj = pool.borrowObject(KEY1);
         assertNotNull(obj);
-        obj.setData(DATA1);
-    }
 
-    @Test
-    public void testAccessAfterReturn_test2_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
         obj.setData(DATA1);
         assertEquals(DATA1, obj.getData());
-    }
 
-    @Test
-    public void testAccessAfterReturn_test3_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
-        obj.setData(DATA1);
-        assertEquals(DATA1, obj.getData());
         pool.returnObject(KEY1, obj);
     }
 
     @Test
-    public void testAccessAfterReturn_test4_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
-        obj.setData(DATA1);
-        assertEquals(DATA1, obj.getData());
-        pool.returnObject(KEY1, obj);
-        assertNotNull(obj);
-        assertThrows(IllegalStateException.class, obj::getData);
-    }
-
-    @Test
-    public void testBorrowObject_test0_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-    }
-
-    @Test
-    public void testBorrowObject_test1_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
-        obj.setData(DATA1);
-    }
-
-    @Test
-    public void testBorrowObject_test2_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
-        obj.setData(DATA1);
-        assertEquals(DATA1, obj.getData());
-    }
-
-    @Test
-    public void testBorrowObject_test3_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
-        obj.setData(DATA1);
-        assertEquals(DATA1, obj.getData());
-        pool.returnObject(KEY1, obj);
-    }
-
-    @Test
-    public void testPassThroughMethods01_test0_decomposed() throws Exception {
-        assertEquals(0, pool.getNumActive0());
-    }
-
-    @Test
-    public void testPassThroughMethods01_test1_decomposed() throws Exception {
+    public void testPassThroughMethods01() throws Exception {
         assertEquals(0, pool.getNumActive0());
         assertEquals(0, pool.getNumIdle0());
-    }
 
-    @Test
-    public void testPassThroughMethods01_test2_decomposed() throws Exception {
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(0, pool.getNumIdle0());
         pool.addObject(KEY1);
-    }
 
-    @Test
-    public void testPassThroughMethods01_test3_decomposed() throws Exception {
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(0, pool.getNumIdle0());
-        pool.addObject(KEY1);
-        assertEquals(0, pool.getNumActive0());
-    }
-
-    @Test
-    public void testPassThroughMethods01_test4_decomposed() throws Exception {
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(0, pool.getNumIdle0());
-        pool.addObject(KEY1);
         assertEquals(0, pool.getNumActive0());
         assertEquals(1, pool.getNumIdle0());
-    }
 
-    @Test
-    public void testPassThroughMethods01_test5_decomposed() throws Exception {
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(0, pool.getNumIdle0());
-        pool.addObject(KEY1);
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(1, pool.getNumIdle0());
         pool.clear0();
-    }
 
-    @Test
-    public void testPassThroughMethods01_test6_decomposed() throws Exception {
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(0, pool.getNumIdle0());
-        pool.addObject(KEY1);
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(1, pool.getNumIdle0());
-        pool.clear0();
-        assertEquals(0, pool.getNumActive0());
-    }
-
-    @Test
-    public void testPassThroughMethods01_test7_decomposed() throws Exception {
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(0, pool.getNumIdle0());
-        pool.addObject(KEY1);
-        assertEquals(0, pool.getNumActive0());
-        assertEquals(1, pool.getNumIdle0());
-        pool.clear0();
         assertEquals(0, pool.getNumActive0());
         assertEquals(0, pool.getNumIdle0());
     }
 
     @Test
-    public void testPassThroughMethods02_test0_decomposed()  {
-        pool.close();
-    }
-
-    @Test
-    public void testPassThroughMethods02_test1_decomposed()  {
+    public void testPassThroughMethods02() {
         pool.close();
         assertThrows(IllegalStateException.class, () -> pool.addObject(KEY1));
     }
 
     @Test
-    public void testUsageTracking_test0_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-    }
-
-    @Test
-    public void testUsageTracking_test1_decomposed() throws Exception {
+    public void testUsageTracking() throws Exception {
         final TestObject obj = pool.borrowObject(KEY1);
         assertNotNull(obj);
-        obj.setData(DATA1);
-    }
 
-    @Test
-    public void testUsageTracking_test2_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
         obj.setData(DATA1);
+
         Thread.sleep(ABANDONED_TIMEOUT_SECS.plusSeconds(2).toMillis());
-        pool.borrowObject(KEY1);
-    }
 
-    @Test
-    public void testUsageTracking_test3_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
-        obj.setData(DATA1);
-        Thread.sleep(ABANDONED_TIMEOUT_SECS.plusSeconds(2).toMillis());
         pool.borrowObject(KEY1);
+
         final String logOutput = log.getBuffer().toString();
-    }
 
-    @Test
-    public void testUsageTracking_test4_decomposed() throws Exception {
-        final TestObject obj = pool.borrowObject(KEY1);
-        assertNotNull(obj);
-        obj.setData(DATA1);
-        Thread.sleep(ABANDONED_TIMEOUT_SECS.plusSeconds(2).toMillis());
-        pool.borrowObject(KEY1);
-        final String logOutput = log.getBuffer().toString();
         assertTrue(logOutput.contains("Pooled object created"));
         assertTrue(logOutput.contains("The last code to use this object was"));
     }

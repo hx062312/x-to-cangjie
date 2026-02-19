@@ -176,6 +176,4 @@ public class Waiter {
         } catch (final InterruptedException e) {
         }
     }
-
-    
 }

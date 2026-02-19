@@ -46,87 +46,21 @@ public class Exec44Test {
      *
      * @throws Exception the test failed
      */
-
     @Test
-    public void testExec44_test0_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
-    }
+    public void testExec44() throws Exception {
 
-    @Test
-    public void testExec44_test1_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
-        final DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
-    }
-
-    @Test
-    public void testExec44_test2_decomposed() throws Exception {
         final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
         final DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
         final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(ExecuteWatchdog.INFINITE_TIMEOUT);
-    }
 
-    @Test
-    public void testExec44_test3_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
-        final DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(ExecuteWatchdog.INFINITE_TIMEOUT);
-        exec.setWatchdog(watchdog);
-    }
-
-    @Test
-    public void testExec44_test4_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
-        final DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(ExecuteWatchdog.INFINITE_TIMEOUT);
         exec.setWatchdog(watchdog);
         exec.execute1(cl, resultHandler);
-    }
 
-    @Test
-    public void testExec44_test5_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
-        final DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(ExecuteWatchdog.INFINITE_TIMEOUT);
-        exec.setWatchdog(watchdog);
-        exec.execute1(cl, resultHandler);
+        // wait for script to run
         Thread.sleep(5000);
         assertTrue(watchdog.isWatching(), "The watchdog is watching the process");
-    }
 
-    @Test
-    public void testExec44_test6_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
-        final DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(ExecuteWatchdog.INFINITE_TIMEOUT);
-        exec.setWatchdog(watchdog);
-        exec.execute1(cl, resultHandler);
-        Thread.sleep(5000);
-        assertTrue(watchdog.isWatching(), "The watchdog is watching the process");
-        watchdog.destroyProcess();
-    }
-
-    @Test
-    public void testExec44_test7_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
-        final DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(ExecuteWatchdog.INFINITE_TIMEOUT);
-        exec.setWatchdog(watchdog);
-        exec.execute1(cl, resultHandler);
-        Thread.sleep(5000);
-        assertTrue(watchdog.isWatching(), "The watchdog is watching the process");
-        watchdog.destroyProcess();
-        assertTrue(watchdog.killedProcess(), "The watchdog has killed the process");
-    }
-
-    @Test
-    public void testExec44_test8_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, foreverTestScript, null);
-        final DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(ExecuteWatchdog.INFINITE_TIMEOUT);
-        exec.setWatchdog(watchdog);
-        exec.execute1(cl, resultHandler);
-        Thread.sleep(5000);
-        assertTrue(watchdog.isWatching(), "The watchdog is watching the process");
+        // terminate it
         watchdog.destroyProcess();
         assertTrue(watchdog.killedProcess(), "The watchdog has killed the process");
         assertFalse(watchdog.isWatching(), "The watchdog is no longer watching any process");

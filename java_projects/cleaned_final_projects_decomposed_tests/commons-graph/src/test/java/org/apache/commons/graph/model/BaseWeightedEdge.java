@@ -31,6 +31,4 @@ public final class BaseWeightedEdge<W>
     public W map(BaseLabeledWeightedEdge<W> edge) {
         return edge.getWeight();
     }
-
-    
 }

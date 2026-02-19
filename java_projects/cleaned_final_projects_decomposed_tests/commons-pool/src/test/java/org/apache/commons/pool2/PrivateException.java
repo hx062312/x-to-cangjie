@@ -24,6 +24,4 @@ public class PrivateException extends RuntimeException {
     public PrivateException(final String message) {
         super(message);
     }
-
-    
 }

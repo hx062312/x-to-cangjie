@@ -30,54 +30,28 @@ public class EncoderExceptionTest {
     private static final Throwable t = new Exception();
 
     @Test
-    public void testConstructor0_test0_decomposed()  {
-        final EncoderException e = new EncoderException(null, null);
-    }
-
-    @Test
-    public void testConstructor0_test1_decomposed()  {
+    public void testConstructor0() {
         final EncoderException e = new EncoderException(null, null);
         assertNull(e.getMessage());
         assertNull(e.getCause());
     }
 
     @Test
-    public void testConstructorString_test0_decomposed()  {
-        final EncoderException e = new EncoderException(MSG, null);
-    }
-
-    @Test
-    public void testConstructorString_test1_decomposed()  {
+    public void testConstructorString() {
         final EncoderException e = new EncoderException(MSG, null);
         assertEquals(MSG, e.getMessage());
         assertNull(e.getCause());
     }
 
     @Test
-    public void testConstructorStringThrowable_test0_decomposed()  {
-        final EncoderException e = new EncoderException(MSG, t);
-    }
-
-    @Test
-    public void testConstructorStringThrowable_test1_decomposed()  {
+    public void testConstructorStringThrowable() {
         final EncoderException e = new EncoderException(MSG, t);
         assertEquals(MSG, e.getMessage());
         assertEquals(t, e.getCause());
     }
 
     @Test
-    public void testConstructorThrowable_test0_decomposed()  {
-        final EncoderException e = new EncoderException("java.lang.Exception", t);
-    }
-
-    @Test
-    public void testConstructorThrowable_test1_decomposed()  {
-        final EncoderException e = new EncoderException("java.lang.Exception", t);
-        assertEquals(t.getClass().getName(), e.getMessage());
-    }
-
-    @Test
-    public void testConstructorThrowable_test2_decomposed()  {
+    public void testConstructorThrowable() {
         final EncoderException e = new EncoderException("java.lang.Exception", t);
         assertEquals(t.getClass().getName(), e.getMessage());
         assertEquals(t, e.getCause());

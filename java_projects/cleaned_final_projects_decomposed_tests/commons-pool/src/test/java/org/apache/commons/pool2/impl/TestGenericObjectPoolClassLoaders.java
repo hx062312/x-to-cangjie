@@ -41,6 +41,4 @@ public class TestGenericObjectPoolClassLoaders {
 
     private static final URL BASE_URL =
             TestGenericObjectPoolClassLoaders.class.getResource("/org/apache/commons/pool2/impl/");
-
-    
 }

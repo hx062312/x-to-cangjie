@@ -1,5 +1,2 @@
 package org.apache.commons.exec;
-public class StandAloneTest {
-
-    
-}
+public class StandAloneTest {}

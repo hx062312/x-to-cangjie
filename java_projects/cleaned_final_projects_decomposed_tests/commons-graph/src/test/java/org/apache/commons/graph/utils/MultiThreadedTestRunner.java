@@ -57,6 +57,4 @@ public class MultiThreadedTestRunner {
             throw this.exceptions.get(0);
         }
     }
-
-    
 }

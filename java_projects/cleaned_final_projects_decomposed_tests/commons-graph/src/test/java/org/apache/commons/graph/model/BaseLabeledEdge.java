@@ -68,6 +68,4 @@ public class BaseLabeledEdge implements Serializable {
     public String toString() {
         return format("%s()", getLabel());
     }
-
-    
 }

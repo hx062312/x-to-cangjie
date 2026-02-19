@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 public class JansiLoaderTest {
 
     @Test
-    public void testLoadJansi_test0_decomposed() {
+    public void testLoadJansi() {
         JansiLoader.initialize();
     }
 }

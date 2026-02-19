@@ -32,9 +32,8 @@ public class UtilsTest {
      * We could make the constructor private but there does not seem to be a point to jumping
      * through extra code hoops to restrict instantiation right now.
      */
-
     @Test
-    public void testConstructor_test0_decomposed()  {
+    public void testConstructor() {
         new Utils();
     }
 }

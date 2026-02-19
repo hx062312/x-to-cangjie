@@ -61,6 +61,4 @@ public class SleepingObjectFactory {
         Waiter.sleepQuietly(30);
         return true;
     }
-
-    
 }

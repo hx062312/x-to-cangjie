@@ -70,29 +70,19 @@ public class TestPoolImplUtils {
     private static final Instant INSTANT_0 = Instant.ofEpochMilli(0);
 
     @Test
-    public void testFactoryTypeNotSimple_test0_decomposed()  {
-        final Class<?> result = PoolImplUtils.getFactoryType(NotSimpleFactory.class);
-    }
-
-    @Test
-    public void testFactoryTypeNotSimple_test1_decomposed()  {
+    public void testFactoryTypeNotSimple() {
         final Class<?> result = PoolImplUtils.getFactoryType(NotSimpleFactory.class);
         assertEquals(Long.class, result);
     }
 
     @Test
-    public void testFactoryTypeSimple_test0_decomposed()  {
-        final Class<?> result = PoolImplUtils.getFactoryType(SimpleFactory.class);
-    }
-
-    @Test
-    public void testFactoryTypeSimple_test1_decomposed()  {
+    public void testFactoryTypeSimple() {
         final Class<?> result = PoolImplUtils.getFactoryType(SimpleFactory.class);
         assertEquals(String.class, result);
     }
 
     @Test
-    public void testMaxInstants_test0_decomposed()  {
+    public void testMaxInstants() {
         assertEquals(INSTANT_1, PoolImplUtils.max(INSTANT_0, INSTANT_1));
         assertEquals(INSTANT_1, PoolImplUtils.max(INSTANT_1, INSTANT_0));
         assertEquals(INSTANT_1, PoolImplUtils.max(INSTANT_1, INSTANT_1));
@@ -100,7 +90,7 @@ public class TestPoolImplUtils {
     }
 
     @Test
-    public void testMinInstants_test0_decomposed()  {
+    public void testMinInstants() {
         assertEquals(INSTANT_0, PoolImplUtils.min(INSTANT_0, INSTANT_1));
         assertEquals(INSTANT_0, PoolImplUtils.min(INSTANT_1, INSTANT_0));
         assertEquals(INSTANT_1, PoolImplUtils.min(INSTANT_1, INSTANT_1));
@@ -108,7 +98,7 @@ public class TestPoolImplUtils {
     }
 
     @Test
-    public void testToChronoUnit_test0_decomposed()  {
+    public void testToChronoUnit() {
         assertEquals(ChronoUnit.NANOS, PoolImplUtils.toChronoUnit(TimeUnit.NANOSECONDS));
         assertEquals(ChronoUnit.MICROS, PoolImplUtils.toChronoUnit(TimeUnit.MICROSECONDS));
         assertEquals(ChronoUnit.MILLIS, PoolImplUtils.toChronoUnit(TimeUnit.MILLISECONDS));
@@ -119,7 +109,7 @@ public class TestPoolImplUtils {
     }
 
     @Test
-    public void testToDuration_test0_decomposed()  {
+    public void testToDuration() {
         assertEquals(Duration.ZERO, PoolImplUtils.toDuration(0, TimeUnit.MILLISECONDS));
         assertEquals(Duration.ofMillis(1), PoolImplUtils.toDuration(1, TimeUnit.MILLISECONDS));
         for (final TimeUnit tu : TimeUnit.values()) {

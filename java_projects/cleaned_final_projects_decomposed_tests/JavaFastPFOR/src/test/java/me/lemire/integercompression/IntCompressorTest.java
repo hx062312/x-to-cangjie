@@ -35,18 +35,8 @@ public class IntCompressorTest {
     /**
      * 
      */
-    
-    /**
-     * 
-     */
-    
-
-    /**
-     * 
-     */
-
     @Test
-    public void basicTest_test0_decomposed()  {
+    public void basicTest() {
         for (int N = 1; N <= 10000; N *= 10) {
             int[] orig = new int[N];
             for (int k = 0; k < N; k++)
@@ -57,36 +47,13 @@ public class IntCompressorTest {
                 Assert.assertArrayEquals(back, orig);
             }
         }
-    }
 
-    @Test
-    public void superSimpleExample_test0_decomposed()  {
-        IntegratedIntCompressor iic = new IntegratedIntCompressor(1, null);
     }
-
+    /**
+     * 
+     */
     @Test
-    public void superSimpleExample_test1_decomposed()  {
-        IntegratedIntCompressor iic = new IntegratedIntCompressor(1, null);
-        int[] data = new int[2342351];
-        for(int k = 0; k < data.length; ++k)
-          data[k] = k;
-        System.out.println("Compressing "+data.length+" integers using friendly interface");
-        int[] compressed = iic.compress(data);
-    }
-
-    @Test
-    public void superSimpleExample_test2_decomposed()  {
-        IntegratedIntCompressor iic = new IntegratedIntCompressor(1, null);
-        int[] data = new int[2342351];
-        for(int k = 0; k < data.length; ++k)
-          data[k] = k;
-        System.out.println("Compressing "+data.length+" integers using friendly interface");
-        int[] compressed = iic.compress(data);
-        int[] recov = iic.uncompress(compressed);
-    }
-
-    @Test
-    public void superSimpleExample_test3_decomposed()  {
+    public void superSimpleExample() {
         IntegratedIntCompressor iic = new IntegratedIntCompressor(1, null);
         int[] data = new int[2342351];
         for(int k = 0; k < data.length; ++k)
@@ -98,8 +65,11 @@ public class IntCompressorTest {
         if(!Arrays.equals(recov,data)) throw new RuntimeException("bug");
     }
 
+    /**
+     * 
+     */
     @Test
-    public void basicIntegratedTest_test0_decomposed()  {
+    public void basicIntegratedTest() {
         for (int N = 1; N <= 10000; N *= 10) {
             int[] orig = new int[N];
             for (int k = 0; k < N; k++)

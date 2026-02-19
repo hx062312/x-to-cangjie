@@ -29,6 +29,4 @@ public final class EdgeLabelMapper implements Mapper<BaseLabeledWeightedEdge<Dou
     public String map(BaseLabeledWeightedEdge<Double> input) {
         return input.getLabel();
     }
-
-    
 }

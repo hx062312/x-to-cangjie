@@ -109,6 +109,4 @@ public class VisitTracker<K> {
         validateCount++;
         return true;
     }
-
-    
 }

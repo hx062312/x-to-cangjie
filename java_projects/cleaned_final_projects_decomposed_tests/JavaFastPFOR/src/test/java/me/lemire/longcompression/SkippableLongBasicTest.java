@@ -31,20 +31,8 @@ public class SkippableLongBasicTest {
     /**
      * 
      */
-    
-
-    
-    /**
-     * 
-     */
-    
-
-    /**
-     * 
-     */
-
     @Test
-    public void consistentTest_test0_decomposed()  {
+    public void consistentTest() {
         int N = 4096;
         long[] data = new long[N];
         long[] rev = new long[N];
@@ -77,8 +65,12 @@ public class SkippableLongBasicTest {
         }
     }
 
+    
+    /**
+     * 
+     */
     @Test
-    public void varyingLengthTest_test0_decomposed()  {
+    public void varyingLengthTest() {
         int N = 4096;
         long[] data = new long[N];
         for (int k = 0; k < N; ++k)
@@ -103,8 +95,11 @@ public class SkippableLongBasicTest {
         }
     }
 
+    /**
+     * 
+     */
     @Test
-    public void varyingLengthTest2_test0_decomposed()  {
+    public void varyingLengthTest2() {
         int N = 128;
         long[] data = new long[N];
         data[127] = -1;
@@ -145,4 +140,6 @@ public class SkippableLongBasicTest {
 
         }
     }
+
+
 }

@@ -34,7 +34,7 @@ public class TestTrackedUse {
     }
 
     @Test
-    public void testDefaultGetLastUsedInstant_test0_decomposed()  {
+    public void testDefaultGetLastUsedInstant() {
         assertEquals(Instant.ofEpochMilli(1), new DefaultTrackedUse().getLastUsedInstant());
     }
 }

@@ -48,19 +48,50 @@ public class DeltaZigzagEncodingTest {
     /**
      * 
      */
-    
+    @Test
+    public void checkZigzagEncode() {
+        DeltaZigzagEncoding.Encoder e = new DeltaZigzagEncoding.Encoder(0);
+        assertEquals(0, zigzagEncode(e, 0));
+        assertEquals(2, zigzagEncode(e, 1));
+        assertEquals(4, zigzagEncode(e, 2));
+        assertEquals(6, zigzagEncode(e, 3));
+        assertEquals(1, zigzagEncode(e, -1));
+        assertEquals(3, zigzagEncode(e, -2));
+        assertEquals(5, zigzagEncode(e, -3));
+    }
     /**
      * 
      */
-    
+    @Test
+    public void checkZigzagDecoder() {
+        DeltaZigzagEncoding.Decoder d = new DeltaZigzagEncoding.Decoder(0);
+        assertEquals( 0, zigzagDecode(d, 0));
+        assertEquals(-1, zigzagDecode(d, 1));
+        assertEquals( 1, zigzagDecode(d, 2));
+        assertEquals(-2, zigzagDecode(d, 3));
+        assertEquals( 2, zigzagDecode(d, 4));
+        assertEquals(-3, zigzagDecode(d, 5));
+    }
     /**
      * 
      */
-    
+    @Test
+    public void checkEncodeSimple() {
+        DeltaZigzagEncoding.Encoder e = new DeltaZigzagEncoding.Encoder(0);
+        checkEncode(e,
+            new int[]{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 },
+            new int[]{ 0, 2, 2, 2, 2, 2, 2, 2, 2, 2 });
+    }
     /**
      * 
      */
-    
+    @Test
+    public void checkDecodeSimple() {
+        DeltaZigzagEncoding.Decoder d = new DeltaZigzagEncoding.Decoder(0);
+        checkDecode(d,
+            new int[]{ 0, 2, 2, 2, 2, 2, 2, 2, 2, 2 },
+            new int[]{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+    }
 
     protected static class SpotChecker {
 
@@ -81,73 +112,8 @@ public class DeltaZigzagEncodingTest {
     /**
      * 
      */
-
     @Test
-    public void checkZigzagEncode_test0_decomposed()  {
-        DeltaZigzagEncoding.Encoder e = new DeltaZigzagEncoding.Encoder(0);
-    }
-
-    @Test
-    public void checkZigzagEncode_test1_decomposed()  {
-        DeltaZigzagEncoding.Encoder e = new DeltaZigzagEncoding.Encoder(0);
-        assertEquals(0, zigzagEncode(e, 0));
-        assertEquals(2, zigzagEncode(e, 1));
-        assertEquals(4, zigzagEncode(e, 2));
-        assertEquals(6, zigzagEncode(e, 3));
-        assertEquals(1, zigzagEncode(e, -1));
-        assertEquals(3, zigzagEncode(e, -2));
-        assertEquals(5, zigzagEncode(e, -3));
-    }
-
-    @Test
-    public void checkZigzagDecoder_test0_decomposed()  {
-        DeltaZigzagEncoding.Decoder d = new DeltaZigzagEncoding.Decoder(0);
-    }
-
-    @Test
-    public void checkZigzagDecoder_test1_decomposed()  {
-        DeltaZigzagEncoding.Decoder d = new DeltaZigzagEncoding.Decoder(0);
-        assertEquals( 0, zigzagDecode(d, 0));
-        assertEquals(-1, zigzagDecode(d, 1));
-        assertEquals( 1, zigzagDecode(d, 2));
-        assertEquals(-2, zigzagDecode(d, 3));
-        assertEquals( 2, zigzagDecode(d, 4));
-        assertEquals(-3, zigzagDecode(d, 5));
-    }
-
-    @Test
-    public void checkEncodeSimple_test0_decomposed()  {
-        DeltaZigzagEncoding.Encoder e = new DeltaZigzagEncoding.Encoder(0);
-    }
-
-    @Test
-    public void checkEncodeSimple_test1_decomposed()  {
-        DeltaZigzagEncoding.Encoder e = new DeltaZigzagEncoding.Encoder(0);
-        checkEncode(e,
-            new int[]{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 },
-            new int[]{ 0, 2, 2, 2, 2, 2, 2, 2, 2, 2 });
-    }
-
-    @Test
-    public void checkDecodeSimple_test0_decomposed()  {
-        DeltaZigzagEncoding.Decoder d = new DeltaZigzagEncoding.Decoder(0);
-    }
-
-    @Test
-    public void checkDecodeSimple_test1_decomposed()  {
-        DeltaZigzagEncoding.Decoder d = new DeltaZigzagEncoding.Decoder(0);
-        checkDecode(d,
-            new int[]{ 0, 2, 2, 2, 2, 2, 2, 2, 2, 2 },
-            new int[]{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 });
-    }
-
-    @Test
-    public void checkSpots_test0_decomposed()  {
-        SpotChecker c = new SpotChecker();
-    }
-
-    @Test
-    public void checkSpots_test1_decomposed()  {
+    public void checkSpots() {
         SpotChecker c = new SpotChecker();
         c.check(0);
         c.check(1);

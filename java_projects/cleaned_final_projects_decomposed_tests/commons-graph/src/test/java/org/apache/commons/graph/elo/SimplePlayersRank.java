@@ -41,6 +41,4 @@ final class SimplePlayersRank implements PlayersRank<String> {
     public void updateRanking(String player, Double ranking) {
         ranks.put(player, ranking);
     }
-
-    
 }

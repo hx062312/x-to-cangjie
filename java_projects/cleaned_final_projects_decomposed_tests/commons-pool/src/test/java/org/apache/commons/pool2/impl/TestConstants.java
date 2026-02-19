@@ -30,6 +30,4 @@ public class TestConstants {
 
     /** A duration of one millisecond. */
     public static final Duration ONE_MILLISECOND_DURATION = Duration.ofMillis(1);
-
-    
 }

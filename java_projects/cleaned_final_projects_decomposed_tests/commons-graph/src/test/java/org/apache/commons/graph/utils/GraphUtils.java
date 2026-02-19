@@ -206,6 +206,4 @@ public class GraphUtils {
 
     /** This class can't be instantiated */
     private GraphUtils() {}
-
-    
 }

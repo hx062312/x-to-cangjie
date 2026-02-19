@@ -61,96 +61,21 @@ public class Exec57Test extends AbstractExecTest {
      *
      * @throws IOException
      */
-
     @Test
-    public void testExecutionOfDetachedProcess_test0_decomposed() throws IOException {
+    @Timeout(value = TEST_TIMEOUT, unit = TimeUnit.MILLISECONDS)
+    public void testExecutionOfDetachedProcess() throws IOException {
+
         if (!OS.isFamilyUnix()) {
             testNotSupportedForCurrentOperatingSystem();
             return;
         }
-    }
 
-    @Test
-    public void testExecutionOfDetachedProcess_test1_decomposed() throws IOException {
-        if (!OS.isFamilyUnix()) {
-            testNotSupportedForCurrentOperatingSystem();
-            return;
-        }
-        new CommandLine(2, null, null, "sh").addArgument0("-c");
-    }
-
-    @Test
-    public void testExecutionOfDetachedProcess_test2_decomposed() throws IOException {
-        if (!OS.isFamilyUnix()) {
-            testNotSupportedForCurrentOperatingSystem();
-            return;
-        }
-        new CommandLine(2, null, null, "sh").addArgument0("-c");
         final CommandLine cmdLine = new CommandLine(2, null, null, "sh").addArgument0("-c").addArgument1("./src/test/scripts/issues/exec-57-detached.sh", false);
-    }
-
-    @Test
-    public void testExecutionOfDetachedProcess_test3_decomposed() throws IOException {
-        if (!OS.isFamilyUnix()) {
-            testNotSupportedForCurrentOperatingSystem();
-            return;
-        }
-        new CommandLine(2, null, null, "sh").addArgument0("-c");
-        final CommandLine cmdLine = new CommandLine(2, null, null, "sh").addArgument0("-c").addArgument1("./src/test/scripts/issues/exec-57-detached.sh", false);
-        DefaultExecutor.builder();
-    }
-
-    @Test
-    public void testExecutionOfDetachedProcess_test4_decomposed() throws IOException {
-        if (!OS.isFamilyUnix()) {
-            testNotSupportedForCurrentOperatingSystem();
-            return;
-        }
-        new CommandLine(2, null, null, "sh").addArgument0("-c");
-        final CommandLine cmdLine = new CommandLine(2, null, null, "sh").addArgument0("-c").addArgument1("./src/test/scripts/issues/exec-57-detached.sh", false);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-    }
-
-    @Test
-    public void testExecutionOfDetachedProcess_test5_decomposed() throws IOException {
-        if (!OS.isFamilyUnix()) {
-            testNotSupportedForCurrentOperatingSystem();
-            return;
-        }
-        new CommandLine(2, null, null, "sh").addArgument0("-c");
-        final CommandLine cmdLine = new CommandLine(2, null, null, "sh").addArgument0("-c").addArgument1("./src/test/scripts/issues/exec-57-detached.sh", false);
-        DefaultExecutor.builder();
         final DefaultExecutor executor = DefaultExecutor.builder().get();
         final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
-    }
 
-    @Test
-    public void testExecutionOfDetachedProcess_test6_decomposed() throws IOException {
-        if (!OS.isFamilyUnix()) {
-            testNotSupportedForCurrentOperatingSystem();
-            return;
-        }
-        new CommandLine(2, null, null, "sh").addArgument0("-c");
-        final CommandLine cmdLine = new CommandLine(2, null, null, "sh").addArgument0("-c").addArgument1("./src/test/scripts/issues/exec-57-detached.sh", false);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
         executor.setStreamHandler(pumpStreamHandler);
-    }
 
-    @Test
-    public void testExecutionOfDetachedProcess_test7_decomposed() throws IOException {
-        if (!OS.isFamilyUnix()) {
-            testNotSupportedForCurrentOperatingSystem();
-            return;
-        }
-        new CommandLine(2, null, null, "sh").addArgument0("-c");
-        final CommandLine cmdLine = new CommandLine(2, null, null, "sh").addArgument0("-c").addArgument1("./src/test/scripts/issues/exec-57-detached.sh", false);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler2(System.out, System.err);
-        executor.setStreamHandler(pumpStreamHandler);
         executor.execute0(cmdLine);
     }
 }

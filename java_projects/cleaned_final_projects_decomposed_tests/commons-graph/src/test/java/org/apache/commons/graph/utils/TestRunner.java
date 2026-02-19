@@ -36,6 +36,4 @@ public abstract class TestRunner implements Runnable {
     public void setTestRunner(MultiThreadedTestRunner runner) {
         this.runner = runner;
     }
-
-    
 }

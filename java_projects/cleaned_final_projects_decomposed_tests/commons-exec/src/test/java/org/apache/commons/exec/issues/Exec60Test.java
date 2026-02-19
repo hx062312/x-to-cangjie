@@ -83,6 +83,4 @@ public class Exec60Test extends AbstractExecTest {
         assertTrue(processTerminatedCounter > 0, "Not a single process terminated on its own");
         assertTrue(watchdogKilledProcessCounter > 0, "Not a single process was killed by the watch dog");
     }
-
-    
 }

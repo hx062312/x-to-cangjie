@@ -57,6 +57,4 @@ public abstract class TestObjectPool {
      */
     protected abstract ObjectPool<Object> makeEmptyPool(PooledObjectFactory<Object> factory)
             throws UnsupportedOperationException;
-
-    
 }

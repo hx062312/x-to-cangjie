@@ -25,6 +25,4 @@ public class AllocateDirectHexTest extends HexTest {
     protected ByteBuffer allocate(final int capacity) {
         return ByteBuffer.allocateDirect(capacity);
     }
-
-    
 }

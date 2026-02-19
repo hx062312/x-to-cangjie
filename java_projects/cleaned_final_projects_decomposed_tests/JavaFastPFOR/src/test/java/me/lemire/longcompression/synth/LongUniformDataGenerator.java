@@ -107,5 +107,4 @@ public LongUniformDataGenerator(int constructorId, final int seed) {
 
         Random rand = new Random();
 
-    
 }

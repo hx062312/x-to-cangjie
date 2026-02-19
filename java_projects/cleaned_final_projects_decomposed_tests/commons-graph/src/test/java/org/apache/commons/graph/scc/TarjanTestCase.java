@@ -44,35 +44,21 @@ import java.util.Set;
 public final class TarjanTestCase {
 
     @Test
-    public void testEmptyGraph_test0_decomposed()  {
+    public void testEmptyGraph() {
         DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>> graph =
                 new DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>>();
-        findStronglyConnectedComponent(graph);
-    }
 
-    @Test
-    public void testEmptyGraph_test1_decomposed()  {
-        DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>> graph =
-                new DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>>();
-        findStronglyConnectedComponent(graph);
         findStronglyConnectedComponent(graph).applyingTarjan();
     }
 
     @Test(expected = NullPointerException.class)
-    public void testNullGraph_test0_decomposed()  {
+    public void testNullGraph() {
         DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>> graph = null;
-        findStronglyConnectedComponent(graph);
-    }
-
-    @Test(expected = NullPointerException.class)
-    public void testNullGraph_test1_decomposed()  {
-        DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>> graph = null;
-        findStronglyConnectedComponent(graph);
         findStronglyConnectedComponent(graph).applyingTarjan();
     }
 
     @Test
-    public void testSparse_test0_decomposed()  {
+    public void testSparse() {
         DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>> graph =
                 newDirectedMutableGraph(
                         new AbstractGraphConnection<
@@ -88,77 +74,17 @@ public final class TarjanTestCase {
                                 addVertex(new BaseLabeledVertex("F"));
                             }
                         });
-    }
 
-    @Test
-    public void testSparse_test1_decomposed()  {
-        DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>> graph =
-                newDirectedMutableGraph(
-                        new AbstractGraphConnection<
-                                BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>>() {
-
-                            @Override
-                            public void connect0() {
-                                addVertex(new BaseLabeledVertex("A"));
-                                addVertex(new BaseLabeledVertex("B"));
-                                addVertex(new BaseLabeledVertex("C"));
-                                addVertex(new BaseLabeledVertex("D"));
-                                addVertex(new BaseLabeledVertex("E"));
-                                addVertex(new BaseLabeledVertex("F"));
-                            }
-                        });
         final int expected = 6;
-        findStronglyConnectedComponent(graph);
-    }
 
-    @Test
-    public void testSparse_test2_decomposed()  {
-        DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>> graph =
-                newDirectedMutableGraph(
-                        new AbstractGraphConnection<
-                                BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>>() {
-
-                            @Override
-                            public void connect0() {
-                                addVertex(new BaseLabeledVertex("A"));
-                                addVertex(new BaseLabeledVertex("B"));
-                                addVertex(new BaseLabeledVertex("C"));
-                                addVertex(new BaseLabeledVertex("D"));
-                                addVertex(new BaseLabeledVertex("E"));
-                                addVertex(new BaseLabeledVertex("F"));
-                            }
-                        });
-        final int expected = 6;
-        findStronglyConnectedComponent(graph);
         Set<Set<BaseLabeledVertex>> actual = findStronglyConnectedComponent(graph).applyingTarjan();
-    }
 
-    @Test
-    public void testSparse_test3_decomposed()  {
-        DirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>> graph =
-                newDirectedMutableGraph(
-                        new AbstractGraphConnection<
-                                BaseLabeledVertex, BaseLabeledWeightedEdge<Integer>>() {
-
-                            @Override
-                            public void connect0() {
-                                addVertex(new BaseLabeledVertex("A"));
-                                addVertex(new BaseLabeledVertex("B"));
-                                addVertex(new BaseLabeledVertex("C"));
-                                addVertex(new BaseLabeledVertex("D"));
-                                addVertex(new BaseLabeledVertex("E"));
-                                addVertex(new BaseLabeledVertex("F"));
-                            }
-                        });
-        final int expected = 6;
-        findStronglyConnectedComponent(graph);
-        Set<Set<BaseLabeledVertex>> actual = findStronglyConnectedComponent(graph).applyingTarjan();
         assertEquals(actual.size(), expected);
     }
 
-    @Ignore
     @Test
-    public void verifyHasStronglyConnectedComponents_test18_decomposed()  {
+    @Ignore // TODO - for time being ignoring it.
+    public void verifyHasStronglyConnectedComponents() {
         final BaseLabeledVertex a = new BaseLabeledVertex("A");
         final BaseLabeledVertex b = new BaseLabeledVertex("B");
         final BaseLabeledVertex c = new BaseLabeledVertex("C");
@@ -167,6 +93,7 @@ public final class TarjanTestCase {
         final BaseLabeledVertex f = new BaseLabeledVertex("F");
         final BaseLabeledVertex g = new BaseLabeledVertex("G");
         final BaseLabeledVertex h = new BaseLabeledVertex("H");
+
         DirectedMutableGraph<BaseLabeledVertex, BaseLabeledEdge> graph =
                 newDirectedMutableGraph(
                         new AbstractGraphConnection<BaseLabeledVertex, BaseLabeledEdge>() {
@@ -194,6 +121,7 @@ public final class TarjanTestCase {
                                 addEdge(new BaseLabeledEdge("H -> C")).from(h).to(c);
                             }
                         });
+
         Set<Set<BaseLabeledVertex>> expected = new HashSet<Set<BaseLabeledVertex>>();
         Set<BaseLabeledVertex> scc1 = new HashSet<BaseLabeledVertex>();
         Collections.addAll(scc1, a, b, d);
@@ -204,8 +132,9 @@ public final class TarjanTestCase {
         Set<BaseLabeledVertex> scc3 = new HashSet<BaseLabeledVertex>();
         Collections.addAll(scc3, g, h, c);
         expected.add(scc3);
-        findStronglyConnectedComponent(graph);
+
         Set<Set<BaseLabeledVertex>> actual = findStronglyConnectedComponent(graph).applyingTarjan();
+
         assertFalse(actual.isEmpty());
         assertEquals(expected, actual);
     }

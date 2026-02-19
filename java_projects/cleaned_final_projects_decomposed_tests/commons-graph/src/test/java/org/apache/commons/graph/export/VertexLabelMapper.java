@@ -29,6 +29,4 @@ public final class VertexLabelMapper implements Mapper<BaseLabeledVertex, String
     public String map(BaseLabeledVertex input) {
         return input.getLabel();
     }
-
-    
 }

@@ -31,56 +31,38 @@ public class PureJavaCrc32CTest {
 
     private final byte[] data = new byte[32];
 
-    
+    @Test
+    public void testZeros() {
+        Arrays.fill(data, (byte) 0);
+        check(0x8a9136aa); // aa 36 91 8a
+    }
 
-    
+    @Test
+    public void testOnes() {
+        Arrays.fill(data, (byte) 0xFF);
+        check(0x62a8ab43); // 43 ab a8 62
+    }
 
-    
+    @Test
+    public void testIncreasing() {
+        for (int i = 0; i < data.length; i++) {
+            data[i] = (byte) i;
+        }
+        check(0x46dd794e); // 4e 79 dd 46
+    }
 
-    
+    @Test
+    public void testDecreasing() {
+        for (int i = 0; i < data.length; i++) {
+            data[i] = (byte) (31 - i);
+        }
+        check(0x113fdb5c); // 5c db 3f 11
+    }
 
     private void check(final int expected) {
         crc.reset();
         crc.update0(data, 0, data.length);
         final int actual = (int) crc.getValue();
         Assert.assertEquals(Integer.toHexString(expected), Integer.toHexString(actual));
-    }
-
-    @Test
-    public void testZeros_test0_decomposed()  {
-        Arrays.fill(data, (byte) 0);
-    }
-
-    @Test
-    public void testZeros_test1_decomposed()  {
-        Arrays.fill(data, (byte) 0);
-        check(0x8a9136aa);
-    }
-
-    @Test
-    public void testOnes_test0_decomposed()  {
-        Arrays.fill(data, (byte) 0xFF);
-    }
-
-    @Test
-    public void testOnes_test1_decomposed()  {
-        Arrays.fill(data, (byte) 0xFF);
-        check(0x62a8ab43);
-    }
-
-    @Test
-    public void testIncreasing_test0_decomposed()  {
-        for (int i = 0; i < data.length; i++) {
-            data[i] = (byte) i;
-        }
-        check(0x46dd794e);
-    }
-
-    @Test
-    public void testDecreasing_test0_decomposed()  {
-        for (int i = 0; i < data.length; i++) {
-            data[i] = (byte) (31 - i);
-        }
-        check(0x113fdb5c);
     }
 }

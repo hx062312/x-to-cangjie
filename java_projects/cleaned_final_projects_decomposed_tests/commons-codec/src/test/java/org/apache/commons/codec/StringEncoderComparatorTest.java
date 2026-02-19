@@ -31,15 +31,10 @@ import java.util.List;
 public class StringEncoderComparatorTest {
 
     @Test
-    public void testComparatorWithSoundex_test0_decomposed() throws Exception {
+    public void testComparatorWithSoundex() throws Exception {
         final StringEncoderComparator sCompare =
                 new StringEncoderComparator(0, new Soundex(3, false, null, null));
-    }
 
-    @Test
-    public void testComparatorWithSoundex_test1_decomposed() throws Exception {
-        final StringEncoderComparator sCompare =
-                new StringEncoderComparator(0, new Soundex(3, false, null, null));
         assertEquals(
                 "O'Brien and O'Brian didn't come out with "
                         + "the same Soundex, something must be wrong here",
@@ -47,21 +42,21 @@ public class StringEncoderComparatorTest {
                 sCompare.compare("O'Brien", "O'Brian"));
     }
 
+    @SuppressWarnings("unchecked") // cannot easily avoid this warning
     @Test
-    public void testComparatorWithDoubleMetaphone_test0_decomposed() throws Exception {
+    public void testComparatorWithDoubleMetaphone() throws Exception {
         final StringEncoderComparator sCompare =
                 new StringEncoderComparator(0, new DoubleMetaphone());
-    }
 
-    @Test
-    public void testComparatorWithDoubleMetaphone_test1_decomposed() throws Exception {
-        final StringEncoderComparator sCompare =
-                new StringEncoderComparator(0, new DoubleMetaphone());
         final String[] testArray = {"Jordan", "Sosa", "Prior", "Pryor"};
         final List<String> testList = Arrays.asList(testArray);
+
         final String[] controlArray = {"Jordan", "Prior", "Pryor", "Sosa"};
-        Collections.sort(testList, sCompare);
+
+        Collections.sort(testList, sCompare); // unchecked
+
         final String[] resultArray = testList.toArray(new String[0]);
+
         for (int i = 0; i < resultArray.length; i++) {
             assertEquals(
                     "Result Array not Equal to Control Array at index: " + i,
@@ -71,22 +66,10 @@ public class StringEncoderComparatorTest {
     }
 
     @Test
-    public void testComparatorWithDoubleMetaphoneAndInvalidInput_test0_decomposed() throws Exception {
+    public void testComparatorWithDoubleMetaphoneAndInvalidInput() throws Exception {
         final StringEncoderComparator sCompare =
                 new StringEncoderComparator(0, new DoubleMetaphone());
-    }
 
-    @Test
-    public void testComparatorWithDoubleMetaphoneAndInvalidInput_test1_decomposed() throws Exception {
-        final StringEncoderComparator sCompare =
-                new StringEncoderComparator(0, new DoubleMetaphone());
-        final int compare = sCompare.compare(Double.valueOf(3.0d), Long.valueOf(3));
-    }
-
-    @Test
-    public void testComparatorWithDoubleMetaphoneAndInvalidInput_test2_decomposed() throws Exception {
-        final StringEncoderComparator sCompare =
-                new StringEncoderComparator(0, new DoubleMetaphone());
         final int compare = sCompare.compare(Double.valueOf(3.0d), Long.valueOf(3));
         assertEquals(
                 "Trying to compare objects that make no sense to the underlying encoder should"

@@ -194,6 +194,4 @@ public class WaiterFactory<K> {
         doWait(validateLatency);
         return obj.getObject().isValid();
     }
-
-    
 }

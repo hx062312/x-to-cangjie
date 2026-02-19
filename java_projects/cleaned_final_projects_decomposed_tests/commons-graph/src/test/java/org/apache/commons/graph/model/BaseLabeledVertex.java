@@ -67,6 +67,4 @@ public class BaseLabeledVertex implements Serializable {
     public String toString() {
         return format("{ %s }", label);
     }
-
-    
 }

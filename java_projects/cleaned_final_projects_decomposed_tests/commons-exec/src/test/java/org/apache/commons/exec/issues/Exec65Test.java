@@ -51,359 +51,71 @@ public class Exec65Test extends AbstractExecTest {
      *
      * @TODO Fix tests for Windows & Linux
      */
-    
+    @Test
+    @Timeout(value = TEST_TIMEOUT, unit = TimeUnit.MILLISECONDS)
+    public void testExec65WithSleepUsingShellScript() throws Exception {
+        assumeTrue(OS.isFamilyMac());
+        final DefaultExecutor executor = DefaultExecutor.builder().get();
+        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
+        executor.setWatchdog(ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT));
+        final CommandLine command = new CommandLine(1, null, resolveTestScript0("sleep"), null);
+
+        assertThrows(ExecuteException.class, () -> executor.execute0(command));
+    }
 
     /**
      * This is the original code snippet from the JIRA to show that killing the process actually works with JDK only but it does not re-direct any streams.
      */
-    
+    @Test
+    @Timeout(value = TEST_TIMEOUT, unit = TimeUnit.MILLISECONDS)
+    public void testExec65WithSleepUsingShellScriptAndJDKOnly() throws Exception {
+
+        final Process process = Runtime.getRuntime().exec(resolveTestScript0("sleep").getAbsolutePath());
+        Thread.sleep(WATCHDOG_TIMEOUT);
+
+        process.destroy();
+
+        process.waitFor();
+
+        assertTrue(process.exitValue() != 0);
+    }
 
     /**
      * Please note that this tests make assumptions about the environment. It assumes that user "root" exists and that the current user is not a "sudoer"
      * already (thereby requiring a password).
      */
-
     @Test
-    public void testExec65WithSleepUsingShellScript_test0_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-    }
-
-    @Test
-    public void testExec65WithSleepUsingShellScript_test1_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-        DefaultExecutor.builder();
-    }
-
-    @Test
-    public void testExec65WithSleepUsingShellScript_test2_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-        DefaultExecutor.builder();
+    @Timeout(value = TEST_TIMEOUT, unit = TimeUnit.MILLISECONDS)
+    public void testExec65WithSudoUsingShellScript() throws Exception {
+        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
+                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
+        // TODO Fails on GitHub
+        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
+        if (!OS.isFamilyUnix()) {
+            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
+        }
         final DefaultExecutor executor = DefaultExecutor.builder().get();
-    }
-
-    @Test
-    public void testExec65WithSleepUsingShellScript_test3_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-    }
-
-    @Test
-    public void testExec65WithSleepUsingShellScript_test4_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
-    }
-
-    @Test
-    public void testExec65WithSleepUsingShellScript_test5_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
-        ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-    }
-
-    @Test
-    public void testExec65WithSleepUsingShellScript_test6_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
-        ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
+        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in));
         executor.setWatchdog(ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT));
-    }
+        final CommandLine command = new CommandLine(1, null, resolveTestScript1("issues", "exec-65"), null);
 
-    @Test
-    public void testExec65WithSleepUsingShellScript_test7_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
-        ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        executor.setWatchdog(ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT));
-        final CommandLine command = new CommandLine(1, null, resolveTestScript0("sleep"), null);
-    }
-
-    @Test
-    public void testExec65WithSleepUsingShellScript_test8_decomposed() throws Exception {
-        assumeTrue(OS.isFamilyMac());
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
-        ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        executor.setWatchdog(ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT));
-        final CommandLine command = new CommandLine(1, null, resolveTestScript0("sleep"), null);
         assertThrows(ExecuteException.class, () -> executor.execute0(command));
     }
 
     @Test
-    public void testExec65WithSleepUsingShellScriptAndJDKOnly_test0_decomposed() throws Exception {
-        final Process process = Runtime.getRuntime().exec(resolveTestScript0("sleep").getAbsolutePath());
-    }
+    @Timeout(value = TEST_TIMEOUT, unit = TimeUnit.MILLISECONDS)
+    public void testExec65WitSleepUsingSleepCommandDirectly() throws Exception {
 
-    @Test
-    public void testExec65WithSleepUsingShellScriptAndJDKOnly_test1_decomposed() throws Exception {
-        final Process process = Runtime.getRuntime().exec(resolveTestScript0("sleep").getAbsolutePath());
-        Thread.sleep(WATCHDOG_TIMEOUT);
-        process.destroy();
-        process.waitFor();
-    }
-
-    @Test
-    public void testExec65WithSleepUsingShellScriptAndJDKOnly_test2_decomposed() throws Exception {
-        final Process process = Runtime.getRuntime().exec(resolveTestScript0("sleep").getAbsolutePath());
-        Thread.sleep(WATCHDOG_TIMEOUT);
-        process.destroy();
-        process.waitFor();
-        assertTrue(process.exitValue() != 0);
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test0_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test1_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        DefaultExecutor.builder();
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test2_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test3_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler3(System.out,System.err,System.in);
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test4_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler3(System.out,System.err,System.in);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in));
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test5_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler3(System.out,System.err,System.in);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in));
-        ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test6_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler3(System.out,System.err,System.in);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in));
-        ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        executor.setWatchdog(ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT));
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test7_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler3(System.out,System.err,System.in);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in));
-        ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        executor.setWatchdog(ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT));
-        final CommandLine command = new CommandLine(1, null, resolveTestScript1("issues", "exec-65"), null);
-    }
-
-    @Test
-    public void testExec65WithSudoUsingShellScript_test8_decomposed() throws Exception {
-        assumeFalse(new File(".").getAbsolutePath().contains("travis"),
-                "Test is skipped on travis, because we have to be a sudoer to make the other tests pass.");
-        assumeTrue(System.getenv("GITHUB_WORKFLOW") == null);
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        PumpStreamHandler.PumpStreamHandler3(System.out,System.err,System.in);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in));
-        ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        executor.setWatchdog(ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT));
-        final CommandLine command = new CommandLine(1, null, resolveTestScript1("issues", "exec-65"), null);
-        assertThrows(ExecuteException.class, () -> executor.execute0(command));
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test0_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test1_decomposed() throws Exception {
         if (!OS.isFamilyUnix()) {
             throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
         }
         final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test2_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        DefaultExecutor.builder();
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test3_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test4_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final CommandLine command = new CommandLine(2, null, null, "sleep");
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test5_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        DefaultExecutor.builder();
         final DefaultExecutor executor = DefaultExecutor.builder().get();
         final CommandLine command = new CommandLine(2, null, null, "sleep");
         command.addArgument0("60");
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test6_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final CommandLine command = new CommandLine(2, null, null, "sleep");
-        command.addArgument0("60");
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test7_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final CommandLine command = new CommandLine(2, null, null, "sleep");
-        command.addArgument0("60");
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
-    }
-
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test8_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final CommandLine command = new CommandLine(2, null, null, "sleep");
-        command.addArgument0("60");
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
         executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
         executor.setWatchdog(watchdog);
-    }
 
-    @Test
-    public void testExec65WitSleepUsingSleepCommandDirectly_test9_decomposed() throws Exception {
-        if (!OS.isFamilyUnix()) {
-            throw new ExecuteException(testNotSupportedForCurrentOperatingSystem(), 0, null);
-        }
-        final ExecuteWatchdog watchdog = ExecuteWatchdog.ExecuteWatchdog0(WATCHDOG_TIMEOUT);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        final CommandLine command = new CommandLine(2, null, null, "sleep");
-        command.addArgument0("60");
-        PumpStreamHandler.PumpStreamHandler2(System.out,System.err);
-        executor.setStreamHandler(PumpStreamHandler.PumpStreamHandler2(System.out, System.err));
-        executor.setWatchdog(watchdog);
         assertThrows(ExecuteException.class, () -> executor.execute0(command));
     }
 }

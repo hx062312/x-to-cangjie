@@ -252,7 +252,7 @@ public class MurmurHash2Test {
     static final String text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
 
     @Test
-    public void testHash32ByteArrayIntInt_test0_decomposed()  {
+    public void testHash32ByteArrayIntInt() {
         for (int i = 0; i < input.length; i++) {
             final int hash = MurmurHash2.hash320(input[i], input[i].length, 0x71b4954d);
             if (hash != results32_seed[i]) {
@@ -265,7 +265,7 @@ public class MurmurHash2Test {
     }
 
     @Test
-    public void testHash32ByteArrayInt_test0_decomposed()  {
+    public void testHash32ByteArrayInt() {
         for (int i = 0; i < input.length; i++) {
             final int hash = MurmurHash2.hash321(input[i], input[i].length);
             if (hash != results32_standard[i]) {
@@ -278,36 +278,19 @@ public class MurmurHash2Test {
     }
 
     @Test
-    public void testHash32String_test0_decomposed()  {
-        final int hash = MurmurHash2.hash322(text);
-    }
-
-    @Test
-    public void testHash32String_test1_decomposed()  {
+    public void testHash32String() {
         final int hash = MurmurHash2.hash322(text);
         Assert.assertEquals(0xb3bf597e, hash);
     }
 
     @Test
-    public void testHash32StringIntInt_test0_decomposed()  {
-        text.length();
-    }
-
-    @Test
-    public void testHash32StringIntInt_test1_decomposed()  {
-        text.length();
-        final int hash = MurmurHash2.hash323(text, 2, text.length() - 4);
-    }
-
-    @Test
-    public void testHash32StringIntInt_test2_decomposed()  {
-        text.length();
+    public void testHash32StringIntInt() {
         final int hash = MurmurHash2.hash323(text, 2, text.length() - 4);
         Assert.assertEquals(0x4d666d90, hash);
     }
 
     @Test
-    public void testHash64ByteArrayIntInt_test0_decomposed()  {
+    public void testHash64ByteArrayIntInt() {
         for (int i = 0; i < input.length; i++) {
             final long hash = MurmurHash2.hash640(input[i], input[i].length, 0x344d1f5c);
             if (hash != results64_seed[i]) {
@@ -321,7 +304,7 @@ public class MurmurHash2Test {
     }
 
     @Test
-    public void testHash64ByteArrayInt_test0_decomposed()  {
+    public void testHash64ByteArrayInt() {
         for (int i = 0; i < input.length; i++) {
             final long hash = MurmurHash2.hash641(input[i], input[i].length);
             if (hash != results64_standard[i]) {
@@ -335,30 +318,13 @@ public class MurmurHash2Test {
     }
 
     @Test
-    public void testHash64String_test0_decomposed()  {
-        final long hash = MurmurHash2.hash642(text);
-    }
-
-    @Test
-    public void testHash64String_test1_decomposed()  {
+    public void testHash64String() {
         final long hash = MurmurHash2.hash642(text);
         Assert.assertEquals(0x0920e0c1b7eeb261L, hash);
     }
 
     @Test
-    public void testHash64StringIntInt_test0_decomposed()  {
-        text.length();
-    }
-
-    @Test
-    public void testHash64StringIntInt_test1_decomposed()  {
-        text.length();
-        final long hash = MurmurHash2.hash643(text, 2, text.length() - 4);
-    }
-
-    @Test
-    public void testHash64StringIntInt_test2_decomposed()  {
-        text.length();
+    public void testHash64StringIntInt() {
         final long hash = MurmurHash2.hash643(text, 2, text.length() - 4);
         Assert.assertEquals(0xa8b33145194985a2L, hash);
     }

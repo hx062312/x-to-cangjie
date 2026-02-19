@@ -40,55 +40,9 @@ public class Exec33Test {
     private final File testScript = TestUtil.resolveScriptForOS(testDir + "/test");
 
     @Test
-    public void testExec33_test0_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, testScript, null);
-    }
-
-    @Test
-    public void testExec33_test1_decomposed() throws Exception {
+    public void testExec33() throws Exception {
         final CommandLine cl = new CommandLine(1, null, testScript, null);
         final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in);
-    }
-
-    @Test
-    public void testExec33_test2_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, testScript, null);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in);
-        DefaultExecutor.builder();
-    }
-
-    @Test
-    public void testExec33_test3_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, testScript, null);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-    }
-
-    @Test
-    public void testExec33_test4_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, testScript, null);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        executor.setStreamHandler(pumpStreamHandler);
-    }
-
-    @Test
-    public void testExec33_test5_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, testScript, null);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in);
-        DefaultExecutor.builder();
-        final DefaultExecutor executor = DefaultExecutor.builder().get();
-        executor.setStreamHandler(pumpStreamHandler);
-        final int exitValue = executor.execute0(cl);
-    }
-
-    @Test
-    public void testExec33_test6_decomposed() throws Exception {
-        final CommandLine cl = new CommandLine(1, null, testScript, null);
-        final PumpStreamHandler pumpStreamHandler = PumpStreamHandler.PumpStreamHandler3(System.out, System.err, System.in);
-        DefaultExecutor.builder();
         final DefaultExecutor executor = DefaultExecutor.builder().get();
         executor.setStreamHandler(pumpStreamHandler);
         final int exitValue = executor.execute0(cl);

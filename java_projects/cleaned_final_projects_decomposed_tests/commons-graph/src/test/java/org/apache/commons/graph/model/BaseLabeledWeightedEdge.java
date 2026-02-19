@@ -72,6 +72,4 @@ public class BaseLabeledWeightedEdge<W> extends BaseLabeledEdge {
     public String toString() {
         return format("%s( %s )", getLabel(), weight);
     }
-
-    
 }

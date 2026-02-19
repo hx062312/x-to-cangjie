@@ -1,5 +1,2 @@
 package org.apache.commons.exec;
-public class LogOutputStreamTest {
-
-    
-}
+public class LogOutputStreamTest {}

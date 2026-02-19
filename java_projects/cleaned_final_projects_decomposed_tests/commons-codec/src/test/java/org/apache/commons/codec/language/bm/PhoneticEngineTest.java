@@ -124,24 +124,14 @@ public class PhoneticEngineTest {
     }
 
     @Test(timeout = 10000L)
-    public void testEncode_test0_decomposed()  {
+    public void testEncode() {
         final PhoneticEngine engine =
                 new PhoneticEngine(this.nameType, this.ruleType, this.concat, this.maxPhonemes);
-    }
 
-    @Test(timeout = 10000L)
-    public void testEncode_test1_decomposed()  {
-        final PhoneticEngine engine =
-                new PhoneticEngine(this.nameType, this.ruleType, this.concat, this.maxPhonemes);
         final String phoneticActual = engine.encode0(this.name);
-    }
 
-    @Test(timeout = 10000L)
-    public void testEncode_test2_decomposed()  {
-        final PhoneticEngine engine =
-                new PhoneticEngine(this.nameType, this.ruleType, this.concat, this.maxPhonemes);
-        final String phoneticActual = engine.encode0(this.name);
         assertEquals("phoneme incorrect", this.phoneticExpected, phoneticActual);
+
         if (this.concat) {
             final String[] split = phoneticActual.split("\\|");
             assertTrue(split.length <= this.maxPhonemes);

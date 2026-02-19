@@ -29,6 +29,4 @@ public final class EdgeWeightMapper implements Mapper<BaseLabeledWeightedEdge<Do
     public Double map(BaseLabeledWeightedEdge<Double> input) {
         return input.getWeight();
     }
-
-    
 }

@@ -47,6 +47,4 @@ public class CallStackTest {
         final String stackTrace = writer.toString();
         assertTrue(stackTrace.contains(getClass().getName()));
     }
-
-    
 }

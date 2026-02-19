@@ -1062,92 +1062,13 @@ public class DoubleMetaphoneTest extends StringEncoderAbstractTest<DoubleMetapho
         }
     }
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    /** Example in the original article but failures in this Java impl: */
-    
-
-    
-
-    /** Used to generate the MATCHES array and test possible matches from the FIXTURE array. */
-    
-
-    
-
-    
-
-    
-
-    /** Test setting maximum length */
-    
-
-    public void validateFixture(final String[][] pairs) {
-        if (pairs.length == 0) {
-            fail("Test fixture is empty");
-        }
-        for (int i = 0; i < pairs.length; i++) {
-            if (pairs[i].length != 2) {
-                fail("Error in test fixture in the data array at index " + i);
-            }
-        }
+    @Test
+    public void testCCedilla() {
+        assertTrue(this.getStringEncoder().isDoubleMetaphoneEqual0("\u00e7", "S")); // c-cedilla
     }
 
     @Test
-    public void testCCedilla_test0_decomposed()  {
-        this.getStringEncoder();
-    }
-
-    @Test
-    public void testCCedilla_test1_decomposed()  {
-        this.getStringEncoder();
-        assertTrue(this.getStringEncoder().isDoubleMetaphoneEqual0("\u00e7", "S"));
-    }
-
-    @Test
-    public void testCodec184_test0_decomposed() throws Throwable {
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", false));
-    }
-
-    @Test
-    public void testCodec184_test1_decomposed() throws Throwable {
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", false));
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", true));
-    }
-
-    @Test
-    public void testCodec184_test2_decomposed() throws Throwable {
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", false));
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", true));
-        assertFalse(new DoubleMetaphone().isDoubleMetaphoneEqual1("aa", "", false));
-    }
-
-    @Test
-    public void testCodec184_test3_decomposed() throws Throwable {
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", false));
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", true));
-        assertFalse(new DoubleMetaphone().isDoubleMetaphoneEqual1("aa", "", false));
-        assertFalse(new DoubleMetaphone().isDoubleMetaphoneEqual1("aa", "", true));
-    }
-
-    @Test
-    public void testCodec184_test4_decomposed() throws Throwable {
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", false));
-        assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", true));
-        assertFalse(new DoubleMetaphone().isDoubleMetaphoneEqual1("aa", "", false));
-        assertFalse(new DoubleMetaphone().isDoubleMetaphoneEqual1("aa", "", true));
-        assertFalse(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "aa", false));
-    }
-
-    @Test
-    public void testCodec184_test5_decomposed() throws Throwable {
+    public void testCodec184() throws Throwable {
         assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", false));
         assertTrue(new DoubleMetaphone().isDoubleMetaphoneEqual1("", "", true));
         assertFalse(new DoubleMetaphone().isDoubleMetaphoneEqual1("aa", "", false));
@@ -1157,7 +1078,7 @@ public class DoubleMetaphoneTest extends StringEncoderAbstractTest<DoubleMetapho
     }
 
     @Test
-    public void testDoubleMetaphone_test0_decomposed()  {
+    public void testDoubleMetaphone() {
         assertDoubleMetaphone("TSTN", "testing");
         assertDoubleMetaphone("0", "The");
         assertDoubleMetaphone("KK", "quick");
@@ -1174,26 +1095,7 @@ public class DoubleMetaphoneTest extends StringEncoderAbstractTest<DoubleMetapho
         assertDoubleMetaphone("MKLL", "McClelland");
         assertDoubleMetaphone("SNHS", "san jose");
         assertDoubleMetaphone("SNFP", "xenophobia");
-    }
 
-    @Test
-    public void testDoubleMetaphone_test1_decomposed()  {
-        assertDoubleMetaphone("TSTN", "testing");
-        assertDoubleMetaphone("0", "The");
-        assertDoubleMetaphone("KK", "quick");
-        assertDoubleMetaphone("PRN", "brown");
-        assertDoubleMetaphone("FKS", "fox");
-        assertDoubleMetaphone("JMPT", "jumped");
-        assertDoubleMetaphone("AFR", "over");
-        assertDoubleMetaphone("0", "the");
-        assertDoubleMetaphone("LS", "lazy");
-        assertDoubleMetaphone("TKS", "dogs");
-        assertDoubleMetaphone("MKFR", "MacCafferey");
-        assertDoubleMetaphone("STFN", "Stephan");
-        assertDoubleMetaphone("KSSK", "Kuczewski");
-        assertDoubleMetaphone("MKLL", "McClelland");
-        assertDoubleMetaphone("SNHS", "san jose");
-        assertDoubleMetaphone("SNFP", "xenophobia");
         assertDoubleMetaphoneAlt("TSTN", "testing");
         assertDoubleMetaphoneAlt("T", "The");
         assertDoubleMetaphoneAlt("KK", "quick");
@@ -1217,92 +1119,15 @@ public class DoubleMetaphoneTest extends StringEncoderAbstractTest<DoubleMetapho
     }
 
     @Test
-    public void testEmpty_test0_decomposed()  {
-        this.getStringEncoder();
-    }
-
-    @Test
-    public void testEmpty_test1_decomposed()  {
-        this.getStringEncoder();
+    public void testEmpty() {
         assertNull(this.getStringEncoder().doubleMetaphone0(null));
-    }
-
-    @Test
-    public void testEmpty_test2_decomposed()  {
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(null));
-        this.getStringEncoder();
-    }
-
-    @Test
-    public void testEmpty_test3_decomposed()  {
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(null));
-        this.getStringEncoder();
         assertNull(this.getStringEncoder().doubleMetaphone0(""));
-    }
-
-    @Test
-    public void testEmpty_test4_decomposed()  {
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(null));
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(""));
-        this.getStringEncoder();
-    }
-
-    @Test
-    public void testEmpty_test5_decomposed()  {
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(null));
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(""));
-        this.getStringEncoder();
         assertNull(this.getStringEncoder().doubleMetaphone0(" "));
-    }
-
-    @Test
-    public void testEmpty_test6_decomposed()  {
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(null));
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(""));
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(" "));
-        this.getStringEncoder();
-    }
-
-    @Test
-    public void testEmpty_test7_decomposed()  {
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(null));
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(""));
-        this.getStringEncoder();
-        assertNull(this.getStringEncoder().doubleMetaphone0(" "));
-        this.getStringEncoder();
         assertNull(this.getStringEncoder().doubleMetaphone0("\t\n\r "));
     }
 
     @Test
-    public void testIsDoubleMetaphoneEqualBasic_test0_decomposed()  {
-        final String[][] testFixture = {
-            {"", ""},
-            {"Case", "case"},
-            {"CASE", "Case"},
-            {"caSe", "cAsE"},
-            {"cookie", "quick"},
-            {"quick", "cookie"},
-            {"Brian", "Bryan"},
-            {"Auto", "Otto"},
-            {"Steven", "Stefan"},
-            {"Philipowitz", "Filipowicz"}
-        };
-        doubleMetaphoneEqualTest(testFixture, false);
-    }
-
-    @Test
-    public void testIsDoubleMetaphoneEqualBasic_test1_decomposed()  {
+    public void testIsDoubleMetaphoneEqualBasic() {
         final String[][] testFixture = {
             {"", ""},
             {"Case", "case"},
@@ -1319,79 +1144,19 @@ public class DoubleMetaphoneTest extends StringEncoderAbstractTest<DoubleMetapho
         doubleMetaphoneEqualTest(testFixture, true);
     }
 
+    /** Example in the original article but failures in this Java impl: */
     @Test
-    public void testIsDoubleMetaphoneEqualExtended2_test0_decomposed()  {
+    public void testIsDoubleMetaphoneEqualExtended1() {}
+
+    @Test
+    public void testIsDoubleMetaphoneEqualExtended2() {
         final String[][] testFixture = {{"Jablonski", "Yablonsky"}};
         doubleMetaphoneEqualTest(testFixture, true);
     }
 
+    /** Used to generate the MATCHES array and test possible matches from the FIXTURE array. */
     @Test
-    public void testIsDoubleMetaphoneEqualExtended3_test0_decomposed()  {
-        this.validateFixture(FIXTURE);
-    }
-
-    @Test
-    public void testIsDoubleMetaphoneEqualExtended3_test1_decomposed()  {
-        this.validateFixture(FIXTURE);
-        final StringBuilder failures = new StringBuilder();
-        final StringBuilder matches = new StringBuilder();
-        final String cr = System.lineSeparator();
-        matches.append("private static final String[][] MATCHES = {" + cr);
-    }
-
-    @Test
-    public void testIsDoubleMetaphoneEqualExtended3_test2_decomposed()  {
-        this.validateFixture(FIXTURE);
-        final StringBuilder failures = new StringBuilder();
-        final StringBuilder matches = new StringBuilder();
-        final String cr = System.lineSeparator();
-        matches.append("private static final String[][] MATCHES = {" + cr);
-        int failCount = 0;
-        for (int i = 0; i < FIXTURE.length; i++) {
-            final String name0 = FIXTURE[i][0];
-            final String name1 = FIXTURE[i][1];
-            final boolean match1 =
-                    this.getStringEncoder().isDoubleMetaphoneEqual1(name0, name1, false);
-            final boolean match2 =
-                    this.getStringEncoder().isDoubleMetaphoneEqual1(name0, name1, true);
-            if (!match1 && !match2) {
-                final String failMsg = "[" + i + "] " + name0 + " and " + name1 + cr;
-                failures.append(failMsg);
-                failCount++;
-            } else {
-                matches.append("{\"" + name0 + "\", \"" + name1 + "\"}," + cr);
-            }
-        }
-    }
-
-    @Test
-    public void testIsDoubleMetaphoneEqualExtended3_test3_decomposed()  {
-        this.validateFixture(FIXTURE);
-        final StringBuilder failures = new StringBuilder();
-        final StringBuilder matches = new StringBuilder();
-        final String cr = System.lineSeparator();
-        matches.append("private static final String[][] MATCHES = {" + cr);
-        int failCount = 0;
-        for (int i = 0; i < FIXTURE.length; i++) {
-            final String name0 = FIXTURE[i][0];
-            final String name1 = FIXTURE[i][1];
-            final boolean match1 =
-                    this.getStringEncoder().isDoubleMetaphoneEqual1(name0, name1, false);
-            final boolean match2 =
-                    this.getStringEncoder().isDoubleMetaphoneEqual1(name0, name1, true);
-            if (!match1 && !match2) {
-                final String failMsg = "[" + i + "] " + name0 + " and " + name1 + cr;
-                failures.append(failMsg);
-                failCount++;
-            } else {
-                matches.append("{\"" + name0 + "\", \"" + name1 + "\"}," + cr);
-            }
-        }
-        matches.append("};");
-    }
-
-    @Test
-    public void testIsDoubleMetaphoneEqualExtended3_test4_decomposed()  {
+    public void testIsDoubleMetaphoneEqualExtended3() {
         this.validateFixture(FIXTURE);
         final StringBuilder failures = new StringBuilder();
         final StringBuilder matches = new StringBuilder();
@@ -1418,12 +1183,7 @@ public class DoubleMetaphoneTest extends StringEncoderAbstractTest<DoubleMetapho
     }
 
     @Test
-    public void testIsDoubleMetaphoneEqualWithMATCHES_test0_decomposed()  {
-        this.validateFixture(MATCHES);
-    }
-
-    @Test
-    public void testIsDoubleMetaphoneEqualWithMATCHES_test1_decomposed()  {
+    public void testIsDoubleMetaphoneEqualWithMATCHES() {
         this.validateFixture(MATCHES);
         for (int i = 0; i < MATCHES.length; i++) {
             final String name0 = MATCHES[i][0];
@@ -1439,75 +1199,41 @@ public class DoubleMetaphoneTest extends StringEncoderAbstractTest<DoubleMetapho
     }
 
     @Test
-    public void testIsDoubleMetaphoneNotEqual_test0_decomposed()  {
+    public void testIsDoubleMetaphoneNotEqual() {
         doubleMetaphoneNotEqualTest(false);
         doubleMetaphoneNotEqualTest(true);
     }
 
     @Test
-    public void testNTilde_test0_decomposed()  {
-        this.getStringEncoder();
+    public void testNTilde() {
+        assertTrue(this.getStringEncoder().isDoubleMetaphoneEqual0("\u00f1", "N")); // n-tilde
     }
 
+    /** Test setting maximum length */
     @Test
-    public void testNTilde_test1_decomposed()  {
-        this.getStringEncoder();
-        assertTrue(this.getStringEncoder().isDoubleMetaphoneEqual0("\u00f1", "N"));
-    }
-
-    @Test
-    public void testSetMaxCodeLength_test0_decomposed()  {
+    public void testSetMaxCodeLength() {
         final String value = "jumped";
-        final DoubleMetaphone doubleMetaphone = new DoubleMetaphone();
-    }
 
-    @Test
-    public void testSetMaxCodeLength_test1_decomposed()  {
-        final String value = "jumped";
         final DoubleMetaphone doubleMetaphone = new DoubleMetaphone();
-        assertEquals("Default Max Code Length", 4, doubleMetaphone.getMaxCodeLen());
-    }
 
-    @Test
-    public void testSetMaxCodeLength_test2_decomposed()  {
-        final String value = "jumped";
-        final DoubleMetaphone doubleMetaphone = new DoubleMetaphone();
         assertEquals("Default Max Code Length", 4, doubleMetaphone.getMaxCodeLen());
         assertEquals("Default Primary", "JMPT", doubleMetaphone.doubleMetaphone1(value, false));
         assertEquals("Default Alternate", "AMPT", doubleMetaphone.doubleMetaphone1(value, true));
-    }
 
-    @Test
-    public void testSetMaxCodeLength_test3_decomposed()  {
-        final String value = "jumped";
-        final DoubleMetaphone doubleMetaphone = new DoubleMetaphone();
-        assertEquals("Default Max Code Length", 4, doubleMetaphone.getMaxCodeLen());
-        assertEquals("Default Primary", "JMPT", doubleMetaphone.doubleMetaphone1(value, false));
-        assertEquals("Default Alternate", "AMPT", doubleMetaphone.doubleMetaphone1(value, true));
-        doubleMetaphone.setMaxCodeLen(3);
-    }
-
-    @Test
-    public void testSetMaxCodeLength_test4_decomposed()  {
-        final String value = "jumped";
-        final DoubleMetaphone doubleMetaphone = new DoubleMetaphone();
-        assertEquals("Default Max Code Length", 4, doubleMetaphone.getMaxCodeLen());
-        assertEquals("Default Primary", "JMPT", doubleMetaphone.doubleMetaphone1(value, false));
-        assertEquals("Default Alternate", "AMPT", doubleMetaphone.doubleMetaphone1(value, true));
-        doubleMetaphone.setMaxCodeLen(3);
-        assertEquals("Set Max Code Length", 3, doubleMetaphone.getMaxCodeLen());
-    }
-
-    @Test
-    public void testSetMaxCodeLength_test5_decomposed()  {
-        final String value = "jumped";
-        final DoubleMetaphone doubleMetaphone = new DoubleMetaphone();
-        assertEquals("Default Max Code Length", 4, doubleMetaphone.getMaxCodeLen());
-        assertEquals("Default Primary", "JMPT", doubleMetaphone.doubleMetaphone1(value, false));
-        assertEquals("Default Alternate", "AMPT", doubleMetaphone.doubleMetaphone1(value, true));
         doubleMetaphone.setMaxCodeLen(3);
         assertEquals("Set Max Code Length", 3, doubleMetaphone.getMaxCodeLen());
         assertEquals("Max=3 Primary", "JMP", doubleMetaphone.doubleMetaphone1(value, false));
         assertEquals("Max=3 Alternate", "AMP", doubleMetaphone.doubleMetaphone1(value, true));
+    }
+
+    public void validateFixture(final String[][] pairs) {
+        if (pairs.length == 0) {
+            fail("Test fixture is empty");
+        }
+        for (int i = 0; i < pairs.length; i++) {
+            if (pairs[i].length != 2) {
+                fail("Error in test fixture in the data array at index " + i);
+            }
+        }
     }
 }

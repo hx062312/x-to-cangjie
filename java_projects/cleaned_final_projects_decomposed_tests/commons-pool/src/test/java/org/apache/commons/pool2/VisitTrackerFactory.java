@@ -60,6 +60,4 @@ public class VisitTrackerFactory<K> {
     public boolean validateObject1(final PooledObject<VisitTracker<K>> ref) {
         return ref.getObject().validate();
     }
-
-    
 }

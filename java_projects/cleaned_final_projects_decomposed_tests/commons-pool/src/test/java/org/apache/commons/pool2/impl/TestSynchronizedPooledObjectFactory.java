@@ -118,6 +118,4 @@ final class TestSynchronizedPooledObjectFactory<T> implements PooledObjectFactor
             writeLock.unlock();
         }
     }
-
-    
 }

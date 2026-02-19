@@ -187,6 +187,4 @@ public class BaseNTestData {
         }
         return false;
     }
-
-    
 }

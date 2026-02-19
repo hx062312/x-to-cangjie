@@ -51,6 +51,4 @@ public class Codec105ErrorInputStream extends InputStream {
         }
         return EOF;
     }
-
-    
 }

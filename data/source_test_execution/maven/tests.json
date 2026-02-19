@@ -1,0 +1,35 @@
+{
+    "com.demo.DiscountServiceTest": [
+        "testDiscountDescriptions",
+        "testFixedAmountDiscount",
+        "testVipDiscount",
+        "testReset",
+        "testFixedDiscountCap",
+        "testPercentageDiscount",
+        "testNoDiscount",
+        "testZeroSubtotal"
+    ],
+    "com.demo.CartItemTest": [
+        "testNegativePriceThrows",
+        "testNegativeQuantityThrows",
+        "testSubtotalCalculation",
+        "testZeroQuantityThrows",
+        "testEmptyNameThrows",
+        "testNullNameThrows",
+        "testEquality",
+        "testCreateValidItem"
+    ],
+    "com.demo.ShoppingCartTest": [
+        "testAddItem",
+        "testSubtotal",
+        "testClear",
+        "testTotal",
+        "testInjectedDiscountService",
+        "testAddNullThrows",
+        "testMultipleItemsWithDiscount",
+        "testEmptyInitially",
+        "testRemoveItem",
+        "testDiscount",
+        "testUnmodifiableItems"
+    ]
+}

@@ -72,13 +72,9 @@ public class LanguageGuessingTest {
     }
 
     @Test
-    public void testLanguageGuessing_test0_decomposed()  {
+    public void testLanguageGuessing() {
         final Languages.LanguageSet guesses = this.lang.guessLanguages(this.name);
-    }
 
-    @Test
-    public void testLanguageGuessing_test1_decomposed()  {
-        final Languages.LanguageSet guesses = this.lang.guessLanguages(this.name);
         assertTrue(
                 "language predicted for name '"
                         + this.name
