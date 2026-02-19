@@ -165,6 +165,7 @@ cython_debug/
 
 misc/
 java_projects/
+vscode-codeql-starter/
 databases/
 **/.DS_Store
 configs/
