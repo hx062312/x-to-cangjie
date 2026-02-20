@@ -192,7 +192,15 @@ def main(args):
     
     reserved_tokens = dir(__builtins__) + keyword.kwlist
     
-    extracted_types = {k.split('.')[-1]: v for k, v in extracted_types.items()}
+    # 修复：处理类型映射冲突，保留非空值
+    temp_types = {}
+    for k, v in extracted_types.items():
+        short_key = k.split('.')[-1]
+        # 如果 key 已存在且当前值为空，保留已有的非空值
+        if short_key in temp_types and not v:
+            continue
+        temp_types[short_key] = v
+    extracted_types = temp_types
 
     schemas = os.listdir(f'data/schemas{args.suffix}/{args.project_name}')
 

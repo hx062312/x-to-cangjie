@@ -1,0 +1,897 @@
+{
+    "path": "java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/ShoppingCart.java",
+    "imports": {
+        "5-5:import List": {
+            "start": 5,
+            "end": 5,
+            "body": [
+                "import java.util.List;\n"
+            ]
+        },
+        "3-3:import ArrayList": {
+            "start": 3,
+            "end": 3,
+            "body": [
+                "import java.util.ArrayList;\n"
+            ]
+        },
+        "4-4:import Collections": {
+            "start": 4,
+            "end": 4,
+            "body": [
+                "import java.util.Collections;\n"
+            ]
+        }
+    },
+    "classes": {
+        "ShoppingCart": {
+            "start": 11,
+            "end": 11,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": [],
+            "nests": [
+                "new Predicate<CartItem>(...) { ... }",
+                "new ToDoubleFunction<CartItem>(...) { ... }"
+            ],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "121-129:toString": {
+                    "start": 121,
+                    "end": 129,
+                    "body": [
+                        "    public String toString() {\n",
+                        "        return String.format(\n",
+                        "            \"ShoppingCart{items=%d, subtotal=%.2f, discount=%.2f, total=%.2f}\",\n",
+                        "            items.size(),\n",
+                        "            getSubtotal(),\n",
+                        "            getDiscountAmount(),\n",
+                        "            getTotal()\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "Override"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "String",
+                            "java.lang.String"
+                        ]
+                    ],
+                    "signature": "toString()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "format(java.lang.String,java.lang.Object[])"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/util/List",
+                            "size()"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "80-82:getSubtotal"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "87-89:getDiscountAmount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "94-96:getTotal"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def toString(self) -> str:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "115-118:clear": {
+                    "start": 115,
+                    "end": 118,
+                    "body": [
+                        "    public void clear() {\n",
+                        "        items.clear();\n",
+                        "        discountService.reset();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "clear()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/util/List",
+                            "clear()"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "84-87:reset"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def clear(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "108-110:hasDiscount": {
+                    "start": 108,
+                    "end": 110,
+                    "body": [
+                        "    public boolean hasDiscount() {\n",
+                        "        return discountService.hasDiscount();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "boolean",
+                            "boolean"
+                        ]
+                    ],
+                    "signature": "hasDiscount()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def hasDiscount(self) -> bool:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "101-103:getDiscountService": {
+                    "start": 101,
+                    "end": 103,
+                    "body": [
+                        "    public DiscountService getDiscountService() {\n",
+                        "        return discountService;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "DiscountService",
+                            "DiscountService"
+                        ]
+                    ],
+                    "signature": "getDiscountService()",
+                    "parameters": [],
+                    "calls": [],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def getDiscountService(self) -> DiscountService:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "94-96:getTotal": {
+                    "start": 94,
+                    "end": 96,
+                    "body": [
+                        "    public double getTotal() {\n",
+                        "        return Math.max(0, getSubtotal() - getDiscountAmount());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ],
+                    "signature": "getTotal()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/Math",
+                            "max(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "80-82:getSubtotal"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "87-89:getDiscountAmount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def getTotal(self) -> float:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "87-89:getDiscountAmount": {
+                    "start": 87,
+                    "end": 89,
+                    "body": [
+                        "    public double getDiscountAmount() {\n",
+                        "        return discountService.calculateDiscount(getSubtotal());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ],
+                    "signature": "getDiscountAmount()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "80-82:getSubtotal"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def getDiscountAmount(self) -> float:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "80-82:getSubtotal": {
+                    "start": 80,
+                    "end": 82,
+                    "body": [
+                        "    public double getSubtotal() {\n",
+                        "        return items.stream().mapToDouble(CartItem::getSubtotal).sum();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ],
+                    "signature": "getSubtotal()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/util/stream/DoubleStream",
+                            "sum()"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/util/stream/Stream",
+                            "mapToDouble(java.util.function.ToDoubleFunction)"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/util/Collection",
+                            "stream()"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def getSubtotal(self) -> float:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "73-75:getItemCount": {
+                    "start": 73,
+                    "end": 75,
+                    "body": [
+                        "    public int getItemCount() {\n",
+                        "        return items.size();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "int",
+                            "int"
+                        ]
+                    ],
+                    "signature": "getItemCount()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/util/List",
+                            "size()"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def getItemCount(self) -> int:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "66-68:isEmpty": {
+                    "start": 66,
+                    "end": 68,
+                    "body": [
+                        "    public boolean isEmpty() {\n",
+                        "        return items.isEmpty();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "boolean",
+                            "boolean"
+                        ]
+                    ],
+                    "signature": "isEmpty()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/util/List",
+                            "isEmpty()"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def isEmpty(self) -> bool:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "59-61:getItems": {
+                    "start": 59,
+                    "end": 61,
+                    "body": [
+                        "    public List<CartItem> getItems() {\n",
+                        "        return Collections.unmodifiableList(items);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "List<CartItem>",
+                            "java.util.List<CartItem>"
+                        ]
+                    ],
+                    "signature": "getItems()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/util/Collections",
+                            "unmodifiableList(java.util.List)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def getItems(self) -> List[CartItem]:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "50-54:removeItem": {
+                    "start": 50,
+                    "end": 54,
+                    "body": [
+                        "    public boolean removeItem(String itemName) {\n",
+                        "        return items.removeIf(item ->\n",
+                        "            item.getName().equalsIgnoreCase(itemName)\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "boolean",
+                            "boolean"
+                        ]
+                    ],
+                    "signature": "removeItem(String)",
+                    "parameters": [
+                        "itemName"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/util/Collection",
+                            "removeIf(java.util.function.Predicate)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def removeItem(self, itemName: str) -> bool:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "40-45:addItem": {
+                    "start": 40,
+                    "end": 45,
+                    "body": [
+                        "    public void addItem(CartItem item) {\n",
+                        "        if (item == null) {\n",
+                        "            throw new IllegalArgumentException(\"Item cannot be null\");\n",
+                        "        }\n",
+                        "        items.add(item);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "addItem(CartItem)",
+                    "parameters": [
+                        "item"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/IllegalArgumentException",
+                            "IllegalArgumentException(java.lang.String)"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/util/List",
+                            "add(com.demo.CartItem)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def addItem(self, item: CartItem) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "21-23:ShoppingCart1": {
+                    "start": 21,
+                    "end": 23,
+                    "body": [
+                        "    public static ShoppingCart ShoppingCart1() {\n",
+                        "        return new ShoppingCart(new DiscountService());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public",
+                        "static"
+                    ],
+                    "return_types": [
+                        [
+                            "ShoppingCart",
+                            "ShoppingCart"
+                        ]
+                    ],
+                    "signature": "ShoppingCart1()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "16-20:ShoppingCart"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    @staticmethod\n",
+                        "    def ShoppingCart1() -> ShoppingCart:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "16-20:ShoppingCart": {
+                    "start": 16,
+                    "end": 20,
+                    "body": [
+                        "    public ShoppingCart(DiscountService discountService) {\n",
+                        "        this.items = new ArrayList<>();\n",
+                        "        this.discountService =\n",
+                        "            discountService != null ? discountService : new DiscountService();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": true,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "ShoppingCart(DiscountService)",
+                    "parameters": [
+                        "discountService"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/util/ArrayList",
+                            "ArrayList<CartItem>()"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def __init__(self, discountService: DiscountService) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                }
+            },
+            "fields": {
+                "14-14:discountService": {
+                    "start": 14,
+                    "end": 14,
+                    "body": [
+                        "    private final DiscountService discountService;\n"
+                    ],
+                    "modifiers": [
+                        "final",
+                        "private"
+                    ],
+                    "types": [
+                        [
+                            "DiscountService",
+                            "DiscountService"
+                        ]
+                    ],
+                    "partial_translation": [
+                        "    __discountService: DiscountService = None",
+                        ""
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "13-13:items": {
+                    "start": 13,
+                    "end": 13,
+                    "body": [
+                        "    private final List<CartItem> items;\n"
+                    ],
+                    "modifiers": [
+                        "final",
+                        "private"
+                    ],
+                    "types": [
+                        [
+                            "List<CartItem>",
+                            "java.util.List<CartItem>"
+                        ]
+                    ],
+                    "partial_translation": [
+                        "    __items: List[CartItem] = None",
+                        ""
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                }
+            },
+            "is_enum": false,
+            "python_class_declaration": "class ShoppingCart:\n\n"
+        },
+        "new Predicate<CartItem>(...) { ... }": {
+            "start": 51,
+            "end": 52,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": "ShoppingCart",
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "51-52:test": {
+                    "start": 51,
+                    "end": 52,
+                    "body": [
+                        "        return items.removeIf(item ->\n",
+                        "            item.getName().equalsIgnoreCase(itemName)\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [],
+                    "return_types": [
+                        [
+                            "boolean",
+                            "boolean"
+                        ]
+                    ],
+                    "signature": "test(CartItem)",
+                    "parameters": [
+                        "item"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "equalsIgnoreCase(java.lang.String)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "30-32:getName"
+                        ]
+                    ],
+                    "is_overload": false
+                }
+            },
+            "fields": {}
+        },
+        "new ToDoubleFunction<CartItem>(...) { ... }": {
+            "start": 81,
+            "end": 81,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": "ShoppingCart",
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "81-81:applyAsDouble": {
+                    "start": 81,
+                    "end": 81,
+                    "body": [
+                        "        return items.stream().mapToDouble(CartItem::getSubtotal).sum();\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [],
+                    "return_types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ],
+                    "signature": "applyAsDouble(CartItem)",
+                    "parameters": [
+                        "this"
+                    ],
+                    "calls": [],
+                    "is_overload": false
+                }
+            },
+            "fields": {}
+        }
+    },
+    "python_imports": [
+        "from __future__ import annotations",
+        "import io",
+        "import typing\nfrom typing import *",
+        "from src.main.com.demo.CartItem import *",
+        "from src.main.com.demo.DiscountService import *"
+    ]
+}

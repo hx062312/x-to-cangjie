@@ -1,0 +1,1879 @@
+{
+    "path": "java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/DiscountServiceTest.java",
+    "imports": {
+        "4-4:import DisplayName": {
+            "start": 4,
+            "end": 4,
+            "body": [
+                "import org.junit.jupiter.api.DisplayName;\n"
+            ]
+        },
+        "3-3:import Test": {
+            "start": 3,
+            "end": 3,
+            "body": [
+                "import org.junit.jupiter.api.Test;\n"
+            ]
+        },
+        "5-5:import static Assertions.*": {
+            "start": 5,
+            "end": 5,
+            "body": [
+                "import static org.junit.jupiter.api.Assertions.*;\n"
+            ]
+        }
+    },
+    "classes": {
+        "DiscountServiceTest": {
+            "start": 8,
+            "end": 8,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": [],
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "235-242:testReset_test4_decomposed": {
+                    "start": 235,
+                    "end": 242,
+                    "body": [
+                        "    public void testReset_test4_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertTrue(service.hasDiscount());\n",
+                        "        service.reset();\n",
+                        "        assertFalse(service.hasDiscount());\n",
+                        "        assertEquals(0, service.calculateDiscount(100.0));\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should reset discount\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testReset_test4_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertTrue(boolean)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "84-87:reset"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertFalse(boolean)"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testReset_test4_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "226-232:testReset_test3_decomposed": {
+                    "start": 226,
+                    "end": 232,
+                    "body": [
+                        "    public void testReset_test3_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertTrue(service.hasDiscount());\n",
+                        "        service.reset();\n",
+                        "        assertFalse(service.hasDiscount());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should reset discount\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testReset_test3_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertTrue(boolean)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "84-87:reset"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertFalse(boolean)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testReset_test3_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "218-223:testReset_test2_decomposed": {
+                    "start": 218,
+                    "end": 223,
+                    "body": [
+                        "    public void testReset_test2_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertTrue(service.hasDiscount());\n",
+                        "        service.reset();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should reset discount\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testReset_test2_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertTrue(boolean)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "84-87:reset"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testReset_test2_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "211-215:testReset_test1_decomposed": {
+                    "start": 211,
+                    "end": 215,
+                    "body": [
+                        "    public void testReset_test1_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertTrue(service.hasDiscount());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should reset discount\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testReset_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertTrue(boolean)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testReset_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "205-208:testReset_test0_decomposed": {
+                    "start": 205,
+                    "end": 208,
+                    "body": [
+                        "    public void testReset_test0_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should reset discount\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testReset_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testReset_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "190-202:testDiscountDescriptions_test7_decomposed": {
+                    "start": 190,
+                    "end": 202,
+                    "body": [
+                        "    public void testDiscountDescriptions_test7_decomposed()  {\n",
+                        "        DiscountService noDiscount = new DiscountService();\n",
+                        "        assertEquals(\"No Discount\", noDiscount.getDiscountDescription());\n",
+                        "        DiscountService vip = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertEquals(\"VIP Discount (15% off)\", vip.getDiscountDescription());\n",
+                        "        DiscountService fixed = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 10.0);\n",
+                        "        assertEquals(\"Fixed Discount ($10.00 off)\", fixed.getDiscountDescription());\n",
+                        "        DiscountService percent = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.PERCENTAGE, 25);\n",
+                        "        assertEquals(\"Discount (25% off)\", percent.getDiscountDescription());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should provide correct discount descriptions\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testDiscountDescriptions_test7_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "59-72:getDiscountDescription"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testDiscountDescriptions_test7_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "176-187:testDiscountDescriptions_test6_decomposed": {
+                    "start": 176,
+                    "end": 187,
+                    "body": [
+                        "    public void testDiscountDescriptions_test6_decomposed()  {\n",
+                        "        DiscountService noDiscount = new DiscountService();\n",
+                        "        assertEquals(\"No Discount\", noDiscount.getDiscountDescription());\n",
+                        "        DiscountService vip = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertEquals(\"VIP Discount (15% off)\", vip.getDiscountDescription());\n",
+                        "        DiscountService fixed = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 10.0);\n",
+                        "        assertEquals(\"Fixed Discount ($10.00 off)\", fixed.getDiscountDescription());\n",
+                        "        DiscountService percent = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.PERCENTAGE, 25);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should provide correct discount descriptions\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testDiscountDescriptions_test6_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "59-72:getDiscountDescription"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testDiscountDescriptions_test6_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "164-173:testDiscountDescriptions_test5_decomposed": {
+                    "start": 164,
+                    "end": 173,
+                    "body": [
+                        "    public void testDiscountDescriptions_test5_decomposed()  {\n",
+                        "        DiscountService noDiscount = new DiscountService();\n",
+                        "        assertEquals(\"No Discount\", noDiscount.getDiscountDescription());\n",
+                        "        DiscountService vip = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertEquals(\"VIP Discount (15% off)\", vip.getDiscountDescription());\n",
+                        "        DiscountService fixed = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 10.0);\n",
+                        "        assertEquals(\"Fixed Discount ($10.00 off)\", fixed.getDiscountDescription());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should provide correct discount descriptions\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testDiscountDescriptions_test5_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "59-72:getDiscountDescription"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testDiscountDescriptions_test5_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "153-161:testDiscountDescriptions_test4_decomposed": {
+                    "start": 153,
+                    "end": 161,
+                    "body": [
+                        "    public void testDiscountDescriptions_test4_decomposed()  {\n",
+                        "        DiscountService noDiscount = new DiscountService();\n",
+                        "        assertEquals(\"No Discount\", noDiscount.getDiscountDescription());\n",
+                        "        DiscountService vip = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertEquals(\"VIP Discount (15% off)\", vip.getDiscountDescription());\n",
+                        "        DiscountService fixed = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 10.0);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should provide correct discount descriptions\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testDiscountDescriptions_test4_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "59-72:getDiscountDescription"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testDiscountDescriptions_test4_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "144-150:testDiscountDescriptions_test3_decomposed": {
+                    "start": 144,
+                    "end": 150,
+                    "body": [
+                        "    public void testDiscountDescriptions_test3_decomposed()  {\n",
+                        "        DiscountService noDiscount = new DiscountService();\n",
+                        "        assertEquals(\"No Discount\", noDiscount.getDiscountDescription());\n",
+                        "        DiscountService vip = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertEquals(\"VIP Discount (15% off)\", vip.getDiscountDescription());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should provide correct discount descriptions\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testDiscountDescriptions_test3_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "59-72:getDiscountDescription"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testDiscountDescriptions_test3_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "136-141:testDiscountDescriptions_test2_decomposed": {
+                    "start": 136,
+                    "end": 141,
+                    "body": [
+                        "    public void testDiscountDescriptions_test2_decomposed()  {\n",
+                        "        DiscountService noDiscount = new DiscountService();\n",
+                        "        assertEquals(\"No Discount\", noDiscount.getDiscountDescription());\n",
+                        "        DiscountService vip = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should provide correct discount descriptions\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testDiscountDescriptions_test2_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "59-72:getDiscountDescription"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testDiscountDescriptions_test2_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "130-133:testDiscountDescriptions_test1_decomposed": {
+                    "start": 130,
+                    "end": 133,
+                    "body": [
+                        "    public void testDiscountDescriptions_test1_decomposed()  {\n",
+                        "        DiscountService noDiscount = new DiscountService();\n",
+                        "        assertEquals(\"No Discount\", noDiscount.getDiscountDescription());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should provide correct discount descriptions\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testDiscountDescriptions_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "59-72:getDiscountDescription"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testDiscountDescriptions_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "125-127:testDiscountDescriptions_test0_decomposed": {
+                    "start": 125,
+                    "end": 127,
+                    "body": [
+                        "    public void testDiscountDescriptions_test0_decomposed()  {\n",
+                        "        DiscountService noDiscount = new DiscountService();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should provide correct discount descriptions\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testDiscountDescriptions_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testDiscountDescriptions_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "117-122:testZeroSubtotal_test1_decomposed": {
+                    "start": 117,
+                    "end": 122,
+                    "body": [
+                        "    public void testZeroSubtotal_test1_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertEquals(0, service.calculateDiscount(0));\n",
+                        "        assertEquals(0, service.calculateDiscount(-100));\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should return 0 for zero or negative subtotal\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testZeroSubtotal_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testZeroSubtotal_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "111-114:testZeroSubtotal_test0_decomposed": {
+                    "start": 111,
+                    "end": 114,
+                    "body": [
+                        "    public void testZeroSubtotal_test0_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should return 0 for zero or negative subtotal\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testZeroSubtotal_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testZeroSubtotal_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "102-108:testPercentageDiscount_test2_decomposed": {
+                    "start": 102,
+                    "end": 108,
+                    "body": [
+                        "    public void testPercentageDiscount_test2_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.PERCENTAGE, 20.0);\n",
+                        "        assertEquals(20.0, service.calculateDiscount(100.0));\n",
+                        "        assertEquals(10.0, service.calculateDiscount(50.0));\n",
+                        "        assertTrue(service.hasDiscount());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply percentage discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testPercentageDiscount_test2_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertTrue(boolean)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testPercentageDiscount_test2_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "94-99:testPercentageDiscount_test1_decomposed": {
+                    "start": 94,
+                    "end": 99,
+                    "body": [
+                        "    public void testPercentageDiscount_test1_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.PERCENTAGE, 20.0);\n",
+                        "        assertEquals(20.0, service.calculateDiscount(100.0));\n",
+                        "        assertEquals(10.0, service.calculateDiscount(50.0));\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply percentage discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testPercentageDiscount_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testPercentageDiscount_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "88-91:testPercentageDiscount_test0_decomposed": {
+                    "start": 88,
+                    "end": 91,
+                    "body": [
+                        "    public void testPercentageDiscount_test0_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.PERCENTAGE, 20.0);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply percentage discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testPercentageDiscount_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testPercentageDiscount_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "81-85:testFixedDiscountCap_test1_decomposed": {
+                    "start": 81,
+                    "end": 85,
+                    "body": [
+                        "    public void testFixedDiscountCap_test1_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 50.0);\n",
+                        "        assertEquals(30.0, service.calculateDiscount(30.0));\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should cap fixed discount at subtotal\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testFixedDiscountCap_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testFixedDiscountCap_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "75-78:testFixedDiscountCap_test0_decomposed": {
+                    "start": 75,
+                    "end": 78,
+                    "body": [
+                        "    public void testFixedDiscountCap_test0_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 50.0);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should cap fixed discount at subtotal\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testFixedDiscountCap_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testFixedDiscountCap_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "66-72:testFixedAmountDiscount_test2_decomposed": {
+                    "start": 66,
+                    "end": 72,
+                    "body": [
+                        "    public void testFixedAmountDiscount_test2_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 25.0);\n",
+                        "        assertEquals(25.0, service.calculateDiscount(100.0));\n",
+                        "        assertEquals(25.0, service.calculateDiscount(50.0));\n",
+                        "        assertTrue(service.hasDiscount());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply fixed amount discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testFixedAmountDiscount_test2_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertTrue(boolean)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testFixedAmountDiscount_test2_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "58-63:testFixedAmountDiscount_test1_decomposed": {
+                    "start": 58,
+                    "end": 63,
+                    "body": [
+                        "    public void testFixedAmountDiscount_test1_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 25.0);\n",
+                        "        assertEquals(25.0, service.calculateDiscount(100.0));\n",
+                        "        assertEquals(25.0, service.calculateDiscount(50.0));\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply fixed amount discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testFixedAmountDiscount_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testFixedAmountDiscount_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "52-55:testFixedAmountDiscount_test0_decomposed": {
+                    "start": 52,
+                    "end": 55,
+                    "body": [
+                        "    public void testFixedAmountDiscount_test0_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 25.0);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply fixed amount discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testFixedAmountDiscount_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testFixedAmountDiscount_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "43-49:testVipDiscount_test2_decomposed": {
+                    "start": 43,
+                    "end": 49,
+                    "body": [
+                        "    public void testVipDiscount_test2_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertEquals(15.0, service.calculateDiscount(100.0));\n",
+                        "        assertEquals(7.5, service.calculateDiscount(50.0));\n",
+                        "        assertTrue(service.hasDiscount());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply VIP discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testVipDiscount_test2_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertTrue(boolean)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testVipDiscount_test2_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "35-40:testVipDiscount_test1_decomposed": {
+                    "start": 35,
+                    "end": 40,
+                    "body": [
+                        "    public void testVipDiscount_test1_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        assertEquals(15.0, service.calculateDiscount(100.0));\n",
+                        "        assertEquals(7.5, service.calculateDiscount(50.0));\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply VIP discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testVipDiscount_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testVipDiscount_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "29-32:testVipDiscount_test0_decomposed": {
+                    "start": 29,
+                    "end": 32,
+                    "body": [
+                        "    public void testVipDiscount_test0_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService()\n",
+                        "            .withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should apply VIP discount correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testVipDiscount_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testVipDiscount_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "22-26:testNoDiscount_test2_decomposed": {
+                    "start": 22,
+                    "end": 26,
+                    "body": [
+                        "    public void testNoDiscount_test2_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService();\n",
+                        "        assertEquals(0, service.calculateDiscount(100.0));\n",
+                        "        assertFalse(service.hasDiscount());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should return 0 for no discount\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testNoDiscount_test2_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertFalse(boolean)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "77-79:hasDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testNoDiscount_test2_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "16-19:testNoDiscount_test1_decomposed": {
+                    "start": 16,
+                    "end": 19,
+                    "body": [
+                        "    public void testNoDiscount_test1_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService();\n",
+                        "        assertEquals(0, service.calculateDiscount(100.0));\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should return 0 for no discount\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testNoDiscount_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "37-54:calculateDiscount"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testNoDiscount_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "11-13:testNoDiscount_test0_decomposed": {
+                    "start": 11,
+                    "end": 13,
+                    "body": [
+                        "    public void testNoDiscount_test0_decomposed()  {\n",
+                        "        DiscountService service = new DiscountService();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should return 0 for no discount\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testNoDiscount_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testNoDiscount_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                }
+            },
+            "fields": {},
+            "is_enum": false,
+            "python_class_declaration": "class DiscountServiceTest:\n\n"
+        }
+    },
+    "python_imports": [
+        "from __future__ import annotations",
+        "import unittest",
+        "import pytest",
+        "import io",
+        "import os",
+        "from src.main.com.demo.DiscountService import *"
+    ]
+}

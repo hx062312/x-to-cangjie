@@ -1,0 +1,505 @@
+{
+    "path": "java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/DiscountService.java",
+    "imports": {},
+    "classes": {
+        "DiscountType": {
+            "start": 12,
+            "end": 12,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": "DiscountService",
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {},
+            "fields": {
+                "16-16:PERCENTAGE": {
+                    "start": 16,
+                    "end": 16,
+                    "body": [
+                        "        PERCENTAGE    // Custom percentage off\n"
+                    ],
+                    "modifiers": [
+                        "public",
+                        "final",
+                        "static"
+                    ],
+                    "types": [
+                        [
+                            "DiscountType",
+                            "DiscountType"
+                        ]
+                    ],
+                    "partial_translation": [
+                        "    PERCENTAGE: DiscountType = None",
+                        ""
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "15-15:FIXED_AMOUNT": {
+                    "start": 15,
+                    "end": 15,
+                    "body": [
+                        "        FIXED_AMOUNT,  // Fixed amount off\n"
+                    ],
+                    "modifiers": [
+                        "public",
+                        "final",
+                        "static"
+                    ],
+                    "types": [
+                        [
+                            "DiscountType",
+                            "DiscountType"
+                        ]
+                    ],
+                    "partial_translation": [
+                        "    FIXED_AMOUNT: DiscountType = None",
+                        ""
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "14-14:VIP": {
+                    "start": 14,
+                    "end": 14,
+                    "body": [
+                        "        VIP,           // 15% off for VIP customers\n"
+                    ],
+                    "modifiers": [
+                        "public",
+                        "final",
+                        "static"
+                    ],
+                    "types": [
+                        [
+                            "DiscountType",
+                            "DiscountType"
+                        ]
+                    ],
+                    "partial_translation": [
+                        "    VIP: DiscountType = None",
+                        ""
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "13-13:NONE": {
+                    "start": 13,
+                    "end": 13,
+                    "body": [
+                        "        NONE,\n"
+                    ],
+                    "modifiers": [
+                        "public",
+                        "final",
+                        "static"
+                    ],
+                    "types": [
+                        [
+                            "DiscountType",
+                            "DiscountType"
+                        ]
+                    ],
+                    "partial_translation": [
+                        "    NONE: DiscountType = None",
+                        ""
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                }
+            },
+            "is_enum": true,
+            "python_class_declaration": "class DiscountType:\n\n"
+        },
+        "DiscountService": {
+            "start": 7,
+            "end": 7,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": [],
+            "nests": [
+                "DiscountType"
+            ],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "84-87:reset": {
+                    "start": 84,
+                    "end": 87,
+                    "body": [
+                        "    public void reset() {\n",
+                        "        this.discountType = DiscountType.NONE;\n",
+                        "        this.discountValue = 0;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "reset()",
+                    "parameters": [],
+                    "calls": [],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def reset(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "77-79:hasDiscount": {
+                    "start": 77,
+                    "end": 79,
+                    "body": [
+                        "    public boolean hasDiscount() {\n",
+                        "        return discountType != DiscountType.NONE;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "boolean",
+                            "boolean"
+                        ]
+                    ],
+                    "signature": "hasDiscount()",
+                    "parameters": [],
+                    "calls": [],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def hasDiscount(self) -> bool:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "59-72:getDiscountDescription": {
+                    "start": 59,
+                    "end": 72,
+                    "body": [
+                        "    public String getDiscountDescription() {\n",
+                        "        switch (discountType) {\n",
+                        "            case NONE:\n",
+                        "                return \"No Discount\";\n",
+                        "            case VIP:\n",
+                        "                return \"VIP Discount (15% off)\";\n",
+                        "            case FIXED_AMOUNT:\n",
+                        "                return String.format(\"Fixed Discount ($%.2f off)\", discountValue);\n",
+                        "            case PERCENTAGE:\n",
+                        "                return String.format(\"Discount (%.0f%% off)\", discountValue);\n",
+                        "            default:\n",
+                        "                return \"No Discount\";\n",
+                        "        }\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "String",
+                            "java.lang.String"
+                        ]
+                    ],
+                    "signature": "getDiscountDescription()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "format(java.lang.String,java.lang.Object[])"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def getDiscountDescription(self) -> str:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "37-54:calculateDiscount": {
+                    "start": 37,
+                    "end": 54,
+                    "body": [
+                        "    public double calculateDiscount(double subtotal) {\n",
+                        "        if (subtotal <= 0) {\n",
+                        "            return 0;\n",
+                        "        }\n",
+                        "\n",
+                        "        switch (discountType) {\n",
+                        "            case NONE:\n",
+                        "                return 0;\n",
+                        "            case VIP:\n",
+                        "                return subtotal * 0.15;  // 15% VIP discount\n",
+                        "            case FIXED_AMOUNT:\n",
+                        "                return Math.min(discountValue, subtotal);  // Cap at subtotal\n",
+                        "            case PERCENTAGE:\n",
+                        "                return subtotal * (discountValue / 100.0);\n",
+                        "            default:\n",
+                        "                return 0;\n",
+                        "        }\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ],
+                    "signature": "calculateDiscount(double)",
+                    "parameters": [
+                        "subtotal"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/Math",
+                            "min(double,double)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def calculateDiscount(self, subtotal: float) -> float:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "28-32:withDiscount": {
+                    "start": 28,
+                    "end": 32,
+                    "body": [
+                        "    public DiscountService withDiscount(DiscountType type, double value) {\n",
+                        "        this.discountType = type;\n",
+                        "        this.discountValue = value;\n",
+                        "        return this;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "DiscountService",
+                            "DiscountService"
+                        ]
+                    ],
+                    "signature": "withDiscount(DiscountType, double)",
+                    "parameters": [
+                        "type",
+                        "value"
+                    ],
+                    "calls": [],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def withDiscount(self, type_: DiscountType, value: float) -> DiscountService:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "22-23:DiscountService": {
+                    "start": 22,
+                    "end": 23,
+                    "body": [
+                        "    public DiscountService() {\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": true,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "DiscountService()",
+                    "parameters": [],
+                    "calls": [],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def __init__(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                }
+            },
+            "fields": {
+                "20-20:discountValue": {
+                    "start": 20,
+                    "end": 20,
+                    "body": [
+                        "    private double discountValue = 0;\n"
+                    ],
+                    "modifiers": [
+                        "private"
+                    ],
+                    "types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ],
+                    "partial_translation": [
+                        "    __discountValue: float = <placeholder>",
+                        ""
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "19-19:discountType": {
+                    "start": 19,
+                    "end": 19,
+                    "body": [
+                        "    private DiscountType discountType = DiscountType.NONE;\n"
+                    ],
+                    "modifiers": [
+                        "private"
+                    ],
+                    "types": [
+                        [
+                            "DiscountType",
+                            "DiscountType"
+                        ]
+                    ],
+                    "partial_translation": [
+                        "    __discountType: DiscountType = <placeholder>",
+                        ""
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                }
+            },
+            "is_enum": false,
+            "python_class_declaration": "class DiscountService:\n\n"
+        }
+    },
+    "python_imports": [
+        "from __future__ import annotations",
+        "import io",
+        "import typing\nfrom typing import *"
+    ]
+}

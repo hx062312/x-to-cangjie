@@ -1,0 +1,1084 @@
+{
+    "path": "java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/CartItemTest.java",
+    "imports": {
+        "4-4:import DisplayName": {
+            "start": 4,
+            "end": 4,
+            "body": [
+                "import org.junit.jupiter.api.DisplayName;\n"
+            ]
+        },
+        "3-3:import Test": {
+            "start": 3,
+            "end": 3,
+            "body": [
+                "import org.junit.jupiter.api.Test;\n"
+            ]
+        },
+        "5-5:import static Assertions.*": {
+            "start": 5,
+            "end": 5,
+            "body": [
+                "import static org.junit.jupiter.api.Assertions.*;\n"
+            ]
+        }
+    },
+    "classes": {
+        "CartItemTest": {
+            "start": 8,
+            "end": 8,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": [],
+            "nests": [
+                "new Executable(...) { ... }",
+                "new Executable(...) { ... }",
+                "new Executable(...) { ... }",
+                "new Executable(...) { ... }",
+                "new Executable(...) { ... }"
+            ],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "110-116:testEquality_test3_decomposed": {
+                    "start": 110,
+                    "end": 116,
+                    "body": [
+                        "    public void testEquality_test3_decomposed()  {\n",
+                        "        CartItem item1 = new CartItem(\"Apple\", 1.0, 2);\n",
+                        "        CartItem item2 = new CartItem(\"Apple\", 1.0, 2);\n",
+                        "        CartItem item3 = new CartItem(\"Banana\", 1.0, 2);\n",
+                        "        assertEquals(item1, item2);\n",
+                        "        assertNotEquals(item1, item3);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should support equality\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testEquality_test3_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertNotEquals(java.lang.Object,java.lang.Object)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testEquality_test3_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "103-107:testEquality_test2_decomposed": {
+                    "start": 103,
+                    "end": 107,
+                    "body": [
+                        "    public void testEquality_test2_decomposed()  {\n",
+                        "        CartItem item1 = new CartItem(\"Apple\", 1.0, 2);\n",
+                        "        CartItem item2 = new CartItem(\"Apple\", 1.0, 2);\n",
+                        "        CartItem item3 = new CartItem(\"Banana\", 1.0, 2);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should support equality\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testEquality_test2_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testEquality_test2_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "97-100:testEquality_test1_decomposed": {
+                    "start": 97,
+                    "end": 100,
+                    "body": [
+                        "    public void testEquality_test1_decomposed()  {\n",
+                        "        CartItem item1 = new CartItem(\"Apple\", 1.0, 2);\n",
+                        "        CartItem item2 = new CartItem(\"Apple\", 1.0, 2);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should support equality\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testEquality_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testEquality_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "92-94:testEquality_test0_decomposed": {
+                    "start": 92,
+                    "end": 94,
+                    "body": [
+                        "    public void testEquality_test0_decomposed()  {\n",
+                        "        CartItem item1 = new CartItem(\"Apple\", 1.0, 2);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should support equality\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testEquality_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testEquality_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "86-89:testSubtotalCalculation_test1_decomposed": {
+                    "start": 86,
+                    "end": 89,
+                    "body": [
+                        "    public void testSubtotalCalculation_test1_decomposed()  {\n",
+                        "        CartItem item = new CartItem(\"Book\", 10.00, 5);\n",
+                        "        assertEquals(50.00, item.getSubtotal());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should calculate subtotal correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testSubtotalCalculation_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "45-47:getSubtotal"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testSubtotalCalculation_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "81-83:testSubtotalCalculation_test0_decomposed": {
+                    "start": 81,
+                    "end": 83,
+                    "body": [
+                        "    public void testSubtotalCalculation_test0_decomposed()  {\n",
+                        "        CartItem item = new CartItem(\"Book\", 10.00, 5);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should calculate subtotal correctly\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testSubtotalCalculation_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testSubtotalCalculation_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "74-78:testNegativeQuantityThrows_test0_decomposed": {
+                    "start": 74,
+                    "end": 78,
+                    "body": [
+                        "    public void testNegativeQuantityThrows_test0_decomposed()  {\n",
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(\"Apple\", 1.0, -1)\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should throw for negative quantity\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testNegativeQuantityThrows_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "Assertions",
+                            "assertThrows(java.lang.Class,org.junit.jupiter.api.function.Executable)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testNegativeQuantityThrows_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "67-71:testZeroQuantityThrows_test0_decomposed": {
+                    "start": 67,
+                    "end": 71,
+                    "body": [
+                        "    public void testZeroQuantityThrows_test0_decomposed()  {\n",
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(\"Apple\", 1.0, 0)\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should throw for zero quantity\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testZeroQuantityThrows_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "Assertions",
+                            "assertThrows(java.lang.Class,org.junit.jupiter.api.function.Executable)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testZeroQuantityThrows_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "60-64:testNegativePriceThrows_test0_decomposed": {
+                    "start": 60,
+                    "end": 64,
+                    "body": [
+                        "    public void testNegativePriceThrows_test0_decomposed()  {\n",
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(\"Apple\", -1.0, 1)\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should throw for negative price\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testNegativePriceThrows_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "Assertions",
+                            "assertThrows(java.lang.Class,org.junit.jupiter.api.function.Executable)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testNegativePriceThrows_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "53-57:testEmptyNameThrows_test0_decomposed": {
+                    "start": 53,
+                    "end": 57,
+                    "body": [
+                        "    public void testEmptyNameThrows_test0_decomposed()  {\n",
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(\"  \", 1.0, 1)\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should throw for empty name\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testEmptyNameThrows_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "Assertions",
+                            "assertThrows(java.lang.Class,org.junit.jupiter.api.function.Executable)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testEmptyNameThrows_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "46-50:testNullNameThrows_test0_decomposed": {
+                    "start": 46,
+                    "end": 50,
+                    "body": [
+                        "    public void testNullNameThrows_test0_decomposed()  {\n",
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(null, 1.0, 1)\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should throw for null name\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testNullNameThrows_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "Assertions",
+                            "assertThrows(java.lang.Class,org.junit.jupiter.api.function.Executable)"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testNullNameThrows_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "37-43:testCreateValidItem_test4_decomposed": {
+                    "start": 37,
+                    "end": 43,
+                    "body": [
+                        "    public void testCreateValidItem_test4_decomposed()  {\n",
+                        "        CartItem item = new CartItem(\"Apple\", 1.50, 3);\n",
+                        "        assertEquals(\"Apple\", item.getName());\n",
+                        "        assertEquals(1.50, item.getPrice());\n",
+                        "        assertEquals(3, item.getQuantity());\n",
+                        "        assertEquals(4.50, item.getSubtotal());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should create CartItem with valid data\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testCreateValidItem_test4_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "30-32:getName"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "34-36:getPrice"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(int,int)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "38-40:getQuantity"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "45-47:getSubtotal"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testCreateValidItem_test4_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "29-34:testCreateValidItem_test3_decomposed": {
+                    "start": 29,
+                    "end": 34,
+                    "body": [
+                        "    public void testCreateValidItem_test3_decomposed()  {\n",
+                        "        CartItem item = new CartItem(\"Apple\", 1.50, 3);\n",
+                        "        assertEquals(\"Apple\", item.getName());\n",
+                        "        assertEquals(1.50, item.getPrice());\n",
+                        "        assertEquals(3, item.getQuantity());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should create CartItem with valid data\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testCreateValidItem_test3_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "30-32:getName"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "34-36:getPrice"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(int,int)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "38-40:getQuantity"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testCreateValidItem_test3_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "22-26:testCreateValidItem_test2_decomposed": {
+                    "start": 22,
+                    "end": 26,
+                    "body": [
+                        "    public void testCreateValidItem_test2_decomposed()  {\n",
+                        "        CartItem item = new CartItem(\"Apple\", 1.50, 3);\n",
+                        "        assertEquals(\"Apple\", item.getName());\n",
+                        "        assertEquals(1.50, item.getPrice());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should create CartItem with valid data\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testCreateValidItem_test2_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "30-32:getName"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(double,double)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "34-36:getPrice"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testCreateValidItem_test2_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "16-19:testCreateValidItem_test1_decomposed": {
+                    "start": 16,
+                    "end": 19,
+                    "body": [
+                        "    public void testCreateValidItem_test1_decomposed()  {\n",
+                        "        CartItem item = new CartItem(\"Apple\", 1.50, 3);\n",
+                        "        assertEquals(\"Apple\", item.getName());\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should create CartItem with valid data\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testCreateValidItem_test1_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ],
+                        [
+                            "library",
+                            "Assertions",
+                            "assertEquals(java.lang.Object,java.lang.Object)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "30-32:getName"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testCreateValidItem_test1_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                },
+                "11-13:testCreateValidItem_test0_decomposed": {
+                    "start": 11,
+                    "end": 13,
+                    "body": [
+                        "    public void testCreateValidItem_test0_decomposed()  {\n",
+                        "        CartItem item = new CartItem(\"Apple\", 1.50, 3);\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "DisplayName(\"should create CartItem with valid data\")"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "testCreateValidItem_test0_decomposed()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    def testCreateValidItem_test0_decomposed(self) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "gpt-4o-2024-11-20",
+                    "include_implementation": true
+                }
+            },
+            "fields": {},
+            "is_enum": false,
+            "python_class_declaration": "class CartItemTest:\n\n"
+        },
+        "new Executable(...) { ... }": {
+            "start": 47,
+            "end": 48,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": "CartItemTest",
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "47-48:execute": {
+                    "start": 47,
+                    "end": 48,
+                    "body": [
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(null, 1.0, 1)\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "execute()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": true
+                },
+                "54-55:execute": {
+                    "start": 54,
+                    "end": 55,
+                    "body": [
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(\"  \", 1.0, 1)\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "execute()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": true
+                },
+                "61-62:execute": {
+                    "start": 61,
+                    "end": 62,
+                    "body": [
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(\"Apple\", -1.0, 1)\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "execute()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": true
+                },
+                "68-69:execute": {
+                    "start": 68,
+                    "end": 69,
+                    "body": [
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(\"Apple\", 1.0, 0)\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "execute()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": true
+                },
+                "75-76:execute": {
+                    "start": 75,
+                    "end": 76,
+                    "body": [
+                        "        assertThrows(IllegalArgumentException.class, () ->\n",
+                        "            new CartItem(\"Apple\", 1.0, -1)\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "execute()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ]
+                    ],
+                    "is_overload": true
+                }
+            },
+            "fields": {}
+        }
+    },
+    "python_imports": [
+        "from __future__ import annotations",
+        "import unittest",
+        "import pytest",
+        "import io",
+        "import os",
+        "from src.main.com.demo.CartItem import *"
+    ]
+}

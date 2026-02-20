@@ -1,0 +1,2 @@
+class ReceiptGenerator:
+    pass

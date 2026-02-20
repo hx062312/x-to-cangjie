@@ -1,0 +1,164 @@
+{
+    "path": "java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/App.java",
+    "imports": {},
+    "classes": {
+        "App": {
+            "start": 6,
+            "end": 6,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": [],
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "8-51:main": {
+                    "start": 8,
+                    "end": 51,
+                    "body": [
+                        "    public static void main(String[] args) {\n",
+                        "        System.out.println(\"=== Shopping Cart Demo ===\\n\");\n",
+                        "\n",
+                        "        // Create cart with discount service\n",
+                        "        DiscountService discountService = new DiscountService();\n",
+                        "        ShoppingCart cart = new ShoppingCart(discountService);\n",
+                        "        ReceiptGenerator receipt = new ReceiptGenerator();\n",
+                        "\n",
+                        "        // Scenario 1: Cart without discount\n",
+                        "        System.out.println(\"--- Scenario 1: No Discount ---\");\n",
+                        "        cart.addItem(new CartItem(\"Apple\", 0.50, 5));\n",
+                        "        cart.addItem(new CartItem(\"Bread\", 2.00, 2));\n",
+                        "        cart.addItem(new CartItem(\"Milk\", 3.50, 1));\n",
+                        "\n",
+                        "        System.out.println(receipt.generate(cart));\n",
+                        "\n",
+                        "        // Scenario 2: Apply VIP discount\n",
+                        "        System.out.println(\"--- Scenario 2: VIP Discount ---\");\n",
+                        "        cart.clear();\n",
+                        "        cart.getDiscountService().withDiscount(DiscountService.DiscountType.VIP, 0);\n",
+                        "        cart.addItem(new CartItem(\"Laptop\", 999.99, 1));\n",
+                        "        cart.addItem(new CartItem(\"Mouse\", 29.99, 2));\n",
+                        "\n",
+                        "        System.out.println(receipt.generate(cart));\n",
+                        "\n",
+                        "        // Scenario 3: Fixed amount discount\n",
+                        "        System.out.println(\"--- Scenario 3: Fixed $50 Discount ---\");\n",
+                        "        cart.clear();\n",
+                        "        cart.getDiscountService().withDiscount(DiscountService.DiscountType.FIXED_AMOUNT, 50.00);\n",
+                        "        cart.addItem(new CartItem(\"Headphones\", 80.00, 1));\n",
+                        "        cart.addItem(new CartItem(\"USB Cable\", 15.00, 3));\n",
+                        "\n",
+                        "        System.out.println(receipt.generate(cart));\n",
+                        "\n",
+                        "        // Scenario 4: Percentage discount\n",
+                        "        System.out.println(\"--- Scenario 4: 20% Discount ---\");\n",
+                        "        cart.clear();\n",
+                        "        cart.getDiscountService().withDiscount(DiscountService.DiscountType.PERCENTAGE, 20);\n",
+                        "        cart.addItem(new CartItem(\"T-Shirt\", 25.00, 4));\n",
+                        "\n",
+                        "        System.out.println(receipt.generate(cart));\n",
+                        "\n",
+                        "        System.out.println(\"=== Demo Complete ===\");\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public",
+                        "static"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "main(String[])",
+                    "parameters": [
+                        "args"
+                    ],
+                    "calls": [
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "22-23:DiscountService"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "16-20:ShoppingCart"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ReceiptGenerator",
+                            "ReceiptGenerator",
+                            "ReceiptGenerator"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/io/PrintStream",
+                            "println(java.lang.String)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "40-45:addItem"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "13-28:CartItem"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ReceiptGenerator",
+                            "ReceiptGenerator",
+                            "14-77:generate"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "115-118:clear"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "28-32:withDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "101-103:getDiscountService"
+                        ]
+                    ],
+                    "is_overload": false,
+                    "partial_translation": [
+                        "    @staticmethod\n",
+                        "    def main(args: typing.List[typing.List[str]]) -> None:\n",
+                        "        pass\n\n"
+                    ],
+                    "translation": [],
+                    "translation_status": "pending",
+                    "syntactic_validation": "pending",
+                    "field_exercise": "pending",
+                    "graal_validation": "pending",
+                    "test_execution": "pending",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
+                    "model_name": "deepseek-coder-33b-instruct",
+                    "include_implementation": true
+                }
+            },
+            "fields": {},
+            "is_enum": false,
+            "python_class_declaration": "class App:\n\n"
+        }
+    },
+    "python_imports": [
+        "from __future__ import annotations",
+        "import io",
+        "import typing\nfrom typing import *",
+        "from src.main.com.demo.CartItem import *",
+        "from src.main.com.demo.DiscountService import *",
+        "from src.main.com.demo.ReceiptGenerator import *",
+        "from src.main.com.demo.ShoppingCart import *"
+    ]
+}

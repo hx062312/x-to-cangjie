@@ -1797,5 +1797,20 @@
     "SkippableLongCODEC[]": "typing.List[SkippableLongCODEC]",
     "IntegratedIntCompressor[]": "typing.List[IntegratedIntCompressor]",
     "java.util.ArrayList<int[]>": "typing.List[typing.List[int]]",
-    "java.nio.IntBuffer": "typing.Union[array.array, typing.List[int]]"
+    "java.nio.IntBuffer": "typing.Union[array.array, typing.List[int]]",
+    "DiscountType": "DiscountType",
+    "CartItemTest": "CartItemTest",
+    "java.util.function.ToDoubleFunction<CartItem>": "Callable[[CartItem], float]",
+    "java.util.function.Consumer<CartItem>": "Callable[[CartItem], None]",
+    "CartItem": "CartItem",
+    "App": "App",
+    "java.util.ArrayList<CartItem>": "List[CartItem]",
+    "ShoppingCart": "ShoppingCart",
+    "DiscountServiceTest": "DiscountServiceTest",
+    "java.util.List<CartItem>": "List[CartItem]",
+    "DiscountService.DiscountType": "",
+    "ReceiptGenerator": "ReceiptGenerator",
+    "DiscountService": "DiscountService",
+    "java.util.function.Predicate<CartItem>": "Callable[[CartItem], bool]",
+    "ShoppingCartTest": "ShoppingCartTest"
 }
