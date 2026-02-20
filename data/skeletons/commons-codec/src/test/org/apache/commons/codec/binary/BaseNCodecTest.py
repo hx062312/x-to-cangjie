@@ -2,6 +2,7 @@ from __future__ import annotations
 
 # Imports Begin
 from src.main.org.apache.commons.codec.binary.BaseNCodec import *
+from src.main.org.apache.commons.codec.CodecPolicy import *
 import unittest
 import os
 import typing
@@ -9,31 +10,6 @@ from typing import *
 import io
 
 # Imports End
-
-
-class NoOpBaseNCodec(BaseNCodec):
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    def _isInAlphabet0(self, value: int) -> bool:
-        pass
-
-    def decode1(
-        self, pArray: typing.List[int], i: int, length: int, context: Context
-    ) -> None:
-        pass
-
-    def encode2(
-        self, pArray: typing.List[int], i: int, length: int, context: Context
-    ) -> None:
-        pass
-
-    def __init__(self) -> None:
-        pass
-
-    # Class Methods End
 
 
 class BaseNCodecTest(unittest.TestCase):
@@ -157,6 +133,31 @@ class BaseNCodecTest(unittest.TestCase):
     def __assertEnsureBufferSizeExpandsToMaxBufferSize(
         exceedMaxBufferSize: bool,
     ) -> None:
+        pass
+
+    # Class Methods End
+
+
+class NoOpBaseNCodec(BaseNCodec):
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    def _isInAlphabet0(self, value: int) -> bool:
+        pass
+
+    def decode1(
+        self, pArray: typing.List[int], i: int, length: int, context: Context
+    ) -> None:
+        pass
+
+    def encode2(
+        self, pArray: typing.List[int], i: int, length: int, context: Context
+    ) -> None:
+        pass
+
+    def __init__(self) -> None:
         pass
 
     # Class Methods End

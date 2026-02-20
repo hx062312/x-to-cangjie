@@ -8,101 +8,6 @@ import io
 # Imports End
 
 
-class EngineState:
-
-    # Class Fields Begin
-    __key: typing.List[int] = None
-    __flags: int = None
-    __cvStack: typing.List[typing.List[int]] = None
-    __stackLen: int = None
-    __state: ChunkState = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def __popCV(self) -> typing.List[int]:
-        pass
-
-    def __pushCV(self, cv: typing.List[int]) -> None:
-        pass
-
-    def __addChunkCV(self, firstCV: typing.List[int], totalChunks: int) -> None:
-        pass
-
-    def reset(self) -> None:
-        pass
-
-    def outputHash(self, out: typing.List[int], offset: int, length: int) -> None:
-        pass
-
-    def inputData(self, in_: typing.List[int], offset: int, length: int) -> None:
-        pass
-
-    def __init__(self, key: typing.List[int], flags: int) -> None:
-        pass
-
-    # Class Methods End
-
-
-class ChunkState:
-
-    # Class Fields Begin
-    __chainingValue: typing.List[int] = None
-    __chunkCounter: int = None
-    __flags: int = None
-    __block: typing.List[int] = None
-    __blockLength: int = None
-    __blocksCompressed: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def output(self) -> Output:
-        pass
-
-    def update(self, input_: typing.List[int], offset: int, length: int) -> None:
-        pass
-
-    def startFlag(self) -> int:
-        pass
-
-    def length(self) -> int:
-        pass
-
-    def __init__(self, key: typing.List[int], chunkCounter: int, flags: int) -> None:
-        pass
-
-    # Class Methods End
-
-
-class Output:
-
-    # Class Fields Begin
-    __inputChainingValue: typing.List[int] = None
-    __blockWords: typing.List[int] = None
-    __counter: int = None
-    __blockLength: int = None
-    __flags: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def rootOutputBytes(self, out: typing.List[int], offset: int, length: int) -> None:
-        pass
-
-    def chainingValue(self) -> typing.List[int]:
-        pass
-
-    def __init__(
-        self,
-        inputChainingValue: typing.List[int],
-        blockWords: typing.List[int],
-        counter: int,
-        blockLength: int,
-        flags: int,
-    ) -> None:
-        pass
-
-    # Class Methods End
-
-
 class Blake3:
 
     # Class Fields Begin
@@ -222,6 +127,101 @@ class Blake3:
         pass
 
     def __init__(self, key: typing.List[int], flags: int) -> None:
+        pass
+
+    # Class Methods End
+
+
+class Output:
+
+    # Class Fields Begin
+    __inputChainingValue: typing.List[int] = None
+    __blockWords: typing.List[int] = None
+    __counter: int = None
+    __blockLength: int = None
+    __flags: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def rootOutputBytes(self, out: typing.List[int], offset: int, length: int) -> None:
+        pass
+
+    def chainingValue(self) -> typing.List[int]:
+        pass
+
+    def __init__(
+        self,
+        inputChainingValue: typing.List[int],
+        blockWords: typing.List[int],
+        counter: int,
+        blockLength: int,
+        flags: int,
+    ) -> None:
+        pass
+
+    # Class Methods End
+
+
+class EngineState:
+
+    # Class Fields Begin
+    __key: typing.List[int] = None
+    __flags: int = None
+    __cvStack: typing.List[typing.List[int]] = None
+    __stackLen: int = None
+    __state: ChunkState = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def __popCV(self) -> typing.List[int]:
+        pass
+
+    def __pushCV(self, cv: typing.List[int]) -> None:
+        pass
+
+    def __addChunkCV(self, firstCV: typing.List[int], totalChunks: int) -> None:
+        pass
+
+    def reset(self) -> None:
+        pass
+
+    def outputHash(self, out: typing.List[int], offset: int, length: int) -> None:
+        pass
+
+    def inputData(self, in_: typing.List[int], offset: int, length: int) -> None:
+        pass
+
+    def __init__(self, key: typing.List[int], flags: int) -> None:
+        pass
+
+    # Class Methods End
+
+
+class ChunkState:
+
+    # Class Fields Begin
+    __chainingValue: typing.List[int] = None
+    __chunkCounter: int = None
+    __flags: int = None
+    __block: typing.List[int] = None
+    __blockLength: int = None
+    __blocksCompressed: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def output(self) -> Output:
+        pass
+
+    def update(self, input_: typing.List[int], offset: int, length: int) -> None:
+        pass
+
+    def startFlag(self) -> int:
+        pass
+
+    def length(self) -> int:
+        pass
+
+    def __init__(self, key: typing.List[int], chunkCounter: int, flags: int) -> None:
         pass
 
     # Class Methods End

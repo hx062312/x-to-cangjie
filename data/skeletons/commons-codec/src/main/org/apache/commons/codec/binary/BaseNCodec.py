@@ -16,29 +16,6 @@ from abc import ABC
 # Imports End
 
 
-class Context:
-
-    # Class Fields Begin
-    ibitWorkArea: int = None
-    lbitWorkArea: int = None
-    buffer: typing.List[int] = None
-    pos: int = None
-    readPos: int = None
-    eof: bool = None
-    currentLinePos: int = None
-    modulus: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def toString(self) -> str:
-        pass
-
-    def __init__(self) -> None:
-        pass
-
-    # Class Methods End
-
-
 class BaseNCodec(BinaryDecoder, BinaryEncoder, ABC):
 
     # Class Fields Begin
@@ -178,6 +155,29 @@ class BaseNCodec(BinaryDecoder, BinaryEncoder, ABC):
     def decode1(
         self, pArray: typing.List[int], i: int, length: int, context: Context
     ) -> None:
+        pass
+
+    # Class Methods End
+
+
+class Context:
+
+    # Class Fields Begin
+    ibitWorkArea: int = None
+    lbitWorkArea: int = None
+    buffer: typing.List[int] = None
+    pos: int = None
+    readPos: int = None
+    eof: bool = None
+    currentLinePos: int = None
+    modulus: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def toString(self) -> str:
+        pass
+
+    def __init__(self) -> None:
         pass
 
     # Class Methods End

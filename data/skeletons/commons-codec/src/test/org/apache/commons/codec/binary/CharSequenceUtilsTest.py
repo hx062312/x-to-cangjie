@@ -12,6 +12,37 @@ from abc import ABC
 # Imports End
 
 
+class CharSequenceUtilsTest(unittest.TestCase):
+
+    # Class Fields Begin
+    __TEST_DATA: typing.List[TestData] = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def testConstructor_test0_decomposed(self) -> None:
+        pass
+
+    def testRegionMatches_test0_decomposed(self) -> None:
+        pass
+
+    # Class Methods End
+
+
+class RunTest(ABC):
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    def run(self, data: TestData, id_: str) -> None:
+        pass
+
+    def invoke(self) -> bool:
+        pass
+
+    # Class Methods End
+
+
 class TestData:
 
     # Class Fields Begin
@@ -41,37 +72,6 @@ class TestData:
         other: str,
         len_: int,
     ) -> None:
-        pass
-
-    # Class Methods End
-
-
-class RunTest(ABC):
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    def run(self, data: TestData, id_: str) -> None:
-        pass
-
-    def invoke(self) -> bool:
-        pass
-
-    # Class Methods End
-
-
-class CharSequenceUtilsTest(unittest.TestCase):
-
-    # Class Fields Begin
-    __TEST_DATA: typing.List[TestData] = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def testConstructor_test0_decomposed(self) -> None:
-        pass
-
-    def testRegionMatches_test0_decomposed(self) -> None:
         pass
 
     # Class Methods End

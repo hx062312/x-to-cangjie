@@ -13,29 +13,6 @@ import io
 # Imports End
 
 
-class Instantiable:
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    # Class Methods End
-
-    pass
-
-
-class NotInstantiable:
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    def __init__(self) -> None:
-        pass
-
-    # Class Methods End
-
-
 class TypeHandlerTest(unittest.TestCase):
 
     # Class Fields Begin
@@ -106,3 +83,26 @@ class TypeHandlerTest(unittest.TestCase):
         pass
 
     # Class Methods End
+
+
+class NotInstantiable:
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    def __init__(self) -> None:
+        pass
+
+    # Class Methods End
+
+
+class Instantiable:
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    # Class Methods End
+
+    pass

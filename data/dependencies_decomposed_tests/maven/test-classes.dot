@@ -1,0 +1,45 @@
+digraph "test-classes" {
+    // Path: java_projects/cleaned_final_projects_decomposed_tests/maven/target/test-classes
+   "com.demo.CartItemTest"                            -> "com.demo.CartItem (not found)";
+   "com.demo.CartItemTest"                            -> "java.lang.Class (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.IllegalArgumentException (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.Object (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.String (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.Throwable (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.invoke.CallSite (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.invoke.LambdaMetafactory (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.invoke.MethodHandle (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.invoke.MethodHandles (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.invoke.MethodHandles$Lookup (java.base)";
+   "com.demo.CartItemTest"                            -> "java.lang.invoke.MethodType (java.base)";
+   "com.demo.CartItemTest"                            -> "org.junit.jupiter.api.Assertions (not found)";
+   "com.demo.CartItemTest"                            -> "org.junit.jupiter.api.DisplayName (not found)";
+   "com.demo.CartItemTest"                            -> "org.junit.jupiter.api.function.Executable (not found)";
+   "com.demo.DiscountServiceTest"                     -> "com.demo.DiscountService (not found)";
+   "com.demo.DiscountServiceTest"                     -> "com.demo.DiscountService$DiscountType (not found)";
+   "com.demo.DiscountServiceTest"                     -> "java.lang.Object (java.base)";
+   "com.demo.DiscountServiceTest"                     -> "java.lang.String (java.base)";
+   "com.demo.DiscountServiceTest"                     -> "org.junit.jupiter.api.Assertions (not found)";
+   "com.demo.DiscountServiceTest"                     -> "org.junit.jupiter.api.DisplayName (not found)";
+   "com.demo.ShoppingCartTest"                        -> "com.demo.CartItem (not found)";
+   "com.demo.ShoppingCartTest"                        -> "com.demo.DiscountService (not found)";
+   "com.demo.ShoppingCartTest"                        -> "com.demo.DiscountService$DiscountType (not found)";
+   "com.demo.ShoppingCartTest"                        -> "com.demo.ShoppingCart (not found)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.Class (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.IllegalArgumentException (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.Object (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.String (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.Throwable (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.UnsupportedOperationException (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.invoke.CallSite (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.invoke.LambdaMetafactory (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.invoke.MethodHandle (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.invoke.MethodHandles (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.invoke.MethodHandles$Lookup (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.lang.invoke.MethodType (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "java.util.List (java.base)";
+   "com.demo.ShoppingCartTest"                        -> "org.junit.jupiter.api.Assertions (not found)";
+   "com.demo.ShoppingCartTest"                        -> "org.junit.jupiter.api.BeforeEach (not found)";
+   "com.demo.ShoppingCartTest"                        -> "org.junit.jupiter.api.DisplayName (not found)";
+   "com.demo.ShoppingCartTest"                        -> "org.junit.jupiter.api.function.Executable (not found)";
+}

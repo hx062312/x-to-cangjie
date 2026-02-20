@@ -15,98 +15,6 @@ from abc import ABC
 # Imports End
 
 
-class PhonemeExpr(ABC):
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    def getPhonemes(self) -> typing.Iterable[Phoneme]:
-        pass
-
-    # Class Methods End
-
-
-class RPattern(ABC):
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    def isMatch(self, input_: str) -> bool:
-        pass
-
-    # Class Methods End
-
-
-class Phoneme(PhonemeExpr):
-
-    # Class Fields Begin
-    __phonemeText: typing.Union[typing.List[str], io.StringIO] = None
-    __languages: LanguageSet = None
-    COMPARATOR: typing.Callable[[Phoneme, Phoneme], int] = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def toString(self) -> str:
-        pass
-
-    def join(self, right: Phoneme) -> Phoneme:
-        pass
-
-    def getPhonemes(self) -> typing.Iterable[Phoneme]:
-        pass
-
-    def mergeWithLanguage(self, lang: LanguageSet) -> Phoneme:
-        pass
-
-    def getPhonemeText(self) -> str:
-        pass
-
-    def getLanguages(self) -> LanguageSet:
-        pass
-
-    def append(self, str_: str) -> Phoneme:
-        pass
-
-    @staticmethod
-    def Phoneme1(
-        phonemeLeft: Phoneme, phonemeRight: Phoneme, languages: LanguageSet
-    ) -> Phoneme:
-        pass
-
-    @staticmethod
-    def Phoneme0(phonemeLeft: Phoneme, phonemeRight: Phoneme) -> Phoneme:
-        pass
-
-    def __init__(
-        self,
-        constructorId: int,
-        phonemeText: str,
-        languages: LanguageSet,
-        phonemeRight: Phoneme,
-    ) -> None:
-        pass
-
-    # Class Methods End
-
-
-class PhonemeList(PhonemeExpr):
-
-    # Class Fields Begin
-    __phonemes: typing.List[Phoneme] = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def getPhonemes(self) -> typing.List[Phoneme]:
-        pass
-
-    def __init__(self, phonemes: typing.List[Phoneme]) -> None:
-        pass
-
-    # Class Methods End
-
-
 class Rule:
 
     # Class Fields Begin
@@ -212,6 +120,98 @@ class Rule:
 
     @staticmethod
     def __contains(chars: str, input_: str) -> bool:
+        pass
+
+    # Class Methods End
+
+
+class RPattern(ABC):
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    def isMatch(self, input_: str) -> bool:
+        pass
+
+    # Class Methods End
+
+
+class PhonemeExpr(ABC):
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    def getPhonemes(self) -> typing.Iterable[Phoneme]:
+        pass
+
+    # Class Methods End
+
+
+class PhonemeList(PhonemeExpr):
+
+    # Class Fields Begin
+    __phonemes: typing.List[Phoneme] = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def getPhonemes(self) -> typing.List[Phoneme]:
+        pass
+
+    def __init__(self, phonemes: typing.List[Phoneme]) -> None:
+        pass
+
+    # Class Methods End
+
+
+class Phoneme(PhonemeExpr):
+
+    # Class Fields Begin
+    __phonemeText: typing.Union[typing.List[str], io.StringIO] = None
+    __languages: LanguageSet = None
+    COMPARATOR: typing.Callable[[Phoneme, Phoneme], int] = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def toString(self) -> str:
+        pass
+
+    def join(self, right: Phoneme) -> Phoneme:
+        pass
+
+    def getPhonemes(self) -> typing.Iterable[Phoneme]:
+        pass
+
+    def mergeWithLanguage(self, lang: LanguageSet) -> Phoneme:
+        pass
+
+    def getPhonemeText(self) -> str:
+        pass
+
+    def getLanguages(self) -> LanguageSet:
+        pass
+
+    def append(self, str_: str) -> Phoneme:
+        pass
+
+    @staticmethod
+    def Phoneme1(
+        phonemeLeft: Phoneme, phonemeRight: Phoneme, languages: LanguageSet
+    ) -> Phoneme:
+        pass
+
+    @staticmethod
+    def Phoneme0(phonemeLeft: Phoneme, phonemeRight: Phoneme) -> Phoneme:
+        pass
+
+    def __init__(
+        self,
+        constructorId: int,
+        phonemeText: str,
+        languages: LanguageSet,
+        phonemeRight: Phoneme,
+    ) -> None:
         pass
 
     # Class Methods End

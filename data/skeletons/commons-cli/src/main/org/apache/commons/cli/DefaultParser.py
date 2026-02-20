@@ -22,31 +22,6 @@ import io
 # Imports End
 
 
-class Builder:
-
-    # Class Fields Begin
-    __allowPartialMatching: bool = None
-    __stripLeadingAndTrailingQuotes: bool = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def setStripLeadingAndTrailingQuotes(
-        self, stripLeadingAndTrailingQuotes: bool
-    ) -> Builder:
-        pass
-
-    def setAllowPartialMatching(self, allowPartialMatching: bool) -> Builder:
-        pass
-
-    def build(self) -> DefaultParser:
-        pass
-
-    def __init__(self) -> None:
-        pass
-
-    # Class Methods End
-
-
 class DefaultParser(CommandLineParser):
 
     # Class Fields Begin
@@ -170,6 +145,31 @@ class DefaultParser(CommandLineParser):
         pass
 
     def __checkRequiredArgs(self) -> None:
+        pass
+
+    # Class Methods End
+
+
+class Builder:
+
+    # Class Fields Begin
+    __allowPartialMatching: bool = None
+    __stripLeadingAndTrailingQuotes: bool = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def setStripLeadingAndTrailingQuotes(
+        self, stripLeadingAndTrailingQuotes: bool
+    ) -> Builder:
+        pass
+
+    def setAllowPartialMatching(self, allowPartialMatching: bool) -> Builder:
+        pass
+
+    def build(self) -> DefaultParser:
+        pass
+
+    def __init__(self) -> None:
         pass
 
     # Class Methods End

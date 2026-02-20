@@ -9,72 +9,6 @@ import io
 # Imports End
 
 
-class Builder:
-
-    # Class Fields Begin
-    __option: str = None
-    __description: str = None
-    __longOption: str = None
-    __argName: str = None
-    __required: bool = None
-    __optionalArg: bool = None
-    __argCount: int = None
-    __type: typing.Type[typing.Any] = None
-    __valueSeparator: str = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def valueSeparator1(self, sep: str) -> Builder:
-        pass
-
-    def valueSeparator0(self) -> Builder:
-        pass
-
-    def type_(self, type_: typing.Type[typing.Any]) -> Builder:
-        pass
-
-    def required1(self, required: bool) -> Builder:
-        pass
-
-    def required0(self) -> Builder:
-        pass
-
-    def optionalArg(self, isOptional: bool) -> Builder:
-        pass
-
-    def option(self, option: str) -> Builder:
-        pass
-
-    def numberOfArgs(self, numberOfArgs: int) -> Builder:
-        pass
-
-    def longOpt(self, longOpt: str) -> Builder:
-        pass
-
-    def hasArgs(self) -> Builder:
-        pass
-
-    def hasArg1(self, hasArg: bool) -> Builder:
-        pass
-
-    def hasArg0(self) -> Builder:
-        pass
-
-    def desc(self, description: str) -> Builder:
-        pass
-
-    def build(self) -> Option:
-        pass
-
-    def argName(self, argName: str) -> Builder:
-        pass
-
-    def __init__(self, option: str) -> None:
-        pass
-
-    # Class Methods End
-
-
 class Option:
 
     # Class Fields Begin
@@ -245,6 +179,72 @@ class Option:
         pass
 
     def acceptsArg(self) -> bool:
+        pass
+
+    # Class Methods End
+
+
+class Builder:
+
+    # Class Fields Begin
+    __option: str = None
+    __description: str = None
+    __longOption: str = None
+    __argName: str = None
+    __required: bool = None
+    __optionalArg: bool = None
+    __argCount: int = None
+    __type: typing.Type[typing.Any] = None
+    __valueSeparator: str = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def valueSeparator1(self, sep: str) -> Builder:
+        pass
+
+    def valueSeparator0(self) -> Builder:
+        pass
+
+    def type_(self, type_: typing.Type[typing.Any]) -> Builder:
+        pass
+
+    def required1(self, required: bool) -> Builder:
+        pass
+
+    def required0(self) -> Builder:
+        pass
+
+    def optionalArg(self, isOptional: bool) -> Builder:
+        pass
+
+    def option(self, option: str) -> Builder:
+        pass
+
+    def numberOfArgs(self, numberOfArgs: int) -> Builder:
+        pass
+
+    def longOpt(self, longOpt: str) -> Builder:
+        pass
+
+    def hasArgs(self) -> Builder:
+        pass
+
+    def hasArg1(self, hasArg: bool) -> Builder:
+        pass
+
+    def hasArg0(self) -> Builder:
+        pass
+
+    def desc(self, description: str) -> Builder:
+        pass
+
+    def build(self) -> Option:
+        pass
+
+    def argName(self, argName: str) -> Builder:
+        pass
+
+    def __init__(self, option: str) -> None:
         pass
 
     # Class Methods End

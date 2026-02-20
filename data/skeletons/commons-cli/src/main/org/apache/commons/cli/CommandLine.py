@@ -13,25 +13,6 @@ import io
 # Imports End
 
 
-class Builder:
-
-    # Class Fields Begin
-    __commandLine: CommandLine = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def build(self) -> CommandLine:
-        pass
-
-    def addOption(self, opt: Option) -> Builder:
-        pass
-
-    def addArg(self, arg: str) -> Builder:
-        pass
-
-    # Class Methods End
-
-
 class CommandLine:
 
     # Class Fields Begin
@@ -124,6 +105,25 @@ class CommandLine:
         pass
 
     def __resolveOption(self, opt: str) -> Option:
+        pass
+
+    # Class Methods End
+
+
+class Builder:
+
+    # Class Fields Begin
+    __commandLine: CommandLine = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def build(self) -> CommandLine:
+        pass
+
+    def addOption(self, opt: Option) -> Builder:
+        pass
+
+    def addArg(self, arg: str) -> Builder:
         pass
 
     # Class Methods End

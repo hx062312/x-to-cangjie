@@ -14,19 +14,6 @@ from io import IOBase
 # Imports End
 
 
-class OptionComparator:
-
-    # Class Fields Begin
-    __serialVersionUID: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def compare(self, opt1: Option, opt2: Option) -> int:
-        pass
-
-    # Class Methods End
-
-
 class HelpFormatter:
 
     # Class Fields Begin
@@ -246,6 +233,19 @@ class HelpFormatter:
         pass
 
     def __appendOption(self, buff: io.StringIO, option: Option, required: bool) -> None:
+        pass
+
+    # Class Methods End
+
+
+class OptionComparator:
+
+    # Class Fields Begin
+    __serialVersionUID: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def compare(self, opt1: Option, opt2: Option) -> int:
         pass
 
     # Class Methods End

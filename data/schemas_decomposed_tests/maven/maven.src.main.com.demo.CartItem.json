@@ -1,0 +1,344 @@
+{
+    "path": "java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/CartItem.java",
+    "imports": {},
+    "classes": {
+        "CartItem": {
+            "start": 7,
+            "end": 7,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": [],
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "70-77:toString": {
+                    "start": 70,
+                    "end": 77,
+                    "body": [
+                        "    public String toString() {\n",
+                        "        return String.format(\n",
+                        "            \"CartItem{name='%s', price=%.2f, quantity=%d}\",\n",
+                        "            name,\n",
+                        "            price,\n",
+                        "            quantity\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "Override"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "String",
+                            "java.lang.String"
+                        ]
+                    ],
+                    "signature": "toString()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "format(java.lang.String,java.lang.Object[])"
+                        ]
+                    ]
+                },
+                "62-67:hashCode": {
+                    "start": 62,
+                    "end": 67,
+                    "body": [
+                        "    public int hashCode() {\n",
+                        "        int result = name.hashCode();\n",
+                        "        result = 31 * result + Double.hashCode(price);\n",
+                        "        result = 31 * result + Integer.hashCode(quantity);\n",
+                        "        return result;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "Override"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "int",
+                            "int"
+                        ]
+                    ],
+                    "signature": "hashCode()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "hashCode()"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/Double",
+                            "hashCode(double)"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/Integer",
+                            "hashCode(int)"
+                        ]
+                    ]
+                },
+                "50-59:equals": {
+                    "start": 50,
+                    "end": 59,
+                    "body": [
+                        "    public boolean equals(Object o) {\n",
+                        "        if (this == o) return true;\n",
+                        "        if (o == null || getClass() != o.getClass()) return false;\n",
+                        "        CartItem cartItem = (CartItem) o;\n",
+                        "        return (\n",
+                        "            Double.compare(cartItem.price, price) == 0 &&\n",
+                        "            quantity == cartItem.quantity &&\n",
+                        "            name.equals(cartItem.name)\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [
+                        "Override"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "boolean",
+                            "boolean"
+                        ]
+                    ],
+                    "signature": "equals(Object)",
+                    "parameters": [
+                        "o"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/Object",
+                            "getClass()"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "equals(java.lang.Object)"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/Double",
+                            "compare(double,double)"
+                        ]
+                    ]
+                },
+                "45-47:getSubtotal": {
+                    "start": 45,
+                    "end": 47,
+                    "body": [
+                        "    public double getSubtotal() {\n",
+                        "        return price * quantity;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ],
+                    "signature": "getSubtotal()",
+                    "parameters": [],
+                    "calls": []
+                },
+                "38-40:getQuantity": {
+                    "start": 38,
+                    "end": 40,
+                    "body": [
+                        "    public int getQuantity() {\n",
+                        "        return quantity;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "int",
+                            "int"
+                        ]
+                    ],
+                    "signature": "getQuantity()",
+                    "parameters": [],
+                    "calls": []
+                },
+                "34-36:getPrice": {
+                    "start": 34,
+                    "end": 36,
+                    "body": [
+                        "    public double getPrice() {\n",
+                        "        return price;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ],
+                    "signature": "getPrice()",
+                    "parameters": [],
+                    "calls": []
+                },
+                "30-32:getName": {
+                    "start": 30,
+                    "end": 32,
+                    "body": [
+                        "    public String getName() {\n",
+                        "        return name;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "String",
+                            "java.lang.String"
+                        ]
+                    ],
+                    "signature": "getName()",
+                    "parameters": [],
+                    "calls": []
+                },
+                "13-28:CartItem": {
+                    "start": 13,
+                    "end": 28,
+                    "body": [
+                        "    public CartItem(String name, double price, int quantity) {\n",
+                        "        if (name == null || name.isBlank()) {\n",
+                        "            throw new IllegalArgumentException(\n",
+                        "                \"Product name cannot be null or empty\"\n",
+                        "            );\n",
+                        "        }\n",
+                        "        if (price < 0) {\n",
+                        "            throw new IllegalArgumentException(\"Price cannot be negative\");\n",
+                        "        }\n",
+                        "        if (quantity <= 0) {\n",
+                        "            throw new IllegalArgumentException(\"Quantity must be positive\");\n",
+                        "        }\n",
+                        "        this.name = name;\n",
+                        "        this.price = price;\n",
+                        "        this.quantity = quantity;\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": true,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "CartItem(String, double, int)",
+                    "parameters": [
+                        "name",
+                        "price",
+                        "quantity"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "isBlank()"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/IllegalArgumentException",
+                            "IllegalArgumentException(java.lang.String)"
+                        ]
+                    ]
+                }
+            },
+            "fields": {
+                "11-11:quantity": {
+                    "start": 11,
+                    "end": 11,
+                    "body": [
+                        "    private final int quantity;\n"
+                    ],
+                    "modifiers": [
+                        "final",
+                        "private"
+                    ],
+                    "types": [
+                        [
+                            "int",
+                            "int"
+                        ]
+                    ]
+                },
+                "10-10:price": {
+                    "start": 10,
+                    "end": 10,
+                    "body": [
+                        "    private final double price;\n"
+                    ],
+                    "modifiers": [
+                        "final",
+                        "private"
+                    ],
+                    "types": [
+                        [
+                            "double",
+                            "double"
+                        ]
+                    ]
+                },
+                "9-9:name": {
+                    "start": 9,
+                    "end": 9,
+                    "body": [
+                        "    private final String name;\n"
+                    ],
+                    "modifiers": [
+                        "final",
+                        "private"
+                    ],
+                    "types": [
+                        [
+                            "String",
+                            "java.lang.String"
+                        ]
+                    ]
+                }
+            }
+        }
+    }
+}

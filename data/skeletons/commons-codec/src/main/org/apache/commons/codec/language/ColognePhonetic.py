@@ -12,77 +12,6 @@ from abc import ABC
 # Imports End
 
 
-class CologneBuffer(ABC):
-
-    # Class Fields Begin
-    _data: typing.List[str] = None
-    _length: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def toString(self) -> str:
-        pass
-
-    def isEmpty(self) -> bool:
-        pass
-
-    def length(self) -> int:
-        pass
-
-    def __init__(
-        self, constructorId: int, data: typing.List[str], buffSize: int
-    ) -> None:
-        pass
-
-    def _copyData(self, start: int, length: int) -> typing.List[str]:
-        pass
-
-    # Class Methods End
-
-
-class CologneInputBuffer(CologneBuffer):
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    def _copyData(self, start: int, length: int) -> typing.List[str]:
-        pass
-
-    def removeNext(self) -> str:
-        pass
-
-    def _getNextPos(self) -> int:
-        pass
-
-    def getNextChar(self) -> str:
-        pass
-
-    def __init__(self, data: typing.List[str]) -> None:
-        pass
-
-    # Class Methods End
-
-
-class CologneOutputBuffer(CologneBuffer):
-
-    # Class Fields Begin
-    __lastCode: str = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def _copyData(self, start: int, length: int) -> typing.List[str]:
-        pass
-
-    def put(self, code: str) -> None:
-        pass
-
-    def __init__(self, buffSize: int) -> None:
-        pass
-
-    # Class Methods End
-
-
 class ColognePhonetic(StringEncoder):
 
     # Class Fields Begin
@@ -122,6 +51,77 @@ class ColognePhonetic(StringEncoder):
 
     @staticmethod
     def __arrayContains(arr: typing.List[str], key: str) -> bool:
+        pass
+
+    # Class Methods End
+
+
+class CologneBuffer(ABC):
+
+    # Class Fields Begin
+    _data: typing.List[str] = None
+    _length: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def toString(self) -> str:
+        pass
+
+    def isEmpty(self) -> bool:
+        pass
+
+    def length(self) -> int:
+        pass
+
+    def __init__(
+        self, constructorId: int, data: typing.List[str], buffSize: int
+    ) -> None:
+        pass
+
+    def _copyData(self, start: int, length: int) -> typing.List[str]:
+        pass
+
+    # Class Methods End
+
+
+class CologneOutputBuffer(CologneBuffer):
+
+    # Class Fields Begin
+    __lastCode: str = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def _copyData(self, start: int, length: int) -> typing.List[str]:
+        pass
+
+    def put(self, code: str) -> None:
+        pass
+
+    def __init__(self, buffSize: int) -> None:
+        pass
+
+    # Class Methods End
+
+
+class CologneInputBuffer(CologneBuffer):
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    def _copyData(self, start: int, length: int) -> typing.List[str]:
+        pass
+
+    def removeNext(self) -> str:
+        pass
+
+    def _getNextPos(self) -> int:
+        pass
+
+    def getNextChar(self) -> str:
+        pass
+
+    def __init__(self, data: typing.List[str]) -> None:
         pass
 
     # Class Methods End

@@ -12,54 +12,6 @@ from io import StringIO
 # Imports End
 
 
-class DoubleMetaphoneResult:
-
-    # Class Fields Begin
-    __primary: typing.Union[typing.List[str], io.StringIO] = None
-    __alternate: typing.Union[typing.List[str], io.StringIO] = None
-    __maxLength: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def isComplete(self) -> bool:
-        pass
-
-    def getAlternate(self) -> str:
-        pass
-
-    def getPrimary(self) -> str:
-        pass
-
-    def appendAlternate1(self, value: str) -> None:
-        pass
-
-    def appendPrimary1(self, value: str) -> None:
-        pass
-
-    def append3(self, primary: str, alternate: str) -> None:
-        pass
-
-    def append2(self, value: str) -> None:
-        pass
-
-    def appendAlternate0(self, value: str) -> None:
-        pass
-
-    def appendPrimary0(self, value: str) -> None:
-        pass
-
-    def append1(self, primary: str, alternate: str) -> None:
-        pass
-
-    def append0(self, value: str) -> None:
-        pass
-
-    def __init__(self, maxLength: int) -> None:
-        pass
-
-    # Class Methods End
-
-
 class DoubleMetaphone(StringEncoder):
 
     # Class Fields Begin
@@ -205,6 +157,54 @@ class DoubleMetaphone(StringEncoder):
         pass
 
     def __handleAEIOUY(self, result: DoubleMetaphoneResult, index: int) -> int:
+        pass
+
+    # Class Methods End
+
+
+class DoubleMetaphoneResult:
+
+    # Class Fields Begin
+    __primary: typing.Union[typing.List[str], io.StringIO] = None
+    __alternate: typing.Union[typing.List[str], io.StringIO] = None
+    __maxLength: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def isComplete(self) -> bool:
+        pass
+
+    def getAlternate(self) -> str:
+        pass
+
+    def getPrimary(self) -> str:
+        pass
+
+    def appendAlternate1(self, value: str) -> None:
+        pass
+
+    def appendPrimary1(self, value: str) -> None:
+        pass
+
+    def append3(self, primary: str, alternate: str) -> None:
+        pass
+
+    def append2(self, value: str) -> None:
+        pass
+
+    def appendAlternate0(self, value: str) -> None:
+        pass
+
+    def appendPrimary0(self, value: str) -> None:
+        pass
+
+    def append1(self, primary: str, alternate: str) -> None:
+        pass
+
+    def append0(self, value: str) -> None:
+        pass
+
+    def __init__(self, maxLength: int) -> None:
         pass
 
     # Class Methods End

@@ -11,6 +11,47 @@ import io
 # Imports End
 
 
+class PureJavaCrc32Test(unittest.TestCase):
+
+    # Class Fields Begin
+    __theirs: typing.Any = None
+    __ours: PureJavaCrc32 = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def testCorrectness_test7_decomposed(self) -> None:
+        pass
+
+    def testCorrectness_test6_decomposed(self) -> None:
+        pass
+
+    def testCorrectness_test5_decomposed(self) -> None:
+        pass
+
+    def testCorrectness_test4_decomposed(self) -> None:
+        pass
+
+    def testCorrectness_test3_decomposed(self) -> None:
+        pass
+
+    def testCorrectness_test2_decomposed(self) -> None:
+        pass
+
+    def testCorrectness_test1_decomposed(self) -> None:
+        pass
+
+    def testCorrectness_test0_decomposed(self) -> None:
+        pass
+
+    def __checkSame(self) -> None:
+        pass
+
+    def __checkOnBytes(self, bytes_: typing.List[int], print_: bool) -> None:
+        pass
+
+    # Class Methods End
+
+
 class Table:
 
     # Class Fields Begin
@@ -29,20 +70,6 @@ class Table:
         pass
 
     def toStrings(self, nameformat: str) -> typing.List[typing.List[str]]:
-        pass
-
-    # Class Methods End
-
-
-class BenchResult:
-
-    # Class Fields Begin
-    value: int = None
-    mbps: float = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def __init__(self, value: int, mbps: float) -> None:
         pass
 
     # Class Methods End
@@ -95,42 +122,15 @@ class PerformanceTest:
     # Class Methods End
 
 
-class PureJavaCrc32Test(unittest.TestCase):
+class BenchResult:
 
     # Class Fields Begin
-    __theirs: typing.Any = None
-    __ours: PureJavaCrc32 = None
+    value: int = None
+    mbps: float = None
     # Class Fields End
 
     # Class Methods Begin
-    def testCorrectness_test7_decomposed(self) -> None:
-        pass
-
-    def testCorrectness_test6_decomposed(self) -> None:
-        pass
-
-    def testCorrectness_test5_decomposed(self) -> None:
-        pass
-
-    def testCorrectness_test4_decomposed(self) -> None:
-        pass
-
-    def testCorrectness_test3_decomposed(self) -> None:
-        pass
-
-    def testCorrectness_test2_decomposed(self) -> None:
-        pass
-
-    def testCorrectness_test1_decomposed(self) -> None:
-        pass
-
-    def testCorrectness_test0_decomposed(self) -> None:
-        pass
-
-    def __checkSame(self) -> None:
-        pass
-
-    def __checkOnBytes(self, bytes_: typing.List[int], print_: bool) -> None:
+    def __init__(self, value: int, mbps: float) -> None:
         pass
 
     # Class Methods End

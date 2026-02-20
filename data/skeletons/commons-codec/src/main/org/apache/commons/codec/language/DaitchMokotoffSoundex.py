@@ -1,93 +1,21 @@
 from __future__ import annotations
 
 # Imports Begin
-from src.main.org.apache.commons.codec.StringEncoder import *
-from src.main.org.apache.commons.codec.EncoderException import *
-from src.main.org.apache.commons.codec.CharEncoding import *
 from src.main.org.apache.commons.codec.language.bm.RuleType import *
 from src.main.org.apache.commons.codec.language.bm.Rule1 import *
 from src.main.org.apache.commons.codec.language.bm.ResourceConstants import *
 from src.main.org.apache.commons.codec.language.bm.NameType import *
 from src.main.org.apache.commons.codec.language.bm.Languages import *
+from src.main.org.apache.commons.codec.StringEncoder import *
 from src.main.org.apache.commons.codec.Resources import *
+from src.main.org.apache.commons.codec.EncoderException import *
+from src.main.org.apache.commons.codec.CharEncoding import *
 import typing
 from typing import *
 import io
 from io import StringIO
 
 # Imports End
-
-
-class Branch:
-
-    # Class Fields Begin
-    __builder: typing.Union[typing.List[str], io.StringIO] = None
-    __cachedString: str = None
-    __lastReplacement: str = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def toString(self) -> str:
-        pass
-
-    def hashCode(self) -> int:
-        pass
-
-    def equals(self, other: typing.Any) -> bool:
-        pass
-
-    def processNextReplacement(self, replacement: str, forceAppend: bool) -> None:
-        pass
-
-    def finish(self) -> None:
-        pass
-
-    def createBranch(self) -> Branch:
-        pass
-
-    def __init__(self) -> None:
-        pass
-
-    # Class Methods End
-
-
-class Rule:
-
-    # Class Fields Begin
-    __pattern: str = None
-    __replacementAtStart: typing.List[typing.List[str]] = None
-    __replacementBeforeVowel: typing.List[typing.List[str]] = None
-    __replacementDefault: typing.List[typing.List[str]] = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def toString(self) -> str:
-        pass
-
-    def matches(self, context: str) -> bool:
-        pass
-
-    def getReplacements(
-        self, context: str, atStart: bool
-    ) -> typing.List[typing.List[str]]:
-        pass
-
-    def getPatternLength(self) -> int:
-        pass
-
-    def __init__(
-        self,
-        pattern: str,
-        replacementAtStart: str,
-        replacementBeforeVowel: str,
-        replacementDefault: str,
-    ) -> None:
-        pass
-
-    def __isVowel(self, ch: str) -> bool:
-        pass
-
-    # Class Methods End
 
 
 class DaitchMokotoffSoundex(StringEncoder):
@@ -144,6 +72,78 @@ class DaitchMokotoffSoundex(StringEncoder):
         ruleMapping: typing.Dict[str, typing.List[Rule]],
         asciiFoldings: typing.Dict[str, str],
     ) -> None:
+        pass
+
+    # Class Methods End
+
+
+class Rule:
+
+    # Class Fields Begin
+    __pattern: str = None
+    __replacementAtStart: typing.List[typing.List[str]] = None
+    __replacementBeforeVowel: typing.List[typing.List[str]] = None
+    __replacementDefault: typing.List[typing.List[str]] = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def toString(self) -> str:
+        pass
+
+    def matches(self, context: str) -> bool:
+        pass
+
+    def getReplacements(
+        self, context: str, atStart: bool
+    ) -> typing.List[typing.List[str]]:
+        pass
+
+    def getPatternLength(self) -> int:
+        pass
+
+    def __init__(
+        self,
+        pattern: str,
+        replacementAtStart: str,
+        replacementBeforeVowel: str,
+        replacementDefault: str,
+    ) -> None:
+        pass
+
+    def __isVowel(self, ch: str) -> bool:
+        pass
+
+    # Class Methods End
+
+
+class Branch:
+
+    # Class Fields Begin
+    __builder: typing.Union[typing.List[str], io.StringIO] = None
+    __cachedString: str = None
+    __lastReplacement: str = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def toString(self) -> str:
+        pass
+
+    def hashCode(self) -> int:
+        pass
+
+    def equals(self, other: typing.Any) -> bool:
+        pass
+
+    def processNextReplacement(self, replacement: str, forceAppend: bool) -> None:
+        pass
+
+    def finish(self) -> None:
+        pass
+
+    def createBranch(self) -> Branch:
+        pass
+
+    def __init__(self) -> None:
         pass
 
     # Class Methods End

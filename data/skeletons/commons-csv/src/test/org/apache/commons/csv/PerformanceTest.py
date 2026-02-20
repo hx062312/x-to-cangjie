@@ -18,32 +18,6 @@ from abc import ABC
 # Imports End
 
 
-class Stats:
-
-    # Class Fields Begin
-    count: int = None
-    fields: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def __init__(self, c: int, f: int) -> None:
-        pass
-
-    # Class Methods End
-
-
-class CSVParserFactory(ABC):
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    def createParser(self) -> CSVParser:
-        pass
-
-    # Class Methods End
-
-
 class PerformanceTest:
 
     # Class Fields Begin
@@ -121,6 +95,32 @@ class PerformanceTest:
     def __createReader() -> (
         typing.Union[io.TextIOWrapper, io.BufferedReader, io.TextIOBase]
     ):
+        pass
+
+    # Class Methods End
+
+
+class Stats:
+
+    # Class Fields Begin
+    count: int = None
+    fields: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def __init__(self, c: int, f: int) -> None:
+        pass
+
+    # Class Methods End
+
+
+class CSVParserFactory(ABC):
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    def createParser(self) -> CSVParser:
         pass
 
     # Class Methods End

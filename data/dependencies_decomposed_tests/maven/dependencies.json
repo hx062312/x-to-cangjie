@@ -1,0 +1,72 @@
+{
+    "CartItem": [],
+    "ShoppingCart": [
+        [
+            "CartItem",
+            "com.demo.CartItem"
+        ],
+        [
+            "DiscountService",
+            "com.demo.DiscountService"
+        ]
+    ],
+    "ReceiptGenerator": [
+        [
+            "CartItem",
+            "com.demo.CartItem"
+        ],
+        [
+            "DiscountService",
+            "com.demo.DiscountService"
+        ],
+        [
+            "ShoppingCart",
+            "com.demo.ShoppingCart"
+        ]
+    ],
+    "DiscountService": [],
+    "App": [
+        [
+            "CartItem",
+            "com.demo.CartItem"
+        ],
+        [
+            "DiscountService",
+            "com.demo.DiscountService"
+        ],
+        [
+            "ReceiptGenerator",
+            "com.demo.ReceiptGenerator"
+        ],
+        [
+            "ShoppingCart",
+            "com.demo.ShoppingCart"
+        ]
+    ],
+    "ShoppingCartTest": [
+        [
+            "CartItem",
+            "com.demo.CartItem"
+        ],
+        [
+            "DiscountService",
+            "com.demo.DiscountService"
+        ],
+        [
+            "ShoppingCart",
+            "com.demo.ShoppingCart"
+        ]
+    ],
+    "DiscountServiceTest": [
+        [
+            "DiscountService",
+            "com.demo.DiscountService"
+        ]
+    ],
+    "CartItemTest": [
+        [
+            "CartItem",
+            "com.demo.CartItem"
+        ]
+    ]
+}

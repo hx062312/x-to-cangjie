@@ -11,39 +11,6 @@ import io
 # Imports End
 
 
-class DefaultOption(Option):
-
-    # Class Fields Begin
-    __serialVersionUID: int = None
-    __defaultValue: str = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def getValue0(self) -> str:
-        pass
-
-    def __init__(self, opt: str, description: str, defaultValue: str) -> None:
-        pass
-
-    # Class Methods End
-
-
-class TestOption(Option):
-
-    # Class Fields Begin
-    __serialVersionUID: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def addValue(self, value: str) -> bool:
-        pass
-
-    def __init__(self, opt: str, hasArg: bool, description: str) -> None:
-        pass
-
-    # Class Methods End
-
-
 class OptionTest(unittest.TestCase):
 
     # Class Fields Begin
@@ -507,6 +474,39 @@ class OptionTest(unittest.TestCase):
         valueSeparator: str,
         cls: typing.Type[typing.Any],
     ) -> None:
+        pass
+
+    # Class Methods End
+
+
+class TestOption(Option):
+
+    # Class Fields Begin
+    __serialVersionUID: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def addValue(self, value: str) -> bool:
+        pass
+
+    def __init__(self, opt: str, hasArg: bool, description: str) -> None:
+        pass
+
+    # Class Methods End
+
+
+class DefaultOption(Option):
+
+    # Class Fields Begin
+    __serialVersionUID: int = None
+    __defaultValue: str = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def getValue0(self) -> str:
+        pass
+
+    def __init__(self, opt: str, description: str, defaultValue: str) -> None:
         pass
 
     # Class Methods End

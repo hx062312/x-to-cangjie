@@ -1,0 +1,336 @@
+{
+    "path": "java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/ReceiptGenerator.java",
+    "imports": {},
+    "classes": {
+        "ReceiptGenerator": {
+            "start": 7,
+            "end": 7,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": [],
+            "nests": [
+                "new Consumer<CartItem>(...) { ... }"
+            ],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "82-90:generateSummary": {
+                    "start": 82,
+                    "end": 90,
+                    "body": [
+                        "    public String generateSummary(ShoppingCart cart) {\n",
+                        "        return String.format(\n",
+                        "            \"Cart[%d items]: Subtotal=$%.2f, Discount=$%.2f, Total=$%.2f\",\n",
+                        "            cart.getItemCount(),\n",
+                        "            cart.getSubtotal(),\n",
+                        "            cart.getDiscountAmount(),\n",
+                        "            cart.getTotal()\n",
+                        "        );\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "String",
+                            "java.lang.String"
+                        ]
+                    ],
+                    "signature": "generateSummary(ShoppingCart)",
+                    "parameters": [
+                        "cart"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "format(java.lang.String,java.lang.Object[])"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "73-75:getItemCount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "80-82:getSubtotal"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "87-89:getDiscountAmount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "94-96:getTotal"
+                        ]
+                    ]
+                },
+                "14-77:generate": {
+                    "start": 14,
+                    "end": 77,
+                    "body": [
+                        "    public String generate(ShoppingCart cart) {\n",
+                        "        if (cart == null) {\n",
+                        "            throw new IllegalArgumentException(\"Cart cannot be null\");\n",
+                        "        }\n",
+                        "\n",
+                        "        StringBuilder sb = new StringBuilder();\n",
+                        "        sb.append(SEPARATOR).append(\"\\n\");\n",
+                        "        sb.append(\"       SHOPPING RECEIPT\\n\");\n",
+                        "        sb.append(SEPARATOR).append(\"\\n\");\n",
+                        "\n",
+                        "        // List items\n",
+                        "        if (cart.isEmpty()) {\n",
+                        "            sb.append(\"Your cart is empty.\\n\");\n",
+                        "        } else {\n",
+                        "            sb.append(\"Items:\\n\");\n",
+                        "            cart\n",
+                        "                .getItems()\n",
+                        "                .forEach(item -> {\n",
+                        "                    sb.append(\n",
+                        "                        String.format(\n",
+                        "                            \"  %s x%d\\n\",\n",
+                        "                            item.getName(),\n",
+                        "                            item.getQuantity()\n",
+                        "                        )\n",
+                        "                    );\n",
+                        "                    sb.append(\n",
+                        "                        String.format(\n",
+                        "                            \"    $%.2f each -> $%.2f\\n\",\n",
+                        "                            item.getPrice(),\n",
+                        "                            item.getSubtotal()\n",
+                        "                        )\n",
+                        "                    );\n",
+                        "                });\n",
+                        "            sb.append(\"\\n\");\n",
+                        "            sb.append(SEPARATOR).append(\"\\n\");\n",
+                        "        }\n",
+                        "\n",
+                        "        // Subtotal\n",
+                        "        sb.append(String.format(\"Subtotal:      $%.2f\\n\", cart.getSubtotal()));\n",
+                        "\n",
+                        "        // Discount\n",
+                        "        if (cart.hasDiscount()) {\n",
+                        "            sb.append(\n",
+                        "                String.format(\n",
+                        "                    \"Discount:      -$%.2f\\n\",\n",
+                        "                    cart.getDiscountAmount()\n",
+                        "                )\n",
+                        "            );\n",
+                        "            sb.append(\n",
+                        "                String.format(\n",
+                        "                    \"  (%s)\\n\",\n",
+                        "                    cart.getDiscountService().getDiscountDescription()\n",
+                        "                )\n",
+                        "            );\n",
+                        "        }\n",
+                        "\n",
+                        "        // Total\n",
+                        "        sb.append(SEPARATOR).append(\"\\n\");\n",
+                        "        sb.append(String.format(\"TOTAL:         $%.2f\\n\", cart.getTotal()));\n",
+                        "        sb.append(SEPARATOR).append(\"\\n\");\n",
+                        "        sb.append(\"Thank you for shopping!\\n\");\n",
+                        "\n",
+                        "        return sb.toString();\n",
+                        "    }\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public"
+                    ],
+                    "return_types": [
+                        [
+                            "String",
+                            "java.lang.String"
+                        ]
+                    ],
+                    "signature": "generate(ShoppingCart)",
+                    "parameters": [
+                        "cart"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/StringBuilder",
+                            "StringBuilder()"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/IllegalArgumentException",
+                            "IllegalArgumentException(java.lang.String)"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/StringBuilder",
+                            "append(java.lang.String)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "66-68:isEmpty"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/Iterable",
+                            "forEach(java.util.function.Consumer)"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "59-61:getItems"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "format(java.lang.String,java.lang.Object[])"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "80-82:getSubtotal"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "108-110:hasDiscount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "87-89:getDiscountAmount"
+                        ],
+                        [
+                            "maven.src.main.com.demo.DiscountService",
+                            "DiscountService",
+                            "59-72:getDiscountDescription"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "101-103:getDiscountService"
+                        ],
+                        [
+                            "maven.src.main.com.demo.ShoppingCart",
+                            "ShoppingCart",
+                            "94-96:getTotal"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/StringBuilder",
+                            "toString()"
+                        ]
+                    ]
+                }
+            },
+            "fields": {
+                "9-9:SEPARATOR": {
+                    "start": 9,
+                    "end": 9,
+                    "body": [
+                        "    private static final String SEPARATOR = \"--------------------------------\";\n"
+                    ],
+                    "modifiers": [
+                        "final",
+                        "static",
+                        "private"
+                    ],
+                    "types": [
+                        [
+                            "String",
+                            "java.lang.String"
+                        ]
+                    ]
+                }
+            }
+        },
+        "new Consumer<CartItem>(...) { ... }": {
+            "start": 31,
+            "end": 46,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": "ReceiptGenerator",
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "29-46:accept": {
+                    "start": 29,
+                    "end": 46,
+                    "body": [
+                        "            cart\n",
+                        "                .getItems()\n",
+                        "                .forEach(item -> {\n",
+                        "                    sb.append(\n",
+                        "                        String.format(\n",
+                        "                            \"  %s x%d\\n\",\n",
+                        "                            item.getName(),\n",
+                        "                            item.getQuantity()\n",
+                        "                        )\n",
+                        "                    );\n",
+                        "                    sb.append(\n",
+                        "                        String.format(\n",
+                        "                            \"    $%.2f each -> $%.2f\\n\",\n",
+                        "                            item.getPrice(),\n",
+                        "                            item.getSubtotal()\n",
+                        "                        )\n",
+                        "                    );\n",
+                        "                });\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "accept(CartItem)",
+                    "parameters": [
+                        "item"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/lang/StringBuilder",
+                            "append(java.lang.String)"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/lang/String",
+                            "format(java.lang.String,java.lang.Object[])"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "30-32:getName"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "38-40:getQuantity"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "34-36:getPrice"
+                        ],
+                        [
+                            "maven.src.main.com.demo.CartItem",
+                            "CartItem",
+                            "45-47:getSubtotal"
+                        ]
+                    ]
+                }
+            },
+            "fields": {}
+        }
+    }
+}

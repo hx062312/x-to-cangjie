@@ -2475,14 +2475,14 @@
         "from io import StringIO",
         "import io",
         "import typing\nfrom typing import *",
+        "from src.main.org.apache.commons.codec.CharEncoding import *",
+        "from src.main.org.apache.commons.codec.EncoderException import *",
         "from src.main.org.apache.commons.codec.Resources import *",
+        "from src.main.org.apache.commons.codec.StringEncoder import *",
         "from src.main.org.apache.commons.codec.language.bm.Languages import *",
         "from src.main.org.apache.commons.codec.language.bm.NameType import *",
         "from src.main.org.apache.commons.codec.language.bm.ResourceConstants import *",
         "from src.main.org.apache.commons.codec.language.bm.Rule1 import *",
-        "from src.main.org.apache.commons.codec.language.bm.RuleType import *",
-        "from src.main.org.apache.commons.codec.CharEncoding import *",
-        "from src.main.org.apache.commons.codec.EncoderException import *",
-        "from src.main.org.apache.commons.codec.StringEncoder import *"
+        "from src.main.org.apache.commons.codec.language.bm.RuleType import *"
     ]
 }

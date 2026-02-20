@@ -1,0 +1,11 @@
+| DiscountType                                | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/DiscountService.java:12:17:12:28    | DiscountService  |
+| new Consumer<CartItem>(...) { ... }         | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/ReceiptGenerator.java:31:26:46:17   | ReceiptGenerator |
+| new Predicate<CartItem>(...) { ... }        | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/ShoppingCart.java:51:31:52:53       | ShoppingCart     |
+| new ToDoubleFunction<CartItem>(...) { ... } | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/main/java/com/demo/ShoppingCart.java:81:43:81:63       | ShoppingCart     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/CartItemTest.java:47:54:48:38       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/CartItemTest.java:54:54:55:38       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/CartItemTest.java:61:54:62:42       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/CartItemTest.java:68:54:69:41       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/CartItemTest.java:75:54:76:42       | CartItemTest     |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/ShoppingCartTest.java:57:54:57:77   | ShoppingCartTest |
+| new Executable(...) { ... }                 | file:///home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/maven/src/test/java/com/demo/ShoppingCartTest.java:283:59:284:58 | ShoppingCartTest |

@@ -13,6 +13,65 @@ import io
 # Imports End
 
 
+class PhoneticEngine:
+
+    # Class Fields Begin
+    __NAME_PREFIXES: typing.Dict[NameType, typing.Set[str]] = None
+    __DEFAULT_MAX_PHONEMES: int = None
+    __lang: Lang = None
+    __nameType: NameType = None
+    __ruleType: RuleType = None
+    __concat: bool = None
+    __maxPhonemes: int = None
+    # Class Fields End
+
+    # Class Methods Begin
+    def getMaxPhonemes(self) -> int:
+        pass
+
+    def isConcat(self) -> bool:
+        pass
+
+    def getRuleType(self) -> RuleType:
+        pass
+
+    def getNameType(self) -> NameType:
+        pass
+
+    def getLang(self) -> Lang:
+        pass
+
+    def encode1(self, input_: str, languageSet: LanguageSet) -> str:
+        pass
+
+    def encode0(self, input_: str) -> str:
+        pass
+
+    def __init__(
+        self, nameType: NameType, ruleType: RuleType, concat: bool, maxPhonemes: int
+    ) -> None:
+        pass
+
+    @staticmethod
+    def PhoneticEngine0(
+        nameType: NameType, ruleType: RuleType, concat: bool
+    ) -> PhoneticEngine:
+        pass
+
+    def __applyFinalRules(
+        self,
+        phonemeBuilder: PhonemeBuilder,
+        finalRules: typing.Dict[str, typing.List[Rule]],
+    ) -> PhonemeBuilder:
+        pass
+
+    @staticmethod
+    def __join(strings: typing.Iterable[str], sep: str) -> str:
+        pass
+
+    # Class Methods End
+
+
 class PhonemeBuilder:
 
     # Class Fields Begin
@@ -76,65 +135,6 @@ class RulesApplication:
         i: int,
         maxPhonemes: int,
     ) -> None:
-        pass
-
-    # Class Methods End
-
-
-class PhoneticEngine:
-
-    # Class Fields Begin
-    __NAME_PREFIXES: typing.Dict[NameType, typing.Set[str]] = None
-    __DEFAULT_MAX_PHONEMES: int = None
-    __lang: Lang = None
-    __nameType: NameType = None
-    __ruleType: RuleType = None
-    __concat: bool = None
-    __maxPhonemes: int = None
-    # Class Fields End
-
-    # Class Methods Begin
-    def getMaxPhonemes(self) -> int:
-        pass
-
-    def isConcat(self) -> bool:
-        pass
-
-    def getRuleType(self) -> RuleType:
-        pass
-
-    def getNameType(self) -> NameType:
-        pass
-
-    def getLang(self) -> Lang:
-        pass
-
-    def encode1(self, input_: str, languageSet: LanguageSet) -> str:
-        pass
-
-    def encode0(self, input_: str) -> str:
-        pass
-
-    def __init__(
-        self, nameType: NameType, ruleType: RuleType, concat: bool, maxPhonemes: int
-    ) -> None:
-        pass
-
-    @staticmethod
-    def PhoneticEngine0(
-        nameType: NameType, ruleType: RuleType, concat: bool
-    ) -> PhoneticEngine:
-        pass
-
-    def __applyFinalRules(
-        self,
-        phonemeBuilder: PhonemeBuilder,
-        finalRules: typing.Dict[str, typing.List[Rule]],
-    ) -> PhonemeBuilder:
-        pass
-
-    @staticmethod
-    def __join(strings: typing.Iterable[str], sep: str) -> str:
         pass
 
     # Class Methods End

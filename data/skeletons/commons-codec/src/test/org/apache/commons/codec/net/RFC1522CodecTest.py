@@ -13,24 +13,6 @@ import io
 # Imports End
 
 
-class RFC1522TestCodec(RFC1522Codec):
-
-    # Class Fields Begin
-    # Class Fields End
-
-    # Class Methods Begin
-    def _getEncoding(self) -> str:
-        pass
-
-    def _doEncoding(self, bytes_: typing.List[int]) -> typing.List[int]:
-        pass
-
-    def _doDecoding(self, bytes_: typing.List[int]) -> typing.List[int]:
-        pass
-
-    # Class Methods End
-
-
 class RFC1522CodecTest(unittest.TestCase):
 
     # Class Fields Begin
@@ -50,6 +32,24 @@ class RFC1522CodecTest(unittest.TestCase):
         pass
 
     def __assertExpectedDecoderException(self, s: str) -> None:
+        pass
+
+    # Class Methods End
+
+
+class RFC1522TestCodec(RFC1522Codec):
+
+    # Class Fields Begin
+    # Class Fields End
+
+    # Class Methods Begin
+    def _getEncoding(self) -> str:
+        pass
+
+    def _doEncoding(self, bytes_: typing.List[int]) -> typing.List[int]:
+        pass
+
+    def _doDecoding(self, bytes_: typing.List[int]) -> typing.List[int]:
         pass
 
     # Class Methods End

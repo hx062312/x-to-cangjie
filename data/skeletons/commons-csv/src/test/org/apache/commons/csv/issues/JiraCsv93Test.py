@@ -1,5 +1,4 @@
 from __future__ import annotations
-
 # Imports Begin
 from src.main.org.apache.commons.csv.QuoteMode import *
 from src.main.org.apache.commons.csv.CSVRecord import *
@@ -10,9 +9,7 @@ import os
 import typing
 from typing import *
 import io
-
 # Imports End
-
 
 class JiraCsv93Test(unittest.TestCase):
 
@@ -268,13 +265,9 @@ class JiraCsv93Test(unittest.TestCase):
     def testWithNotSetNullString_test0_decomposed(self) -> None:
         pass
 
-    def __every(
-        self,
-        csvFormat: CSVFormat,
-        objects: typing.List[typing.Any],
-        format_: str,
-        data: typing.List[typing.List[str]],
-    ) -> None:
+    def __every(self, csvFormat: CSVFormat, objects: typing.List[typing.Any], format_: str, data: typing.List[typing.List[str]]) -> None:
         pass
 
     # Class Methods End
+
+
