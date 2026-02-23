@@ -285,6 +285,78 @@ bash scripts/recompose.sh <project> 0.0 gpt-4o-2024-11-20
 
 ------
 
+## 文件流程图
+
+```mermaid
+flowchart TD
+    %% 阶段一.1: 项目缩减
+    subgraph Phase1_1["阶段一.1: 项目缩减"]
+        A1["original_projects/<project>"] -->|add_plugin.sh| A2["automated_reduced_projects/<project>"]
+        A2 -->|merge_jar.sh| A3["target/<project>-merged.jar"]
+        A3 -->|generate_cg.sh| A4["callgraph.txt"]
+        A4 -->|reduce_third_party_libs.py| A5["automated_reduced_projects/<project>\n(移除第三方依赖)"]
+    end
+
+    %% 阶段一.2: 程序转换
+    subgraph Phase1_2["阶段一.2: 程序转换"]
+        A5 -->|create_database.sh| B1["databases/<project>"]
+        B1 -->|run.sh| B2["query_outputs/<project>"]
+        B2 -->|method_transformation.sh| B3["preprocessed_0/<project>"]
+        B3 -->|create_database.sh| B4["databases/<project>"]
+        B4 -->|run.sh| B5["query_outputs/<project>"]
+        B5 -->|constructor_transformation.sh| B6["cleaned_final_projects/<project>"]
+    end
+
+    %% 阶段一.3: 测试分解
+    subgraph Phase1_3["阶段一.3: 测试分解"]
+        B6 -->|extract_coverage.sh| C1["source_test_execution/<project>\ntests.json + coverage.json"]
+        C1 -->|decompose_test.sh| C2["cleaned_final_projects_decomposed_tests/<project>"]
+    end
+
+    %% 阶段二: CodeQL 分析与翻译
+    subgraph Phase2["阶段二: CodeQL 分析与翻译"]
+        C2 -->|create_database.sh| D1["databases/<project>_decomposed_tests"]
+        D1 -->|run.sh| D2["query_outputs_decomposed_tests/<project>"]
+        D2 -->|create_schema.sh| D3["schemas_decomposed_tests/<project>"]
+        D2 -->|extract_call_graph.sh| D3
+        D3 -->|get_dependencies.sh| D4["skeletons/<project>/dependencies.json"]
+        D3 -->|create_skeleton.sh| D5["skeletons/<project>/"]
+        D3 -->|generate_test_invocation_map.sh| D6["source_test_execution_decomposed_tests/<project>/test_map.json"]
+        C2 -->|extract_coverage.sh| D7["source_test_execution_decomposed_tests/<project>/coverage.json"]
+        D3 -->|translate_fragment.sh| D8["translations/<project>/"]
+        D5 -->|translate_fragment.sh| D8
+        D7 -->|translate_fragment.sh| D8
+        D8 -->|print_results.sh| D9["Console Output"]
+        D8 -->|recompose.sh| D10["<project>_python/"]
+    end
+
+    classDef input fill:#e1f5fe,stroke:#01579b
+    classDef script fill:#fff3e0,stroke:#e65100
+    classDef output fill:#e8f5e9,stroke:#2e7d32
+
+    class A1 input
+    class A2,A3,A4,A5,B1,B2,B3,B4,B5,B6,C1,C2,D1,D2,D3,D4,D5,D6,D7,D8,D10 output
+    class A2,A3,A4,A5,B1,B2,B3,B4,B5,B6,C1,C2,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10 script
+```
+
+## 关键文件路径汇总
+
+| 类型 | 路径 |
+|------|------|
+| 原始项目 | `java_projects/original_projects/<project>/` |
+| 缩减后项目 | `java_projects/automated_reduced_projects/<project>/` |
+| 方法转换后 | `java_projects/preprocessed_0/<project>/` |
+| 最终预处理 | `java_projects/cleaned_final_projects/<project>/` |
+| 测试分解后 | `java_projects/cleaned_final_projects_decomposed_tests/<project>/` |
+| CodeQL 数据库 | `databases/<project>/` |
+| CodeQL 数据库(分解后) | `databases/<project>_decomposed_tests/` |
+| 查询输出 | `data/query_outputs/<project>/` |
+| 查询输出(分解后) | `data/query_outputs_decomposed_tests/<project>/` |
+| 项目 Schema | `data/schemas_decomposed_tests/<project>/` |
+| 骨架代码 | `data/skeletons/<project>/` |
+| 翻译结果 | `data/schemas_decomposed_tests/translations/<project>/` |
+| Python 项目 | `data/schemas_decomposed_tests/translations/<project>_python/` |
+
 ## 说明
 
 1. **手动调整：** 测试分解后可能需要手动调整，确保 <project> 能编译。
