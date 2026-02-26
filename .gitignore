@@ -1,0 +1,7 @@
+misc/
+vscode-codeql-starter/
+databases/
+.DS_Store
+configs/
+CLAUDE.md
+configs/model_configs.yaml
