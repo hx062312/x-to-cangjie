@@ -7,7 +7,7 @@ fi
 
 PROJECT_NAME="$1"
 
-python ./src/java/preprocessing/reduce_third_party_libs.py "$PROJECT_NAME"
+python3 ./src/java/preprocessing/reduce_third_party_libs.py "$PROJECT_NAME"
 
 
 
