@@ -51,13 +51,12 @@ bash scripts/java/generate_cg.sh <project>
 **命令：**
 
 ```Bash
-python3 src/preprocessing/reduce_third_party_libs.py <project>
+bash scripts/java/reduce_third_party_libs.sh <project>
 ```
 
 - **作用：** 分析调用图，移除未使用的第三方依赖，只保留项目自身的代码。
 - **输入：** `callgraph.txt` 和原始项目。
 - **生成文件：** `java_projects/automated_reduced_projects/<project>/` (更新后的项目)。
-- **注意：** 执行此步后，需要重新创建 CodeQL 数据库。
 
 ------
 
@@ -67,9 +66,7 @@ python3 src/preprocessing/reduce_third_party_libs.py <project>
 
 **第一步：提取测试覆盖率**
 
-Bash
-
-```
+```Bash
 bash scripts/java/extract_coverage.sh <project> ''
 ```
 
@@ -79,9 +76,7 @@ bash scripts/java/extract_coverage.sh <project> ''
 
 **第二步：分解测试**
 
-Bash
-
-```
+```Bash
 bash scripts/java/decompose_test.sh
 ```
 
