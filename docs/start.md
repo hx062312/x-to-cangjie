@@ -77,7 +77,7 @@ bash scripts/java/extract_coverage.sh <project> ''
 **第二步：分解测试**
 
 ```Bash
-bash scripts/java/decompose_test.sh
+bash scripts/java/decompose_test.sh <project>
 ```
 
 - **作用：** 将测试分解为独立片段，解决长调用链问题。
