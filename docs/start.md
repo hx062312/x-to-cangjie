@@ -130,7 +130,18 @@ bash scripts/java/extract_call_graph.sh _decomposed_tests
 
 ------
 
-### 2.4 生成骨架结构
+### 2.4 类型翻译
+
+**命令：**
+```Bash
+bash scripts/java/extract_types.sh _decomposed_tests
+bash scripts/java/crawl_type_desc.sh
+bash scripts/java/translate_types.sh <type> <model_name>
+```
+
+------
+
+### 2.5 生成骨架结构
 
 **命令：**
 

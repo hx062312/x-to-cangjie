@@ -6,8 +6,8 @@ import argparse
 def create_schema(args):
     project = args.project_name
     projects_dir = f"projects/java/cleaned_final_projects{args.suffix}/"
-    query_outputs_dir = f"data/query_outputs{args.suffix}"
-    os.makedirs(f"data/schemas{args.suffix}/{project}", exist_ok=True)
+    query_outputs_dir = f"data/java/query_outputs{args.suffix}"
+    os.makedirs(f"data/java/schemas{args.suffix}/{project}", exist_ok=True)
     schemas = {}
 
     imports_query_out = f"{query_outputs_dir}/{project}/{project}_imports.txt"
@@ -736,7 +736,7 @@ def create_schema(args):
         if args.suffix == "_evosuite" and "ESTest" not in key:
             continue
         key = key.replace(".java", "")
-        with open(f"data/schemas{args.suffix}/{project}/{key}.json", "w") as f:
+        with open(f"data/java/schemas{args.suffix}/{project}/{key}.json", "w") as f:
             json.dump(v, f, indent=4)
 
 

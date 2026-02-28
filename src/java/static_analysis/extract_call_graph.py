@@ -7,7 +7,7 @@ def main(args):
 
     project = args.project_name
     projects_dir = f"projects/java/cleaned_final_projects{args.suffix}/"
-    query_outputs_dir = f"data/query_outputs{args.suffix}"
+    query_outputs_dir = f"data/java/query_outputs{args.suffix}"
 
     method_call_graph = []
     with open(f"{query_outputs_dir}/{project}/{project}_call_graph.txt") as f:
@@ -225,7 +225,7 @@ def main(args):
             callee_schema = {}
             is_available = False
             with open(
-                f"data/schemas{args.suffix}/{project}/{callee_schema_name}.json"
+                f"data/java/schemas{args.suffix}/{project}/{callee_schema_name}.json"
             ) as f:
                 callee_schema = json.load(f)
                 for class_ in callee_schema["classes"]:
@@ -270,7 +270,7 @@ def main(args):
         caller_schema = {}
         is_available = False
         with open(
-            f"data/schemas{args.suffix}/{project}/{caller_schema_name}.json"
+            f"data/java/schemas{args.suffix}/{project}/{caller_schema_name}.json"
         ) as f:
             caller_schema = json.load(f)
             for class_ in caller_schema["classes"]:
@@ -305,7 +305,7 @@ def main(args):
         ), f"caller is not available: {caller_name} in {caller_schema_name}"
 
         with open(
-            f"data/schemas{args.suffix}/{project}/{caller_schema_name}.json", "w"
+            f"data/java/schemas{args.suffix}/{project}/{caller_schema_name}.json", "w"
         ) as f:
             json.dump(caller_schema, f, indent=4)
 
