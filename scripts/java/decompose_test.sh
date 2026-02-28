@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ./scripts/java/decompose_test.sh simple-calculator
+# ./scripts/java/decompose_test.sh commons-fileupload
+
 if [ $# -ne 1 ]; then
   echo "Usage: ./scripts/java/decompose_test.sh <project>"
   exit 1

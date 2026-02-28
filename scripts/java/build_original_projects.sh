@@ -1,19 +1,19 @@
 #!/bin/bash
 
 projects=(
-    "commons-cli"
-    "commons-codec"
-    "commons-csv"
-    "commons-exec"
-    "JavaFastPFOR"
+    # "commons-cli"
+    # "commons-codec"
+    # "commons-csv"
+    # "commons-exec"
+    # "JavaFastPFOR"
     "commons-fileupload"
-    "commons-graph"
-    "jansi"
-    "commons-pool"
-    "commons-validator"
+    # "commons-graph"
+    # "jansi"
+    # "commons-pool"
+    # "commons-validator"
 )
 
-projects_dir=java_projects/cleaned_final_projects_decomposed_tests;
+projects_dir=projects/java/cleaned_final_projects_decomposed_tests;
 main=$(pwd);
 
 for project in "${projects[@]}"; do
