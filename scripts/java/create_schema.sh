@@ -12,4 +12,4 @@ project=$1
 suffix=$2
 
 echo "creating schema for $project"
-python3 src/java/static_analysis/create_schema.py --project_name=$project --suffix=$suffix
+python3 src/java/static_analysis/create_schema.py --project=$project --suffix=$suffix

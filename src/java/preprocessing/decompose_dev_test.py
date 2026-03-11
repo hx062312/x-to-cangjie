@@ -297,9 +297,9 @@ def is_test_method(test_file, node, code):
             .replace("/", ".")
             .replace(".java", "")
         )
-        project_name = test_file.split("/")[2]
+        project = test_file.split("/")[2]
 
-        with open(f"data/source_test_execution/{project_name}/tests.json", "r") as f:
+        with open(f"data/source_test_execution/{project}/tests.json", "r") as f:
             executed_tests = json.load(f)
 
         if test_class_path in executed_tests:
@@ -676,7 +676,9 @@ def main(args):
     parser = Parser()
     parser.set_language(JAVA_LANGUAGE)
 
-    test_code_path = f"java_projects/cleaned_final_projects_decomposed_tests/{args.project}/src/test"
+    test_code_path = (
+        f"java_projects/cleaned_final_projects_decomposed_tests/{args.project}/src/test"
+    )
     # find all test files recursively in the test directory
     test_files = []
     for root, dirs, files in os.walk(test_code_path):

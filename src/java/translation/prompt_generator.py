@@ -64,7 +64,7 @@ Notes:
 
     def build_base_prompt(self):
         # add persona
-        self.prompt += self.meta_data[f"{self.args.model_name}-persona"]
+        self.prompt += self.meta_data[f"{self.args.model}-persona"]
 
         self.double_line_break()
 
@@ -221,11 +221,17 @@ Notes:
     def add_partial_translation(self):
         self.build_partial_translation()
         # Use 'cangjie' instead of args.to_lang for the target language
-        self.prompt += f"Partial Cangjie translation:\n```\n{self.partial_translation}\n```"
+        self.prompt += (
+            f"Partial Cangjie translation:\n```\n{self.partial_translation}\n```"
+        )
 
     def build_partial_translation(self):
         # Try cangjie_imports first, fallback to python_imports for compatibility
-        self.partial_translation = "\n".join(self.schema_data.get("cangjie_imports", self.schema_data.get("python_imports", [])))
+        self.partial_translation = "\n".join(
+            self.schema_data.get(
+                "cangjie_imports", self.schema_data.get("python_imports", [])
+            )
+        )
         self.partial_translation += "\n\n"
 
         # add inner and outer classes
@@ -268,10 +274,12 @@ Notes:
 
         # add necessary dependencies from imported classes
         dependencies = {}
-        dependencies_path = f"data/dependencies{self.args.suffix}/{self.args.project_name}/dependencies.json"
+        dependencies_path = (
+            f"data/dependencies{self.args.suffix}/{self.args.project}/dependencies.json"
+        )
         if self.args.translate_evosuite:
             dependencies_path = (
-                f"data/dependencies_evosuite/{self.args.project_name}/dependencies.json"
+                f"data/dependencies_evosuite/{self.args.project}/dependencies.json"
             )
 
         with open(dependencies_path, "r") as f:
@@ -298,7 +306,7 @@ Notes:
 
                 if (
                     "joda.convert" in dependent_class_path
-                    and self.args.project_name == "joda-money"
+                    and self.args.project == "joda-money"
                 ):  # resolving these dependencies later
                     has_exceptional_import = True
                     break
@@ -307,12 +315,12 @@ Notes:
                 continue
 
             imported_class_path = self.get_dependency_path(
-                dependent_class_path, self.args.project_name
+                dependent_class_path, self.args.project
             )
 
             imported_class_data = {}
             with open(
-                f"{self.args.translation_dir}/{self.args.project_name}.{imported_class_path}_cangjie_partial.json",
+                f"{self.args.translation_dir}/{self.args.project}.{imported_class_path}_cangjie_partial.json",
                 "r",
             ) as f:
                 imported_class_data = json.load(f)
@@ -729,15 +737,15 @@ Notes:
     def double_line_break(self):
         self.prompt += "\n\n"
 
-    def get_dependency_path(self, dependent_class, project_name):
+    def get_dependency_path(self, dependent_class, project):
         if os.path.exists(
-            f"java_projects/cleaned_final_projects{self.args.suffix}/{project_name}/src/main/java/"
+            f"java_projects/cleaned_final_projects{self.args.suffix}/{project}/src/main/java/"
             + dependent_class.replace(".", "/")
             + ".java"
         ):
             return f"src.main.{dependent_class}"
         elif os.path.exists(
-            f"java_projects/cleaned_final_projects{self.args.suffix}/{project_name}/src/test/java/"
+            f"java_projects/cleaned_final_projects{self.args.suffix}/{project}/src/test/java/"
             + dependent_class.replace(".", "/")
             + ".java"
         ):

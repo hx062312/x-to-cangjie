@@ -101,9 +101,6 @@ def main(args):
                 ".class:0:0:0:0" not in callee_location
             ), f"callee_location: {callee_location}"
 
-        callee_path = parse_location(callee_location)[0]
-        callee_path = callee_path[callee_path.find(project) :]
-
         caller_path = parse_location(caller_location)[0]
         caller_path = caller_path[caller_path.find(project) :]
 
@@ -116,6 +113,8 @@ def main(args):
         )
 
         if not is_library_callee:
+            callee_path = parse_location(callee_location)[0]
+            callee_path = callee_path[callee_path.find(project) :]
 
             callee_start_line = parse_location(callee_location)[1] - 1
             callee_end_line = callee_start_line + 5

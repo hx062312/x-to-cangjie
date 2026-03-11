@@ -126,5 +126,8 @@
     "FileItemHeadersImpl": "FileItemHeadersImpl",
     "java.util.Hashtable<String,Object>": "",
     "FileItemStream.ItemSkippedException": "",
-    "java.lang.Long": "Int64"
+    "java.lang.Long": "Int64",
+    "HelloWorld": "HelloWorld",
+    "HelloWorldTest": "HelloWorldTest",
+    "java.util.Scanner": ""
 }

@@ -1,0 +1,24 @@
+{
+    "com.example.helloworld.HelloWorldTest": {
+        "testHelloWithSpecialCharacters": {
+            "com/example/helloworld/HelloWorld": [
+                "hello"
+            ]
+        },
+        "testHelloWithoutName": {
+            "com/example/helloworld/HelloWorld": [
+                "hello"
+            ]
+        },
+        "testHelloWithName": {
+            "com/example/helloworld/HelloWorld": [
+                "hello"
+            ]
+        },
+        "testHelloWithEmptyName": {
+            "com/example/helloworld/HelloWorld": [
+                "hello"
+            ]
+        }
+    }
+}

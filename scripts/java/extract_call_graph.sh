@@ -11,5 +11,5 @@ fi
 project=$1
 suffix=$2
 
-python3 src/java/static_analysis/extract_call_graph.py --project_name=$project --suffix=$suffix
+python3 src/java/static_analysis/extract_call_graph.py --project=$project --suffix=$suffix
 

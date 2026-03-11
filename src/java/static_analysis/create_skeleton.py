@@ -8,10 +8,10 @@ from collections import defaultdict
 def calculate_output_path(
     formatted_schema_fname: str,
     class_name: str,
-    project_name: str,
+    project: str,
     is_test: bool,
     src_dir: str,
-    tests_dir: str
+    tests_dir: str,
 ) -> str:
     """
     Calculate the output file path for a Cangjie skeleton file.
@@ -19,7 +19,7 @@ def calculate_output_path(
     Args:
         formatted_schema_fname: Schema filename without extension (e.g., commons-fileupload.src.main.org.apache.commons.fileupload.disk.DiskFileItem)
         class_name: Name of the class (e.g., DiskFileItem)
-        project_name: Name of the project (e.g., commons-fileupload)
+        project: Name of the project (e.g., commons-fileupload)
         is_test: Whether this is a test file
         src_dir: Source directory path
         tests_dir: Tests directory path
@@ -32,16 +32,18 @@ def calculate_output_path(
     # e.g., commons-fileupload.src.main.org.apache.commons.fileupload.DefaultFileItem -> "" (no subdir)
     java_sub_dir = ""
     # Convert schema filename to path and remove first part (project/src) and last part (class)
-    path_from_fname = "/".join(formatted_schema_fname.replace(".", "/").split("/")[1:-1])
+    path_from_fname = "/".join(
+        formatted_schema_fname.replace(".", "/").split("/")[1:-1]
+    )
     # e.g., src/main/org/apache/commons/fileupload/disk
     # Delete src/main/ prefix
     if path_from_fname.startswith("src/main/"):
-        path_from_fname = path_from_fname[len("src/main/"):]
+        path_from_fname = path_from_fname[len("src/main/") :]
     elif path_from_fname.startswith("src/"):
-        path_from_fname = path_from_fname[len("src/"):]
+        path_from_fname = path_from_fname[len("src/") :]
     # Now path is like: org/apache/commons/fileupload/disk
     # Calculate package path for the project (remove project-specific subdir)
-    if project_name == "commons-fileupload":
+    if project == "commons-fileupload":
         # Package is: org/apache/commons/fileupload (without the last 'disk' etc)
         # So we need to check if there's something after fileupload
         if path_from_fname.startswith("org/apache/commons/fileupload/"):
@@ -161,9 +163,9 @@ def split_with_nested_commas(s):
     return result
 
 
-def get_dependency_path(dependent_class, project_name, suffix):
+def get_dependency_path(dependent_class, project, suffix):
     """Get the dependency path for a class."""
-    if dependent_class.startswith(project_name):
+    if dependent_class.startswith(project):
         return ".".join(dependent_class.split(".")[1:-1])
     else:
         return dependent_class.replace(".", "/")
@@ -207,14 +209,18 @@ def get_dependency_cycle(dependencies):
     return cycles, class_path
 
 
-def has_child_parent_dept(dependent_files, class_path, project_name, suffix):
+def has_child_parent_dept(dependent_files, class_path, project, suffix):
     verified_dependent_files = []
     for class_1, class_2 in dependent_files:
-        class_1_path = get_dependency_path(class_path[class_1], project_name, suffix)
-        class_2_path = get_dependency_path(class_path[class_2], project_name, suffix)
+        class_1_path = get_dependency_path(class_path[class_1], project, suffix)
+        class_2_path = get_dependency_path(class_path[class_2], project, suffix)
 
-        class_1_schema_name = f"data/java/schemas{suffix}/{project_name}/{project_name}.{class_1_path}.json"
-        class_2_schema_name = f"data/java/schemas{suffix}/{project_name}/{project_name}.{class_2_path}.json"
+        class_1_schema_name = (
+            f"data/java/schemas{suffix}/{project}/{project}.{class_1_path}.json"
+        )
+        class_2_schema_name = (
+            f"data/java/schemas{suffix}/{project}/{project}.{class_2_path}.json"
+        )
 
         class_1_schema = {}
         with open(class_1_schema_name, "r") as f:
@@ -331,15 +337,15 @@ def main(args):
         temp_types[short_key] = v
     extracted_types = temp_types
 
-    schemas = os.listdir(f"data/java/schemas{args.suffix}/{args.project_name}")
+    schemas = os.listdir(f"data/java/schemas{args.suffix}/{args.project}")
 
     dependencies_dir = f"data/java/dependencies{args.suffix}"
-    with open(f"{dependencies_dir}/{args.project_name}/dependencies.json", "r") as f:
+    with open(f"{dependencies_dir}/{args.project}/dependencies.json", "r") as f:
         dependencies = json.load(f)
 
     dependent_files, class_path = get_dependency_cycle(dependencies)
     verified_dependent_files = has_child_parent_dept(
-        dependent_files, class_path, args.project_name, args.suffix
+        dependent_files, class_path, args.project, args.suffix
     )
 
     for schema_fname in schemas:
@@ -349,9 +355,7 @@ def main(args):
         if args.suffix != "_evosuite" and "ESTest" in schema_fname:
             continue
 
-        schema_path = (
-            f"data/java/schemas{args.suffix}/{args.project_name}/{schema_fname}"
-        )
+        schema_path = f"data/java/schemas{args.suffix}/{args.project}/{schema_fname}"
 
         schema = {}
         with open(schema_path, "r") as f:
@@ -382,7 +386,7 @@ def main(args):
                 schema["path"].split("src/")[1].rsplit("/", 1)[0].replace("/", ".")
             )
         else:
-            package_name = args.project_name
+            package_name = args.project
         skeleton += package_name + "\n\n"
 
         skeleton += "// Imports Begin\n"
@@ -616,10 +620,8 @@ def main(args):
                     ]["generation_timestamp"] = 0
                     target_schema["classes"][class_]["static_initializers"][
                         static_initializer_se
-                    ]["model_name"] = (
-                        args.model_name
-                        if args.model_name
-                        else "deepseek-coder-33b-instruct"
+                    ]["model"] = (
+                        args.model if args.model else "deepseek-coder-33b-instruct"
                     )
                     target_schema["classes"][class_]["static_initializers"][
                         static_initializer_se
@@ -748,10 +750,8 @@ def main(args):
                 target_schema["classes"][class_]["fields"][field][
                     "generation_timestamp"
                 ] = 0
-                target_schema["classes"][class_]["fields"][field]["model_name"] = (
-                    args.model_name
-                    if args.model_name
-                    else "deepseek-coder-33b-instruct"
+                target_schema["classes"][class_]["fields"][field]["model"] = (
+                    args.model if args.model else "deepseek-coder-33b-instruct"
                 )
                 target_schema["classes"][class_]["fields"][field][
                     "include_implementation"
@@ -957,10 +957,8 @@ def main(args):
                 target_schema["classes"][class_]["methods"][method][
                     "generation_timestamp"
                 ] = 0
-                target_schema["classes"][class_]["methods"][method]["model_name"] = (
-                    args.model_name
-                    if args.model_name
-                    else "deepseek-coder-33b-instruct"
+                target_schema["classes"][class_]["methods"][method]["model"] = (
+                    args.model if args.model else "deepseek-coder-33b-instruct"
                 )
                 target_schema["classes"][class_]["methods"][method][
                     "include_implementation"
@@ -1019,7 +1017,7 @@ def main(args):
                     continue
 
                 path = get_dependency_path(
-                    dependent_class[1], args.project_name, args.suffix
+                    dependent_class[1], args.project, args.suffix
                 )
                 # If two classes already have inheritance (parent-child), no separate import needed
                 skip = False
@@ -1051,20 +1049,26 @@ def main(args):
                 # Remove company name and project name from import path
                 # e.g., import org.apache.commons.fileupload.ProgressListener -> import ProgressListener
                 # e.g., import org.apache.commons.fileupload.disk.DiskFileItem -> import disk.DiskFileItem
-                full_import_path = path.replace('/', '.')
+                full_import_path = path.replace("/", ".")
 
                 # Special handling for commons-fileupload project
-                if args.project_name == "commons-fileupload":
+                if args.project == "commons-fileupload":
                     # Remove "org.apache.commons.fileupload" prefix
                     if full_import_path.startswith("org.apache.commons.fileupload."):
-                        import_path = full_import_path[len("org.apache.commons.fileupload."):]
+                        import_path = full_import_path[
+                            len("org.apache.commons.fileupload.") :
+                        ]
                     else:
                         import_path = full_import_path
                 else:
                     # Default: remove "org.apache.{project}" prefix
-                    import_parts = full_import_path.split('.')
-                    if len(import_parts) >= 3 and import_parts[0] == 'org' and import_parts[1] == 'apache':
-                        import_path = '.'.join(import_parts[3:])
+                    import_parts = full_import_path.split(".")
+                    if (
+                        len(import_parts) >= 3
+                        and import_parts[0] == "org"
+                        and import_parts[1] == "apache"
+                    ):
+                        import_path = ".".join(import_parts[3:])
                     else:
                         import_path = full_import_path
 
@@ -1096,7 +1100,7 @@ def main(args):
                             f"// {current_line}"
                         )
                 if (
-                    "joda.convert" in current_line and args.project_name == "joda-money"
+                    "joda.convert" in current_line and args.project == "joda-money"
                 ):  # resolving these dependencies later
                     skeleton_lines[i] = f"// {current_line}"
                     for import_ in cangjie_imports:
@@ -1118,7 +1122,7 @@ def main(args):
         # └── tests/
         #     └── my_test.cj
 
-        project_dir = f"data/java/skeletons/{args.project_name}"
+        project_dir = f"data/java/skeletons/{args.project}"
         src_dir = f"{project_dir}/src"
         tests_dir = f"{project_dir}/tests"
 
@@ -1131,7 +1135,7 @@ def main(args):
         cjpm_toml_path = f"{project_dir}/cjpm.toml"
         if not os.path.exists(cjpm_toml_path):
             cjpm_toml_content = f"""[package]
-name = "{args.project_name}"
+name = "{args.project}"
 version = "0.1.0"
 
 [dependencies]
@@ -1149,10 +1153,10 @@ version = "0.1.0"
         file_path = calculate_output_path(
             formatted_schema_fname=formatted_schema_fname,
             class_name=class_name,
-            project_name=args.project_name,
+            project=args.project,
             is_test=is_test,
             src_dir=src_dir,
-            tests_dir=tests_dir
+            tests_dir=tests_dir,
         )
 
         # Create directory if needed
@@ -1166,11 +1170,11 @@ version = "0.1.0"
         # The generated .cj file should be valid Cangjie code
 
         os.makedirs(
-            f"data/java/schemas{args.suffix}/translations/{args.model_name}/{args.type}/{args.temperature}/{args.project_name}",
+            f"data/java/schemas{args.suffix}/translations/{args.model}/{args.type}/{args.temperature}/{args.project}",
             exist_ok=True,
         )
         with open(
-            f"data/java/schemas{args.suffix}/translations/{args.model_name}/{args.type}/{args.temperature}/{args.project_name}/{formatted_schema_fname}_cangjie_partial.json",
+            f"data/java/schemas{args.suffix}/translations/{args.model}/{args.type}/{args.temperature}/{args.project}/{formatted_schema_fname}_cangjie_partial.json",
             "w",
         ) as f:
             json.dump(target_schema, f, indent=4)
@@ -1179,11 +1183,9 @@ version = "0.1.0"
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create a Cangjie class skeleton")
     parser.add_argument(
-        "--project_name", type=str, dest="project_name", help="name of the project"
+        "--project", type=str, dest="project", help="name of the project"
     )
-    parser.add_argument(
-        "--model_name", type=str, dest="model_name", help="name of the model"
-    )
+    parser.add_argument("--model", type=str, dest="model", help="name of the model")
     parser.add_argument(
         "--type", type=str, dest="type", help="prompt type signature/body"
     )

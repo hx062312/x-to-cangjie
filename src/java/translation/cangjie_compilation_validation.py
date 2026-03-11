@@ -3,7 +3,11 @@ import os
 import subprocess
 import tempfile
 
-from src.compositional_glue_tests.script import ERROR, FAILURE, NOT_EXERCISED, SUCCESS
+# Status constants for compilation validation
+ERROR = "error"
+SUCCESS = "success"
+FAILURE = "failure"
+NOT_EXERCISED = "not-exercised"
 
 
 def cangjie_compile(cangjie_code: str, fragment: dict, args) -> tuple:

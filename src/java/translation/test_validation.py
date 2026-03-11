@@ -2,7 +2,6 @@ import json
 import os
 import subprocess
 import tempfile
-from calculate_coverage import calculate_method_coverage
 
 
 def test_validation(args, eligible_tests):
@@ -25,7 +24,7 @@ def test_validation(args, eligible_tests):
         # Convert schema name to Cangjie file path
         test_path = test["schema_name"].replace(".", "/") + ".java"
         test_path = (
-            test_path[test_path.index(args.project_name):]
+            test_path[test_path.index(args.project):]
             .replace("test/java/org", "test/org")
             .replace(".java", ".cj")  # Use .cj extension for Cangjie
         )
@@ -55,7 +54,7 @@ def test_validation(args, eligible_tests):
         )
 
         # Find the test file
-        test_file_path = f"data/recomposed_projects/{args.model_name}/{args.prompt_type}/{args.temperature}/{args.project_name}/{test_path}"
+        test_file_path = f"data/recomposed_projects/{args.model}/{args.prompt_type}/{args.temperature}/{args.project}/{test_path}"
 
         if not os.path.exists(test_file_path):
             test_execution_results[f"{test_path}::{test_class}::{test_method}"][

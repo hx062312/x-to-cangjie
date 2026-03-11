@@ -93,7 +93,7 @@ bash scripts/java/decompose_test.sh <project>
 **命令：**
 
 ```Bash
-bash scripts/java/init_codeql_db.sh <project> cleaned_final_projects_decomposed_tests "_decomposed_tests"
+bash scripts/java/create_database.sh <project> cleaned_final_projects_decomposed_tests "_decomposed_tests"
 
 ```
 
@@ -108,7 +108,7 @@ bash scripts/java/init_codeql_db.sh <project> cleaned_final_projects_decomposed_
 **命令：**
 
 ```Bash
-bash queries/run.sh <project> "_decomposed_tests"  
+bash scripts/java/create_query_outputs.sh <project> "_decomposed_tests"  
 ```
 
 - **作用：** 运行 CodeQL 查询，提取类型、方法调用等信息。
@@ -121,8 +121,8 @@ bash queries/run.sh <project> "_decomposed_tests"
 **命令：**
 
 ```Bash
-bash scripts/java/create_schema.sh _decomposed_tests
-bash scripts/java/extract_call_graph.sh _decomposed_tests
+bash scripts/java/create_schema.sh <project> <suffix>
+bash scripts/java/extract_call_graph.sh <project> <suffix>
 ```
 
 - **作用：** 根据 CodeQL 查询结果创建项目 schema（JSON 格式）。
@@ -134,8 +134,8 @@ bash scripts/java/extract_call_graph.sh _decomposed_tests
 
 **命令：**
 ```Bash
-bash scripts/java/extract_types.sh _decomposed_tests
-bash scripts/java/crawl_type_desc.sh
+bash scripts/java/extract_types.sh scripts/java/extract_types.sh <project> <suffix>
+bash scripts/java/crawl_type_desc.sh <project> <suffix>
 bash scripts/java/translate_types.sh <project> <model_name> <type>
 ```
 
@@ -146,8 +146,8 @@ bash scripts/java/translate_types.sh <project> <model_name> <type>
 **命令：**
 
 ```Bash
-bash scripts/java/get_dependencies.sh _decomposed_tests
-bash scripts/java/create_skeleton.sh _decomposed_tests
+bash scripts/java/get_dependencies.sh <project> <suffix>
+bash scripts/java/create_skeleton.sh <project> <model> <type> <suffix> <temperature>
 ```
 
 - **作用：** 在目标语言中 `data/skeletons/<project_name>` 下创建合适的骨架（语法正确的空实现）。
@@ -160,9 +160,9 @@ bash scripts/java/create_skeleton.sh _decomposed_tests
 **命令：**
 
 ```Bash
-bash scripts/java/generate_test_invocation_map.sh _decomposed_tests
-bash scripts/java/extract_coverage.sh <project_name> _decomposed_tests
-bash scripts/java/translate_fragment.sh <project_name> <temperature> <model>
+bash scripts/java/generate_test_invocation_map.sh <project> <model> <suffix>
+bash scripts/java/extract_coverage.sh <project> <suffix>
+bash scripts/java/translate_fragment.sh <project>  <model> <temperature> 
 ```
 
 - **作用：** 提取测试覆盖率，用于指导翻译。
@@ -174,10 +174,8 @@ bash scripts/java/translate_fragment.sh <project_name> <temperature> <model>
 
 **命令：**
 
-Bash
-
-```
-bash scripts/java/translate_fragment.sh <project> 0.0 gpt-4o-2024-11-20
+```Bash
+bash scripts/java/translate_fragment.sh <project> gpt-4o-2024-11-20 0.0
 ```
 
 - **作用：** 调用 LLM 翻译代码片段，按反向调用图顺序执行。

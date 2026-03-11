@@ -13,4 +13,4 @@ model=$2
 suffix=$3
 
 echo "extracting test map for $project"
-python3 src/java/static_analysis/create_test_method_map.py --project_name=$project --model_name=$model --suffix=$suffix
+python3 src/java/static_analysis/create_test_method_map.py --project=$project --model=$model --suffix=$suffix

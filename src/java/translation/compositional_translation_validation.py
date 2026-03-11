@@ -14,19 +14,23 @@ from get_reverse_traversal import get_reverse_traversal
 from prompt_generator import PromptGenerator
 from test_validation import test_validation
 
-from src.compositional_glue_tests.script import ERROR, FAILURE, NOT_EXERCISED, SUCCESS
+# Status constants for translation validation
+ERROR = "error"
+SUCCESS = "success"
+FAILURE = "failure"
+NOT_EXERCISED = "not-exercised"
 
 
 # 找到可以执行来验证当前方法的测试。
 def get_eligible_tests(fragment, processed_fragments, args):
 
     global_call_graph = {}
-    with open(f"data/call_graphs/{args.project_name}/call_graph.json", "r") as f:
+    with open(f"data/java/call_graphs/{args.project}/call_graph.json", "r") as f:
         global_call_graph = json.load(f)
 
     executed_tests = {}
     with open(
-        f"data/source_test_execution{args.suffix}/{args.project_name}/tests.json", "r"
+        f"data/java/source_test_execution{args.suffix}/{args.project}/tests.json", "r"
     ) as f:
         executed_tests = json.load(f)
 
@@ -136,7 +140,8 @@ def get_pending_fragments(fragment_traversal, args):
     for fragment in fragment_traversal:
         schema_data = {}
         with open(
-            f"{args.translation_dir}/{fragment['schema_name']}_cangjie_partial.json", "r"
+            f"{args.translation_dir}/{fragment['schema_name']}_cangjie_partial.json",
+            "r",
         ) as f:
             schema_data = json.load(f)
 
@@ -173,7 +178,9 @@ def update_labels(
     """
     schema_data = {}
     # Use cangjie file instead of python
-    schema_file = f"{args.translation_dir}/{fragment['schema_name']}_cangjie_partial.json"
+    schema_file = (
+        f"{args.translation_dir}/{fragment['schema_name']}_cangjie_partial.json"
+    )
     with open(schema_file, "r") as f:
         schema_data = json.load(f)
 
@@ -310,7 +317,8 @@ def is_test_already_translated(test, args):
     if (
         test_schema_data["classes"][test["class_name"]]["methods"][
             test["fragment_name"]
-        ]["cangjie_compilation"].get("outcome") == "success"
+        ]["cangjie_compilation"].get("outcome")
+        == "success"
     ):
         return True
 
@@ -335,7 +343,7 @@ def get_adaptive_budget(fragment, args, feedback=False):
     # For main methods, calculate based on test coverage
     method_coverage = {}
     with open(
-        f"data/source_test_execution{args.suffix}/{args.project_name}/coverage.json",
+        f"data/java/source_test_execution{args.suffix}/{args.project}/coverage.json",
         "r",
     ) as f:
         method_coverage = json.load(f)
@@ -373,7 +381,7 @@ def get_adaptive_budget(fragment, args, feedback=False):
 
 
 def get_total_input_tokens(prompt, args, model_info):
-    if args.model_name == "gpt-4o-2024-11-20":
+    if args.model == "gpt-4o-2024-11-20":
         encoding = tiktoken.encoding_for_model("gpt-4o")
         total_tokens = len(encoding.encode(prompt))
     else:  # TODO: add token calculator for open-source models
@@ -384,11 +392,11 @@ def get_total_input_tokens(prompt, args, model_info):
 
 
 def prompt_model(model_info, client, prompt, total_input_tokens, args):
-    max_new_tokens = model_info[args.model_name]["total"] - total_input_tokens
-    max_new_tokens = min(max_new_tokens, model_info[args.model_name]["max_new_tokens"])
+    max_new_tokens = model_info[args.model]["total"] - total_input_tokens
+    max_new_tokens = min(max_new_tokens, model_info[args.model]["max_new_tokens"])
 
     completion = client.chat.completions.create(
-        model=model_info[args.model_name]["model_id"],
+        model=model_info[args.model]["model_id"],
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt},
@@ -402,7 +410,7 @@ def prompt_model(model_info, client, prompt, total_input_tokens, args):
 
     generation = completion.choices[0].message.content
 
-    if args.model_name == "deepseek-coder-33b-instruct":
+    if args.model == "deepseek-coder-33b-instruct":
         if generation.strip().startswith("```"):
             pass
         elif generation.count("```") % 2 == 0:
@@ -427,7 +435,8 @@ def is_test_parseable(test, args):
     if (
         schema_data["classes"][test["class_name"]]["methods"][test["fragment_name"]][
             "cangjie_compilation"
-        ].get("outcome") == "success"
+        ].get("outcome")
+        == "success"
     ):
         return True
 
@@ -529,7 +538,7 @@ def translate(
     client = OpenAI(
         **{
             k: v
-            for k, v in model_info[args.model_name].items()
+            for k, v in model_info[args.model].items()
             if k in ["api_key", "base_url", "default_headers"]
         }
     )
@@ -575,7 +584,7 @@ def translate(
         total_input_tokens = get_total_input_tokens(prompt, args, model_info)
 
         # if prompt size exceeds model token limit, mark translation out_of_context and move on to next fragment
-        if total_input_tokens >= model_info[args.model_name]["total"]:
+        if total_input_tokens >= model_info[args.model]["total"]:
             update_labels(
                 args=args,
                 fragment=fragment,
@@ -664,7 +673,10 @@ def translate(
                     fragment=fragment,
                     translation=generation,
                     translation_status="attempted",
-                    cangjie_compilation={"outcome": cangjie_compilation_status, "message": message},
+                    cangjie_compilation={
+                        "outcome": cangjie_compilation_status,
+                        "message": message,
+                    },
                     test_execution="not-exercised",
                     elapsed_time=time.time() - start_time,
                 )
@@ -700,7 +712,10 @@ def translate(
                         fragment=fragment,
                         translation=generation,
                         translation_status="attempted",
-                        cangjie_compilation={"outcome": cangjie_compilation_status, "message": message},
+                        cangjie_compilation={
+                            "outcome": cangjie_compilation_status,
+                            "message": message,
+                        },
                         test_execution="not-exercised",
                         elapsed_time=time.time() - start_time,
                     )
@@ -793,9 +808,12 @@ def translate(
                 ) as f:
                     covered_method_schema_data = json.load(f)
 
-                if covered_method_schema_data["classes"][covered_method_class][
-                    "methods"
-                ][covered_method_name]["cangjie_compilation"].get("outcome") == "success":
+                if (
+                    covered_method_schema_data["classes"][covered_method_class][
+                        "methods"
+                    ][covered_method_name]["cangjie_compilation"].get("outcome")
+                    == "success"
+                ):
                     continue
 
                 # suspiciousness score = total number of failed tests / total number of tests
@@ -858,7 +876,7 @@ def main(args):
 
     # constant variables
     args.prompt_type = "body" if args.include_implementation else "signature"
-    args.translation_dir = f"data/schemas{args.suffix}/translations/{args.model_name}/{args.prompt_type}/{args.temperature}/{args.project_name}"
+    args.translation_dir = f"data/java/schemas{args.suffix}/translations/{args.model}/{args.prompt_type}/{args.temperature}/{args.project}"
 
     # extract the reverse-topological order of fragments based on call graph
     fragment_traversal = get_reverse_traversal(args)
@@ -890,15 +908,15 @@ if __name__ == "__main__":
         description="Translate java types to cangjie types"
     )
     parser_.add_argument(
-        "--model_name",
+        "--model",
         type=str,
-        dest="model_name",
+        dest="model",
         help="model name to use for translation",
     )
     parser_.add_argument(
-        "--project_name",
+        "--project",
         type=str,
-        dest="project_name",
+        dest="project",
         help="project name to translate",
     )
     parser_.add_argument(

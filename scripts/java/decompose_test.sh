@@ -13,4 +13,4 @@ project="$1"
 echo "Decomposing tests for $project";
 mkdir -p projects/java/cleaned_final_projects_decomposed_tests/$project;
 cp -r projects/java/cleaned_final_projects/$project projects/java/cleaned_final_projects_decomposed_tests/;
-python3 src/java/preprocessing/decompose_dev_test.py --project_name=$project;
+python3 src/java/preprocessing/decompose_dev_test.py --project=$project;

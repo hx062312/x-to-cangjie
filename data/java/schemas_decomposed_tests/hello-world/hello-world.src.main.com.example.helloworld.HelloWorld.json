@@ -1,0 +1,140 @@
+{
+    "path": "projects/java/cleaned_final_projects_decomposed_tests/hello-world/src/main/java/com/example/helloworld/HelloWorld.java",
+    "imports": {
+        "3-3:import Scanner": {
+            "start": 3,
+            "end": 3,
+            "body": [
+                "import java.util.Scanner;\n"
+            ]
+        }
+    },
+    "classes": {
+        "HelloWorld": {
+            "start": 5,
+            "end": 5,
+            "is_abstract": false,
+            "is_interface": false,
+            "nested_inside": [],
+            "nests": [],
+            "implements": [],
+            "extends": [],
+            "methods": {
+                "15-15:main": {
+                    "start": 15,
+                    "end": 15,
+                    "body": [
+                        "    public static void main(String[] args) {\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public",
+                        "static"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "main(String[])",
+                    "parameters": [
+                        "args"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/util/Scanner",
+                            "Scanner(java.io.InputStream)"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/util/Scanner",
+                            "nextLine()"
+                        ],
+                        [
+                            "hello-world.src.main.com.example.helloworld.HelloWorld",
+                            "HelloWorld",
+                            "7-7:hello"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/io/PrintStream",
+                            "print(java.lang.String)"
+                        ],
+                        [
+                            "hello-world.src.main.com.example.helloworld.HelloWorld",
+                            "HelloWorld",
+                            "11-11:hello"
+                        ],
+                        [
+                            "library",
+                            "java.base/java/util/Scanner",
+                            "close()"
+                        ]
+                    ]
+                },
+                "11-11:hello": {
+                    "start": 11,
+                    "end": 11,
+                    "body": [
+                        "    public static void hello(String name) {\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public",
+                        "static"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "hello(String)",
+                    "parameters": [
+                        "name"
+                    ],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/io/PrintStream",
+                            "println(java.lang.String)"
+                        ]
+                    ]
+                },
+                "7-7:hello": {
+                    "start": 7,
+                    "end": 7,
+                    "body": [
+                        "    public static void hello() {\n"
+                    ],
+                    "is_constructor": false,
+                    "annotations": [],
+                    "modifiers": [
+                        "public",
+                        "static"
+                    ],
+                    "return_types": [
+                        [
+                            "void",
+                            "void"
+                        ]
+                    ],
+                    "signature": "hello()",
+                    "parameters": [],
+                    "calls": [
+                        [
+                            "library",
+                            "java.base/java/io/PrintStream",
+                            "println(java.lang.String)"
+                        ]
+                    ]
+                }
+            },
+            "fields": {}
+        }
+    }
+}

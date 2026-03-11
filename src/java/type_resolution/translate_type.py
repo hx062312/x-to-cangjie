@@ -12,7 +12,7 @@ from openai import OpenAI
 def prompt_model(model_info, client, prompt, args):
 
     completion = client.chat.completions.create(
-        model=model_info[args.model_name]["model_id"],
+        model=model_info[args.model]["model_id"],
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt},
@@ -42,19 +42,19 @@ def main(args):
         universal_type_map = json.load(f)
 
     logging.basicConfig(
-        filename=f"data/java/type_resolution/{args.project_name}/{args.type}.log",
+        filename=f"data/java/type_resolution/{args.project}/{args.type}.log",
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(module)s - %(funcName)s: %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     logging.info("new run started...")
 
-    in_fname = f"data/java/type_resolution/{args.project_name}/s1_input.json"
-    out_fname = f"data/java/type_resolution/{args.project_name}/s1_output.json"
+    in_fname = f"data/java/type_resolution/{args.project}/s1_input.json"
+    out_fname = f"data/java/type_resolution/{args.project}/s1_output.json"
 
     if args.type == "source_description":
-        in_fname = f"data/java/type_resolution/{args.project_name}/s1_output.json"
-        out_fname = f"data/java/type_resolution/{args.project_name}/s2_output.json"
+        in_fname = f"data/java/type_resolution/{args.project}/s1_output.json"
+        out_fname = f"data/java/type_resolution/{args.project}/s2_output.json"
 
     types = {}
     with open(in_fname, "r") as f:
@@ -63,7 +63,7 @@ def main(args):
     type_description = {}
     try:
         with open(
-            f"data/java/type_resolution/{args.project_name}/type_description.json", "r"
+            f"data/java/type_resolution/{args.project}/type_description.json", "r"
         ) as f:
             type_description = json.load(f)
     except FileNotFoundError:
@@ -173,20 +173,20 @@ Cangjie type:
             description = type_description[type_]["summarized_text"].replace("\n", "")
             instruction = instruction.replace(
                 "### Instruction:\nTranslate the following Java type to Cangjie language type and write your response like the example above:",
-                f"### Instruction:\nTranslate the following Java type to Cangjie language type and write your response like the example above. A description of Java type is given as well:\n\nType Description:\n{description}"
+                f"### Instruction:\nTranslate the following Java type to Cangjie language type and write your response like the example above. A description of Java type is given as well:\n\nType Description:\n{description}",
             )
 
             if include_feedback:
                 instruction = instruction.replace(
                     f"A description of Java type is given as well:\n\nType Description:\n{description}",
-                    f"Your previous translation attempt was incorrect. Here is the feedback:\n\n{feedback}\n\nA description of Java type is given as well:\n\nType Description:\n{description}"
+                    f"Your previous translation attempt was incorrect. Here is the feedback:\n\n{feedback}\n\nA description of Java type is given as well:\n\nType Description:\n{description}",
                 )
 
         elif args.type == "simple":
             if include_feedback:
                 instruction = instruction.replace(
                     "### Instruction:\nTranslate the following Java type to Cangjie language type and write your response like the example above:",
-                    f"Your previous translation attempt was incorrect. Here is the feedback:\n\n{feedback}\n\n### Instruction:\nTranslate the following Java type to Cangjie language type and write your response like the example above:"
+                    f"Your previous translation attempt was incorrect. Here is the feedback:\n\n{feedback}\n\n### Instruction:\nTranslate the following Java type to Cangjie language type and write your response like the example above:",
                 )
 
         prompt = f"{icl}\n\n{instruction}"
@@ -198,7 +198,7 @@ Cangjie type:
         client = OpenAI(
             **{
                 k: v
-                for k, v in model_info[args.model_name].items()
+                for k, v in model_info[args.model].items()
                 if k in ["api_key", "base_url", "default_headers"]
             }
         )
@@ -257,7 +257,7 @@ Cangjie type:
         generation = pattern.sub("Any", generation)
 
         # Read template and replace placeholder (same logic as original)
-        template_path = f"data/java/templates/{args.project_name}/template.cj"
+        template_path = f"data/java/templates/{args.project}/template.cj"
         with open(template_path, "r") as f:
             cangjie_program = f.read()
 
@@ -276,9 +276,13 @@ Cangjie type:
             )
 
         except subprocess.CalledProcessError as e:
-            logging.info(f"compile error for translated type {generation}... trying again for {type_}")
+            logging.info(
+                f"compile error for translated type {generation}... trying again for {type_}"
+            )
             # cjc outputs errors to stdout, not stderr
-            error_output = e.stdout if e.stdout else (e.stderr if e.stderr else "Unknown error")
+            error_output = (
+                e.stdout if e.stdout else (e.stderr if e.stderr else "Unknown error")
+            )
             logging.info(f"Compiler output: {error_output}")
             feedback = f"The translated type '{generation}' is syntactically incorrect in Cangjie.\n\n{error_output}"
             feedback = "\n".join(feedback.strip().split("\n")[-2:])
@@ -325,13 +329,11 @@ if __name__ == "__main__":
     parser_ = argparse.ArgumentParser(
         description="Translate java types to cangjie types"
     )
+    parser_.add_argument("--project", type=str, dest="project", help="project name")
     parser_.add_argument(
-        "--project_name", type=str, dest="project_name", help="project name"
-    )
-    parser_.add_argument(
-        "--model_name",
+        "--model",
         type=str,
-        dest="model_name",
+        dest="model",
         help="model name to use for translation",
     )
     parser_.add_argument("--type", type=str, dest="type", help="translation type")

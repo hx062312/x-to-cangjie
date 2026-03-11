@@ -12,5 +12,5 @@ project=$1
 suffix=$2
 
 echo "extracting types for $project"
-python3 src/java/type_resolution/extract_types.py --project_name=$project --suffix=$suffix
+python3 src/java/type_resolution/extract_types.py --project=$project --suffix=$suffix
 

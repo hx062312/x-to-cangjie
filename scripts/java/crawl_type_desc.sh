@@ -12,5 +12,5 @@ project=$1
 suffix=$2
 
 echo "crawling type description for $project"
-python3 src/java/type_resolution/crawl_type_desc.py --project_name=$project
+python3 src/java/type_resolution/crawl_type_desc.py --project=$project
 

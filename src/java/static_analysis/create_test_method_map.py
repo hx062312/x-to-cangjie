@@ -11,7 +11,7 @@ def main(args):
 
     global_call_graph = {}
     for schema_file in os.listdir(
-        f"{schema_dir}/translations/{args.model_name}/body/0.0/{args.project}"
+        f"{schema_dir}/translations/{args.model}/body/0.0/{args.project}"
     ):
 
         if "ESTest" in schema_file and not args.evosuite:
@@ -22,7 +22,7 @@ def main(args):
 
         data = {}
         with open(
-            f"{schema_dir}/translations/{args.model_name}/body/0.0/{args.project}/{schema_file}",
+            f"{schema_dir}/translations/{args.model}/body/0.0/{args.project}/{schema_file}",
             "r",
         ) as f:
             data = json.load(f)
@@ -53,9 +53,7 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create call graph for test methods")
     parser.add_argument("--project", type=str, help="Name of the project")
-    parser.add_argument(
-        "--model_name", type=str, dest="model_name", help="name of the model"
-    )
+    parser.add_argument("--model", type=str, dest="model", help="name of the model")
     parser.add_argument("--evosuite", action="store_true", help="Use evosuite schemas")
     parser.add_argument(
         "--suffix", type=str, default="", help="Suffix for schema directory"

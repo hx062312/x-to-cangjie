@@ -1181,13 +1181,13 @@ def refactor_code(
                             break
 
 
-def main(project_name):
+def main(project):
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     project_dir = (
         os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
-        + f"/projects/java/automated_reduced_projects/{project_name}"
+        + f"/projects/java/automated_reduced_projects/{project}"
     )
 
     if not os.path.isdir(project_dir):
@@ -1246,8 +1246,8 @@ def main(project_name):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python3 reduce_third_party_libs.py project_name")
+        print("Usage: python3 reduce_third_party_libs.py project")
         sys.exit(1)
 
-    project_name = sys.argv[1]
-    main(project_name)
+    project = sys.argv[1]
+    main(project)

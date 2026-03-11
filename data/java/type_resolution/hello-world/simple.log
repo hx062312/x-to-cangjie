@@ -1,0 +1,1554 @@
+2026-03-10 13:07:57 INFO translate_type - main: new run started...
+2026-03-10 13:07:57 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:07:57 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.ByteArrayOutputStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:07:57 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:07:58 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2026-03-10 13:08:52 INFO translate_type - main: new run started...
+2026-03-10 13:08:52 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:08:52 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.ByteArrayOutputStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:08:52 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:08:54 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:08:54 INFO translate_type - main: Raw LLM response: ```
+Stream<Byte>
+```...
+2026-03-10 13:08:54 INFO translate_type - main: Parsed translation: Stream<Byte>
+2026-03-10 13:08:59 INFO translate_type - main: compile error for translated type Stream<Byte>... trying again for java.io.ByteArrayOutputStream
+2026-03-10 13:08:59 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:08:59 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:08:59 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.ByteArrayOutputStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:08:59 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:00 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:00 INFO translate_type - main: Raw LLM response: ```
+Stream<Byte>
+```...
+2026-03-10 13:09:00 INFO translate_type - main: Parsed translation: Stream<Byte>
+2026-03-10 13:09:04 INFO translate_type - main: compile error for translated type Stream<Byte>... trying again for java.io.ByteArrayOutputStream
+2026-03-10 13:09:04 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:04 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:04 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.ByteArrayOutputStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:04 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:06 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:06 INFO translate_type - main: Raw LLM response: ```
+Stream<Byte>
+```...
+2026-03-10 13:09:06 INFO translate_type - main: Parsed translation: Stream<Byte>
+2026-03-10 13:09:10 INFO translate_type - main: compile error for translated type Stream<Byte>... trying again for java.io.ByteArrayOutputStream
+2026-03-10 13:09:10 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:10 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:10 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.ByteArrayOutputStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:10 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:11 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:11 INFO translate_type - main: Raw LLM response: ```
+Stream<Byte>
+```...
+2026-03-10 13:09:11 INFO translate_type - main: Parsed translation: Stream<Byte>
+2026-03-10 13:09:16 INFO translate_type - main: compile error for translated type Stream<Byte>... trying again for java.io.ByteArrayOutputStream
+2026-03-10 13:09:16 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:16 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:16 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.ByteArrayOutputStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:16 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:18 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:18 INFO translate_type - main: Raw LLM response: ```
+Stream<Byte>
+```...
+2026-03-10 13:09:18 INFO translate_type - main: Parsed translation: Stream<Byte>
+2026-03-10 13:09:22 INFO translate_type - main: compile error for translated type Stream<Byte>... trying again for java.io.ByteArrayOutputStream
+2026-03-10 13:09:22 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Stream<Byte> = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:22 INFO translate_type - main: Failed to translate java.io.ByteArrayOutputStream... skipping
+2026-03-10 13:09:22 INFO translate_type - main: java.lang.String already translated to String
+2026-03-10 13:09:22 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:22 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.PrintStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:22 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:24 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:24 INFO translate_type - main: Raw LLM response: ```
+PrintStream
+```...
+2026-03-10 13:09:24 INFO translate_type - main: Parsed translation: PrintStream
+2026-03-10 13:09:28 INFO translate_type - main: compile error for translated type PrintStream... trying again for java.io.PrintStream
+2026-03-10 13:09:28 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:28 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:28 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.PrintStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:28 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:30 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:30 INFO translate_type - main: Raw LLM response: ```
+PrintStream
+```...
+2026-03-10 13:09:30 INFO translate_type - main: Parsed translation: PrintStream
+2026-03-10 13:09:34 INFO translate_type - main: compile error for translated type PrintStream... trying again for java.io.PrintStream
+2026-03-10 13:09:34 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:34 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:34 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.PrintStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:34 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:35 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:35 INFO translate_type - main: Raw LLM response: ```
+PrintStream
+```...
+2026-03-10 13:09:35 INFO translate_type - main: Parsed translation: PrintStream
+2026-03-10 13:09:40 INFO translate_type - main: compile error for translated type PrintStream... trying again for java.io.PrintStream
+2026-03-10 13:09:40 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:40 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:40 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.PrintStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:40 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:41 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:41 INFO translate_type - main: Raw LLM response: ```
+PrintStream
+```...
+2026-03-10 13:09:41 INFO translate_type - main: Parsed translation: PrintStream
+2026-03-10 13:09:45 INFO translate_type - main: compile error for translated type PrintStream... trying again for java.io.PrintStream
+2026-03-10 13:09:45 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:45 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:45 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.io.PrintStream
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:45 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:47 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:47 INFO translate_type - main: Raw LLM response: ```
+PrintStream
+```...
+2026-03-10 13:09:47 INFO translate_type - main: Parsed translation: PrintStream
+2026-03-10 13:09:51 INFO translate_type - main: compile error for translated type PrintStream... trying again for java.io.PrintStream
+2026-03-10 13:09:51 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: PrintStream = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:51 INFO translate_type - main: Failed to translate java.io.PrintStream... skipping
+2026-03-10 13:09:51 INFO translate_type - main: void already translated to Unit
+2026-03-10 13:09:51 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:51 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:51 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:53 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:09:53 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-10 13:09:53 INFO translate_type - main: Parsed translation: System
+2026-03-10 13:09:57 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-10 13:09:57 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:09:57 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:09:57 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:09:57 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:00 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:01 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-10 13:10:01 INFO translate_type - main: Parsed translation: System
+2026-03-10 13:10:05 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-10 13:10:05 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:05 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:05 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:10:05 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:06 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:07 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-10 13:10:07 INFO translate_type - main: Parsed translation: System
+2026-03-10 13:10:11 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-10 13:10:11 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:11 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:11 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:10:11 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:12 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:12 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-10 13:10:12 INFO translate_type - main: Parsed translation: System
+2026-03-10 13:10:17 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-10 13:10:17 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:17 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:17 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:10:17 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:18 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:18 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-10 13:10:18 INFO translate_type - main: Parsed translation: System
+2026-03-10 13:10:22 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-10 13:10:22 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: System = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:22 INFO translate_type - main: Failed to translate java.lang.System... skipping
+2026-03-10 13:10:22 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:22 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.util.Scanner
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:10:22 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:24 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:24 INFO translate_type - main: Raw LLM response: ```
+Scanner
+```...
+2026-03-10 13:10:24 INFO translate_type - main: Parsed translation: Scanner
+2026-03-10 13:10:28 INFO translate_type - main: compile error for translated type Scanner... trying again for java.util.Scanner
+2026-03-10 13:10:28 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:28 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:28 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.util.Scanner
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:10:28 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:30 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:30 INFO translate_type - main: Raw LLM response: ```
+Scanner
+```...
+2026-03-10 13:10:30 INFO translate_type - main: Parsed translation: Scanner
+2026-03-10 13:10:34 INFO translate_type - main: compile error for translated type Scanner... trying again for java.util.Scanner
+2026-03-10 13:10:34 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:34 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:34 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.util.Scanner
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:10:34 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:36 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:36 INFO translate_type - main: Raw LLM response: ```
+Scanner
+```...
+2026-03-10 13:10:36 INFO translate_type - main: Parsed translation: Scanner
+2026-03-10 13:10:40 INFO translate_type - main: compile error for translated type Scanner... trying again for java.util.Scanner
+2026-03-10 13:10:40 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:40 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:40 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.util.Scanner
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:10:40 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:43 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:43 INFO translate_type - main: Raw LLM response: ```
+Scanner
+```...
+2026-03-10 13:10:43 INFO translate_type - main: Parsed translation: Scanner
+2026-03-10 13:10:47 INFO translate_type - main: compile error for translated type Scanner... trying again for java.util.Scanner
+2026-03-10 13:10:47 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:47 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:47 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+Your previous translation attempt was incorrect. Here is the feedback:
+
+
+b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.util.Scanner
+```
+
+### Response:
+Cangjie type:
+
+2026-03-10 13:10:47 INFO translate_type - main: ****************************************************************************************************
+2026-03-10 13:10:49 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-10 13:10:49 INFO translate_type - main: Raw LLM response: ```
+Scanner
+```...
+2026-03-10 13:10:49 INFO translate_type - main: Parsed translation: Scanner
+2026-03-10 13:10:54 INFO translate_type - main: compile error for translated type Scanner... trying again for java.util.Scanner
+2026-03-10 13:10:54 INFO translate_type - main: Compiler output: b'\x1b[31merror\x1b[0m: \'main\' declaration doesn\'t need \'func\' keyword\n \x1b[36m==>\x1b[0m test.cj:7:6:\n  \x1b[36m| \x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mfunc main(): Int64 {{\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~~~~\x1b[0m \x1b[31m^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36mhelp: try to remove \'func\' keyword\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected \'=>\' in lambda expression, found keyword \'let\'\n \x1b[36m==>\x1b[0m test.cj:8:5:\n  \x1b[36m| \x1b[0m\n\x1b[36m8\x1b[0m \x1b[36m| \x1b[0m    let test_var: Scanner = throw Exception("test")\x1b[0m\n  \x1b[36m| \x1b[0m    \x1b[31m^^^ expected \'=>\' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n'
+2026-03-10 13:10:54 INFO translate_type - main: Failed to translate java.util.Scanner... skipping
+2026-03-10 13:10:54 INFO translate_type - main: Total success: 2
+2026-03-10 13:10:54 INFO translate_type - main: Total failed: 4
