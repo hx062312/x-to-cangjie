@@ -2,6 +2,7 @@
 
 # ./scripts/java/create_schema.sh simple-calculator _decomposed_tests
 # ./scripts/java/create_schema.sh commons-fileupload _decomposed_tests
+# ./scripts/java/create_schema.sh hello-world _decomposed_tests
 
 if [ $# -ne 2 ]; then
   echo "Usage: ./scripts/java/create_schema.sh <project> <suffix>"

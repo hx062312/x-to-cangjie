@@ -70,13 +70,16 @@ def process_callables(schemas: dict, projects_dir: str, query_outputs_dir: str, 
         if start.endswith("0:0:0:0") or end.endswith("0:0:0:0"):
             continue
 
-        path, start_line, end_line = parse_location_with_end(start)
+        path, start_line, _ = parse_location_with_end(start)
         path = projects_dir + path[path.find(project) :]
 
         schemas.setdefault(path, {})
 
         # Adjust to 0-based for internal use
         start_line = start_line - 1
+
+        # Get end_line from the 'end' variable (not from 'start')
+        _, _, end_line = parse_location_with_end(end)
 
         class_location_path, class_start_line, class_end_line = parse_location_with_end(class_location)
 
@@ -211,13 +214,16 @@ def process_interfaces(schemas: dict, projects_dir: str, query_outputs_dir: str,
             _add_interface_declaration(schemas, projects_dir, project, interface_loc, interface_name)
             continue
 
-        path, start_line, end_line = parse_location_with_end(start)
+        path, start_line, _ = parse_location_with_end(start)
         path = projects_dir + path[path.find(project) :]
 
         schemas.setdefault(path, {})
 
         # Adjust to 0-based for internal use
         start_line = start_line - 1
+
+        # Get end_line from the 'end' variable (not from 'start')
+        _, _, end_line = parse_location_with_end(end)
 
         interface_start_line, interface_end_line = parse_location_with_end(interface_loc)[1:3]
 
@@ -435,11 +441,14 @@ def process_parameters(schemas: dict, projects_dir: str, query_outputs_dir: str,
             x.strip() for x in res_row
         ]
 
-        path, start_line, end_line = parse_location_with_end(start)
+        path, start_line, _ = parse_location_with_end(start)
         path = projects_dir + path[path.find(project) :]
 
         # Adjust to 0-based for internal use
         start_line = start_line - 1
+
+        # Get end_line from the 'end' variable (not from 'start')
+        _, _, end_line = parse_location_with_end(end)
 
         # Use find_callable_body to adjust start line
         callable_body, start_line = find_callable_body(path, start_line, end_line)

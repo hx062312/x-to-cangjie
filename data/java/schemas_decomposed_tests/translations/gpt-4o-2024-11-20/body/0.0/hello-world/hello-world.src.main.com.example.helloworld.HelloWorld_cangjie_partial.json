@@ -20,11 +20,21 @@
             "implements": [],
             "extends": [],
             "methods": {
-                "15-15:main": {
+                "15-25:main": {
                     "start": 15,
-                    "end": 15,
+                    "end": 25,
                     "body": [
-                        "    public static void main(String[] args) {\n"
+                        "    public static void main(String[] args) {\n",
+                        "        // \u8c03\u7528\u65e0\u53c2\u7248\u672c\n",
+                        "        hello();\n",
+                        "\n",
+                        "        // \u8c03\u7528\u5e26\u53c2\u7248\u672c\n",
+                        "        Scanner scanner = new Scanner(System.in);\n",
+                        "        System.out.print(\"Please enter your name: \");\n",
+                        "        String name = scanner.nextLine();\n",
+                        "        hello(name);\n",
+                        "        scanner.close();\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -56,7 +66,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "7-7:hello"
+                            "7-9:hello"
                         ],
                         [
                             "library",
@@ -66,7 +76,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "11-11:hello"
+                            "11-13:hello"
                         ],
                         [
                             "library",
@@ -81,21 +91,36 @@
                         "\t}\n"
                     ],
                     "translation": [],
-                    "translation_status": "pending",
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 11.557129144668579,
+                    "generation_timestamp": "2026-03-12T10:29:28.055758",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": 2,
+                        "test_execution": 2
+                    },
+                    "cangjie_compilation": {
+                        "outcome": "error",
+                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"parse_illegal_modifier_in_scope\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"parse\",\n                \"Message\": \"unexpected modifier 'public' on main function\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpzl4a80br.cj\",\n                    \"Line\": 5,\n                    \"Column\": 1\n                },\n                \"MainHint\": {\n                    \"Content\": \"unexpected modifier\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpzl4a80br.cj\",\n                            \"Line\": 5,\n                            \"Column\": 1\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpzl4a80br.cj\",\n                            \"Line\": 5,\n                            \"Column\": 7\n                        }\n                    }\n                },\n                \"OtherHints\": [\n                    {\n                        \"Content\": \"on main function\",\n                        \"Range\": {\n                            \"Begin\": {\n                                \"File\": \"/tmp/tmpzl4a80br.cj\",\n                                \"Line\": 5,\n                                \"Column\": 15\n                            },\n                            \"End\": {\n                                \"File\": \"/tmp/tmpzl4a80br.cj\",\n                                \"Line\": 5,\n                                \"Column\": 19\n                            }\n                        }\n                    }\n                ],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"parse_illegal_modifier_in_scope\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"parse\",\n                \"Message\": \"unexpected modifier 'static' on main function\",\n          "
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": 1,
+                        "test_execution": 2,
+                        "syntactic": 2
+                    }
                 },
-                "11-11:hello": {
+                "11-13:hello": {
                     "start": 11,
-                    "end": 11,
+                    "end": 13,
                     "body": [
-                        "    public static void hello(String name) {\n"
+                        "    public static void hello(String name) {\n",
+                        "        System.out.println(\"Hello, \" + name + \"!\");\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -126,22 +151,37 @@
                         "\t\t// TODO",
                         "\t}\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
+                    "translation": "main() {\n    return 0\n}\n\nclass HelloWorld {\npublic static func hello(name: String): Unit {\n\t\tprintln(\"Hello, \" + name + \"!\")\n\t}\n}",
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 8.515053272247314,
+                    "generation_timestamp": "2026-03-12T10:29:08.166379",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": 5,
+                        "test_execution": 5
+                    },
+                    "cangjie_compilation": {
+                        "outcome": "success",
+                        "message": "Compilation successful"
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": 5,
+                        "test_execution": 5,
+                        "syntactic": 2
+                    }
                 },
-                "7-7:hello": {
+                "7-9:hello": {
                     "start": 7,
-                    "end": 7,
+                    "end": 9,
                     "body": [
-                        "    public static void hello() {\n"
+                        "    public static void hello() {\n",
+                        "        System.out.println(\"Hello, World!\");\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -170,16 +210,29 @@
                         "\t\t// TODO",
                         "\t}\n"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
+                    "translation": "main() {\n    return 0\n}\n\nclass HelloWorld {\npublic static func hello(): Unit {\n\t\tprintln(\"Hello, World!\")\n\t}\n}",
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "test_execution": "not-exercised",
+                    "elapsed_time": 8.313037157058716,
+                    "generation_timestamp": "2026-03-12T10:29:16.488851",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": 5,
+                        "test_execution": 5
+                    },
+                    "cangjie_compilation": {
+                        "outcome": "success",
+                        "message": "Compilation successful"
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": 5,
+                        "test_execution": 5,
+                        "syntactic": 2
+                    }
                 }
             },
             "fields": {},

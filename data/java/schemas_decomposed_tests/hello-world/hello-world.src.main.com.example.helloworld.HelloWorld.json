@@ -20,11 +20,21 @@
             "implements": [],
             "extends": [],
             "methods": {
-                "15-15:main": {
+                "15-25:main": {
                     "start": 15,
-                    "end": 15,
+                    "end": 25,
                     "body": [
-                        "    public static void main(String[] args) {\n"
+                        "    public static void main(String[] args) {\n",
+                        "        // \u8c03\u7528\u65e0\u53c2\u7248\u672c\n",
+                        "        hello();\n",
+                        "\n",
+                        "        // \u8c03\u7528\u5e26\u53c2\u7248\u672c\n",
+                        "        Scanner scanner = new Scanner(System.in);\n",
+                        "        System.out.print(\"Please enter your name: \");\n",
+                        "        String name = scanner.nextLine();\n",
+                        "        hello(name);\n",
+                        "        scanner.close();\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -56,7 +66,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "7-7:hello"
+                            "7-9:hello"
                         ],
                         [
                             "library",
@@ -66,7 +76,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "11-11:hello"
+                            "11-13:hello"
                         ],
                         [
                             "library",
@@ -75,11 +85,13 @@
                         ]
                     ]
                 },
-                "11-11:hello": {
+                "11-13:hello": {
                     "start": 11,
-                    "end": 11,
+                    "end": 13,
                     "body": [
-                        "    public static void hello(String name) {\n"
+                        "    public static void hello(String name) {\n",
+                        "        System.out.println(\"Hello, \" + name + \"!\");\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -105,11 +117,13 @@
                         ]
                     ]
                 },
-                "7-7:hello": {
+                "7-9:hello": {
                     "start": 7,
-                    "end": 7,
+                    "end": 9,
                     "body": [
-                        "    public static void hello() {\n"
+                        "    public static void hello() {\n",
+                        "        System.out.println(\"Hello, World!\");\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],

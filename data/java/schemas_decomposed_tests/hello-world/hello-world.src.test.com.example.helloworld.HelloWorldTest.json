@@ -62,11 +62,16 @@
             "implements": [],
             "extends": [],
             "methods": {
-                "46-46:testHelloWithSpecialCharacters": {
+                "46-51:testHelloWithSpecialCharacters": {
                     "start": 46,
-                    "end": 46,
+                    "end": 51,
                     "body": [
-                        "    void testHelloWithSpecialCharacters() {\n"
+                        "    void testHelloWithSpecialCharacters() {\n",
+                        "        outputStream.reset();\n",
+                        "        HelloWorld.hello(\"\u5f20\u4e09\");\n",
+                        "        String output = outputStream.toString().trim();\n",
+                        "        assertEquals(\"Hello, \u5f20\u4e09!\", output);\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -98,7 +103,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "11-11:hello"
+                            "11-13:hello"
                         ],
                         [
                             "library",
@@ -107,11 +112,16 @@
                         ]
                     ]
                 },
-                "38-38:testHelloWithEmptyName": {
+                "38-43:testHelloWithEmptyName": {
                     "start": 38,
-                    "end": 38,
+                    "end": 43,
                     "body": [
-                        "    void testHelloWithEmptyName() {\n"
+                        "    void testHelloWithEmptyName() {\n",
+                        "        outputStream.reset();\n",
+                        "        HelloWorld.hello(\"\");\n",
+                        "        String output = outputStream.toString().trim();\n",
+                        "        assertEquals(\"Hello, !\", output);\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -143,7 +153,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "11-11:hello"
+                            "11-13:hello"
                         ],
                         [
                             "library",
@@ -152,11 +162,16 @@
                         ]
                     ]
                 },
-                "30-30:testHelloWithName": {
+                "30-35:testHelloWithName": {
                     "start": 30,
-                    "end": 30,
+                    "end": 35,
                     "body": [
-                        "    void testHelloWithName() {\n"
+                        "    void testHelloWithName() {\n",
+                        "        outputStream.reset();\n",
+                        "        HelloWorld.hello(\"Alice\");\n",
+                        "        String output = outputStream.toString().trim();\n",
+                        "        assertEquals(\"Hello, Alice!\", output);\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -188,7 +203,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "11-11:hello"
+                            "11-13:hello"
                         ],
                         [
                             "library",
@@ -197,11 +212,15 @@
                         ]
                     ]
                 },
-                "23-23:testHelloWithoutName": {
+                "23-27:testHelloWithoutName": {
                     "start": 23,
-                    "end": 23,
+                    "end": 27,
                     "body": [
-                        "    void testHelloWithoutName() {\n"
+                        "    void testHelloWithoutName() {\n",
+                        "        HelloWorld.hello();\n",
+                        "        String output = outputStream.toString().trim();\n",
+                        "        assertEquals(\"Hello, World!\", output);\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -228,7 +247,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "7-7:hello"
+                            "7-9:hello"
                         ],
                         [
                             "library",
@@ -237,11 +256,13 @@
                         ]
                     ]
                 },
-                "18-18:setUp": {
+                "18-20:setUp": {
                     "start": 18,
-                    "end": 18,
+                    "end": 20,
                     "body": [
-                        "    void setUp() {\n"
+                        "    void setUp() {\n",
+                        "        System.setOut(new PrintStream(outputStream));\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],

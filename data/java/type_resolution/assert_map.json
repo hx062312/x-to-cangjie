@@ -1,0 +1,92 @@
+{
+    "assertEquals": [
+        {
+            "java": "assertEquals(expected, actual)",
+            "cangjie": "expect.equals(actual)"
+        },
+        {
+            "java": "assertEquals(message, expected, actual)",
+            "cangjie": "expect(${message}).equals(actual)"
+        }
+    ],
+    "assertTrue": [
+        {
+            "java": "assertTrue(condition)",
+            "cangjie": "expect(condition).equals(true)"
+        },
+        {
+            "java": "assertTrue(message, condition)",
+            "cangjie": "expect(${message}).equals(true)"
+        }
+    ],
+    "assertFalse": [
+        {
+            "java": "assertFalse(condition)",
+            "cangjie": "expect(condition).equals(false)"
+        },
+        {
+            "java": "assertFalse(message, condition)",
+            "cangjie": "expect(${message}).equals(false)"
+        }
+    ],
+    "assertNull": [
+        {
+            "java": "assertNull(object)",
+            "cangjie": "expect(object).equals(null)"
+        },
+        {
+            "java": "assertNull(message, object)",
+            "cangjie": "expect(${message}).equals(null)"
+        }
+    ],
+    "assertNotNull": [
+        {
+            "java": "assertNotNull(object)",
+            "cangjie": "expect(object).not_equals(null)"
+        },
+        {
+            "java": "assertNotNull(message, object)",
+            "cangjie": "expect(${message}).not_equals(null)"
+        }
+    ],
+    "assertSame": [
+        {
+            "java": "assertSame(expected, actual)",
+            "cangjie": "expect(actual).same_as(expected)"
+        },
+        {
+            "java": "assertSame(message, expected, actual)",
+            "cangjie": "expect(${message}).same_as(expected)"
+        }
+    ],
+    "assertNotSame": [
+        {
+            "java": "assertNotSame(expected, actual)",
+            "cangjie": "expect(actual).not_same_as(expected)"
+        },
+        {
+            "java": "assertNotSame(message, expected, actual)",
+            "cangjie": "expect(${message}).not_same_as(expected)"
+        }
+    ],
+    "assertArrayEquals": [
+        {
+            "java": "assertArrayEquals(expected, actual)",
+            "cangjie": "expect(actual).array_equals(expected)"
+        },
+        {
+            "java": "assertArrayEquals(message, expected, actual)",
+            "cangjie": "expect(${message}).array_equals(expected)"
+        }
+    ],
+    "fail": [
+        {
+            "java": "fail()",
+            "cangjie": "throw Exception(\"Test failed\")"
+        },
+        {
+            "java": "fail(message)",
+            "cangjie": "throw Exception(${message})"
+        }
+    ]
+}

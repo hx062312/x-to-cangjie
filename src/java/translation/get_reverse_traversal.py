@@ -227,10 +227,6 @@ def get_reverse_traversal(args):
                     )
 
             for method_ in data["classes"][class_]["methods"]:
-
-                if data["classes"][class_]["methods"][method_]["is_overload"]:
-                    continue
-
                 full_fragment_name = f"{schema_base_name}|{class_}|{method_}"
                 dependent_fragments = [
                     f"{x[0]}|{x[1]}|{x[2]}"

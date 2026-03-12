@@ -62,11 +62,16 @@
             "implements": [],
             "extends": [],
             "methods": {
-                "46-46:testHelloWithSpecialCharacters": {
+                "46-51:testHelloWithSpecialCharacters": {
                     "start": 46,
-                    "end": 46,
+                    "end": 51,
                     "body": [
-                        "    void testHelloWithSpecialCharacters() {\n"
+                        "    void testHelloWithSpecialCharacters() {\n",
+                        "        outputStream.reset();\n",
+                        "        HelloWorld.hello(\"\u5f20\u4e09\");\n",
+                        "        String output = outputStream.toString().trim();\n",
+                        "        assertEquals(\"Hello, \u5f20\u4e09!\", output);\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -98,7 +103,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "11-11:hello"
+                            "11-13:hello"
                         ],
                         [
                             "library",
@@ -113,21 +118,39 @@
                         "\t}\n"
                     ],
                     "translation": [],
-                    "translation_status": "pending",
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 11.46499752998352,
+                    "generation_timestamp": "2026-03-12T10:30:15.989049",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": 2,
+                        "test_execution": 2
+                    },
+                    "cangjie_compilation": {
+                        "outcome": "error",
+                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'ByteArrayOutputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpigmua1td.cj\",\n                    \"Line\": 7,\n                    \"Column\": 22\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpigmua1td.cj\",\n                            \"Line\": 7,\n                            \"Column\": 22\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpigmua1td.cj\",\n                            \"Line\": 7,\n                            \"Column\": 23\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'HelloWorld'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpigmua1td.cj\",\n                    \"Line\": 9,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpigmua1td.cj\",\n                            \"Line\": 9,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpigmua1td.cj\",\n                            \"Line\": 9,\n                            \"Column\": 4\n                        }\n         "
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": 1,
+                        "test_execution": 2,
+                        "syntactic": 2
+                    }
                 },
-                "38-38:testHelloWithEmptyName": {
+                "38-43:testHelloWithEmptyName": {
                     "start": 38,
-                    "end": 38,
+                    "end": 43,
                     "body": [
-                        "    void testHelloWithEmptyName() {\n"
+                        "    void testHelloWithEmptyName() {\n",
+                        "        outputStream.reset();\n",
+                        "        HelloWorld.hello(\"\");\n",
+                        "        String output = outputStream.toString().trim();\n",
+                        "        assertEquals(\"Hello, !\", output);\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -159,7 +182,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "11-11:hello"
+                            "11-13:hello"
                         ],
                         [
                             "library",
@@ -174,21 +197,39 @@
                         "\t}\n"
                     ],
                     "translation": [],
-                    "translation_status": "pending",
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 10.891976118087769,
+                    "generation_timestamp": "2026-03-12T10:30:04.507916",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": 2,
+                        "test_execution": 2
+                    },
+                    "cangjie_compilation": {
+                        "outcome": "error",
+                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'outputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                    \"Line\": 7,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                            \"Line\": 7,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                            \"Line\": 7,\n                            \"Column\": 4\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'System'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                    \"Line\": 8,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                            \"Line\": 8,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                            \"Line\": 8,\n                            \"Column\": 4\n                        }\n                    }\n   "
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": 1,
+                        "test_execution": 2,
+                        "syntactic": 2
+                    }
                 },
-                "30-30:testHelloWithName": {
+                "30-35:testHelloWithName": {
                     "start": 30,
-                    "end": 30,
+                    "end": 35,
                     "body": [
-                        "    void testHelloWithName() {\n"
+                        "    void testHelloWithName() {\n",
+                        "        outputStream.reset();\n",
+                        "        HelloWorld.hello(\"Alice\");\n",
+                        "        String output = outputStream.toString().trim();\n",
+                        "        assertEquals(\"Hello, Alice!\", output);\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -220,7 +261,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "11-11:hello"
+                            "11-13:hello"
                         ],
                         [
                             "library",
@@ -235,21 +276,38 @@
                         "\t}\n"
                     ],
                     "translation": [],
-                    "translation_status": "pending",
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 14.604591846466064,
+                    "generation_timestamp": "2026-03-12T10:29:53.604177",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": 2,
+                        "test_execution": 2
+                    },
+                    "cangjie_compilation": {
+                        "outcome": "error",
+                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'ByteArrayOutputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                    \"Line\": 7,\n                    \"Column\": 22\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                            \"Line\": 7,\n                            \"Column\": 22\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                            \"Line\": 7,\n                            \"Column\": 23\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'HelloWorld'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                    \"Line\": 9,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                            \"Line\": 9,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                            \"Line\": 9,\n                            \"Column\": 4\n                        }\n         "
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": 1,
+                        "test_execution": 2,
+                        "syntactic": 2
+                    }
                 },
-                "23-23:testHelloWithoutName": {
+                "23-27:testHelloWithoutName": {
                     "start": 23,
-                    "end": 23,
+                    "end": 27,
                     "body": [
-                        "    void testHelloWithoutName() {\n"
+                        "    void testHelloWithoutName() {\n",
+                        "        HelloWorld.hello();\n",
+                        "        String output = outputStream.toString().trim();\n",
+                        "        assertEquals(\"Hello, World!\", output);\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -276,7 +334,7 @@
                         [
                             "hello-world.src.main.com.example.helloworld.HelloWorld",
                             "HelloWorld",
-                            "7-7:hello"
+                            "7-9:hello"
                         ],
                         [
                             "library",
@@ -291,21 +349,36 @@
                         "\t}\n"
                     ],
                     "translation": [],
-                    "translation_status": "pending",
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 10.922770738601685,
+                    "generation_timestamp": "2026-03-12T10:29:38.989179",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": 2,
+                        "test_execution": 2
+                    },
+                    "cangjie_compilation": {
+                        "outcome": "error",
+                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'ByteArrayOutputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                    \"Line\": 7,\n                    \"Column\": 22\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                            \"Line\": 7,\n                            \"Column\": 22\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                            \"Line\": 7,\n                            \"Column\": 23\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'System'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                    \"Line\": 8,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                            \"Line\": 8,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                            \"Line\": 8,\n                            \"Column\": 4\n                        }\n             "
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": 1,
+                        "test_execution": 2,
+                        "syntactic": 2
+                    }
                 },
-                "18-18:setUp": {
+                "18-20:setUp": {
                     "start": 18,
-                    "end": 18,
+                    "end": 20,
                     "body": [
-                        "    void setUp() {\n"
+                        "    void setUp() {\n",
+                        "        System.setOut(new PrintStream(outputStream));\n",
+                        "    }\n"
                     ],
                     "is_constructor": false,
                     "annotations": [],
@@ -337,15 +410,28 @@
                         "\t}\n"
                     ],
                     "translation": [],
-                    "translation_status": "pending",
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "elapsed_time": 10.433945178985596,
+                    "generation_timestamp": "2026-03-12T10:30:26.434961",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": 2,
+                        "test_execution": 2
+                    },
+                    "cangjie_compilation": {
+                        "outcome": "error",
+                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'outputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpk69itztu.cj\",\n                    \"Line\": 7,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpk69itztu.cj\",\n                            \"Line\": 7,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpk69itztu.cj\",\n                            \"Line\": 7,\n                            \"Column\": 4\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'System'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpk69itztu.cj\",\n                    \"Line\": 8,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpk69itztu.cj\",\n                            \"Line\": 8,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpk69itztu.cj\",\n                            \"Line\": 8,\n                            \"Column\": 4\n                        }\n                    }\n   "
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": 1,
+                        "test_execution": 2,
+                        "syntactic": 2
+                    }
                 }
             },
             "fields": {
@@ -368,16 +454,27 @@
                     "partial_translation": [
                         "\tinternal let originalOut:  = ?"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
+                    "translation": [
+                        "\tinternal let originalOut:  = ?"
+                    ],
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-03-12T10:28:59.611441",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": -1,
+                        "test_execution": -1
+                    },
+                    "cangjie_compilation": "success"
                 },
                 "14-14:outputStream": {
                     "start": 14,
@@ -398,16 +495,27 @@
                     "partial_translation": [
                         "\tinternal let outputStream:  = ?"
                     ],
-                    "translation": [],
-                    "translation_status": "pending",
+                    "translation": [
+                        "\tinternal let outputStream:  = ?"
+                    ],
+                    "translation_status": "attempted",
                     "syntactic_validation": "pending",
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
                     "elapsed_time": 0,
-                    "generation_timestamp": 0,
+                    "generation_timestamp": "2026-03-12T10:28:59.614620",
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true
+                    "include_implementation": true,
+                    "original_budget": {
+                        "cangjie_compilation": -1,
+                        "test_execution": -1
+                    },
+                    "final_budget": {
+                        "cangjie_compilation": -1,
+                        "test_execution": -1
+                    },
+                    "cangjie_compilation": "success"
                 }
             },
             "is_enum": false,

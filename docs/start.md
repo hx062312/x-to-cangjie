@@ -11,7 +11,7 @@ bash scripts/java/add_plugin.sh <project>
 ```
 
 - **作用：** 将 `<project>-jar-plugin` 添加到项目的 `pom.xml`，用于生成测试 JAR。
-- **生成文件：** `java_projects/automated_reduced_projects/<project>/` 目录（从 `original_projects` 复制并添加插件）。
+- **生成文件：** `projects/java/automated_reduced_projects/<project>/` 目录（从 `original_projects` 复制并添加插件）。
 
 ------
 
@@ -26,9 +26,9 @@ bash scripts/java/merge_jar.sh <project>
 - **作用：** 执行 `mvn clean install` 构建项目，将主代码和测试代码合并成单个 JAR。
 - **依赖：** 需要 Java 和 <project> 环境。
 - **生成文件：**
-  - `java_projects/automated_reduced_projects/<project>/target/*.jar` (主 JAR)
-  - `java_projects/automated_reduced_projects/<project>/target/*-tests.jar` (测试 JAR)
-  - `java_projects/automated_reduced_projects/<project>/target/*-merged.jar` (合并后的 JAR)
+  - `projects/java/automated_reduced_projects/<project>/target/*.jar` (主 JAR)
+  - `projects/java/automated_reduced_projects/<project>/target/*-tests.jar` (测试 JAR)
+  - `projects/java/automated_reduced_projects/<project>/target/*-merged.jar` (合并后的 JAR)
 
 ------
 
@@ -42,7 +42,7 @@ bash scripts/java/generate_cg.sh <project>
 
 - **作用：** 使用 `JavaCallgraph` 工具生成项目的调用图。
 - **依赖：** `misc/java-callgraph/target/javacg-0.1-SNAPSHOT-static.jar`
-- **生成文件：** `java_projects/automated_reduced_projects/<project>/callgraph.txt`
+- **生成文件：** `projects/java/automated_reduced_projects/<project>/callgraph.txt`
 
 ------
 
@@ -56,7 +56,7 @@ bash scripts/java/reduce_third_party_libs.sh <project>
 
 - **作用：** 分析调用图，移除未使用的第三方依赖，只保留项目自身的代码。
 - **输入：** `callgraph.txt` 和原始项目。
-- **生成文件：** `java_projects/automated_reduced_projects/<project>/` (更新后的项目)。
+- **生成文件：** `projects/java/automated_reduced_projects/<project>/` (更新后的项目)。
 
 ------
 
@@ -71,7 +71,7 @@ bash scripts/java/extract_coverage.sh <project> ''
 ```
 
 - **作用：** 执行测试并提取覆盖率信息。
-- **生成文件：** `data/source_test_execution/` 目录。
+- **生成文件：** `data/java/source_test_execution/` 目录。
 - **注意：** 运行脚本前需要进行测试: *`mvn test`*,并添加 *`jacoco`* 插件
 
 **第二步：分解测试**
@@ -81,7 +81,7 @@ bash scripts/java/decompose_test.sh <project>
 ```
 
 - **作用：** 将测试分解为独立片段，解决长调用链问题。
-- **生成文件：** `java_projects/cleaned_final_projects_decomposed_tests/<project>/`
+- **生成文件：** `projects/java/cleaned_final_projects_decomposed_tests/<project>/`
 - **注意：** 测试分解后可能需要手动调整，如移除 `@Test(expected = ...)` 注解。
 
 ------
@@ -112,7 +112,7 @@ bash scripts/java/create_query_outputs.sh <project> "_decomposed_tests"
 ```
 
 - **作用：** 运行 CodeQL 查询，提取类型、方法调用等信息。
-- **生成文件：** `data/query_outputs_decomposed_tests/`
+- **生成文件：** `data/java/query_outputs_decomposed_tests/`
 
 ------
 
@@ -126,7 +126,7 @@ bash scripts/java/extract_call_graph.sh <project> <suffix>
 ```
 
 - **作用：** 根据 CodeQL 查询结果创建项目 schema（JSON 格式）。
-- **生成文件：** `data/schemas_decomposed_tests/<project>/`
+- **生成文件：** `data/java/schemas_decomposed_tests/<project>/`
 
 ------
 
@@ -134,7 +134,7 @@ bash scripts/java/extract_call_graph.sh <project> <suffix>
 
 **命令：**
 ```Bash
-bash scripts/java/extract_types.sh scripts/java/extract_types.sh <project> <suffix>
+bash scripts/java/extract_types.sh <project> <suffix>
 bash scripts/java/crawl_type_desc.sh <project> <suffix>
 bash scripts/java/translate_types.sh <project> <model_name> <type>
 ```
@@ -150,8 +150,8 @@ bash scripts/java/get_dependencies.sh <project> <suffix>
 bash scripts/java/create_skeleton.sh <project> <model> <type> <suffix> <temperature>
 ```
 
-- **作用：** 在目标语言中 `data/skeletons/<project_name>` 下创建合适的骨架（语法正确的空实现）。
-- **生成文件：** 更新到 `data/skeletons/<project_name>`。
+- **作用：** 在目标语言中 `data/java/skeletons/<project_name>` 下创建合适的骨架（语法正确的空实现）。
+- **生成文件：** 更新到 `data/java/skeletons/<project_name>`。
 
 ------
 
@@ -166,7 +166,7 @@ bash scripts/java/translate_fragment.sh <project>  <model> <temperature>
 ```
 
 - **作用：** 提取测试覆盖率，用于指导翻译。
-- **生成文件：** `data/source_test_execution/`
+- **生成文件：** `data/java/source_test_execution/`
 
 ------
 
@@ -184,7 +184,7 @@ bash scripts/java/translate_fragment.sh <project> gpt-4o-2024-11-20 0.0
   - `0.0` - temperature
   - `gpt-4o-2024-11-20` - 模型名
 - **依赖：** `configs/model_configs.yaml` 中配置了 API。
-- **生成文件：** `data/schemas_decomposed_tests/translations/<project>/` (JSON 格式翻译结果)。
+- **生成文件：** `data/java/schemas_decomposed_tests/translations/<project>/` (JSON 格式翻译结果)。
 
 ------
 
@@ -193,7 +193,7 @@ bash scripts/java/translate_fragment.sh <project> gpt-4o-2024-11-20 0.0
 **命令：**
 
 ```Bash
-bash scripts/java/print_results.sh <project> 0.0 gpt-4o-2024-11-20 data/schemas_decomposed_tests/translations
+bash scripts/java/print_results.sh <project> 0.0 gpt-4o-2024-11-20 data/java/schemas_decomposed_tests/translations
 ```
 
 - **作用：** 打印翻译结果统计（语法正确性、GraalVM 正确性、测试通过率等）。
@@ -209,7 +209,7 @@ bash scripts/java/recompose.sh <project> 0.0 gpt-4o-2024-11-20
 ```
 
 - **作用：** 将翻译片段组合成独立的 Python 项目。
-- **生成文件：** `data/schemas_decomposed_tests/translations/<project>_python/`
+- **生成文件：** `data/java/schemas_decomposed_tests/translations/<project>_python/`
 
 ------
 
@@ -217,5 +217,5 @@ bash scripts/java/recompose.sh <project> 0.0 gpt-4o-2024-11-20
 
 1. **手动调整：** 测试分解后可能需要手动调整，确保 <project> 能编译。
 2. **模型配置：** 翻译需要配置 LLM API，当前 `configs/model_configs.yaml` 已配置 `gpt-4o-2024-11-20`。
-3. **中途可能需要重新运行测试代码:** `cd /home/AlphaTrans/java_projects/cleaned_final_projects_decomposed_tests/<project> && mvn clean test -Drat.skip=true`
+3. **中途可能需要重新运行测试代码:** `cd /home/AlphaTrans/projects/java/cleaned_final_projects_decomposed_tests/<project> && mvn clean test -Drat.skip=true`
 

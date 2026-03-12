@@ -56,7 +56,7 @@ Notes:
             },
         }
 
-        self.assert_map = json.load(open("data/type_resolution/assert_map.json", "r"))
+        self.assert_map = json.load(open("data/java/type_resolution/assert_map.json", "r"))
 
         self.load_fragment(fragment_details)
         self.construct_adaptive_icl()
@@ -113,7 +113,7 @@ Notes:
                     self.assert_map[source_assert][i]["java"] + ";\n        "
                 )
                 target_statements += (
-                    "self." + self.assert_map[source_assert][i]["python"] + "\n        "
+                    self.assert_map[source_assert][i]["cangjie"] + "\n        "
                 )
 
         if self.is_feedback:
@@ -198,7 +198,7 @@ Notes:
         if self.is_feedback:
             self.prompt += f'### Instruction:\nBased on the feedback provided, identify the error in the following Cangjie translation of the {self.fragment_type} and correct it. You only need to correct the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only complete the given "{self.fragment_actual_name}" method like the example above and do not add anything else in your response.'
         else:
-            self.prompt += f'### Instruction:\nTranslate the following {self.args.from_lang} {self.fragment_type} to Cangjie like the example above. You only need to translate the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation.'
+            self.prompt += f'### Instruction:\nTranslate the following {self.args.from_lang} {self.fragment_type} to Cangjie like the example above. You only need to translate the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only output the code block and do not add any explanations or additional text in your response.'
 
     def add_source_code(self):
         self.prompt += (
@@ -247,7 +247,7 @@ Notes:
                 continue
 
             inner_outer_classes_py = [
-                f"{self.schema_data['classes'][inner_outer_class]['python_class_declaration']}"
+                f"{self.schema_data['classes'][inner_outer_class]['cangjie_class_declaration']}"
             ]
             for field in self.schema_data["classes"][inner_outer_class]["fields"]:
                 if field.split(":")[1] in "".join(
@@ -275,11 +275,11 @@ Notes:
         # add necessary dependencies from imported classes
         dependencies = {}
         dependencies_path = (
-            f"data/dependencies{self.args.suffix}/{self.args.project}/dependencies.json"
+            f"data/java/dependencies{self.args.suffix}/{self.args.project}/dependencies.json"
         )
         if self.args.translate_evosuite:
             dependencies_path = (
-                f"data/dependencies_evosuite/{self.args.project}/dependencies.json"
+                f"data/java/dependencies_evosuite/{self.args.project}/dependencies.json"
             )
 
         with open(dependencies_path, "r") as f:
@@ -326,7 +326,7 @@ Notes:
                 imported_class_data = json.load(f)
 
             imported_classes = [
-                f'{imported_class_data["classes"][dependenct_class_name]["python_class_declaration"]}'
+                f'{imported_class_data["classes"][dependenct_class_name]["cangjie_class_declaration"]}'
             ]
 
             for field in imported_class_data["classes"][dependenct_class_name][
@@ -376,7 +376,7 @@ Notes:
                 continue
 
             super_class_declaration = [
-                super_class_data["classes"][super_class]["python_class_declaration"]
+                super_class_data["classes"][super_class]["cangjie_class_declaration"]
             ]
             for field in super_class_data["classes"][super_class]["fields"]:
                 if field.split(":")[1] in "".join(
@@ -403,7 +403,7 @@ Notes:
 
         # add the fragment partial translation
         main_class_partial_translation = self.schema_data["classes"][self.class_name][
-            "python_class_declaration"
+            "cangjie_class_declaration"
         ]
 
         if "<placeholder>" not in "".join(self.fragment_dict["partial_translation"]):
@@ -540,11 +540,11 @@ Notes:
 
                             if (
                                 callee_schema_data["classes"][callee_class][
-                                    "python_class_declaration"
+                                    "cangjie_class_declaration"
                                 ]
                                 not in self.partial_translation
                             ):
-                                self.partial_translation += f"{callee_schema_data['classes'][callee_class]['python_class_declaration']}"
+                                self.partial_translation += f"{callee_schema_data['classes'][callee_class]['cangjie_class_declaration']}"
                                 for field in callee_schema_data["classes"][
                                     callee_class
                                 ]["fields"]:
@@ -610,7 +610,7 @@ Notes:
                             ) as f:
                                 callee_schema_data = json.load(f)
 
-                            self.partial_translation += f"{callee_schema_data['classes'][callee_class]['python_class_declaration']}"
+                            self.partial_translation += f"{callee_schema_data['classes'][callee_class]['cangjie_class_declaration']}"
                             for field in callee_schema_data["classes"][callee_class][
                                 "fields"
                             ]:
@@ -699,7 +699,7 @@ Notes:
             )
         elif self.fragment_type == "static_initializer":
             main_class_partial_translation += (
-                "    @staticmethod\n    def run_static_init():\n        pass"
+                "    public static func run_static_init() {\n    }"
             )
 
         self.partial_translation += main_class_partial_translation
