@@ -78,7 +78,10 @@ def add_dummy_main(code: str) -> str:
     Must be placed at the beginning of the file (before class definitions).
     Cangjie uses 'main()' not 'func main()'.
     """
-    if 'main()' in code:
+    # Check if main function already exists (with any parameters)
+    # Match patterns like: main(), main(args: ...), main(args: Array<String>)
+    import re
+    if re.search(r'\bmain\s*\(', code):
         return code
 
     # Add a dummy main function at the beginning (Cangjie uses main() without func)
@@ -125,7 +128,8 @@ def cangjie_syntax_validation(generation: str, fragment: dict, args) -> tuple:
 
     # Check that the code has at least some structure
     # Look for common Cangjie keywords
-    has_function = any('func ' in line for line in code_lines)
+    # Note: 'main(' without 'func' is also valid (main function in Cangjie)
+    has_function = any('func ' in line or 'main(' in line for line in code_lines)
     has_class = any('class ' in line for line in code_lines)
     has_var = any('var ' in line for line in code_lines)
     has_let = any('let ' in line for line in code_lines)

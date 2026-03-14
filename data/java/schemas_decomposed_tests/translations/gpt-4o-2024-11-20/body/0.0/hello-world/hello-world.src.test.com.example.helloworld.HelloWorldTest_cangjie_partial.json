@@ -7,54 +7,12 @@
             "body": [
                 "import org.junit.jupiter.api.Test;\n"
             ]
-        },
-        "5-5:import BeforeEach": {
-            "start": 5,
-            "end": 5,
-            "body": [
-                "import org.junit.jupiter.api.BeforeEach;\n"
-            ]
-        },
-        "6-6:import ByteArrayOutputStream": {
-            "start": 6,
-            "end": 6,
-            "body": [
-                "import java.io.ByteArrayOutputStream;\n"
-            ]
-        },
-        "7-7:import PrintStream": {
-            "start": 7,
-            "end": 7,
-            "body": [
-                "import java.io.PrintStream;\n"
-            ]
-        },
-        "8-8:import Scanner": {
-            "start": 8,
-            "end": 8,
-            "body": [
-                "import java.util.Scanner;\n"
-            ]
-        },
-        "4-4:import TempDir": {
-            "start": 4,
-            "end": 4,
-            "body": [
-                "import org.junit.jupiter.api.io.TempDir;\n"
-            ]
-        },
-        "10-10:import static Assertions.*": {
-            "start": 10,
-            "end": 10,
-            "body": [
-                "import static org.junit.jupiter.api.Assertions.*;\n"
-            ]
         }
     },
     "classes": {
         "HelloWorldTest": {
-            "start": 12,
-            "end": 12,
+            "start": 5,
+            "end": 5,
             "is_abstract": false,
             "is_interface": false,
             "nested_inside": [],
@@ -62,58 +20,34 @@
             "implements": [],
             "extends": [],
             "methods": {
-                "46-51:testHelloWithSpecialCharacters": {
-                    "start": 46,
-                    "end": 51,
+                "8-11:testMain": {
+                    "start": 8,
+                    "end": 11,
                     "body": [
-                        "    void testHelloWithSpecialCharacters() {\n",
-                        "        outputStream.reset();\n",
-                        "        HelloWorld.hello(\"\u5f20\u4e09\");\n",
-                        "        String output = outputStream.toString().trim();\n",
-                        "        assertEquals(\"Hello, \u5f20\u4e09!\", output);\n",
+                        "    public void testMain() {\n",
+                        "        // Simple test to verify HelloWorld.main() runs without error\n",
+                        "        HelloWorld.main(new String[]{});\n",
                         "    }\n"
                     ],
                     "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
+                    "annotations": [
+                        "Test"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
                     "return_types": [
                         [
                             "void",
                             "void"
                         ]
                     ],
-                    "signature": "testHelloWithSpecialCharacters()",
+                    "signature": "testMain()",
                     "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/String",
-                            "trim()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "toString()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "reset()"
-                        ],
-                        [
-                            "hello-world.src.main.com.example.helloworld.HelloWorld",
-                            "HelloWorld",
-                            "11-13:hello"
-                        ],
-                        [
-                            "library",
-                            "Assertions",
-                            "assertEquals(java.lang.Object,java.lang.Object)"
-                        ]
-                    ],
+                    "calls": [],
                     "is_overload": false,
                     "partial_translation": [
-                        "\tinternal func testHelloWithSpecialCharacters(): Unit {",
+                        "\tpublic func testMain(): Unit {",
                         "\t\t// TODO",
                         "\t}\n"
                     ],
@@ -123,406 +57,33 @@
                     "field_exercise": "pending",
                     "graal_validation": "pending",
                     "test_execution": "pending",
-                    "elapsed_time": 11.46499752998352,
-                    "generation_timestamp": "2026-03-12T10:30:15.989049",
+                    "elapsed_time": 11.332666873931885,
+                    "generation_timestamp": "2026-03-12T12:24:54.291013",
                     "model": "gpt-4o-2024-11-20",
                     "include_implementation": true,
                     "original_budget": {
+                        "syntactic": 2,
                         "cangjie_compilation": 2,
                         "test_execution": 2
                     },
                     "cangjie_compilation": {
                         "outcome": "error",
-                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'ByteArrayOutputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpigmua1td.cj\",\n                    \"Line\": 7,\n                    \"Column\": 22\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpigmua1td.cj\",\n                            \"Line\": 7,\n                            \"Column\": 22\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpigmua1td.cj\",\n                            \"Line\": 7,\n                            \"Column\": 23\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'HelloWorld'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpigmua1td.cj\",\n                    \"Line\": 9,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpigmua1td.cj\",\n                            \"Line\": 9,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpigmua1td.cj\",\n                            \"Line\": 9,\n                            \"Column\": 4\n                        }\n         "
+                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'HelloWorld'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpikeewtbq.cj\",\n                    \"Line\": 4,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpikeewtbq.cj\",\n                            \"Line\": 4,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpikeewtbq.cj\",\n                            \"Line\": 4,\n                            \"Column\": 4\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_missing_entry\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"'main' is missing\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpikeewtbq.cj\",\n                    \"Line\": 1,\n                    \"Column\": 1\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpikeewtbq.cj\",\n                            \"Line\": 1,\n                            \"Column\": 1\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpikeewtbq.cj\",\n                            \"Line\": 1,\n                            \"Column\": 2\n                        }\n                    }\n                },\n       "
                     },
                     "final_budget": {
+                        "syntactic": 2,
                         "cangjie_compilation": 1,
-                        "test_execution": 2,
-                        "syntactic": 2
-                    }
-                },
-                "38-43:testHelloWithEmptyName": {
-                    "start": 38,
-                    "end": 43,
-                    "body": [
-                        "    void testHelloWithEmptyName() {\n",
-                        "        outputStream.reset();\n",
-                        "        HelloWorld.hello(\"\");\n",
-                        "        String output = outputStream.toString().trim();\n",
-                        "        assertEquals(\"Hello, !\", output);\n",
-                        "    }\n"
-                    ],
-                    "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
-                    "return_types": [
-                        [
-                            "void",
-                            "void"
-                        ]
-                    ],
-                    "signature": "testHelloWithEmptyName()",
-                    "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/String",
-                            "trim()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "toString()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "reset()"
-                        ],
-                        [
-                            "hello-world.src.main.com.example.helloworld.HelloWorld",
-                            "HelloWorld",
-                            "11-13:hello"
-                        ],
-                        [
-                            "library",
-                            "Assertions",
-                            "assertEquals(java.lang.Object,java.lang.Object)"
-                        ]
-                    ],
-                    "is_overload": false,
-                    "partial_translation": [
-                        "\tinternal func testHelloWithEmptyName(): Unit {",
-                        "\t\t// TODO",
-                        "\t}\n"
-                    ],
-                    "translation": [],
-                    "translation_status": "attempted",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 10.891976118087769,
-                    "generation_timestamp": "2026-03-12T10:30:04.507916",
-                    "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "cangjie_compilation": 2,
                         "test_execution": 2
-                    },
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'outputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                    \"Line\": 7,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                            \"Line\": 7,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                            \"Line\": 7,\n                            \"Column\": 4\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'System'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                    \"Line\": 8,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                            \"Line\": 8,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmp0e45h2vp.cj\",\n                            \"Line\": 8,\n                            \"Column\": 4\n                        }\n                    }\n   "
-                    },
-                    "final_budget": {
-                        "cangjie_compilation": 1,
-                        "test_execution": 2,
-                        "syntactic": 2
-                    }
-                },
-                "30-35:testHelloWithName": {
-                    "start": 30,
-                    "end": 35,
-                    "body": [
-                        "    void testHelloWithName() {\n",
-                        "        outputStream.reset();\n",
-                        "        HelloWorld.hello(\"Alice\");\n",
-                        "        String output = outputStream.toString().trim();\n",
-                        "        assertEquals(\"Hello, Alice!\", output);\n",
-                        "    }\n"
-                    ],
-                    "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
-                    "return_types": [
-                        [
-                            "void",
-                            "void"
-                        ]
-                    ],
-                    "signature": "testHelloWithName()",
-                    "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/String",
-                            "trim()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "toString()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "reset()"
-                        ],
-                        [
-                            "hello-world.src.main.com.example.helloworld.HelloWorld",
-                            "HelloWorld",
-                            "11-13:hello"
-                        ],
-                        [
-                            "library",
-                            "Assertions",
-                            "assertEquals(java.lang.Object,java.lang.Object)"
-                        ]
-                    ],
-                    "is_overload": false,
-                    "partial_translation": [
-                        "\tinternal func testHelloWithName(): Unit {",
-                        "\t\t// TODO",
-                        "\t}\n"
-                    ],
-                    "translation": [],
-                    "translation_status": "attempted",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 14.604591846466064,
-                    "generation_timestamp": "2026-03-12T10:29:53.604177",
-                    "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'ByteArrayOutputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                    \"Line\": 7,\n                    \"Column\": 22\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                            \"Line\": 7,\n                            \"Column\": 22\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                            \"Line\": 7,\n                            \"Column\": 23\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'HelloWorld'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                    \"Line\": 9,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                            \"Line\": 9,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpt1bvtql0.cj\",\n                            \"Line\": 9,\n                            \"Column\": 4\n                        }\n         "
-                    },
-                    "final_budget": {
-                        "cangjie_compilation": 1,
-                        "test_execution": 2,
-                        "syntactic": 2
-                    }
-                },
-                "23-27:testHelloWithoutName": {
-                    "start": 23,
-                    "end": 27,
-                    "body": [
-                        "    void testHelloWithoutName() {\n",
-                        "        HelloWorld.hello();\n",
-                        "        String output = outputStream.toString().trim();\n",
-                        "        assertEquals(\"Hello, World!\", output);\n",
-                        "    }\n"
-                    ],
-                    "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
-                    "return_types": [
-                        [
-                            "void",
-                            "void"
-                        ]
-                    ],
-                    "signature": "testHelloWithoutName()",
-                    "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/String",
-                            "trim()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "toString()"
-                        ],
-                        [
-                            "hello-world.src.main.com.example.helloworld.HelloWorld",
-                            "HelloWorld",
-                            "7-9:hello"
-                        ],
-                        [
-                            "library",
-                            "Assertions",
-                            "assertEquals(java.lang.Object,java.lang.Object)"
-                        ]
-                    ],
-                    "is_overload": false,
-                    "partial_translation": [
-                        "\tinternal func testHelloWithoutName(): Unit {",
-                        "\t\t// TODO",
-                        "\t}\n"
-                    ],
-                    "translation": [],
-                    "translation_status": "attempted",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 10.922770738601685,
-                    "generation_timestamp": "2026-03-12T10:29:38.989179",
-                    "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'ByteArrayOutputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                    \"Line\": 7,\n                    \"Column\": 22\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                            \"Line\": 7,\n                            \"Column\": 22\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                            \"Line\": 7,\n                            \"Column\": 23\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'System'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                    \"Line\": 8,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                            \"Line\": 8,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmp3q9pdz3s.cj\",\n                            \"Line\": 8,\n                            \"Column\": 4\n                        }\n             "
-                    },
-                    "final_budget": {
-                        "cangjie_compilation": 1,
-                        "test_execution": 2,
-                        "syntactic": 2
-                    }
-                },
-                "18-20:setUp": {
-                    "start": 18,
-                    "end": 20,
-                    "body": [
-                        "    void setUp() {\n",
-                        "        System.setOut(new PrintStream(outputStream));\n",
-                        "    }\n"
-                    ],
-                    "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
-                    "return_types": [
-                        [
-                            "void",
-                            "void"
-                        ]
-                    ],
-                    "signature": "setUp()",
-                    "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/System",
-                            "setOut(java.io.PrintStream)"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/PrintStream",
-                            "PrintStream(java.io.OutputStream)"
-                        ]
-                    ],
-                    "is_overload": false,
-                    "partial_translation": [
-                        "\tinternal func setUp(): Unit {",
-                        "\t\t// TODO",
-                        "\t}\n"
-                    ],
-                    "translation": [],
-                    "translation_status": "attempted",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 10.433945178985596,
-                    "generation_timestamp": "2026-03-12T10:30:26.434961",
-                    "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: {\n    \"Diags\":[\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'outputStream'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpk69itztu.cj\",\n                    \"Line\": 7,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpk69itztu.cj\",\n                            \"Line\": 7,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpk69itztu.cj\",\n                            \"Line\": 7,\n                            \"Column\": 4\n                        }\n                    }\n                },\n                \"OtherHints\": [],\n                \"Notes\": [],\n                \"Helps\": []\n            },\n            {\n                \"DiagKind\": \"sema_undeclared_identifier\",\n                \"Severity\": \"error\",\n                \"WarnGroup\": \"none\",\n                \"DiagCategory\": \"sema\",\n                \"Message\": \"undeclared identifier 'System'\",\n                \"Location\": {\n                    \"File\": \"/tmp/tmpk69itztu.cj\",\n                    \"Line\": 8,\n                    \"Column\": 3\n                },\n                \"MainHint\": {\n                    \"Content\": \"\",\n                    \"Range\": {\n                        \"Begin\": {\n                            \"File\": \"/tmp/tmpk69itztu.cj\",\n                            \"Line\": 8,\n                            \"Column\": 3\n                        },\n                        \"End\": {\n                            \"File\": \"/tmp/tmpk69itztu.cj\",\n                            \"Line\": 8,\n                            \"Column\": 4\n                        }\n                    }\n   "
-                    },
-                    "final_budget": {
-                        "cangjie_compilation": 1,
-                        "test_execution": 2,
-                        "syntactic": 2
                     }
                 }
             },
-            "fields": {
-                "15-15:originalOut": {
-                    "start": 15,
-                    "end": 15,
-                    "body": [
-                        "    private final PrintStream originalOut = System.out;\n"
-                    ],
-                    "modifiers": [
-                        "final",
-                        "private"
-                    ],
-                    "types": [
-                        [
-                            "PrintStream",
-                            "java.io.PrintStream"
-                        ]
-                    ],
-                    "partial_translation": [
-                        "\tinternal let originalOut:  = ?"
-                    ],
-                    "translation": [
-                        "\tinternal let originalOut:  = ?"
-                    ],
-                    "translation_status": "attempted",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": "2026-03-12T10:28:59.611441",
-                    "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "cangjie_compilation": -1,
-                        "test_execution": -1
-                    },
-                    "final_budget": {
-                        "cangjie_compilation": -1,
-                        "test_execution": -1
-                    },
-                    "cangjie_compilation": "success"
-                },
-                "14-14:outputStream": {
-                    "start": 14,
-                    "end": 14,
-                    "body": [
-                        "    private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();\n"
-                    ],
-                    "modifiers": [
-                        "final",
-                        "private"
-                    ],
-                    "types": [
-                        [
-                            "ByteArrayOutputStream",
-                            "java.io.ByteArrayOutputStream"
-                        ]
-                    ],
-                    "partial_translation": [
-                        "\tinternal let outputStream:  = ?"
-                    ],
-                    "translation": [
-                        "\tinternal let outputStream:  = ?"
-                    ],
-                    "translation_status": "attempted",
-                    "syntactic_validation": "pending",
-                    "field_exercise": "pending",
-                    "graal_validation": "pending",
-                    "test_execution": "pending",
-                    "elapsed_time": 0,
-                    "generation_timestamp": "2026-03-12T10:28:59.614620",
-                    "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "cangjie_compilation": -1,
-                        "test_execution": -1
-                    },
-                    "final_budget": {
-                        "cangjie_compilation": -1,
-                        "test_execution": -1
-                    },
-                    "cangjie_compilation": "success"
-                }
-            },
+            "fields": {},
             "is_enum": false,
-            "cangjie_class_declaration": "class HelloWorldTest {\n"
+            "cangjie_class_declaration": "@Test\nclass HelloWorldTest {\n"
         }
     },
     "cangjie_imports": [
+        "import testing",
         "import std.io.*",
         "import com.example.helloworld.HelloWorld"
     ]

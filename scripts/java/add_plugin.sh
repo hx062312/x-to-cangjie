@@ -49,16 +49,40 @@ if [ ! -f "pom.xml" ]; then
     exit 1
 fi
 
-awk -v config="$plugin_config" '
-    BEGIN { in_build = 0 }
-    /<build>/ { in_build = 1 }
-    /<\/build>/ { in_build = 0 }
-    in_build && /<plugins>/ {
-        print; 
-        print config; 
-        next 
-    }
-    { print }
-' pom.xml > pom.xml.new && mv pom.xml.new pom.xml
+# Check if maven-jar-plugin is already configured
+if grep -q "maven-jar-plugin" pom.xml; then
+    echo "Plugin maven-jar-plugin already exists in pom.xml, skipping..."
+    exit 0
+fi
+
+# Check if <build> tag exists
+if grep -q "<build>" pom.xml; then
+    # <build> exists, add plugin inside <plugins>
+    awk -v config="$plugin_config" '
+        BEGIN { in_build = 0 }
+        /<build>/ { in_build = 1 }
+        /<\/build>/ { in_build = 0 }
+        in_build && /<plugins>/ {
+            print;
+            print config;
+            next
+        }
+        { print }
+    ' pom.xml > pom.xml.new && mv pom.xml.new pom.xml
+else
+    # <build> doesn't exist, add it before </project>
+    awk -v config="$plugin_config" '
+        /<\/project>/ {
+            print "    <build>";
+            print "        <plugins>";
+            print config;
+            print "        </plugins>";
+            print "    </build>";
+            print;
+            next
+        }
+        { print }
+    ' pom.xml > pom.xml.new && mv pom.xml.new pom.xml
+fi
 
 echo "Plugin configuration added to pom.xml in $reduced_dir"

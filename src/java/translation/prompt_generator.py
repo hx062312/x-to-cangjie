@@ -195,10 +195,15 @@ Notes:
         self.source_fragment_code = f"class {self.class_name} {{\n{self.source_class_dependent_fields}\n{self.source_fragment_body}\n}}"
 
     def add_instruction(self):
+        # Special handling for main function
+        main_note = ""
+        if self.fragment_actual_name == "main":
+            main_note = "\n\nNote: For the 'main' function in Cangjie, do NOT use 'func' keyword. Use the format: main(args: Array<String>): Int32 { ... }"
+
         if self.is_feedback:
-            self.prompt += f'### Instruction:\nBased on the feedback provided, identify the error in the following Cangjie translation of the {self.fragment_type} and correct it. You only need to correct the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only complete the given "{self.fragment_actual_name}" method like the example above and do not add anything else in your response.'
+            self.prompt += f'### Instruction:\nBased on the feedback provided, identify the error in the following Cangjie translation of the {self.fragment_type} and correct it. You only need to correct the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only complete the given "{self.fragment_actual_name}" method like the example above and do not add anything else in your response.{main_note}'
         else:
-            self.prompt += f'### Instruction:\nTranslate the following {self.args.from_lang} {self.fragment_type} to Cangjie like the example above. You only need to translate the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only output the code block and do not add any explanations or additional text in your response.'
+            self.prompt += f'### Instruction:\nTranslate the following {self.args.from_lang} {self.fragment_type} to Cangjie like the example above. You only need to translate the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only output the code block and do not add any explanations or additional text in your response.{main_note}'
 
     def add_source_code(self):
         self.prompt += (

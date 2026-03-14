@@ -554,13 +554,15 @@ def translate(
 
     if budget == {}:
         adaptive_budget = get_adaptive_budget(fragment, args)
-        # Simplified budget: only cangjie_compilation and test_execution
+        # Simplified budget: includes syntactic, cangjie_compilation and test_execution
         budget = {
+            "syntactic": adaptive_budget,
             "cangjie_compilation": adaptive_budget,
             "test_execution": adaptive_budget,
         }
         adaptive_budget_feedback = get_adaptive_budget(fragment, args, feedback=True)
         feedback_budget = {
+            "syntactic": adaptive_budget_feedback,
             "cangjie_compilation": adaptive_budget_feedback,
             "test_execution": adaptive_budget_feedback,
         }

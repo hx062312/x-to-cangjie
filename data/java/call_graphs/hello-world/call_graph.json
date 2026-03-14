@@ -1,51 +1,16 @@
 {
     "HelloWorldTest": {
         "schema_file": "projects/java/cleaned_final_projects_decomposed_tests/hello-world/src/test/java/com/example/helloworld/HelloWorldTest.java",
-        "46-46:testHelloWithSpecialCharacters": [
+        "8-11:testMain": [
             {
                 "schema": "hello-world.src.main.com.example.helloworld.HelloWorld",
                 "class": "HelloWorld",
-                "method": "11-11:hello"
+                "method": "7-9:main"
             }
-        ],
-        "38-38:testHelloWithEmptyName": [
-            {
-                "schema": "hello-world.src.main.com.example.helloworld.HelloWorld",
-                "class": "HelloWorld",
-                "method": "11-11:hello"
-            }
-        ],
-        "30-30:testHelloWithName": [
-            {
-                "schema": "hello-world.src.main.com.example.helloworld.HelloWorld",
-                "class": "HelloWorld",
-                "method": "11-11:hello"
-            }
-        ],
-        "23-23:testHelloWithoutName": [
-            {
-                "schema": "hello-world.src.main.com.example.helloworld.HelloWorld",
-                "class": "HelloWorld",
-                "method": "7-7:hello"
-            }
-        ],
-        "18-18:setUp": []
+        ]
     },
     "HelloWorld": {
         "schema_file": "projects/java/cleaned_final_projects_decomposed_tests/hello-world/src/main/java/com/example/helloworld/HelloWorld.java",
-        "15-15:main": [
-            {
-                "schema": "hello-world.src.main.com.example.helloworld.HelloWorld",
-                "class": "HelloWorld",
-                "method": "7-7:hello"
-            },
-            {
-                "schema": "hello-world.src.main.com.example.helloworld.HelloWorld",
-                "class": "HelloWorld",
-                "method": "11-11:hello"
-            }
-        ],
-        "11-11:hello": [],
-        "7-7:hello": []
+        "7-9:main": []
     }
 }

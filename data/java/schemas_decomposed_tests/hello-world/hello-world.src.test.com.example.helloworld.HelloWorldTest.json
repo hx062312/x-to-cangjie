@@ -7,54 +7,12 @@
             "body": [
                 "import org.junit.jupiter.api.Test;\n"
             ]
-        },
-        "5-5:import BeforeEach": {
-            "start": 5,
-            "end": 5,
-            "body": [
-                "import org.junit.jupiter.api.BeforeEach;\n"
-            ]
-        },
-        "6-6:import ByteArrayOutputStream": {
-            "start": 6,
-            "end": 6,
-            "body": [
-                "import java.io.ByteArrayOutputStream;\n"
-            ]
-        },
-        "7-7:import PrintStream": {
-            "start": 7,
-            "end": 7,
-            "body": [
-                "import java.io.PrintStream;\n"
-            ]
-        },
-        "8-8:import Scanner": {
-            "start": 8,
-            "end": 8,
-            "body": [
-                "import java.util.Scanner;\n"
-            ]
-        },
-        "4-4:import TempDir": {
-            "start": 4,
-            "end": 4,
-            "body": [
-                "import org.junit.jupiter.api.io.TempDir;\n"
-            ]
-        },
-        "10-10:import static Assertions.*": {
-            "start": 10,
-            "end": 10,
-            "body": [
-                "import static org.junit.jupiter.api.Assertions.*;\n"
-            ]
         }
     },
     "classes": {
         "HelloWorldTest": {
-            "start": 12,
-            "end": 12,
+            "start": 5,
+            "end": 5,
             "is_abstract": false,
             "is_interface": false,
             "nested_inside": [],
@@ -62,269 +20,34 @@
             "implements": [],
             "extends": [],
             "methods": {
-                "46-51:testHelloWithSpecialCharacters": {
-                    "start": 46,
-                    "end": 51,
+                "8-11:testMain": {
+                    "start": 8,
+                    "end": 11,
                     "body": [
-                        "    void testHelloWithSpecialCharacters() {\n",
-                        "        outputStream.reset();\n",
-                        "        HelloWorld.hello(\"\u5f20\u4e09\");\n",
-                        "        String output = outputStream.toString().trim();\n",
-                        "        assertEquals(\"Hello, \u5f20\u4e09!\", output);\n",
+                        "    public void testMain() {\n",
+                        "        // Simple test to verify HelloWorld.main() runs without error\n",
+                        "        HelloWorld.main(new String[]{});\n",
                         "    }\n"
                     ],
                     "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
+                    "annotations": [
+                        "Test"
+                    ],
+                    "modifiers": [
+                        "public"
+                    ],
                     "return_types": [
                         [
                             "void",
                             "void"
                         ]
                     ],
-                    "signature": "testHelloWithSpecialCharacters()",
+                    "signature": "testMain()",
                     "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/String",
-                            "trim()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "toString()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "reset()"
-                        ],
-                        [
-                            "hello-world.src.main.com.example.helloworld.HelloWorld",
-                            "HelloWorld",
-                            "11-13:hello"
-                        ],
-                        [
-                            "library",
-                            "Assertions",
-                            "assertEquals(java.lang.Object,java.lang.Object)"
-                        ]
-                    ]
-                },
-                "38-43:testHelloWithEmptyName": {
-                    "start": 38,
-                    "end": 43,
-                    "body": [
-                        "    void testHelloWithEmptyName() {\n",
-                        "        outputStream.reset();\n",
-                        "        HelloWorld.hello(\"\");\n",
-                        "        String output = outputStream.toString().trim();\n",
-                        "        assertEquals(\"Hello, !\", output);\n",
-                        "    }\n"
-                    ],
-                    "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
-                    "return_types": [
-                        [
-                            "void",
-                            "void"
-                        ]
-                    ],
-                    "signature": "testHelloWithEmptyName()",
-                    "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/String",
-                            "trim()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "toString()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "reset()"
-                        ],
-                        [
-                            "hello-world.src.main.com.example.helloworld.HelloWorld",
-                            "HelloWorld",
-                            "11-13:hello"
-                        ],
-                        [
-                            "library",
-                            "Assertions",
-                            "assertEquals(java.lang.Object,java.lang.Object)"
-                        ]
-                    ]
-                },
-                "30-35:testHelloWithName": {
-                    "start": 30,
-                    "end": 35,
-                    "body": [
-                        "    void testHelloWithName() {\n",
-                        "        outputStream.reset();\n",
-                        "        HelloWorld.hello(\"Alice\");\n",
-                        "        String output = outputStream.toString().trim();\n",
-                        "        assertEquals(\"Hello, Alice!\", output);\n",
-                        "    }\n"
-                    ],
-                    "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
-                    "return_types": [
-                        [
-                            "void",
-                            "void"
-                        ]
-                    ],
-                    "signature": "testHelloWithName()",
-                    "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/String",
-                            "trim()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "toString()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "reset()"
-                        ],
-                        [
-                            "hello-world.src.main.com.example.helloworld.HelloWorld",
-                            "HelloWorld",
-                            "11-13:hello"
-                        ],
-                        [
-                            "library",
-                            "Assertions",
-                            "assertEquals(java.lang.Object,java.lang.Object)"
-                        ]
-                    ]
-                },
-                "23-27:testHelloWithoutName": {
-                    "start": 23,
-                    "end": 27,
-                    "body": [
-                        "    void testHelloWithoutName() {\n",
-                        "        HelloWorld.hello();\n",
-                        "        String output = outputStream.toString().trim();\n",
-                        "        assertEquals(\"Hello, World!\", output);\n",
-                        "    }\n"
-                    ],
-                    "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
-                    "return_types": [
-                        [
-                            "void",
-                            "void"
-                        ]
-                    ],
-                    "signature": "testHelloWithoutName()",
-                    "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/String",
-                            "trim()"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/ByteArrayOutputStream",
-                            "toString()"
-                        ],
-                        [
-                            "hello-world.src.main.com.example.helloworld.HelloWorld",
-                            "HelloWorld",
-                            "7-9:hello"
-                        ],
-                        [
-                            "library",
-                            "Assertions",
-                            "assertEquals(java.lang.Object,java.lang.Object)"
-                        ]
-                    ]
-                },
-                "18-20:setUp": {
-                    "start": 18,
-                    "end": 20,
-                    "body": [
-                        "    void setUp() {\n",
-                        "        System.setOut(new PrintStream(outputStream));\n",
-                        "    }\n"
-                    ],
-                    "is_constructor": false,
-                    "annotations": [],
-                    "modifiers": [],
-                    "return_types": [
-                        [
-                            "void",
-                            "void"
-                        ]
-                    ],
-                    "signature": "setUp()",
-                    "parameters": [],
-                    "calls": [
-                        [
-                            "library",
-                            "java.base/java/lang/System",
-                            "setOut(java.io.PrintStream)"
-                        ],
-                        [
-                            "library",
-                            "java.base/java/io/PrintStream",
-                            "PrintStream(java.io.OutputStream)"
-                        ]
-                    ]
+                    "calls": []
                 }
             },
-            "fields": {
-                "15-15:originalOut": {
-                    "start": 15,
-                    "end": 15,
-                    "body": [
-                        "    private final PrintStream originalOut = System.out;\n"
-                    ],
-                    "modifiers": [
-                        "final",
-                        "private"
-                    ],
-                    "types": [
-                        [
-                            "PrintStream",
-                            "java.io.PrintStream"
-                        ]
-                    ]
-                },
-                "14-14:outputStream": {
-                    "start": 14,
-                    "end": 14,
-                    "body": [
-                        "    private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();\n"
-                    ],
-                    "modifiers": [
-                        "final",
-                        "private"
-                    ],
-                    "types": [
-                        [
-                            "ByteArrayOutputStream",
-                            "java.io.ByteArrayOutputStream"
-                        ]
-                    ]
-                }
-            }
+            "fields": {}
         }
     }
 }

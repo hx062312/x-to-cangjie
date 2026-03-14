@@ -11,13 +11,7 @@ class HelloWorld {
 	// Class Fields End
 
 	// Class Methods Begin
-	public static func main(args: Array<String>): Unit {
-		// TODO
-	}
-	public static func hello(name: String): Unit {
-		// TODO
-	}
-	public static func hello(): Unit {
+	main(args: Array<String>): Int32 {
 		// TODO
 	}
 	// Class Methods End

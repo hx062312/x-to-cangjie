@@ -802,6 +802,9 @@ def main(args):
                 # Handle static methods
                 static_prefix = "static " if is_static else ""
 
+                # Special handling for main function - Cangjie main doesn't use func keyword
+                is_main = method_name == "main"
+
                 # Check if this is a constructor (method name equals class name)
                 is_constructor = class_ == method_name
 
@@ -827,6 +830,10 @@ def main(args):
                         # Constructor
                         skeleton += f"\t{access_modifier}init() {{\n\t\t// TODO\n\t}}\n"
                         current_method.append(f"\t{access_modifier}init() {{")
+                    elif is_main:
+                        # Special handling for main function
+                        skeleton += f"\tmain(): Int32 {{\n\t\t// TODO\n\t}}\n"
+                        current_method.append(f"\tmain(): Int32 {{")
                     else:
                         if is_static:
                             skeleton += f"\t{access_modifier}{static_prefix}func {method_name}(): {return_type} {{\n\t\t// TODO\n\t}}\n"
@@ -878,6 +885,22 @@ def main(args):
                             f"\t{access_modifier}init("
                             + ", ".join([x + f": {y.strip()}" for x, y in param_types])
                             + ") {"
+                        )
+                    elif is_main:
+                        # Special handling for main function - no func keyword
+                        skeleton += (
+                            f"\tmain("
+                            + ", ".join(
+                                [x + f": {y.strip()}" for x, y in param_types]
+                            )
+                            + f"): Int32 {{\n\t\t// TODO\n\t}}\n"
+                        )
+                        current_method.append(
+                            f"\tmain("
+                            + ", ".join(
+                                [x + f": {y.strip()}" for x, y in param_types]
+                            )
+                            + f"): Int32 {{"
                         )
                     else:
                         if is_static:

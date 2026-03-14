@@ -1,24 +1,16 @@
 {
     "com.example.helloworld.HelloWorldTest": {
         "testHelloWithSpecialCharacters": {
-            "com/example/helloworld/HelloWorld": [
-                "hello"
-            ]
+            "com/example/helloworld/HelloWorld": []
         },
         "testHelloWithoutName": {
-            "com/example/helloworld/HelloWorld": [
-                "hello"
-            ]
+            "com/example/helloworld/HelloWorld": []
         },
         "testHelloWithName": {
-            "com/example/helloworld/HelloWorld": [
-                "hello"
-            ]
+            "com/example/helloworld/HelloWorld": []
         },
         "testHelloWithEmptyName": {
-            "com/example/helloworld/HelloWorld": [
-                "hello"
-            ]
+            "com/example/helloworld/HelloWorld": []
         }
     }
 }

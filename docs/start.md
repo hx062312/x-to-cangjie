@@ -52,6 +52,7 @@ bash scripts/java/generate_cg.sh <project>
 
 ```Bash
 bash scripts/java/reduce_third_party_libs.sh <project>
+cp projects/java/automated_reduced_projects/<project> projects/java/cleaned_final_projects/<project>
 ```
 
 - **作用：** 分析调用图，移除未使用的第三方依赖，只保留项目自身的代码。
@@ -162,7 +163,6 @@ bash scripts/java/create_skeleton.sh <project> <model> <type> <suffix> <temperat
 ```Bash
 bash scripts/java/generate_test_invocation_map.sh <project> <model> <suffix>
 bash scripts/java/extract_coverage.sh <project> <suffix>
-bash scripts/java/translate_fragment.sh <project>  <model> <temperature> 
 ```
 
 - **作用：** 提取测试覆盖率，用于指导翻译。

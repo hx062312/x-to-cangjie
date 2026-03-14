@@ -1,10 +1,7 @@
 {
     "HelloWorld": "HelloWorld",
-    "java.io.ByteArrayOutputStream": "",
     "java.lang.String": "",
-    "java.io.PrintStream": "",
-    "void": "",
-    "HelloWorldTest": "HelloWorldTest",
     "java.lang.System": "",
-    "java.util.Scanner": ""
+    "void": "",
+    "HelloWorldTest": "HelloWorldTest"
 }

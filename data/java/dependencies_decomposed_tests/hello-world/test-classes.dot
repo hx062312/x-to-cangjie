@@ -1,13 +1,7 @@
 digraph "test-classes" {
     // Path: projects/java/cleaned_final_projects_decomposed_tests/hello-world/target/test-classes
    "com.example.helloworld.HelloWorldTest"            -> "com.example.helloworld.HelloWorld (not found)";
-   "com.example.helloworld.HelloWorldTest"            -> "java.io.ByteArrayOutputStream (java.base)";
-   "com.example.helloworld.HelloWorldTest"            -> "java.io.OutputStream (java.base)";
-   "com.example.helloworld.HelloWorldTest"            -> "java.io.PrintStream (java.base)";
    "com.example.helloworld.HelloWorldTest"            -> "java.lang.Object (java.base)";
    "com.example.helloworld.HelloWorldTest"            -> "java.lang.String (java.base)";
-   "com.example.helloworld.HelloWorldTest"            -> "java.lang.System (java.base)";
-   "com.example.helloworld.HelloWorldTest"            -> "org.junit.jupiter.api.Assertions (not found)";
-   "com.example.helloworld.HelloWorldTest"            -> "org.junit.jupiter.api.BeforeEach (not found)";
    "com.example.helloworld.HelloWorldTest"            -> "org.junit.jupiter.api.Test (not found)";
 }
