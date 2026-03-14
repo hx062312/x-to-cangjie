@@ -1,9 +1,15 @@
 misc/
 vscode-codeql-starter/
-databases/
 .DS_Store
 configs/
 CLAUDE.md
 configs/model_configs.yaml
 docs/projects.md
 .vscode/
+.log
+__pycache__/
+misc/
+vscode-codeql-starter/
+projects/java/
+databases/
+java/data/
