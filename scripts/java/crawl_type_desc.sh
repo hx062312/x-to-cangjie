@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ./scripts/java/crawl_type_desc.sh simple-calculator
+# ./scripts/java/crawl_type_desc.sh Calculator
 # ./scripts/java/crawl_type_desc.sh commons-fileupload
 
 if [ $# -ne 1 ]; then

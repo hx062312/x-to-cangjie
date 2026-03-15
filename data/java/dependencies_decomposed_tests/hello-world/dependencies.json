@@ -1,9 +1,0 @@
-{
-    "HelloWorld": [],
-    "HelloWorldTest": [
-        [
-            "HelloWorld",
-            "com.example.helloworld.HelloWorld"
-        ]
-    ]
-}

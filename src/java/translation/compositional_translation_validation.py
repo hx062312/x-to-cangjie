@@ -22,13 +22,16 @@ FAILURE = "failure"
 NOT_EXERCISED = "not-exercised"
 
 
-def extract_cangjie_code(generation: str, class_name: str = None):
+def extract_cangjie_code(
+    generation: str, class_name: str = None, method_name: str = None
+):
     """
     Extract Cangjie code from markdown code blocks.
 
     Args:
         generation: LLM response containing markdown code blocks
         class_name: Optional class name to wrap the method in
+        method_name: Optional method name to extract (if provided, only extract this method)
 
     Returns:
         Extracted code or None if not found
@@ -47,50 +50,182 @@ def extract_cangjie_code(generation: str, class_name: str = None):
     if match:
         extracted = match.group(1).strip()
 
-        # If extracted code doesn't contain class definition but we have a class_name,
-        # wrap the method in a class
-        if class_name and 'class ' not in extracted:
-            # Check if it's a method (contains 'func')
-            if 'func ' in extracted:
-                # Wrap method in class
-                wrapped = f"class {class_name} {{\n{extracted}\n}}"
-                return wrapped
+        # If method_name is provided, try to extract only that method
+        if method_name:
+            extracted = extract_method_from_code(extracted, method_name, class_name)
+
+        # Post-process the extracted code
+        extracted = post_process_cangjie_code(extracted, class_name)
 
         return extracted
 
     # Try alternative pattern if no code block found
     # Look for anything that looks like Cangjie code (has func, class, let, etc.)
-    lines = generation.split('\n')
+    lines = generation.split("\n")
     code_lines = []
     in_code = False
 
     for line in lines:
         # Check if line looks like it contains code (starts with whitespace or has common keywords)
-        if any(keyword in line for keyword in ['func ', 'class ', 'let ', 'var ', 'pub ', 'priv ', 'import ', 'package ']):
+        if any(
+            keyword in line
+            for keyword in [
+                "func ",
+                "class ",
+                "let ",
+                "var ",
+                "pub ",
+                "priv ",
+                "import ",
+                "package ",
+            ]
+        ):
             in_code = True
             code_lines.append(line)
-        elif in_code and (line.strip() == '' or line.strip().startswith('//') or line.strip().startswith('#')):
+        elif in_code and (
+            line.strip() == ""
+            or line.strip().startswith("//")
+            or line.strip().startswith("#")
+        ):
             # Allow empty lines and comments in code
             code_lines.append(line)
-        elif in_code and not line.startswith(' ') and not line.startswith('\t'):
+        elif in_code and not line.startswith(" ") and not line.startswith("\t"):
             # Stop if we hit a non-indented line that's not a comment
             if line.strip():
                 break
             code_lines.append(line)
 
     if code_lines:
-        extracted = '\n'.join(code_lines).strip()
+        extracted = "\n".join(code_lines).strip()
 
-        # If extracted code doesn't contain class definition but we have a class_name,
-        # wrap the method in a class
-        if class_name and 'class ' not in extracted:
-            if 'func ' in extracted:
-                wrapped = f"class {class_name} {{\n{extracted}\n}}"
-                return wrapped
+        # If method_name is provided, try to extract only that method
+        if method_name:
+            extracted = extract_method_from_code(extracted, method_name, class_name)
+
+        # Post-process the extracted code
+        extracted = post_process_cangjie_code(extracted, class_name)
 
         return extracted
 
     return None
+
+
+def extract_method_from_code(
+    code: str, method_name: str, class_name: str = None
+) -> str:
+    """
+    Extract a specific method from the generated code.
+
+    Args:
+        code: Full generated code
+        method_name: Name of the method to extract
+        class_name: Optional class name (used to find the method in class context)
+
+    Returns:
+        Extracted method code
+    """
+    import re
+
+    # Clean the method name (remove line numbers like "16-21:div" -> "div")
+    clean_method_name = method_name
+    if ":" in method_name:
+        clean_method_name = method_name.split(":")[-1]
+
+    # Try to find the method using regex
+    # Match func declaration: (public/private/protected/static/...) func methodName(...)
+    # Also handle constructors: func ClassName(...)
+    method_patterns = [
+        # Standard method: func methodName(
+        rf"(public\s+|private\s+|protected\s+|static\s+|internal\s+|override\s+)*func\s+{re.escape(clean_method_name)}\s*\(",
+        # Constructor: func ClassName(
+        rf"func\s+{re.escape(clean_method_name)}\s*\(",
+    ]
+
+    for pattern in method_patterns:
+        match = re.search(pattern, code)
+        if match:
+            # Found the method, extract from here to the end of the method
+            start_pos = match.start()
+
+            # Find the matching closing brace
+            # Start from the opening brace of the method
+            brace_count = 0
+            in_method = False
+            end_pos = start_pos
+
+            for i in range(start_pos, len(code)):
+                if code[i] == "{":
+                    brace_count += 1
+                    in_method = True
+                elif code[i] == "}":
+                    brace_count -= 1
+                    if in_method and brace_count == 0:
+                        end_pos = i + 1
+                        break
+
+            extracted_method = code[start_pos:end_pos].strip()
+            return extracted_method
+
+    # If we can't find the method, return the original code
+    return code
+
+
+def post_process_cangjie_code(code: str, class_name: str = None) -> str:
+    """
+    Post-process extracted Cangjie code to fix common issues.
+
+    Args:
+        code: Extracted Cangjie code
+        class_name: Optional class name to wrap the method in
+
+    Returns:
+        Processed Cangjie code
+    """
+    import re
+
+    # If extracted code doesn't contain class definition but we have a class_name,
+    # wrap the method in a class
+    if class_name and "class " not in code:
+        if "func " in code:
+            # Wrap method in class
+            code = f"class {class_name} {{\n{code}\n}}"
+
+    # Fix 1: Replace arrow syntax with colon syntax
+    # Pattern: func name(...) -> Type { -> func name(...): Type {
+    # This handles cases where LLM uses "->" instead of ":" for return type
+    code = re.sub(r"(\bfunc\s+\w+[^:]*)\s*->\s*(\w+)\s*\{", r"\1: \2 {", code)
+
+    # Fix 2: Ensure class definitions are complete (have closing braces)
+    # Find all class definitions and ensure they have closing braces
+    lines = code.split("\n")
+    processed_lines = []
+    brace_count = 0
+    in_class = False
+
+    for line in lines:
+        processed_lines.append(line)
+
+        # Track brace count
+        brace_count += line.count("{") - line.count("}")
+
+        # If we were in a class and braces are balanced, ensure we have closing brace
+        if "{" in line and "class " in line:
+            in_class = True
+
+        # If we've closed all braces and were in a class, add closing brace if missing
+        if in_class and brace_count == 0 and "}" not in line:
+            # Check if previous line already closed the class
+            if processed_lines and "}" not in processed_lines[-1]:
+                processed_lines.append("}")
+
+    code = "\n".join(processed_lines)
+
+    # Fix 3: Remove duplicate class declarations that might cause issues
+    # If multiple classes are declared without proper closure, fix them
+    class_pattern = r"(class\s+\w+\s*\{[^}]*)\n\s*(class\s+\w+\s*\{)"
+    code = re.sub(class_pattern, r"\1\n}\n\2", code)
+
+    return code
 
 
 def add_dummy_main(code: str) -> str:
@@ -100,17 +235,21 @@ def add_dummy_main(code: str) -> str:
     Cangjie uses 'main()' not 'func main()'.
     """
     import re
+
     # Check if main function already exists (with any parameters)
     # Match patterns like: main(), main(args: ...), main(args: Array<String>)
-    if re.search(r'\bmain\s*\(', code):
+    if re.search(r"\bmain\s*\(", code):
         return code
 
     # Add a dummy main function at the beginning (Cangjie uses main() without func)
-    code = """main() {
+    code = (
+        """main() {
     return 0
 }
 
-""" + code
+"""
+        + code
+    )
     return code
 
 
@@ -126,23 +265,32 @@ def extract_code_for_translation(generation: str, fragment: dict, args):
     Returns:
         tuple: (success: bool, extracted_code: str or None, feedback: str)
     """
-    # Get class name from fragment
-    class_name = fragment.get('class_name', None)
+    # Get class name and method name from fragment
+    class_name = fragment.get("class_name", None)
+    method_name = fragment.get("fragment_name", None)
+    fragment_type = fragment.get("fragment_type", "unknown")
 
-    # Extract Cangjie code from markdown, passing class name for wrapping
-    extracted_code = extract_cangjie_code(generation, class_name)
+    # Extract Cangjie code from markdown, passing class name and method name for filtering
+    extracted_code = extract_cangjie_code(generation, class_name, method_name)
 
     if extracted_code is None:
+        print(
+            f"[DEBUG] Failed to extract code for {class_name}.{method_name} (type: {fragment_type})"
+        )
         return False, None, "the model did not generate any code"
 
     # Add dummy main function if not present (required by Cangjie compiler)
     extracted_code = add_dummy_main(extracted_code)
 
     # Basic Cangjie syntax checks
-    code_lines = extracted_code.split('\n')
+    code_lines = extracted_code.split("\n")
 
     # Remove empty lines and comments for analysis
-    meaningful_lines = [line for line in code_lines if line.strip() and not line.strip().startswith('//')]
+    meaningful_lines = [
+        line
+        for line in code_lines
+        if line.strip() and not line.strip().startswith("//")
+    ]
 
     if not meaningful_lines:
         return False, None, "the model did not generate any code"
@@ -150,16 +298,20 @@ def extract_code_for_translation(generation: str, fragment: dict, args):
     # Check that the code has at least some structure
     # Look for common Cangjie keywords
     # Note: 'main(' without 'func' is also valid (main function in Cangjie)
-    has_function = any('func ' in line or 'main(' in line for line in code_lines)
-    has_class = any('class ' in line for line in code_lines)
-    has_var = any('var ' in line for line in code_lines)
-    has_let = any('let ' in line for line in code_lines)
+    has_function = any("func " in line or "main(" in line for line in code_lines)
+    has_class = any("class " in line for line in code_lines)
+    has_var = any("var " in line for line in code_lines)
+    has_let = any("let " in line for line in code_lines)
 
     if not (has_function or has_class or has_var or has_let):
-        return False, None, "the generated code does not appear to be valid Cangjie code"
+        return (
+            False,
+            None,
+            "the generated code does not appear to be valid Cangjie code",
+        )
 
     # If validation passes, return the extracted code
-    return True, extracted_code.split('\n'), None
+    return True, extracted_code.split("\n"), None
 
 
 # 找到可以执行来验证当前方法的测试。
@@ -209,13 +361,13 @@ def get_eligible_tests(fragment, processed_fragments, args):
             != f"{fragment['schema_name']}|{fragment['class_name']}|{fragment['fragment_name']}"
         ):
             # Build test schema name from fragment schema_name:
-            # hello-world.src.main.com.example.helloworld.HelloWorld
-            # -> hello-world.src.test.com.example.helloworld.HelloWorldTest
-            main_schema = fragment['schema_name']
+            # HelloWorld.src.main.com.example.helloworld.HelloWorld
+            # -> HelloWorld.src.test.com.example.helloworld.HelloWorldTest
+            main_schema = fragment["schema_name"]
             # Replace src.main with src.test
-            test_schema = main_schema.replace('.src.main.', '.src.test.')
+            test_schema = main_schema.replace(".src.main.", ".src.test.")
             # Add Test suffix to class name
-            test_schema += 'Test'
+            test_schema += "Test"
 
             test_class = test.split("|")[1]
             test_method = test.split("|")[2]
@@ -350,9 +502,14 @@ def update_labels(
             ]["test_execution"] = test_execution
     else:
         if translation == "<translated>":
-            translation = schema_data["classes"][fragment["class_name"]][
+            fragment_data = schema_data["classes"][fragment["class_name"]][
                 f"{fragment['fragment_type']}s"
-            ][fragment["fragment_name"]]["partial_translation"]
+            ][fragment["fragment_name"]]
+            if "partial_translation" not in fragment_data:
+                print(
+                    f"[DEBUG] partial_translation not found for {fragment['class_name']}.{fragment['fragment_name']}, using empty list"
+                )
+            translation = fragment_data.get("partial_translation", [])
 
         schema_data["classes"][fragment["class_name"]][f"{fragment['fragment_type']}s"][
             fragment["fragment_name"]
@@ -366,14 +523,18 @@ def update_labels(
             fragment["fragment_name"]
         ]["cangjie_compilation"] = cangjie_compilation
 
-        if isinstance(
-            schema_data["classes"][fragment["class_name"]][
-                f"{fragment['fragment_type']}s"
-            ][fragment["fragment_name"]]["test_execution"],
-            dict,
+        # Check if test_execution exists before accessing
+        fragment_data = schema_data["classes"][fragment["class_name"]][
+            f"{fragment['fragment_type']}s"
+        ][fragment["fragment_name"]]
+        if "test_execution" in fragment_data and isinstance(
+            fragment_data["test_execution"], dict
         ):
             pass
         else:
+            print(
+                f"[DEBUG] Adding missing test_execution for {fragment['class_name']}.{fragment['fragment_name']}"
+            )
             schema_data["classes"][fragment["class_name"]][
                 f"{fragment['fragment_type']}s"
             ][fragment["fragment_name"]]["test_execution"] = test_execution
@@ -730,6 +891,7 @@ def translate(
         )
         prompt = prompt_gen.generate_prompt()
 
+        # Commented out to reduce output - uncomment for debugging
         if args.debug:
             print("=======================PROMPT=======================", flush=True)
             print(prompt, flush=True)
@@ -739,12 +901,12 @@ def translate(
 
         total_input_tokens = get_total_input_tokens(prompt, args, model_info)
 
-        # if prompt size exceeds model token limit, mark translation out_of_context and move on to next fragment
+        # if prompt size exceeds model token limit, mark translation out_of_context and keep previous translation
         if total_input_tokens >= model_info[args.model]["total"]:
             update_labels(
                 args=args,
                 fragment=fragment,
-                translation=[],
+                translation="<translated>",
                 translation_status="out_of_context",
                 cangjie_compilation="pending",
                 test_execution="pending",
@@ -755,6 +917,7 @@ def translate(
 
         generation = prompt_model(model_info, client, prompt, total_input_tokens, args)
 
+        # Only show generation in debug mode
         if args.debug:
             print(generation, flush=True)
             print("---" * 50, flush=True)
@@ -762,18 +925,23 @@ def translate(
 
         ############################ <EXTRACT CODE> ############################
         # Extract Cangjie code from markdown
-        syntactic_status, extracted_code, syntactic_feedback = extract_code_for_translation(
-            generation, fragment, args
+        syntactic_status, extracted_code, syntactic_feedback = (
+            extract_code_for_translation(generation, fragment, args)
         )
 
         if not syntactic_status:
             if budget["syntactic"] - 1 == 0:
+                # If code extraction fails after all budget attempts, keep the previous translation
+                # instead of clearing it
                 update_labels(
                     args=args,
                     fragment=fragment,
-                    translation=[],
+                    translation="<translated>",
                     translation_status="attempted",
-                    cangjie_compilation={"outcome": "error", "message": syntactic_feedback},
+                    cangjie_compilation={
+                        "outcome": "error",
+                        "message": syntactic_feedback,
+                    },
                     test_execution="pending",
                     elapsed_time=time.time() - start_time,
                 )
@@ -790,7 +958,13 @@ def translate(
             continue
 
         # Use extracted code for compilation
-        generation_lines = extracted_code if isinstance(extracted_code, list) else [extracted_code]
+        # Convert string to list of lines (each line is an element)
+        if isinstance(extracted_code, str):
+            # Split into lines - each line becomes an element in the list
+            generation_lines = extracted_code.split("\n")
+        else:
+            generation_lines = extracted_code
+
         # Convert list of lines back to full code format expected by compiler
         generation = "\n".join(generation_lines)
 
@@ -803,7 +977,10 @@ def translate(
             fragment=fragment,
             translation=generation_lines,
             translation_status="attempted",
-            cangjie_compilation={"outcome": "pending", "message": "waiting for compilation"},
+            cangjie_compilation={
+                "outcome": "pending",
+                "message": "waiting for compilation",
+            },
             test_execution="pending",
             elapsed_time=time.time() - start_time,
         )
@@ -820,11 +997,12 @@ def translate(
 
         if status != SUCCESS:
             if budget[current_budget] - 1 == 0:
-                # If compilation fails after all budget attempts, mark as failed
+                # If compilation fails after all budget attempts, keep the previous translation
+                # instead of clearing it
                 update_labels(
                     args=args,
                     fragment=fragment,
-                    translation=[],
+                    translation="<translated>",
                     translation_status="attempted",
                     cangjie_compilation={"outcome": "error", "message": message},
                     test_execution="pending",

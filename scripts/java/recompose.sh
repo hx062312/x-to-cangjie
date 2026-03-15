@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# ./scripts/java/recompose.sh simple-calculator gpt-4o-2024-11-20 0.0
+# ./scripts/java/recompose.sh Calculator gpt-4o-2024-11-20 0.0
 # ./scripts/java/recompose.sh commons-fileupload gpt-4o-2024-11-20 0.0
-# ./scripts/java/recompose.sh hello-world gpt-4o-2024-11-20 0.0
+# ./scripts/java/recompose.sh HelloWorld gpt-4o-2024-11-20 0.0
 
 if [ $# -ne 3 ]; then
   echo "Usage: ./scripts/java/recompose.sh <project> <model> <temperature>"

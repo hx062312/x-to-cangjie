@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# ./scripts/java/create_query_outputs.sh simple-calculator _decomposed_tests
+# ./scripts/java/create_query_outputs.sh Calculator _decomposed_tests
 # ./scripts/java/create_query_outputs.sh commons-fileupload _decomposed_tests
-# ./scripts/java/create_query_outputs.sh hello-world _decomposed_tests
+# ./scripts/java/create_query_outputs.sh HelloWorld _decomposed_tests
 
 if [ $# -ne 2 ]; then
   echo "Usage: ./scripts/java/create_query_outputs.sh <project> <suffix>"

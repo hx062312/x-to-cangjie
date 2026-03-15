@@ -1,9 +1,0 @@
-{
-    "com.example.helloworld.HelloWorldTest": {
-        "testMain": {
-            "com/example/helloworld/HelloWorld": [
-                "main"
-            ]
-        }
-    }
-}

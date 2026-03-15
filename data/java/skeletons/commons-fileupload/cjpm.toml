@@ -1,5 +1,0 @@
-[package]
-name = "commons-fileupload"
-version = "0.1.0"
-
-[dependencies]

@@ -1,8 +1,0 @@
-{
-    "com.example.helloworld.HelloWorldTest": [
-        "testHelloWithSpecialCharacters",
-        "testHelloWithoutName",
-        "testHelloWithName",
-        "testHelloWithEmptyName"
-    ]
-}

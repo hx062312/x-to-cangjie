@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# ./scripts/java/extract_call_graph.sh simple-calculator _decomposed_tests
+# ./scripts/java/extract_call_graph.sh Calculator _decomposed_tests
 # ./scripts/java/extract_call_graph.sh commons-fileupload _decomposed_tests
-# ./scripts/java/extract_call_graph.sh hello-world _decomposed_tests
+# ./scripts/java/extract_call_graph.sh HelloWorld _decomposed_tests
 
 if [ $# -ne 2 ]; then
   echo "Usage: ./scripts/java/extract_call_graph.sh <project> <suffix>"

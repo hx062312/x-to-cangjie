@@ -117,7 +117,7 @@ bash scripts/java/create_query_outputs.sh <project> "_decomposed_tests"
 
 ------
 
-### 2.3 程序分解
+### 2.3 创建项目架构
 
 **命令：**
 

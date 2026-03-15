@@ -1,7 +1,0 @@
-digraph "classes" {
-    // Path: projects/java/cleaned_final_projects_decomposed_tests/hello-world/target/classes
-   "com.example.helloworld.HelloWorld"                -> "java.io.PrintStream (java.base)";
-   "com.example.helloworld.HelloWorld"                -> "java.lang.Object (java.base)";
-   "com.example.helloworld.HelloWorld"                -> "java.lang.String (java.base)";
-   "com.example.helloworld.HelloWorld"                -> "java.lang.System (java.base)";
-}

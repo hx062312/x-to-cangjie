@@ -805,6 +805,30 @@ def main(args):
                         main_method_template = (
                             f"main(args: Array<String>): Int64 {{\n\t// TODO\n}}\n"
                         )
+                        # Create partial_translation for main method before skipping
+                        target_schema["classes"][class_]["methods"][method][
+                            "partial_translation"
+                        ] = [f"\tpublic func {method_name}(args: Array<String>): Int64 {{", "\t\t// TODO", "\t}\n"]
+                        target_schema["classes"][class_]["methods"][method]["translation"] = []
+                        target_schema["classes"][class_]["methods"][method][
+                            "translation_status"
+                        ] = "pending"
+                        target_schema["classes"][class_]["methods"][method][
+                            "cangjie_compilation"
+                        ] = "pending"
+                        target_schema["classes"][class_]["methods"][method][
+                            "test_execution"
+                        ] = "pending"
+                        target_schema["classes"][class_]["methods"][method]["elapsed_time"] = 0
+                        target_schema["classes"][class_]["methods"][method][
+                            "generation_timestamp"
+                        ] = 0
+                        target_schema["classes"][class_]["methods"][method]["model"] = (
+                            args.model if args.model else "deepseek-coder-33b-instruct"
+                        )
+                        target_schema["classes"][class_]["methods"][method][
+                            "include_implementation"
+                        ] = (True if args.type == "body" else False)
                         continue  # Skip adding to class
                     else:
                         if is_static:
@@ -859,12 +883,34 @@ def main(args):
                             + ") {"
                         )
                     elif is_main:
-                        # Special handling for main function - save for later (outside class)
+                        # Special handling for main function - always use Array<String>
                         main_method_template = (
-                            f"main("
-                            + ", ".join([x + f": {y.strip()}" for x, y in param_types])
-                            + f"): Int64 {{\n\t// TODO\n}}\n"
+                            f"main(args: Array<String>): Int64 {{\n\t// TODO\n}}\n"
                         )
+                        # Create partial_translation for main method before skipping
+                        target_schema["classes"][class_]["methods"][method][
+                            "partial_translation"
+                        ] = [f"\tpublic func {method_name}(args: Array<String>): Int64 {{", "\t\t// TODO", "\t}\n"]
+                        target_schema["classes"][class_]["methods"][method]["translation"] = []
+                        target_schema["classes"][class_]["methods"][method][
+                            "translation_status"
+                        ] = "pending"
+                        target_schema["classes"][class_]["methods"][method][
+                            "cangjie_compilation"
+                        ] = "pending"
+                        target_schema["classes"][class_]["methods"][method][
+                            "test_execution"
+                        ] = "pending"
+                        target_schema["classes"][class_]["methods"][method]["elapsed_time"] = 0
+                        target_schema["classes"][class_]["methods"][method][
+                            "generation_timestamp"
+                        ] = 0
+                        target_schema["classes"][class_]["methods"][method]["model"] = (
+                            args.model if args.model else "deepseek-coder-33b-instruct"
+                        )
+                        target_schema["classes"][class_]["methods"][method][
+                            "include_implementation"
+                        ] = (True if args.type == "body" else False)
                         continue  # Skip adding to class
                     else:
                         if is_static:
@@ -1059,7 +1105,7 @@ def main(args):
                         and import_parts[1] == "example"
                     ):
                         # For com.example.xxx projects, use project name as package
-                        # e.g., com.example.helloworld.HelloWorld -> hello-world.HelloWorld
+                        # e.g., com.example.helloworld.HelloWorld -> HelloWorld.HelloWorld
                         class_name = import_parts[-1]
                         import_path = f"{args.project}.{class_name}"
                     else:

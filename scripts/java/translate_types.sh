@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ./scripts/java/translate_types.sh simple-calculator gpt-4o-2024-11-20 simple
+# ./scripts/java/translate_types.sh Calculator gpt-4o-2024-11-20 simple
 # ./scripts/java/translate_types.sh commons-fileupload gpt-4o-2024-11-20 simple
 
 if [ $# -ne 3 ]; then
@@ -9,8 +9,8 @@ if [ $# -ne 3 ]; then
 fi
 
 project=$1
-model_name=$2
+model=$2
 type=$3
 
 echo "translating types for $project"
-python3 src/java/type_resolution/translate_type.py --project=$project --model=$model_name --type=$type
+python3 src/java/type_resolution/translate_type.py --project=$project --model=$model --type=$type

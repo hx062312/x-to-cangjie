@@ -2,7 +2,6 @@ import json
 import os
 import subprocess
 import xml.etree.ElementTree as ET
-from calculate_coverage import calculate_method_coverage
 
 
 def test_validation(args, eligible_tests):
@@ -11,12 +10,14 @@ def test_validation(args, eligible_tests):
     """
 
     # Run recompose to generate Cangjie project files
-    os.system(f'python3 src/java/postprocessing/recompose.py --project={args.project} \
+    os.system(
+        f"python3 src/java/postprocessing/recompose.py --project={args.project} \
                                                         --model={args.model} \
-                                                        --output_dir=data/cangjie_projects \
+                                                        --output_dir=projects/java/recomposed_projects \
                                                         --type={args.prompt_type} \
                                                         --temperature={args.temperature} \
-                                                        --suffix={args.suffix}')
+                                                        --suffix={args.suffix}"
+    )
 
     test_execution_results = {}
     failed_tests = []
@@ -59,7 +60,7 @@ def test_validation(args, eligible_tests):
         )
 
         # Find the test file
-        test_file_path = f"data/cangjie_projects/{args.model}/{args.prompt_type}/{args.temperature}/{args.project}/{test_path}"
+        test_file_path = f"projects/java/recomposed_projects/{args.model}/{args.prompt_type}/{args.temperature}/{args.project}/{test_path}"
 
         if not os.path.exists(test_file_path):
             test_execution_results[f"{test_path}::{test_class}::{test_method}"][
@@ -71,15 +72,10 @@ def test_validation(args, eligible_tests):
             failed_tests.append(actual_test_name)
             continue
 
-        # Compile and run test using cjc --test with coverage
+        # Compile and run test using cjc --test
         output_binary = os.path.join(
             test_output_dir, f"test_{test_class}_{test_method}"
         )
-
-        # Clean up previous coverage files
-        coverage_file = f"{args.project}-{args.model}-coverage.txt"
-        if os.path.exists(coverage_file):
-            os.remove(coverage_file)
 
         try:
             # Use cjc --test --coverage to compile and run the test
@@ -101,21 +97,7 @@ def test_validation(args, eligible_tests):
                 test_execution_results[f"{test_path}::{test_class}::{test_method}"][
                     "test_outcome"
                 ] = "exercised-success"
-
-                # Calculate covered methods using calculate_method_coverage
-                # Note: calculate_method_coverage expects XML coverage file, but cjc generates different format
-                # For now, we'll try to use the existing function and it will return empty if format doesn't match
-                project_root = f"data/cangjie_projects/{args.model}/{args.prompt_type}/{args.temperature}/{args.project}"
-
-                try:
-                    covered_methods = calculate_method_coverage(args, project_root)
-                except Exception as e:
-                    # If calculate_method_coverage fails due to format mismatch, return empty
-                    covered_methods = []
-
-                test_execution_results[f"{test_path}::{test_class}::{test_method}"][
-                    "covered_methods"
-                ] = covered_methods
+                # Note: covered_methods calculation is done separately after all tests run
 
         except subprocess.TimeoutExpired:
             test_execution_results[f"{test_path}::{test_class}::{test_method}"][

@@ -48,11 +48,12 @@ Notes:
 4. Handle Java and Cangjie differences""",
             "icl": {
                 # Python examples replaced with Cangjie
+                # IMPORTANT: Use ":" for return type, NOT "->"
                 "field": "Java code:\n```\npublic class Calculator {\n    public int x;\n}\n```\n\nPartial Cangjie translation:\n```\nclass Calculator {\n    x: Int64 =\n```\n\nCangjie field translation:\n```\n    x: Int64 = 0\n```",
-                "method": "Java code:\n```\npublic class Calculator {\n    public int add(int a, int b) {\n        return a + b;\n    }\n}\n```\n\nPartial Cangjie translation:\n```\nclass Calculator {\n    public func add(a: Int64, b: Int64) -> Int64 {\n        \n    }\n}\n```\n\nCangjie method translation:\n```\n    public func add(a: Int64, b: Int64) -> Int64 {\n        return a + b\n    }\n```",
-                "static_initializer": "Java code:\n```\npublic class Calculator {\n    static int count = 0;\n    static {\n        count = 10;\n    }\n}\n```\n\nPartial Cangjie translation:\n```\nclass Calculator {\n    static var count: Int64 = 0\n    public static func run_static_init() {\n        \n    }\n}\n```\n\nCangjie static initializer translation:\n```\n    public static func run_static_init() {\n        count = 10\n    }\n```",
+                "method": "Java code:\n```\npublic class Calculator {\n    public int add(int a, int b) {\n        return a + b;\n    }\n}\n```\n\nPartial Cangjie translation:\n```\nclass Calculator {\n    public func add(a: Int64, b: Int64): Int64 {\n        \n    }\n}\n```\n\nCangjie method translation:\n```\n    public func add(a: Int64, b: Int64): Int64 {\n        return a + b\n    }\n```",
+                "static_initializer": "Java code:\n```\npublic class Calculator {\n    static int count = 0;\n    static {\n        count = 10;\n    }\n}\n```\n\nPartial Cangjie translation:\n```\nclass Calculator {\n    static var count: Int64 = 0\n    public static func run_static_init(): Unit {\n        \n    }\n}\n```\n\nCangjie static initializer translation:\n```\n    public static func run_static_init(): Unit {\n        count = 10\n    }\n```",
                 "feedback": "Java code:\n```\npublic class Calculator {\n    public int add(int a, int b) {\n        return a + b;\n    }\n}\n```"
-                + "\n\nIncorrect Cangjie translation:\n```\nclass Calculator {\n    public func add(a: Int64, b: Int64) -> Int64 {\n        return a + c\n    }\n}\n```\n\nCompilation feedback:\n```\nerror: unbound name 'c'\n```\n\nPartial Cangjie translation:\n```\nclass Calculator {\n    public func add(a: Int64, b: Int64) -> Int64 {\n        \n    }\n}\n```\n\nCangjie method translation:\n```\n    public func add(a: Int64, b: Int64) -> Int64 {\n        return a + b\n    }\n```",
+                + "\n\nIncorrect Cangjie translation:\n```\nclass Calculator {\n    public func add(a: Int64, b: Int64): Int64 {\n        return a + c\n    }\n}\n```\n\nCompilation feedback:\n```\nerror: unbound name 'c'\n```\n\nPartial Cangjie translation:\n```\nclass Calculator {\n    public func add(a: Int64, b: Int64): Int64 {\n        \n    }\n}\n```\n\nCangjie method translation:\n```\n    public func add(a: Int64, b: Int64): Int64 {\n        return a + b\n    }\n```",
             },
         }
 
@@ -162,6 +163,11 @@ Notes:
             f"{self.fragment_type}s"
         ][self.fragment_name]
 
+        # Ensure partial_translation exists in fragment_dict
+        if "partial_translation" not in self.fragment_dict:
+            print(f"[DEBUG] Adding missing partial_translation for {self.class_name}.{self.fragment_name} ({self.fragment_type})")
+            self.fragment_dict["partial_translation"] = []
+
         # add source fragment body
         self.source_fragment_body = (
             "\n".join(
@@ -177,7 +183,9 @@ Notes:
             if self.fragment_type == "method"
             else ""
         )
-        self.source_fragment_body += "".join(self.fragment_dict["body"])
+        # Add body if it exists in fragment_dict
+        if "body" in self.fragment_dict:
+            self.source_fragment_body += "".join(self.fragment_dict["body"])
 
         # add source class fields for reference
         self.source_class_dependent_fields = ""
@@ -200,10 +208,13 @@ Notes:
         if self.fragment_actual_name == "main":
             main_note = "\n\nNote: For the 'main' function in Cangjie, do NOT use 'func' keyword. Use the format: main(args: Array<String>): Int32 { ... }"
 
+        # IMPORTANT: 强调必须使用 ":" 而不是 "->" 表示返回类型
+        syntax_note = "\n\nIMPORTANT: Use COLON (:) for return type in function signatures, NOT arrow (->). Example: func foo(): Int64 { ... } NOT func foo() -> Int64 { ... }"
+
         if self.is_feedback:
-            self.prompt += f'### Instruction:\nBased on the feedback provided, identify the error in the following Cangjie translation of the {self.fragment_type} and correct it. You only need to correct the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only complete the given "{self.fragment_actual_name}" method like the example above and do not add anything else in your response.{main_note}'
+            self.prompt += f'### Instruction:\nBased on the feedback provided, identify the error in the following Cangjie translation of the {self.fragment_type} and correct it. You only need to correct the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only complete the given "{self.fragment_actual_name}" method like the example above and do not add anything else in your response.{main_note}{syntax_note}'
         else:
-            self.prompt += f'### Instruction:\nTranslate the following {self.args.from_lang} {self.fragment_type} to Cangjie like the example above. You only need to translate the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only output the code block and do not add any explanations or additional text in your response.{main_note}'
+            self.prompt += f'### Instruction:\nTranslate the following {self.args.from_lang} {self.fragment_type} to Cangjie like the example above. You only need to translate the "{self.fragment_actual_name}" {self.fragment_type}. All necessary dependencies are available in partial Cangjie translation. Only output the code block and do not add any explanations or additional text in your response.{main_note}{syntax_note}'
 
     def add_source_code(self):
         self.prompt += (
@@ -251,9 +262,12 @@ Notes:
             ):
                 continue
 
-            inner_outer_classes_py = [
-                f"{self.schema_data['classes'][inner_outer_class]['cangjie_class_declaration']}"
-            ]
+            # 确保类定义完整，包含闭合括号
+            class_decl = self.schema_data['classes'][inner_outer_class]['cangjie_class_declaration']
+            if not class_decl.rstrip().endswith("}"):
+                class_decl = class_decl.rstrip() + "\n}"
+
+            inner_outer_classes_py = [class_decl]
             for field in self.schema_data["classes"][inner_outer_class]["fields"]:
                 if field.split(":")[1] in "".join(
                     self.schema_data["classes"][self.class_name][
@@ -274,7 +288,7 @@ Notes:
                     )
                     inner_outer_classes_py.append("\n")
 
-            if len(inner_outer_classes_py) > 1:
+            if len(inner_outer_classes_py) > 0:
                 self.partial_translation += "\n".join(inner_outer_classes_py) + "\n\n"
 
         # add necessary dependencies from imported classes
@@ -330,9 +344,12 @@ Notes:
             ) as f:
                 imported_class_data = json.load(f)
 
-            imported_classes = [
-                f'{imported_class_data["classes"][dependenct_class_name]["cangjie_class_declaration"]}'
-            ]
+            # 确保类定义完整，包含闭合括号
+            class_declaration = imported_class_data["classes"][dependenct_class_name]["cangjie_class_declaration"]
+            if not class_declaration.rstrip().endswith("}"):
+                class_declaration = class_declaration.rstrip() + "\n}"
+
+            imported_classes = [class_declaration]
 
             for field in imported_class_data["classes"][dependenct_class_name][
                 "fields"
@@ -346,17 +363,17 @@ Notes:
                         dependenct_class_name
                     ]["fields"][field]["translation"]
                     if field_translation:
-                        imported_classes += ["\n".join(field_translation)]
+                        imported_classes.append("\n".join(field_translation))
                     else:
-                        imported_classes += [
+                        imported_classes.append(
                             "\n".join(
                                 imported_class_data["classes"][dependenct_class_name][
                                     "fields"
                                 ][field]["partial_translation"]
                             ).replace("<placeholder>", "None")
-                        ]
+                        )
 
-            if len(imported_classes) > 1:
+            if len(imported_classes) > 0:
                 self.partial_translation += "\n".join(imported_classes) + "\n"
 
         # include fields of superclass
@@ -380,9 +397,12 @@ Notes:
             ):
                 continue
 
-            super_class_declaration = [
-                super_class_data["classes"][super_class]["cangjie_class_declaration"]
-            ]
+            # 确保类定义完整，包含闭合括号
+            super_class_decl = super_class_data["classes"][super_class]["cangjie_class_declaration"]
+            if not super_class_decl.rstrip().endswith("}"):
+                super_class_decl = super_class_decl.rstrip() + "\n}"
+
+            super_class_declaration = [super_class_decl]
             for field in super_class_data["classes"][super_class]["fields"]:
                 if field.split(":")[1] in "".join(
                     self.schema_data["classes"][self.class_name][
@@ -403,15 +423,20 @@ Notes:
                     )
                     super_class_declaration.append("\n")
 
-            if len(super_class_declaration) > 1:
+            if len(super_class_declaration) > 0:
                 self.partial_translation += "\n".join(super_class_declaration) + "\n\n"
 
         # add the fragment partial translation
-        main_class_partial_translation = self.schema_data["classes"][self.class_name][
+        # 确保主类定义完整，包含闭合括号
+        main_class_decl = self.schema_data["classes"][self.class_name][
             "cangjie_class_declaration"
         ]
+        if not main_class_decl.rstrip().endswith("}"):
+            main_class_decl = main_class_decl.rstrip() + "\n}"
+        main_class_partial_translation = main_class_decl
 
-        if "<placeholder>" not in "".join(self.fragment_dict["partial_translation"]):
+        # Check if partial_translation exists in fragment_dict
+        if "partial_translation" in self.fragment_dict and "<placeholder>" not in "".join(self.fragment_dict["partial_translation"]):
             self.prompt_status = "translated"
 
         # add related fields of the main class
@@ -549,7 +574,11 @@ Notes:
                                 ]
                                 not in self.partial_translation
                             ):
-                                self.partial_translation += f"{callee_schema_data['classes'][callee_class]['cangjie_class_declaration']}"
+                                # 确保类定义完整，包含闭合括号
+                                callee_class_decl = callee_schema_data['classes'][callee_class]['cangjie_class_declaration']
+                                if not callee_class_decl.rstrip().endswith("}"):
+                                    callee_class_decl = callee_class_decl.rstrip() + "\n}"
+                                self.partial_translation += callee_class_decl
                                 for field in callee_schema_data["classes"][
                                     callee_class
                                 ]["fields"]:
@@ -615,7 +644,11 @@ Notes:
                             ) as f:
                                 callee_schema_data = json.load(f)
 
-                            self.partial_translation += f"{callee_schema_data['classes'][callee_class]['cangjie_class_declaration']}"
+                            # 确保类定义完整，包含闭合括号
+                            callee_class_decl = callee_schema_data['classes'][callee_class]['cangjie_class_declaration']
+                            if not callee_class_decl.rstrip().endswith("}"):
+                                callee_class_decl = callee_class_decl.rstrip() + "\n}"
+                            self.partial_translation += callee_class_decl
                             for field in callee_schema_data["classes"][callee_class][
                                 "fields"
                             ]:
@@ -696,12 +729,13 @@ Notes:
                     main_class_partial_translation += "\n\n"
 
         if self.fragment_type == "field":
-            main_class_partial_translation += (
-                "".join(self.fragment_dict["partial_translation"]).replace(
-                    "<placeholder>", ""
+            if "partial_translation" in self.fragment_dict:
+                main_class_partial_translation += (
+                    "".join(self.fragment_dict["partial_translation"]).replace(
+                        "<placeholder>", ""
+                    )
+                    + "\n"
                 )
-                + "\n"
-            )
         elif self.fragment_type == "static_initializer":
             main_class_partial_translation += (
                 "    public static func run_static_init() {\n    }"

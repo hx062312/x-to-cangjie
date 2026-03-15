@@ -256,12 +256,15 @@ Cangjie type:
         pattern = re.compile(r"\bF\b")
         generation = pattern.sub("Any", generation)
 
-        # Read template and replace placeholder (same logic as original)
-        template_path = f"data/java/templates/{args.project}/template.cj"
-        with open(template_path, "r") as f:
-            cangjie_program = f.read()
+        # Generate template directly instead of reading from file
+        cangjie_program = f"""func validateType(x: {generation}): {generation} {{
+    x
+}}
 
-        cangjie_program = cangjie_program.replace("<placeholder>", generation)
+main(): Int64 {{
+    0
+}}
+"""
 
         with open("test.cj", "w") as f:
             f.write(cangjie_program)

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ./scripts/java/generate_cg.sh simple-calculator
+# ./scripts/java/generate_cg.sh Calculator
 # ./scripts/java/generate_cg.sh commons-fileupload
 
 if [ $# -ne 1 ]; then

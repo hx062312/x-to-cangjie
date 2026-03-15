@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ./scripts/java/extract_coverage.sh simple-calculator _decomposed_tests
+# ./scripts/java/extract_coverage.sh Calculator _decomposed_tests
 # ./scripts/java/extract_coverage.sh commons-fileupload _decomposed_tests
 
 if [ $# -ne 2 ]; then
@@ -10,7 +10,10 @@ fi
 
 project=$1
 suffix=$2
-reduced_dir="./projects/java/automated_reduced_projects/$project"
+
+# Get the project root directory (assumes script is run from project root)
+project_root="$(pwd)"
+project_dir="$project_root/projects/java/cleaned_final_projects${suffix}/$project"
 
 jacoco_plugin=$(cat <<'EOF'
 <plugin>
@@ -35,15 +38,15 @@ jacoco_plugin=$(cat <<'EOF'
 EOF
 )
 
-if [ ! -d "$reduced_dir" ]; then
-    echo "Error: Project '$project' not found in $reduced_dir."
+if [ ! -d "$project_dir" ]; then
+    echo "Error: Project '$project' not found in $project_dir."
     exit 1
 fi
 
-cd "$reduced_dir" || exit
+cd "$project_dir" || exit
 
 if [ ! -f "pom.xml" ]; then
-    echo "Error: pom.xml not found in $reduced_dir."
+    echo "Error: pom.xml not found in $project_dir."
     exit 1
 fi
 
@@ -68,6 +71,9 @@ echo "Running mvn clean test -Drat.skip=true..."
 mvn clean test -Drat.skip=true
 
 cd - > /dev/null || exit
+
+# Change back to project root directory
+cd "$project_root" || exit
 
 echo "extracting test coverage for $project"
 python3 src/java/static_analysis/extract_source_tests.py --project=$project --suffix=$suffix

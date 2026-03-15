@@ -435,6 +435,9 @@ def process_parameters(schemas: dict, projects_dir: str, query_outputs_dir: str,
     with open(parameters, "r") as f:
         lines = f.readlines()
 
+    # Collect and deduplicate parameters using dict (key uniqueness)
+    params_map = {}  # (path, class_name, method_key) -> {param_name: None}
+
     for line in lines:
         res_row = line.split("|")[1:-1]
         class_name, method_name, parameter_name, start, end = [
@@ -456,9 +459,15 @@ def process_parameters(schemas: dict, projects_dir: str, query_outputs_dir: str,
         if start == end:
             callable_body, start_line, end_line = expand_callable_body(path, start_line, end_line)
 
-        schemas[path]["classes"][class_name]["methods"][
-            f"{start_line}-{end_line}:{method_name}"
-        ]["parameters"].append(parameter_name)
+        method_key = f"{start_line}-{end_line}:{method_name}"
+        key = (path, class_name, method_key)
+        if key not in params_map:
+            params_map[key] = {}
+        params_map[key][parameter_name] = None
+
+    # Apply deduplicated parameters once
+    for (path, class_name, method_key), param_dict in params_map.items():
+        schemas[path]["classes"][class_name]["methods"][method_key]["parameters"] = list(param_dict.keys())
 
 
 def _parse_return_type(return_type: str, return_type_qualified_name: str) -> str:

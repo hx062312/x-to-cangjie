@@ -57,9 +57,12 @@ def main(args):
     print("total unique types:", len(all_types))
 
     formatted_project_name = args.project.replace("-", "_")
-    os.makedirs(f"data/java/custom_types/{formatted_project_name}", exist_ok=True)
+    os.makedirs(
+        f"data/java/type_resolution/{args.project}/custom_types",
+        exist_ok=True,
+    )
     os.makedirs(f"data/java/type_resolution/{args.project}", exist_ok=True)
-    os.makedirs(f"data/java/templates/{args.project}", exist_ok=True)
+    os.makedirs(f"data/java/type_resolution/{args.project}/templates", exist_ok=True)
 
     templates_content = ""
 
@@ -70,7 +73,7 @@ def main(args):
             type_dct[type_] = type_
             # Generate Cangjie custom type files
             with open(
-                f"data/java/custom_types/{formatted_project_name}/{type_}.cj", "w"
+                f"data/java/type_resolution/{args.project}/custom_types/{type_}.cj", "w"
             ) as f:
                 f.write(f"pub class {type_} {{\n}}\n")
 
@@ -90,7 +93,9 @@ func main(): Int64 {{
 }}
 """
 
-    with open(f"data/java/templates/{args.project}/template.cj", "w") as f:
+    with open(
+        f"data/java/type_resolution/{args.project}/templates/template.cj", "w"
+    ) as f:
         f.write(templates_content)
 
     total_app_type_resolved = 0
