@@ -1,0 +1,20 @@
+{
+    "calculator.ValidatorTest": {
+        "testInvalidValues": {
+            "calculator/Arithmetics": [],
+            "calculator/Main": [],
+            "calculator/Validator": [
+                "isValid"
+            ],
+            "calculator/Calculator": []
+        },
+        "testValidValues": {
+            "calculator/Arithmetics": [],
+            "calculator/Main": [],
+            "calculator/Validator": [
+                "isValid"
+            ],
+            "calculator/Calculator": []
+        }
+    }
+}

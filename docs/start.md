@@ -135,7 +135,7 @@ bash scripts/java/extract_call_graph.sh <project> <suffix>
 **命令：**
 ```Bash
 bash scripts/java/extract_types.sh <project> <suffix>
-bash scripts/java/crawl_type_desc.sh <project> <suffix>
+bash scripts/java/crawl_type_desc.sh <project>
 bash scripts/java/translate_types.sh <project> <model_name> <type>
 ```
 

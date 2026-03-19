@@ -1,0 +1,67 @@
+{
+  "bin": {},
+  "pkg-build": {
+    "/home/cangjie/data/java/skeletons/translations/gpt-4o-2024-11-20/body/0.0/calculator/src/test": {
+      "package": "calculator.test",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773923912,
+      "dependencies": [],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.io",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/cangjie/data/java/skeletons/translations/gpt-4o-2024-11-20/body/0.0/calculator/src/test/ValidatorTest.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    },
+    "/home/cangjie/data/java/skeletons/translations/gpt-4o-2024-11-20/body/0.0/calculator/src": {
+      "package": "calculator",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773923912,
+      "dependencies": [],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/cangjie/data/java/skeletons/translations/gpt-4o-2024-11-20/body/0.0/calculator/src/Main.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.io",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/cangjie/data/java/skeletons/translations/gpt-4o-2024-11-20/body/0.0/calculator/src/Arithmetics.cj"
+            },
+            {
+              "file": "/home/cangjie/data/java/skeletons/translations/gpt-4o-2024-11-20/body/0.0/calculator/src/Calculator.cj"
+            },
+            {
+              "file": "/home/cangjie/data/java/skeletons/translations/gpt-4o-2024-11-20/body/0.0/calculator/src/Main.cj"
+            },
+            {
+              "file": "/home/cangjie/data/java/skeletons/translations/gpt-4o-2024-11-20/body/0.0/calculator/src/Validator.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    }
+  },
+  "pkg-test": {}
+}

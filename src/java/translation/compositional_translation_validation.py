@@ -274,9 +274,6 @@ def extract_code_for_translation(generation: str, fragment: dict, args):
     extracted_code = extract_cangjie_code(generation, class_name, method_name)
 
     if extracted_code is None:
-        print(
-            f"[DEBUG] Failed to extract code for {class_name}.{method_name} (type: {fragment_type})"
-        )
         return False, None, "the model did not generate any code"
 
     # Add dummy main function if not present (required by Cangjie compiler)
@@ -533,9 +530,7 @@ def update_labels(
                     f"{fragment['fragment_type']}s"
                 ][fragment["fragment_name"]]
             if "partial_translation" not in fragment_data:
-                print(
-                    f"[DEBUG] partial_translation not found for {fragment['class_name']}.{fragment['fragment_name']}, using empty list"
-                )
+                pass
             translation = fragment_data.get("partial_translation", [])
 
         if is_main:
@@ -551,9 +546,6 @@ def update_labels(
             ):
                 pass
             else:
-                print(
-                    f"[DEBUG] Adding missing test_execution for main.{fragment['fragment_name']}"
-                )
                 schema_data["main_methods"][fragment["fragment_name"]]["test_execution"] = test_execution
             schema_data["main_methods"][fragment["fragment_name"]]["elapsed_time"] = elapsed_time
             schema_data["main_methods"][fragment["fragment_name"]]["generation_timestamp"] = datetime.datetime.now().isoformat()
@@ -580,9 +572,6 @@ def update_labels(
             ):
                 pass
             else:
-                print(
-                    f"[DEBUG] Adding missing test_execution for {fragment['class_name']}.{fragment['fragment_name']}"
-                )
                 schema_data["classes"][fragment["class_name"]][
                     f"{fragment['fragment_type']}s"
                 ][fragment["fragment_name"]]["test_execution"] = test_execution
@@ -1154,10 +1143,12 @@ def handle_main_for_schema(schema_name, args, processed_fragments):
     if main_info.get("translation_status") in ["completed", "attempted", "out_of_context"]:
         return
 
-    print(f"[DEBUG] Translating main for schema {schema_name}", flush=True)
+    # Extract class name from schema path (e.g., calculator.src.main.calculator.Main_cangjie_partial.json -> Main)
+    class_name = os.path.basename(schema_path).replace("_cangjie_partial.json", "").split(".")[-1]
+
     main_fragment = {
         "schema_name": schema_name,
-        "class_name": "main",
+        "class_name": class_name,
         "fragment_name": "main",
         "fragment_type": "method",
         "is_test_method": False,
@@ -1197,7 +1188,6 @@ def cleanup_dummy_main_functions(args):
                 new_content = new_content.rstrip()
                 with open(filepath, 'w') as f:
                     f.write(new_content)
-                print(f"[DEBUG] Removed dummy main from: {filepath}", flush=True)
 
 
 def main(args):

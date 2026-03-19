@@ -1,0 +1,5 @@
+| Arithmetics   | false | Object | file:///home/cangjie/projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Arithmetics.java:3:14:3:24  |
+| Calculator    | false | Object | file:///home/cangjie/projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Calculator.java:3:14:3:23   |
+| Main          | false | Object | file:///home/cangjie/projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Main.java:3:14:3:17         |
+| Validator     | false | Object | file:///home/cangjie/projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Validator.java:3:14:3:22    |
+| ValidatorTest | false | Object | file:///home/cangjie/projects/java/cleaned_final_projects_decomposed_tests/calculator/src/test/java/calculator/ValidatorTest.java:6:7:6:19 |

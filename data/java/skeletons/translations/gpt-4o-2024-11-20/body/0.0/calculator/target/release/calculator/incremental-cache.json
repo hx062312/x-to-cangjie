@@ -1,0 +1,22 @@
+{
+  "packageInformation": {
+    "calculator.test": {
+      "rootPackageName": "calculator",
+      "fileNameHash": "-1558302519260972263",
+      "timeStamp": 1773924110,
+      "isBuilt": true,
+      "exeName": "",
+      "hasSubPkgs": false
+    },
+    "calculator": {
+      "rootPackageName": "calculator",
+      "fileNameHash": "-5821752300767698896",
+      "timeStamp": 1773925754,
+      "isBuilt": true,
+      "exeName": "main",
+      "hasSubPkgs": true
+    }
+  },
+  "jsonHash": "3737541533663587112",
+  "rootPackageName": "calculator"
+}

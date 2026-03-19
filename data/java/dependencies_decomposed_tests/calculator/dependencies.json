@@ -1,0 +1,26 @@
+{
+    "Main": [
+        [
+            "Calculator",
+            "calculator.Calculator"
+        ]
+    ],
+    "Calculator": [
+        [
+            "Arithmetics",
+            "calculator.Arithmetics"
+        ],
+        [
+            "Validator",
+            "calculator.Validator"
+        ]
+    ],
+    "Validator": [],
+    "Arithmetics": [],
+    "ValidatorTest": [
+        [
+            "Validator",
+            "calculator.Validator"
+        ]
+    ]
+}

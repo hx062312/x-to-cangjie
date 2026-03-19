@@ -7,7 +7,7 @@
     "boolean": "Bool",
     "java.lang.String": "String",
     "java.lang.System": "",
-    "void": "Unit",
+    "void": "",
     "java.lang.IllegalArgumentException": "IllegalArgumentException",
     "java.lang.NumberFormatException": "",
     "int": "Int64",

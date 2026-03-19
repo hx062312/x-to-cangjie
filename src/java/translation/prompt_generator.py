@@ -183,7 +183,6 @@ Notes:
 
         # Ensure partial_translation exists in fragment_dict
         if "partial_translation" not in self.fragment_dict:
-            print(f"[DEBUG] Adding missing partial_translation for {self.class_name}.{self.fragment_name} ({self.fragment_type})")
             self.fragment_dict["partial_translation"] = []
 
         # add source fragment body

@@ -1,0 +1,1475 @@
+2026-03-19 12:35:45 INFO translate_type - main: new run started...
+2026-03-19 12:35:45 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:35:45 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.Integer
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:35:45 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:35:46 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:35:46 INFO translate_type - main: Raw LLM response: ```
+Int64
+```...
+2026-03-19 12:35:46 INFO translate_type - main: Parsed translation: Int64
+2026-03-19 12:35:54 INFO translate_type - main: Translated java.lang.Integer to Int64
+2026-03-19 12:35:54 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:35:54 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+boolean
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:35:54 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:35:55 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:35:55 INFO translate_type - main: Raw LLM response: ```
+Bool
+```...
+2026-03-19 12:35:55 INFO translate_type - main: Parsed translation: Bool
+2026-03-19 12:36:03 INFO translate_type - main: Translated boolean to Bool
+2026-03-19 12:36:03 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:03 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.String
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:03 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:05 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:05 INFO translate_type - main: Raw LLM response: ```
+String
+```...
+2026-03-19 12:36:05 INFO translate_type - main: Parsed translation: String
+2026-03-19 12:36:12 INFO translate_type - main: Translated java.lang.String to String
+2026-03-19 12:36:12 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:12 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:12 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:13 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:14 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-19 12:36:14 INFO translate_type - main: Parsed translation: System
+2026-03-19 12:36:18 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-19 12:36:18 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:31:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                              \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:36:18 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:18 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:18 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:19 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:19 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-19 12:36:19 INFO translate_type - main: Parsed translation: System
+2026-03-19 12:36:24 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-19 12:36:24 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:31:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                              \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:36:24 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:24 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:24 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:27 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:27 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-19 12:36:27 INFO translate_type - main: Parsed translation: System
+2026-03-19 12:36:31 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-19 12:36:31 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:31:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                              \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:36:31 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:31 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:31 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:32 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:32 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-19 12:36:32 INFO translate_type - main: Parsed translation: System
+2026-03-19 12:36:37 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-19 12:36:37 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:31:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                              \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:36:37 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:37 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.System
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:37 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:38 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:38 INFO translate_type - main: Raw LLM response: ```
+System
+```...
+2026-03-19 12:36:38 INFO translate_type - main: Parsed translation: System
+2026-03-19 12:36:42 INFO translate_type - main: compile error for translated type System... trying again for java.lang.System
+2026-03-19 12:36:42 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'System'\n \x1b[36m==>\x1b[0m test.cj:1:31:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: System): System {\x1b[0m\n  \x1b[36m| \x1b[0m                              \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:36:42 INFO translate_type - main: Failed to translate java.lang.System... skipping
+2026-03-19 12:36:42 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:42 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+void
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:42 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:43 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:44 INFO translate_type - main: Raw LLM response: ```
+Void
+```...
+2026-03-19 12:36:44 INFO translate_type - main: Parsed translation: Void
+2026-03-19 12:36:49 INFO translate_type - main: compile error for translated type Void... trying again for void
+2026-03-19 12:36:49 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:29:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                            \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:36:49 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:49 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+void
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:49 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:50 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:50 INFO translate_type - main: Raw LLM response: ```
+Void
+```...
+2026-03-19 12:36:50 INFO translate_type - main: Parsed translation: Void
+2026-03-19 12:36:55 INFO translate_type - main: compile error for translated type Void... trying again for void
+2026-03-19 12:36:55 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:29:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                            \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:36:55 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:55 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+void
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:36:55 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:36:56 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:36:56 INFO translate_type - main: Raw LLM response: ```
+Void
+```...
+2026-03-19 12:36:56 INFO translate_type - main: Parsed translation: Void
+2026-03-19 12:37:01 INFO translate_type - main: compile error for translated type Void... trying again for void
+2026-03-19 12:37:01 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:29:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                            \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:37:01 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:01 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+void
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:01 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:02 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:02 INFO translate_type - main: Raw LLM response: ```
+Void
+```...
+2026-03-19 12:37:02 INFO translate_type - main: Parsed translation: Void
+2026-03-19 12:37:07 INFO translate_type - main: compile error for translated type Void... trying again for void
+2026-03-19 12:37:07 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:29:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                            \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:37:07 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:07 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+void
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:07 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:08 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:08 INFO translate_type - main: Raw LLM response: ```
+Void
+```...
+2026-03-19 12:37:08 INFO translate_type - main: Parsed translation: Void
+2026-03-19 12:37:12 INFO translate_type - main: compile error for translated type Void... trying again for void
+2026-03-19 12:37:12 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'Void'\n \x1b[36m==>\x1b[0m test.cj:1:29:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Void): Void {\x1b[0m\n  \x1b[36m| \x1b[0m                            \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:37:12 INFO translate_type - main: Failed to translate void... skipping
+2026-03-19 12:37:12 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:12 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.IllegalArgumentException
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:12 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:13 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:13 INFO translate_type - main: Raw LLM response: ```
+Cangjie type:
+IllegalArgumentException
+```...
+2026-03-19 12:37:13 INFO translate_type - main: Parsed translation: Cangjie type:
+IllegalArgumentException
+2026-03-19 12:37:18 INFO translate_type - main: compile error for translated type Cangjie type:
+IllegalArgumentException... trying again for java.lang.IllegalArgumentException
+2026-03-19 12:37:18 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: unclosed delimiter: '('\n \x1b[36m==>\x1b[0m test.cj:1:29:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Cangjie type:\x1b[0m\n  \x1b[36m| \x1b[0m                 \x1b[36m~\x1b[0m          \x1b[31m^ expected ')' here\x1b[0m\n  \x1b[36m| \x1b[0m                 \x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m                 \x1b[36mto match this opening '('\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected ';' or '<NL>', found keyword 'type'\n \x1b[36m==>\x1b[0m test.cj:1:30:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Cangjie type:\x1b[0m\n  \x1b[36m| \x1b[0m                             \x1b[31m^^^^ expected ';' or '<NL>' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected type name after 'type', found ':'\n \x1b[36m==>\x1b[0m test.cj:1:34:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Cangjie type:\x1b[0m\n  \x1b[36m| \x1b[0m                                 \x1b[31m^ expected type name here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected '=', found ')'\n \x1b[36m==>\x1b[0m test.cj:2:25:\n  \x1b[36m| \x1b[0m\n\x1b[36m2\x1b[0m \x1b[36m| \x1b[0mIllegalArgumentException): Cangjie type:\x1b[0m\n  \x1b[36m| \x1b[0m                        \x1b[31m^ expected '=' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected type name after 'Cangjie', found keyword 'type'\n \x1b[36m==>\x1b[0m test.cj:2:36:\n  \x1b[36m| \x1b[0m\n\x1b[36m2\x1b[0m \x1b[36m| \x1b[0mIllegalArgumentException): Cangjie type:\x1b[0m\n  \x1b[36m| \x1b[0m                           \x1b[36m~~~~~~~\x1b[0m \x1b[31m^^^^ expected type name here\x1b[0m\n  \x1b[36m| \x1b[0m                           \x1b[36m|\x1b[0m\n  \x1b[36m| \x1b[0m                           \x1b[36mafter 'Cangjie'\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected type name after 'type', found ':'\n \x1b[36m==>\x1b[0m test.cj:2:40:\n  \x1b[36m| \x1b[0m\n\x1b[36m2\x1b[0m \x1b[36m| \x1b[0mIllegalArgumentException): Cangjie type:\x1b[0m\n  \x1b[36m| \x1b[0m                                       \x1b[31m^ expected type name here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected '=', found '{'\n \x1b[36m==>\x1b[0m test.cj:3:26:\n  \x1b[36m| \x1b[0m\n\x1b[36m3\x1b[0m \x1b[36m| \x1b[0mIllegalArgumentException {\x1b[0m\n  \x1b[36m| \x1b[0m                         \x1b[31m^ expected '=' here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: expected type name after '}', found keyword 'main'\n \x1b[36m==>\x1b[0m test.cj:7:1:\n  \x1b[36m| \x1b[0m\n\x1b[36m5\x1b[0m \x1b[36m| \x1b[0m}\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[36m~ after '}'\x1b[0m\n\x1b[36m6\x1b[0m \x1b[36m| \x1b[0m\x1b[0m\n\x1b[36m7\x1b[0m \x1b[36m| \x1b[0mmain(): Int64 {\x1b[0m\n  \x1b[36m| \x1b[0m\x1b[31m^^^^ expected type name here\x1b[0m\n  \x1b[36m| \x1b[0m\n\n8 errors generated, 8 errors printed.\n"
+2026-03-19 12:37:18 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:18 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.IllegalArgumentException
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:18 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:19 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:19 INFO translate_type - main: Raw LLM response: ```
+IllegalArgumentException
+```...
+2026-03-19 12:37:19 INFO translate_type - main: Parsed translation: IllegalArgumentException
+2026-03-19 12:37:27 INFO translate_type - main: Translated java.lang.IllegalArgumentException to IllegalArgumentException
+2026-03-19 12:37:27 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:27 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.NumberFormatException
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:27 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:28 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:28 INFO translate_type - main: Raw LLM response: ```
+NumberFormatException
+```...
+2026-03-19 12:37:28 INFO translate_type - main: Parsed translation: NumberFormatException
+2026-03-19 12:37:32 INFO translate_type - main: compile error for translated type NumberFormatException... trying again for java.lang.NumberFormatException
+2026-03-19 12:37:32 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'NumberFormatException'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: NumberFormatException): NumberFormatException {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'NumberFormatException'\n \x1b[36m==>\x1b[0m test.cj:1:46:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: NumberFormatException): NumberFormatException {\x1b[0m\n  \x1b[36m| \x1b[0m                                             \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:37:32 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:32 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.NumberFormatException
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:32 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:34 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:34 INFO translate_type - main: Raw LLM response: ```
+NumberFormatException
+```...
+2026-03-19 12:37:34 INFO translate_type - main: Parsed translation: NumberFormatException
+2026-03-19 12:37:38 INFO translate_type - main: compile error for translated type NumberFormatException... trying again for java.lang.NumberFormatException
+2026-03-19 12:37:38 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'NumberFormatException'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: NumberFormatException): NumberFormatException {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'NumberFormatException'\n \x1b[36m==>\x1b[0m test.cj:1:46:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: NumberFormatException): NumberFormatException {\x1b[0m\n  \x1b[36m| \x1b[0m                                             \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:37:38 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:38 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.NumberFormatException
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:38 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:39 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:39 INFO translate_type - main: Raw LLM response: ```
+NumberFormatException
+```...
+2026-03-19 12:37:39 INFO translate_type - main: Parsed translation: NumberFormatException
+2026-03-19 12:37:44 INFO translate_type - main: compile error for translated type NumberFormatException... trying again for java.lang.NumberFormatException
+2026-03-19 12:37:44 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'NumberFormatException'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: NumberFormatException): NumberFormatException {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'NumberFormatException'\n \x1b[36m==>\x1b[0m test.cj:1:46:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: NumberFormatException): NumberFormatException {\x1b[0m\n  \x1b[36m| \x1b[0m                                             \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:37:44 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:44 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.NumberFormatException
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:44 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:45 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:45 INFO translate_type - main: Raw LLM response: ```
+NumberFormatException
+```...
+2026-03-19 12:37:45 INFO translate_type - main: Parsed translation: NumberFormatException
+2026-03-19 12:37:50 INFO translate_type - main: compile error for translated type NumberFormatException... trying again for java.lang.NumberFormatException
+2026-03-19 12:37:50 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'NumberFormatException'\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: NumberFormatException): NumberFormatException {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'NumberFormatException'\n \x1b[36m==>\x1b[0m test.cj:1:46:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: NumberFormatException): NumberFormatException {\x1b[0m\n  \x1b[36m| \x1b[0m                                             \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n2 errors generated, 2 errors printed.\n"
+2026-03-19 12:37:50 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:50 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+java.lang.NumberFormatException
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:50 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:51 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:51 INFO translate_type - main: Raw LLM response: ```
+Exception<NumberFormat>
+```...
+2026-03-19 12:37:51 INFO translate_type - main: Parsed translation: Exception<NumberFormat>
+2026-03-19 12:37:55 INFO translate_type - main: compile error for translated type Exception<NumberFormat>... trying again for java.lang.NumberFormatException
+2026-03-19 12:37:55 INFO translate_type - main: Compiler output: b"\x1b[31merror\x1b[0m: undeclared type name 'NumberFormat'\n \x1b[36m==>\x1b[0m test.cj:1:32:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Exception<NumberFormat>): Exception<NumberFormat> {\x1b[0m\n  \x1b[36m| \x1b[0m                               \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: undeclared type name 'NumberFormat'\n \x1b[36m==>\x1b[0m test.cj:1:58:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Exception<NumberFormat>): Exception<NumberFormat> {\x1b[0m\n  \x1b[36m| \x1b[0m                                                         \x1b[31m^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: type argument's number does not match type parameter's number\n \x1b[36m==>\x1b[0m test.cj:1:48:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Exception<NumberFormat>): Exception<NumberFormat> {\x1b[0m\n  \x1b[36m| \x1b[0m                                               \x1b[31m^^^^^^^^^^^^^^^^^^^^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n\x1b[31merror\x1b[0m: type argument's number does not match type parameter's number\n \x1b[36m==>\x1b[0m test.cj:1:22:\n  \x1b[36m| \x1b[0m\n\x1b[36m1\x1b[0m \x1b[36m| \x1b[0mfunc validateType(x: Exception<NumberFormat>): Exception<NumberFormat> {\x1b[0m\n  \x1b[36m| \x1b[0m                     \x1b[31m^^^^^^^^^^^^^^^^^^^^^^^ \x1b[0m\n  \x1b[36m| \x1b[0m\n\n4 errors generated, 4 errors printed.\n"
+2026-03-19 12:37:55 INFO translate_type - main: Failed to translate java.lang.NumberFormatException... skipping
+2026-03-19 12:37:55 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:55 INFO translate_type - main: Java type:
+```
+String
+```
+
+Cangjie type:
+```
+String
+```
+
+Java type:
+```
+int
+```
+
+Cangjie type:
+```
+Int64
+```
+
+Java type:
+```
+List<String>
+```
+
+Cangjie type:
+```
+Array<String>
+```
+
+Java type:
+```
+Map<String, Integer>
+```
+
+Cangjie type:
+```
+HashMap<String, Int64>
+```
+
+Java type:
+```
+Optional<String>
+```
+
+Cangjie type:
+```
+?String
+```
+
+### Instruction:
+Translate the following Java type to Cangjie language type and write your response like the example above:
+
+Java type:
+```
+int
+```
+
+### Response:
+Cangjie type:
+
+2026-03-19 12:37:55 INFO translate_type - main: ****************************************************************************************************
+2026-03-19 12:37:57 INFO _client - _send_single_request: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-19 12:37:57 INFO translate_type - main: Raw LLM response: ```
+Int64
+```...
+2026-03-19 12:37:57 INFO translate_type - main: Parsed translation: Int64
+2026-03-19 12:38:05 INFO translate_type - main: Translated int to Int64
+2026-03-19 12:38:05 INFO translate_type - main: Total success: 5
+2026-03-19 12:38:05 INFO translate_type - main: Total failed: 3
+2026-03-19 12:38:05 INFO translate_type - main: Average attempts to overturn: 0.2

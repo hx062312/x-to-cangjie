@@ -1,0 +1,162 @@
+{
+    "ValidatorTest": {
+        "schema_file": "projects/java/cleaned_final_projects_decomposed_tests/calculator/src/test/java/calculator/ValidatorTest.java",
+        "17-22:testInvalidValues": [
+            {
+                "schema": "calculator.src.main.calculator.Validator",
+                "class": "Validator",
+                "method": "4-6:isValid"
+            }
+        ],
+        "9-14:testValidValues": [
+            {
+                "schema": "calculator.src.main.calculator.Validator",
+                "class": "Validator",
+                "method": "4-6:isValid"
+            }
+        ]
+    },
+    "Calculator": {
+        "schema_file": "projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Calculator.java",
+        "27-32:performDiv": [
+            {
+                "schema": "calculator.src.main.calculator.Validator",
+                "class": "Validator",
+                "method": "4-6:isValid"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Arithmetics",
+                "class": "Arithmetics",
+                "method": "16-21:div"
+            }
+        ],
+        "20-25:performMul": [
+            {
+                "schema": "calculator.src.main.calculator.Validator",
+                "class": "Validator",
+                "method": "4-6:isValid"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Arithmetics",
+                "class": "Arithmetics",
+                "method": "12-14:mul"
+            }
+        ],
+        "13-18:performSub": [
+            {
+                "schema": "calculator.src.main.calculator.Validator",
+                "class": "Validator",
+                "method": "4-6:isValid"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Arithmetics",
+                "class": "Arithmetics",
+                "method": "8-10:sub"
+            }
+        ],
+        "6-11:performAdd": [
+            {
+                "schema": "calculator.src.main.calculator.Validator",
+                "class": "Validator",
+                "method": "4-6:isValid"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Arithmetics",
+                "class": "Arithmetics",
+                "method": "4-6:add"
+            }
+        ]
+    },
+    "Validator": {
+        "schema_file": "projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Validator.java",
+        "4-6:isValid": []
+    },
+    "Main": {
+        "schema_file": "projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Main.java",
+        "57-77:printUsage": [],
+        "49-55:printResult": [],
+        "45-47:parseInt": []
+    },
+    "main": {
+        "schema_file": "projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Main.java",
+        "main": [
+            {
+                "schema": "calculator.src.main.calculator.Calculator",
+                "class": "Calculator",
+                "method": "Calculator"
+            },
+            {
+                "schema": "library",
+                "class": "java.base/java/lang/String",
+                "method": "toLowerCase()"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Main",
+                "class": "Main",
+                "method": "57-77:printUsage"
+            },
+            {
+                "schema": "library",
+                "class": "java.base/java/lang/String",
+                "method": "equals(java.lang.Object)"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Calculator",
+                "class": "Calculator",
+                "method": "6-11:performAdd"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Main",
+                "class": "Main",
+                "method": "45-47:parseInt"
+            },
+            {
+                "schema": "library",
+                "class": "java.base/java/lang/IllegalArgumentException",
+                "method": "IllegalArgumentException(java.lang.String)"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Main",
+                "class": "Main",
+                "method": "49-55:printResult"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Calculator",
+                "class": "Calculator",
+                "method": "13-18:performSub"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Calculator",
+                "class": "Calculator",
+                "method": "20-25:performMul"
+            },
+            {
+                "schema": "calculator.src.main.calculator.Calculator",
+                "class": "Calculator",
+                "method": "27-32:performDiv"
+            },
+            {
+                "schema": "library",
+                "class": "java.base/java/io/PrintStream",
+                "method": "println(java.lang.String)"
+            },
+            {
+                "schema": "library",
+                "class": "java.base/java/lang/System",
+                "method": "exit(int)"
+            },
+            {
+                "schema": "library",
+                "class": "java.base/java/lang/Throwable",
+                "method": "getMessage()"
+            }
+        ]
+    },
+    "Arithmetics": {
+        "schema_file": "projects/java/cleaned_final_projects_decomposed_tests/calculator/src/main/java/calculator/Arithmetics.java",
+        "16-21:div": [],
+        "12-14:mul": [],
+        "8-10:sub": [],
+        "4-6:add": []
+    }
+}

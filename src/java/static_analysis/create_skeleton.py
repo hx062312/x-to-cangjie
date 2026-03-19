@@ -418,6 +418,7 @@ def main(args):
 
         # Process main_methods if exists (main function stored separately from classes)
         main_method_template = None
+        main_class = None  # Track which class has the main method
         if "main_methods" in schema:
             if "main" in schema["main_methods"]:
                 main_method_template = f"main(args: Array<String>): Int64 {{\n\tthrow Exception('TODO')\n}}\n"
@@ -726,7 +727,8 @@ def main(args):
                     ):
                         field_body = "[:]"
                     else:
-                        field_body = "?"
+                        # For custom class types like Arithmetics, use constructor
+                        field_body = f"{field_type}()"
 
                 # Save field info to target_schema
                 target_schema["classes"][class_]["fields"][field][
@@ -741,9 +743,7 @@ def main(args):
                 target_schema["classes"][class_]["fields"][field][
                     "cangjie_compilation"
                 ] = "pending"
-                target_schema["classes"][class_]["fields"][field][
-                    "test_execution"
-                ] = {}
+                target_schema["classes"][class_]["fields"][field]["test_execution"] = {}
                 target_schema["classes"][class_]["fields"][field]["elapsed_time"] = 0
                 target_schema["classes"][class_]["fields"][field][
                     "generation_timestamp"
@@ -764,6 +764,7 @@ def main(args):
             # Only reset if main_methods wasn't detected at file level
             if "main_methods" not in schema:
                 main_method_template = None
+                main_class = None
             for method in schema["classes"][class_]["methods"]:
                 current_method = []
                 method_name = method.split(":")[1].strip()
@@ -835,6 +836,7 @@ def main(args):
                     elif is_main and "main_methods" not in schema:
                         # Special handling for main function - save for later (outside class)
                         main_method_template = f"main(args: Array<String>): Int64 {{\n\tthrow Exception('TODO')\n}}\n"
+                        main_class = class_  # Track which class has the main method
                         # Create partial_translation for main method before skipping
                         target_schema["classes"][class_]["methods"][method][
                             "partial_translation"
@@ -923,6 +925,7 @@ def main(args):
                     elif is_main and "main_methods" not in schema:
                         # Special handling for main function - always use Array<String>
                         main_method_template = f"main(args: Array<String>): Int64 {{\n\tthrow Exception('TODO')\n}}\n"
+                        main_class = class_  # Track which class has the main method
                         # Create partial_translation for main method before skipping
                         target_schema["classes"][class_]["methods"][method][
                             "partial_translation"
@@ -1038,11 +1041,9 @@ def main(args):
             skeleton += "\t// Class Methods End\n\n"
             skeleton += "}\n\n"
 
-            # Add main function outside the class if exists, otherwise add dummy main
-            if main_method_template:
+            # Add main function outside the class only if this class has the main method
+            if main_method_template and class_ == main_class:
                 skeleton += main_method_template + "\n"
-            else:
-                skeleton += "main(args: Array<String>): Int64 {\n    // dummy main (original source doesn't have main)\n    0\n}\n"
 
         # Cangjie import mapping
         import_map = {
