@@ -12,25 +12,7 @@ class Main {
 
 	// Class Methods Begin
 	internal static func printUsage(): Unit {
-				println("Simple Calculator - Command Line Tool")
-		println("")
-		println("Usage:")
-		println("    calc <operation> <num1> <num2>")
-		println("")
-		println("Operations:")
-		println("    add, +     Addition")
-		println("    sub, -     Subtraction")
-		println("    mul, *     Multiplication")
-		println("    div, /     Division")
-		println("")
-		println("Examples:")
-		println("    calc add 10 5")
-		println("    calc + 10 5")
-		println("    calc sub 20 8")
-		println("    calc mul 6 7")
-		println("    calc div 100 4")
-		println("")
-		println("Note: Input values must be between 0 and 999")
+		throw Exception('TODO')
 	}
 	internal static func printResult(result: Int64): Unit {
 		throw Exception('TODO')

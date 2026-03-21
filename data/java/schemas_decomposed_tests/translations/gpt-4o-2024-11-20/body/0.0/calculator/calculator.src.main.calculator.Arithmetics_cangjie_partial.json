@@ -46,27 +46,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": "main() {\n    return 0\n}\n\nclass Arithmetics {\npublic func div(a: Int64, b: Int64): Int64 {\n        if (b == 0) {\n            return 0\n        }\n        return a / b\n    }\n}",
-                    "translation_status": "completed",
-                    "cangjie_compilation": {
-                        "outcome": "success",
-                        "message": "Compilation successful"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 19.07965064048767,
-                    "generation_timestamp": "2026-03-19T13:04:41.494081",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "12-14:mul": {
                     "start": 12,
@@ -99,27 +86,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": "main() {\n    return 0\n}\n\nclass Arithmetics {\npublic func mul(a: Int64, b: Int64): Int64 {\n        return a * b\n    }\n}",
-                    "translation_status": "completed",
-                    "cangjie_compilation": {
-                        "outcome": "success",
-                        "message": "Compilation successful"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 18.224136352539062,
-                    "generation_timestamp": "2026-03-19T13:04:59.730787",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "8-10:sub": {
                     "start": 8,
@@ -152,27 +126,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": "main() {\n    return 0\n}\n\nclass Arithmetics {\npublic func sub(a: Int64, b: Int64): Int64 {\n        return a - b\n    }\n}",
-                    "translation_status": "completed",
-                    "cangjie_compilation": {
-                        "outcome": "success",
-                        "message": "Compilation successful"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 18.204031229019165,
-                    "generation_timestamp": "2026-03-19T13:05:17.943898",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "4-6:add": {
                     "start": 4,
@@ -205,27 +166,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": "main() {\n    return 0\n}\n\nclass Arithmetics {\npublic func add(a: Int64, b: Int64): Int64 {\n        return a + b\n    }\n}",
-                    "translation_status": "completed",
-                    "cangjie_compilation": {
-                        "outcome": "success",
-                        "message": "Compilation successful"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 18.937480688095093,
-                    "generation_timestamp": "2026-03-19T13:05:36.890449",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 }
             },
             "fields": {},

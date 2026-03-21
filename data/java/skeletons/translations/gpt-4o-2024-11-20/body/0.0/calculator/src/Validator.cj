@@ -11,7 +11,7 @@ class Validator {
 
 	// Class Methods Begin
 	public static func isValid(value: Int64): Bool {
-				return value >= 0 && value < 1000
+		throw Exception('TODO')
 	}
 	// Class Methods End
 

@@ -57,31 +57,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": [
-                        "\tpublic func performDiv(x: Int64, y: Int64): Int64 {",
-                        "\t\tthrow Exception('TODO')",
-                        "\t}\n"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: \u001b[31merror\u001b[0m: invalid named arguments prefix 'value:', target is not a named parameter\n\u001b[31merror\u001b[0m: invalid named arguments prefix 'value:', target is not a named parameter\n\u001b[31merror\u001b[0m: invalid named arguments prefix 'a:', target is not a named parameter\n3 errors generated, 3 errors printed.\nError: failed to compile package `calculator`, return code is 1\nError: cjpm build failed"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 32.85091471672058,
-                    "generation_timestamp": "2026-03-19T13:06:09.750035",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 1,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "20-25:performMul": {
                     "start": 20,
@@ -128,31 +111,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": [
-                        "\tpublic func performMul(x: Int64, y: Int64): Int64 {",
-                        "\t\tthrow Exception('TODO')",
-                        "\t}\n"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: \u001b[31merror\u001b[0m: invalid named arguments prefix 'value:', target is not a named parameter\n\u001b[31merror\u001b[0m: invalid named arguments prefix 'value:', target is not a named parameter\n\u001b[31merror\u001b[0m: invalid named arguments prefix 'a:', target is not a named parameter\n3 errors generated, 3 errors printed.\nError: failed to compile package `calculator`, return code is 1\nError: cjpm build failed"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 34.07924842834473,
-                    "generation_timestamp": "2026-03-19T13:06:43.840144",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 1,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "13-18:performSub": {
                     "start": 13,
@@ -199,31 +165,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": [
-                        "\tpublic func performSub(x: Int64, y: Int64): Int64 {",
-                        "\t\tthrow Exception('TODO')",
-                        "\t}\n"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: \u001b[31merror\u001b[0m: invalid named arguments prefix 'value:', target is not a named parameter\n\u001b[31merror\u001b[0m: invalid named arguments prefix 'value:', target is not a named parameter\n\u001b[31merror\u001b[0m: invalid named arguments prefix 'a:', target is not a named parameter\n3 errors generated, 3 errors printed.\nError: failed to compile package `calculator`, return code is 1\nError: cjpm build failed"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 33.06423282623291,
-                    "generation_timestamp": "2026-03-19T13:07:16.914572",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 1,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "6-11:performAdd": {
                     "start": 6,
@@ -270,31 +219,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": [
-                        "\tpublic func performAdd(x: Int64, y: Int64): Int64 {",
-                        "\t\tthrow Exception('TODO')",
-                        "\t}\n"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: \u001b[31merror\u001b[0m: invalid named arguments prefix 'value:', target is not a named parameter\n\u001b[31merror\u001b[0m: invalid named arguments prefix 'value:', target is not a named parameter\n\u001b[31merror\u001b[0m: invalid named arguments prefix 'a:', target is not a named parameter\n3 errors generated, 3 errors printed.\nError: failed to compile package `calculator`, return code is 1\nError: cjpm build failed"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 33.02977180480957,
-                    "generation_timestamp": "2026-03-19T13:07:49.955012",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 1,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 }
             },
             "fields": {
@@ -317,24 +249,14 @@
                     "partial_translation": [
                         "\tinternal let math: Arithmetics = Arithmetics()"
                     ],
-                    "translation": [
-                        "\tinternal let math: Arithmetics = Arithmetics()"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": "success",
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
                     "elapsed_time": 0,
-                    "generation_timestamp": "2026-03-19T13:04:03.723574",
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "cangjie_compilation": -1,
-                        "test_execution": -1
-                    },
-                    "final_budget": {
-                        "cangjie_compilation": -1,
-                        "test_execution": -1
-                    }
+                    "include_implementation": true
                 }
             },
             "is_enum": false,

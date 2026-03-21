@@ -11,19 +11,16 @@ class Arithmetics {
 
 	// Class Methods Begin
 	public func div(a: Int64, b: Int64): Int64 {
-				if (b == 0) {
-		return 0
-		}
-		return a / b
+		throw Exception('TODO')
 	}
 	public func mul(a: Int64, b: Int64): Int64 {
-				return a * b
+		throw Exception('TODO')
 	}
 	public func sub(a: Int64, b: Int64): Int64 {
-				return a - b
+		throw Exception('TODO')
 	}
 	public func add(a: Int64, b: Int64): Int64 {
-				return a + b
+		throw Exception('TODO')
 	}
 	// Class Methods End
 

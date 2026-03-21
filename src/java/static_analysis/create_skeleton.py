@@ -708,7 +708,7 @@ def main(args):
                         field_body = "[:]"
                     # TODO: elif field_type == cla_name:
                     else:
-                        field_body = "?"
+                        field_body = "Any"
                 # Process List type fields
                 elif "=" in "".join(schema["classes"][class_]["fields"][field]["body"]):
                     if "new ArrayList" in "".join(
@@ -900,7 +900,7 @@ def main(args):
                                 get_cangjie_type(param_type, extracted_types)
                             )
                         else:
-                            parameter_types.append("?")
+                            parameter_types.append("Any")
 
                     parameters = schema["classes"][class_]["methods"][method][
                         "parameters"

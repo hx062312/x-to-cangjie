@@ -65,27 +65,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": "main() {\n    return 0\n}\n\nclass Main {\ninternal static func printUsage(): Unit {\n    println(\"Simple Calculator - Command Line Tool\")\n    println(\"\")\n    println(\"Usage:\")\n    println(\"    calc <operation> <num1> <num2>\")\n    println(\"\")\n    println(\"Operations:\")\n    println(\"    add, +     Addition\")\n    println(\"    sub, -     Subtraction\")\n    println(\"    mul, *     Multiplication\")\n    println(\"    div, /     Division\")\n    println(\"\")\n    println(\"Examples:\")\n    println(\"    calc add 10 5\")\n    println(\"    calc + 10 5\")\n    println(\"    calc sub 20 8\")\n    println(\"    calc mul 6 7\")\n    println(\"    calc div 100 4\")\n    println(\"\")\n    println(\"Note: Input values must be between 0 and 999\")\n}\n}",
-                    "translation_status": "completed",
-                    "cangjie_compilation": {
-                        "outcome": "success",
-                        "message": "Compilation successful"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 19.35002112388611,
-                    "generation_timestamp": "2026-03-19T13:08:09.316040",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "49-55:printResult": {
                     "start": 49,
@@ -138,31 +125,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": [
-                        "\tinternal static func printResult(result: Int64): Unit {",
-                        "\t\tthrow Exception('TODO')",
-                        "\t}\n"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: \u001b[31merror\u001b[0m: undeclared identifier 'exit'\n1 error generated, 1 error printed.\nError: failed to compile package `calculator`, return code is 1\nError: cjpm build failed"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 33.05790162086487,
-                    "generation_timestamp": "2026-03-19T13:08:42.384244",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 1,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "45-47:parseInt": {
                     "start": 45,
@@ -201,31 +171,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": [
-                        "\tinternal static func parseInt(s: String): Int64 {",
-                        "\t\tthrow Exception('TODO')",
-                        "\t}\n"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: \u001b[31merror\u001b[0m: undeclared identifier 'valueOf'\n1 error generated, 1 error printed.\nError: failed to compile package `calculator`, return code is 1\nError: cjpm build failed"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 32.38540530204773,
-                    "generation_timestamp": "2026-03-19T13:09:14.781050",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 1,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 }
             },
             "fields": {},
@@ -372,29 +325,11 @@
                 "\tthrow Exception('TODO')",
                 "\t}\n"
             ],
-            "translation": [
-                "func main(args: Array<String>): Int64 {",
-                "\tthrow Exception('TODO')",
-                "\t}\n"
-            ],
-            "translation_status": "attempted",
-            "cangjie_compilation": {
-                "outcome": "error",
-                "message": "Compilation failed: \u001b[31merror\u001b[0m: undeclared type name 'NumberFormatException'\n  \u001b[36m==>\u001b[0m /tmp/tmp1j8giwhb.cj:33:17:\n   \u001b[36m| \u001b[0m\n\u001b[36m33\u001b[0m \u001b[36m| \u001b[0m    } catch (e: NumberFormatException) {\u001b[0m\n   \u001b[36m| \u001b[0m                \u001b[31m^ \u001b[0m\n   \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'printUsage'\n \u001b[36m==>\u001b[0m /tmp/tmp1j8giwhb.cj:3:9:\n  \u001b[36m| \u001b[0m\n\u001b[36m3\u001b[0m \u001b[36m| \u001b[0m        printUsage()\u001b[0m\n  \u001b[36m| \u001b[0m        \u001b[31m^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'Calculator'\n \u001b[36m==>\u001b[0m /tmp/tmp1j8giwhb.cj:7:16:\n  \u001b[36m| \u001b[0m\n\u001b[36m7\u001b[0m \u001b[36m| \u001b[0m    let calc = Calculator()\u001b[0m\n  \u001b[36m| \u001b[0m               \u001b[31m^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: 'toLowerCase' is not a member of struct 'String'\n \u001b[36m==>\u001b[0m /tmp/tmp1j8giwhb.cj:8:29:\n  \u001b[36m| \u001b[0m\n\u001b[36m8\u001b[0m \u001b[36m| \u001b[0m    let operation = args[0].toLowerCase()\u001b[0m\n  \u001b[36m| \u001b[0m                            \u001b[31m^^^^^^^^^^^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'printResult'\n  \u001b[36m==>\u001b[0m /tmp/tmp1j8giwhb.cj:14:13:\n   \u001b[36m| \u001b[0m\n\u001b[36m14\u001b[0m \u001b[36m| \u001b[0m            printResult(result)\u001b[0m\n   \u001b[36m| \u001b[0m            \u001b[31m^ \u001b[0m\n   \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'printResult'\n  \u001b[36m==>\u001b[0m /tmp/tmp1j8giwhb.cj:18:13:\n   \u001b[36m| \u001b[0m\n\u001b[36m18\u001b[0m \u001b[36m| \u001b[0m            printResult(result)\u001b[0m\n   \u001b[36m| \u001b[0m            \u001b[31m^ \u001b[0m\n   \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'printResult'\n  \u001b[36m==>\u001b[0m /tmp/tmp1j8giwhb.cj:22:13:\n   \u001b[36m| \u001b[0m\n\u001b[36m22\u001b[0m \u001b[36m| \u001b[0m            printResult(result)\u001b[0m\n   \u001b[36m| \u001b[0m            \u001b[31m^ \u001b[0m\n   \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'printResult'\n  \u001b[36m==>\u001b[0m /tmp/tmp1j8giwhb.cj:26:13:\n   \u001b[36m| \u001b[0m\n\u001b[36m26\u001b[0m \u001b[36m| \u001b[0m            printResult(result)\u001b[0m\n   \u001b[36m| \u001b[0m            \u001b[31m^ \u001b[0m\n   \u001b[36m| \u001b[0m\n\n13 errors generated, 8 errors printed.\n\n"
-            },
+            "translation": [],
+            "translation_status": "pending",
+            "cangjie_compilation": "pending",
             "test_execution": {},
-            "elapsed_time": 15.438481330871582,
-            "original_budget": {
-                "syntactic": 2,
-                "cangjie_compilation": 2,
-                "test_execution": 2
-            },
-            "generation_timestamp": "2026-03-19T13:09:30.240513",
-            "final_budget": {
-                "syntactic": 2,
-                "cangjie_compilation": 1,
-                "test_execution": 2
-            }
+            "elapsed_time": 0
         }
     },
     "cangjie_imports": [

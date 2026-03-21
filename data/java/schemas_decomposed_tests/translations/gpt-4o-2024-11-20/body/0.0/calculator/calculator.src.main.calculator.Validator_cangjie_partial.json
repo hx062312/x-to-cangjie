@@ -43,27 +43,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": "main() {\n    return 0\n}\n\nclass Validator {\npublic static func isValid(value: Int64): Bool {\n    return value >= 0 && value < 1000\n}\n}",
-                    "translation_status": "completed",
-                    "cangjie_compilation": {
-                        "outcome": "success",
-                        "message": "Compilation successful"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 18.639081478118896,
-                    "generation_timestamp": "2026-03-19T13:04:22.404003",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 5,
-                        "cangjie_compilation": 5,
-                        "test_execution": 5
-                    },
-                    "final_budget": {
-                        "syntactic": 5,
-                        "cangjie_compilation": 5,
-                        "test_execution": 5
-                    }
+                    "include_implementation": true
                 }
             },
             "fields": {},

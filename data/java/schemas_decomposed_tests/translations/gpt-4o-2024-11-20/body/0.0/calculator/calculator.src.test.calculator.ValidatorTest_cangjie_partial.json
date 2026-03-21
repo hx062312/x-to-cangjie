@@ -67,31 +67,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": [
-                        "\tinternal func testInvalidValues(): Unit {",
-                        "\t\tthrow Exception('TODO')",
-                        "\t}\n"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: \u001b[31merror\u001b[0m: undeclared identifier 'assertFalse'\n \u001b[36m==>\u001b[0m /tmp/tmp8d924cj8.cj:7:5:\n  \u001b[36m| \u001b[0m\n\u001b[36m7\u001b[0m \u001b[36m| \u001b[0m    assertFalse(Validator.isValid(-1))\u001b[0m\n  \u001b[36m| \u001b[0m    \u001b[31m^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'assertFalse'\n \u001b[36m==>\u001b[0m /tmp/tmp8d924cj8.cj:8:5:\n  \u001b[36m| \u001b[0m\n\u001b[36m8\u001b[0m \u001b[36m| \u001b[0m    assertFalse(Validator.isValid(1000))\u001b[0m\n  \u001b[36m| \u001b[0m    \u001b[31m^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'assertFalse'\n \u001b[36m==>\u001b[0m /tmp/tmp8d924cj8.cj:9:5:\n  \u001b[36m| \u001b[0m\n\u001b[36m9\u001b[0m \u001b[36m| \u001b[0m    assertFalse(Validator.isValid(-100))\u001b[0m\n  \u001b[36m| \u001b[0m    \u001b[31m^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'assertFalse'\n  \u001b[36m==>\u001b[0m /tmp/tmp8d924cj8.cj:10:5:\n   \u001b[36m| \u001b[0m\n\u001b[36m10\u001b[0m \u001b[36m| \u001b[0m    assertFalse(Validator.isValid(2000))\u001b[0m\n   \u001b[36m| \u001b[0m    \u001b[31m^ \u001b[0m\n   \u001b[36m| \u001b[0m\n\n4 errors generated, 4 errors printed.\n\n"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 10.878004312515259,
-                    "generation_timestamp": "2026-03-19T13:09:52.126277",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 1,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 },
                 "9-14:testValidValues": {
                     "start": 9,
@@ -133,31 +116,14 @@
                         "\t\tthrow Exception('TODO')",
                         "\t}\n"
                     ],
-                    "translation": [
-                        "\tinternal func testValidValues(): Unit {",
-                        "\t\tthrow Exception('TODO')",
-                        "\t}\n"
-                    ],
-                    "translation_status": "attempted",
-                    "cangjie_compilation": {
-                        "outcome": "error",
-                        "message": "Compilation failed: \u001b[31merror\u001b[0m: undeclared identifier 'assert'\n \u001b[36m==>\u001b[0m /tmp/tmppzlitl72.cj:7:5:\n  \u001b[36m| \u001b[0m\n\u001b[36m7\u001b[0m \u001b[36m| \u001b[0m    assert(Validator.isValid(0) == true)\u001b[0m\n  \u001b[36m| \u001b[0m    \u001b[31m^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'assert'\n \u001b[36m==>\u001b[0m /tmp/tmppzlitl72.cj:8:5:\n  \u001b[36m| \u001b[0m\n\u001b[36m8\u001b[0m \u001b[36m| \u001b[0m    assert(Validator.isValid(1) == true)\u001b[0m\n  \u001b[36m| \u001b[0m    \u001b[31m^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'assert'\n \u001b[36m==>\u001b[0m /tmp/tmppzlitl72.cj:9:5:\n  \u001b[36m| \u001b[0m\n\u001b[36m9\u001b[0m \u001b[36m| \u001b[0m    assert(Validator.isValid(500) == true)\u001b[0m\n  \u001b[36m| \u001b[0m    \u001b[31m^ \u001b[0m\n  \u001b[36m| \u001b[0m\n\n\u001b[31merror\u001b[0m: undeclared identifier 'assert'\n  \u001b[36m==>\u001b[0m /tmp/tmppzlitl72.cj:10:5:\n   \u001b[36m| \u001b[0m\n\u001b[36m10\u001b[0m \u001b[36m| \u001b[0m    assert(Validator.isValid(999) == true)\u001b[0m\n   \u001b[36m| \u001b[0m    \u001b[31m^ \u001b[0m\n   \u001b[36m| \u001b[0m\n\n4 errors generated, 4 errors printed.\n\n"
-                    },
+                    "translation": [],
+                    "translation_status": "pending",
+                    "cangjie_compilation": "pending",
                     "test_execution": {},
-                    "elapsed_time": 10.980004787445068,
-                    "generation_timestamp": "2026-03-19T13:09:41.231099",
+                    "elapsed_time": 0,
+                    "generation_timestamp": 0,
                     "model": "gpt-4o-2024-11-20",
-                    "include_implementation": true,
-                    "original_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 2,
-                        "test_execution": 2
-                    },
-                    "final_budget": {
-                        "syntactic": 2,
-                        "cangjie_compilation": 1,
-                        "test_execution": 2
-                    }
+                    "include_implementation": true
                 }
             },
             "fields": {},
