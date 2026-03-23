@@ -678,6 +678,10 @@ def main(args):
                     ]
                     field_type = get_cangjie_type(field_type, extracted_types)
 
+                # Fallback if type mapping returned empty string
+                if not field_type:
+                    field_type = "Any"
+
                 # Build field declaration
                 access_modifier = (
                     "public "
@@ -708,7 +712,10 @@ def main(args):
                         field_body = "[:]"
                     # TODO: elif field_type == cla_name:
                     else:
-                        field_body = "Any"
+                        if field_type == "Any":
+                            field_body = "()"
+                        else:
+                            field_body = "Any"
                 # Process List type fields
                 elif "=" in "".join(schema["classes"][class_]["fields"][field]["body"]):
                     if "new ArrayList" in "".join(
@@ -728,7 +735,10 @@ def main(args):
                         field_body = "[:]"
                     else:
                         # For custom class types like Arithmetics, use constructor
-                        field_body = f"{field_type}()"
+                        if field_type == "Any":
+                            field_body = "()"
+                        else:
+                            field_body = f"{field_type}()"
 
                 # Save field info to target_schema
                 target_schema["classes"][class_]["fields"][field][
@@ -1058,7 +1068,6 @@ def main(args):
             "Callable": "import std.functional.*",
             "enum": "import std.enum.*",
             "Type": "import std.reflect.*",
-            "Any": "import std.any.*",
             "Iterator": "import std.iterator.*",
             "Iterable": "import std.iterator.*",
             "decimal": "import std.bigint.*",
@@ -1207,9 +1216,17 @@ def main(args):
         # Create cjpm.toml file if it doesn't exist
         cjpm_toml_path = f"{project_dir}/cjpm.toml"
         if not os.path.exists(cjpm_toml_path):
-            cjpm_toml_content = f"""[package]
-name = "{args.project}"
-version = "0.1.0"
+            cjpm_toml_content = """[package]
+  cjc-version = "1.0.5"
+  name = "calculator"
+  description = "nothing here"
+  version = "1.0.0"
+  target-dir = ""
+  output-type = "executable"
+  compile-option = ""
+  override-compile-option = ""
+  link-option = ""
+  package-configuration = {}
 
 [dependencies]
 """

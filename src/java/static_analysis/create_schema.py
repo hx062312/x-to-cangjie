@@ -11,7 +11,9 @@ from utils import (
 )
 
 
-def process_imports(schemas: dict, projects_dir: str, query_outputs_dir: str, project: str):
+def process_imports(
+    schemas: dict, projects_dir: str, query_outputs_dir: str, project: str
+):
     """Process imports query and populate schemas."""
     imports_query_out = f"{query_outputs_dir}/{project}/{project}_imports.txt"
     with open(imports_query_out, "r") as f:
@@ -41,7 +43,9 @@ def process_imports(schemas: dict, projects_dir: str, query_outputs_dir: str, pr
         )
 
 
-def process_callables(schemas: dict, projects_dir: str, query_outputs_dir: str, project: str):
+def process_callables(
+    schemas: dict, projects_dir: str, query_outputs_dir: str, project: str
+):
     """Process class callables (methods) query and populate schemas."""
     callables_query_out = f"{query_outputs_dir}/{project}/{project}_class_callables.txt"
     with open(callables_query_out, "r") as f:
@@ -81,7 +85,9 @@ def process_callables(schemas: dict, projects_dir: str, query_outputs_dir: str, 
         # Get end_line from the 'end' variable (not from 'start')
         _, _, end_line = parse_location_with_end(end)
 
-        class_location_path, class_start_line, class_end_line = parse_location_with_end(class_location)
+        class_location_path, class_start_line, class_end_line = parse_location_with_end(
+            class_location
+        )
 
         if "new" not in class_name and "{" not in class_name:
             class_declaration = read_file_lines(path, class_start_line, class_end_line)
@@ -89,7 +95,9 @@ def process_callables(schemas: dict, projects_dir: str, query_outputs_dir: str, 
             if class_start_line == class_end_line:
                 changed = False
                 while "{" not in "".join(class_declaration):
-                    class_declaration = read_file_lines(path, class_start_line, class_end_line)
+                    class_declaration = read_file_lines(
+                        path, class_start_line, class_end_line
+                    )
                     class_end_line += 1
                     changed = True
 
@@ -100,7 +108,9 @@ def process_callables(schemas: dict, projects_dir: str, query_outputs_dir: str, 
         callable_body, start_line = find_callable_body(path, start_line, end_line)
 
         if start == end:
-            callable_body, start_line, end_line = expand_callable_body(path, start_line, end_line)
+            callable_body, start_line, end_line = expand_callable_body(
+                path, start_line, end_line
+            )
 
         schemas[path].setdefault("path", path)
         schemas[path].setdefault("imports", {})
@@ -146,27 +156,26 @@ def process_callables(schemas: dict, projects_dir: str, query_outputs_dir: str, 
                     "calls": [],
                 }
 
-            return_type_qualified = _parse_return_type(return_type, return_type_qualified_name)
+            return_type_qualified = _parse_return_type(
+                return_type, return_type_qualified_name
+            )
 
-            if (return_type, return_type_qualified) not in schemas[path]["main_methods"][
-                main_key
-            ]["return_types"]:
-                schemas[path]["main_methods"][main_key][
-                    "return_types"
-                ].append((return_type, return_type_qualified))
+            if (return_type, return_type_qualified) not in schemas[path][
+                "main_methods"
+            ][main_key]["return_types"]:
+                schemas[path]["main_methods"][main_key]["return_types"].append(
+                    (return_type, return_type_qualified)
+                )
 
             if (
-                modifier
-                not in schemas[path]["main_methods"][main_key][
-                    "modifiers"
-                ]
+                modifier not in schemas[path]["main_methods"][main_key]["modifiers"]
                 and modifier != "null"
             ):
-                schemas[path]["main_methods"][main_key][
-                    "modifiers"
-                ].append(modifier)
+                schemas[path]["main_methods"][main_key]["modifiers"].append(modifier)
 
-            _process_annotation(schemas, path, "main_methods", main_key, annotation_location)
+            _process_annotation(
+                schemas, path, "main_methods", main_key, annotation_location
+            )
             continue
 
         # Skip public class methods
@@ -206,7 +215,9 @@ def process_callables(schemas: dict, projects_dir: str, query_outputs_dir: str, 
             },
         )
 
-        return_type_qualified = _parse_return_type(return_type, return_type_qualified_name)
+        return_type_qualified = _parse_return_type(
+            return_type, return_type_qualified_name
+        )
 
         if (return_type, return_type_qualified) not in schemas[path]["classes"][
             class_name
@@ -231,10 +242,14 @@ def process_callables(schemas: dict, projects_dir: str, query_outputs_dir: str, 
                 "is_constructor"
             ] = True
 
-        _process_annotation(schemas, path, class_name, pos_callable_name, annotation_location)
+        _process_annotation(
+            schemas, path, class_name, pos_callable_name, annotation_location
+        )
 
 
-def process_interfaces(schemas: dict, projects_dir: str, query_outputs_dir: str, project: str):
+def process_interfaces(
+    schemas: dict, projects_dir: str, query_outputs_dir: str, project: str
+):
     """Process interfaces query and populate schemas."""
     interfaces_query_out = f"{query_outputs_dir}/{project}/{project}_interfaces.txt"
     with open(interfaces_query_out, "r") as f:
@@ -264,7 +279,9 @@ def process_interfaces(schemas: dict, projects_dir: str, query_outputs_dir: str,
             and return_type_qualified_name == "null"
             and siganture == "null"
         ):
-            _add_interface_declaration(schemas, projects_dir, project, interface_loc, interface_name)
+            _add_interface_declaration(
+                schemas, projects_dir, project, interface_loc, interface_name
+            )
             continue
 
         path, start_line, _ = parse_location_with_end(start)
@@ -278,13 +295,17 @@ def process_interfaces(schemas: dict, projects_dir: str, query_outputs_dir: str,
         # Get end_line from the 'end' variable (not from 'start')
         _, _, end_line = parse_location_with_end(end)
 
-        interface_start_line, interface_end_line = parse_location_with_end(interface_loc)[1:3]
+        interface_start_line, interface_end_line = parse_location_with_end(
+            interface_loc
+        )[1:3]
 
         # Use find_callable_body to adjust start line
         callable_body, start_line = find_callable_body(path, start_line, end_line)
 
         if start == end:
-            callable_body, start_line, end_line = expand_callable_body(path, start_line, end_line)
+            callable_body, start_line, end_line = expand_callable_body(
+                path, start_line, end_line
+            )
 
         schemas[path].setdefault("path", path)
         schemas[path].setdefault("imports", {})
@@ -318,7 +339,9 @@ def process_interfaces(schemas: dict, projects_dir: str, query_outputs_dir: str,
             },
         )
 
-        return_type_qualified = _parse_return_type(return_type, return_type_qualified_name)
+        return_type_qualified = _parse_return_type(
+            return_type, return_type_qualified_name
+        )
 
         if (return_type, return_type_qualified) not in schemas[path]["classes"][
             interface_name
@@ -343,7 +366,9 @@ def process_interfaces(schemas: dict, projects_dir: str, query_outputs_dir: str,
             ] = True
 
 
-def process_fields(schemas: dict, projects_dir: str, query_outputs_dir: str, project: str):
+def process_fields(
+    schemas: dict, projects_dir: str, query_outputs_dir: str, project: str
+):
     """Process fields query and populate schemas."""
     # Initialize fields for all classes
     for path in schemas.keys():
@@ -383,7 +408,9 @@ def process_fields(schemas: dict, projects_dir: str, query_outputs_dir: str, pro
                 "types": [],
             },
         )
-        return_type_qualified = _parse_return_type(return_type, return_type_qualified_name)
+        return_type_qualified = _parse_return_type(
+            return_type, return_type_qualified_name
+        )
 
         if (return_type, return_type_qualified) not in schemas[path]["classes"][
             class_name
@@ -404,7 +431,9 @@ def process_fields(schemas: dict, projects_dir: str, query_outputs_dir: str, pro
             ]["modifiers"].append(modifier)
 
 
-def process_superclasses(schemas: dict, projects_dir: str, query_outputs_dir: str, project: str):
+def process_superclasses(
+    schemas: dict, projects_dir: str, query_outputs_dir: str, project: str
+):
     """Process superclasses query and populate schemas."""
     classes_query_out = f"{query_outputs_dir}/{project}/{project}_superclasses.txt"
     with open(classes_query_out, "r") as f:
@@ -439,7 +468,9 @@ def process_superclasses(schemas: dict, projects_dir: str, query_outputs_dir: st
             schemas[path]["classes"][class_name]["implements"].append(parent_class)
 
 
-def process_static_initializers(schemas: dict, projects_dir: str, query_outputs_dir: str, project: str):
+def process_static_initializers(
+    schemas: dict, projects_dir: str, query_outputs_dir: str, project: str
+):
     """Process static initializers query and populate schemas."""
     static_initializers_query_out = (
         f"{query_outputs_dir}/{project}/{project}_static_initializers.txt"
@@ -463,7 +494,9 @@ def process_static_initializers(schemas: dict, projects_dir: str, query_outputs_
         )
 
 
-def process_nested_classes(schemas: dict, projects_dir: str, query_outputs_dir: str, project: str):
+def process_nested_classes(
+    schemas: dict, projects_dir: str, query_outputs_dir: str, project: str
+):
     """Process nested classes query and populate schemas."""
     nested_classes_query_out = (
         f"{query_outputs_dir}/{project}/{project}_nested_classes.txt"
@@ -482,7 +515,9 @@ def process_nested_classes(schemas: dict, projects_dir: str, query_outputs_dir: 
         schemas[path]["classes"][nested_inside]["nests"].append(class_name)
 
 
-def process_parameters(schemas: dict, projects_dir: str, query_outputs_dir: str, project: str):
+def process_parameters(
+    schemas: dict, projects_dir: str, query_outputs_dir: str, project: str
+):
     """Process parameters query and populate schemas."""
     parameters = f"{query_outputs_dir}/{project}/{project}_parameters.txt"
     with open(parameters, "r") as f:
@@ -510,7 +545,9 @@ def process_parameters(schemas: dict, projects_dir: str, query_outputs_dir: str,
         callable_body, start_line = find_callable_body(path, start_line, end_line)
 
         if start == end:
-            callable_body, start_line, end_line = expand_callable_body(path, start_line, end_line)
+            callable_body, start_line, end_line = expand_callable_body(
+                path, start_line, end_line
+            )
 
         method_key = f"{start_line}-{end_line}:{method_name}"
         key = (path, class_name, method_key)
@@ -525,9 +562,13 @@ def process_parameters(schemas: dict, projects_dir: str, query_outputs_dir: str,
         # Check if it's a main method (stored in main_methods)
         if extracted_method_name == "main" and "main_methods" in schemas[path]:
             if "main" in schemas[path]["main_methods"]:
-                schemas[path]["main_methods"]["main"]["parameters"] = list(param_dict.keys())
+                schemas[path]["main_methods"]["main"]["parameters"] = list(
+                    param_dict.keys()
+                )
             continue
-        schemas[path]["classes"][class_name]["methods"][method_key]["parameters"] = list(param_dict.keys())
+        schemas[path]["classes"][class_name]["methods"][method_key]["parameters"] = (
+            list(param_dict.keys())
+        )
 
 
 def _parse_return_type(return_type: str, return_type_qualified_name: str) -> str:
@@ -543,22 +584,25 @@ def _parse_return_type(return_type: str, return_type_qualified_name: str) -> str
         return return_type
 
 
-def _add_interface_declaration(schemas: dict, projects_dir: str, project: str,
-                                  interface_loc: str, interface_name: str):
+def _add_interface_declaration(
+    schemas: dict,
+    projects_dir: str,
+    project: str,
+    interface_loc: str,
+    interface_name: str,
+):
     """Add interface declaration to schemas."""
-    path, interface_start_line, interface_end_line = parse_location_with_end(interface_loc)
+    path, interface_start_line, interface_end_line = parse_location_with_end(
+        interface_loc
+    )
     path = projects_dir + path[path.find(project) :]
     schemas.setdefault(path, {})
     schemas[path].setdefault("path", path)
     schemas[path].setdefault("imports", {})
     schemas[path].setdefault("classes", {})
     schemas[path]["classes"].setdefault(interface_name, {})
-    schemas[path]["classes"][interface_name].setdefault(
-        "start", interface_start_line
-    )
-    schemas[path]["classes"][interface_name].setdefault(
-        "end", interface_end_line
-    )
+    schemas[path]["classes"][interface_name].setdefault("start", interface_start_line)
+    schemas[path]["classes"][interface_name].setdefault("end", interface_end_line)
     schemas[path]["classes"][interface_name].setdefault("is_abstract", False)
     schemas[path]["classes"][interface_name].setdefault("is_interface", True)
     schemas[path]["classes"][interface_name].setdefault("nested_inside", [])
@@ -568,20 +612,35 @@ def _add_interface_declaration(schemas: dict, projects_dir: str, project: str,
     schemas[path]["classes"][interface_name].setdefault("methods", {})
 
 
-def _process_annotation(schemas: dict, path: str, class_name: str,
-                        pos_callable_name: str, annotation_location: str):
+def _process_annotation(
+    schemas: dict,
+    path: str,
+    class_name: str,
+    pos_callable_name: str,
+    annotation_location: str,
+):
     """Process annotation for a method."""
     if annotation_location != "null":
-        annotation_path, annotation_start_line, annotation_start_col, annotation_end_line, annotation_end_col = parse_location(annotation_location)
-        annotation_body_lines = read_file_lines(annotation_path, annotation_start_line, annotation_end_line)
+        (
+            annotation_path,
+            annotation_start_line,
+            annotation_start_col,
+            annotation_end_line,
+            annotation_end_col,
+        ) = parse_location(annotation_location)
+        annotation_body_lines = read_file_lines(
+            annotation_path, annotation_start_line, annotation_end_line
+        )
         if annotation_body_lines:
-            annotation_body = annotation_body_lines[0][annotation_start_col:annotation_end_col]
+            annotation_body = annotation_body_lines[0][
+                annotation_start_col:annotation_end_col
+            ]
             # Support both class methods and main_methods
             if class_name == "main_methods":
                 # Use "main" as key for main method
-                schemas[path]["main_methods"]["main"][
-                    "annotations"
-                ].append(annotation_body)
+                schemas[path]["main_methods"]["main"]["annotations"].append(
+                    annotation_body
+                )
             else:
                 schemas[path]["classes"][class_name]["methods"][pos_callable_name][
                     "annotations"
