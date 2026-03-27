@@ -78,7 +78,3 @@ RUN git checkout 3b2e55bc2ac942ac2cf2646f5c69acd081ce8ea2
 
 WORKDIR /home/cangjie
 RUN cp queries/java/* vscode-codeql-starter/codeql-custom-queries-java
-
-RUN bash scripts/download_original_projects.sh
-
-RUN bash scripts/build_java_projects.sh
